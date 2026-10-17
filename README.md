@@ -1,7 +1,7 @@
-# Karz Kavach (कर्ज़ कवच)
+# Karz Kavach
 
 > **Anti-Predatory Loan App & Digital Lending Fraud Risk Detector**  
-> *Built for Hack@BVP 8.0 — FinTech PS2 | Team Moon3*
+
 
 Karz Kavach is an explainable consumer-protection platform designed to safeguard borrowers against illegal digital lending apps, extortionate loan sharks, and aggressive data harvesting. By evaluating app permissions, regulatory registrations, and transparency disclosures, Karz Kavach delivers instant, easy-to-understand safety verdicts (**Safe**, **Needs Review**, or **Risky**) in both **English and Hindi** with audio accessibility.
 
