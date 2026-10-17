@@ -61,8 +61,24 @@ const VERDICTS = {
 const FLAGS = {
   IN_DIRECTORY: {
     severity: 'good',
-    en: (v) => `Found in the RBI directory under ${v.lender}.`,
-    hi: (v) => `RBI डायरेक्टरी में ${v.lender} के तहत मिला।`,
+    en: (v) =>
+      `Found in the RBI directory under ${v.lender}. (The directory shows what lenders report. It is not an RBI approval.)`,
+    hi: (v) =>
+      `RBI डायरेक्टरी में ${v.lender} के तहत मिला। (डायरेक्टरी में वही दिखता है जो लेंडर रिपोर्ट करते हैं। यह RBI की मंज़ूरी नहीं है।)`,
+  },
+  DIRECTORY_ONLY_LISTED: {
+    severity: 'good',
+    en: (v) =>
+      `Listed in the RBI directory under ${v.lender}. The directory shows what lenders report; it is not an RBI approval. We did not check this app's permissions.`,
+    hi: (v) =>
+      `RBI डायरेक्टरी में ${v.lender} के तहत सूचीबद्ध। डायरेक्टरी में वही दिखता है जो लेंडर रिपोर्ट करते हैं; यह RBI की मंज़ूरी नहीं है। हमने इस ऐप की परमिशन की जाँच नहीं की।`,
+  },
+  DIRECTORY_ONLY_NOT_LISTED: {
+    severity: 'warn',
+    en: () =>
+      'Not found in the RBI directory. This does not prove fraud: it may not be a lending app, or the name may be spelled differently. Do not share contacts, SMS or photos until you can confirm the lender.',
+    hi: () =>
+      'RBI डायरेक्टरी में नहीं मिला। इससे यह साबित नहीं होता कि ऐप धोखाधड़ी वाला है: हो सकता है यह लेंडिंग ऐप न हो, या नाम की स्पेलिंग अलग हो। लेंडर की पुष्टि होने तक कॉन्टैक्ट, SMS या फोटो साझा न करें।',
   },
   NOT_IN_DIRECTORY: {
     severity: 'bad',
@@ -121,9 +137,39 @@ const NEXT_STEPS = {
   },
 };
 
+// Labels for the "directory lookup only" result (no permission scoring)
+const STATUS_LABELS = {
+  LISTED: { en: 'Listed in directory', hi: 'डायरेक्टरी में सूचीबद्ध' },
+  UNVERIFIED: { en: 'Not found in directory', hi: 'डायरेक्टरी में नहीं मिला' },
+};
+
+NEXT_STEPS.DIRECTORY_LISTED = {
+  en: [
+    "Check that the lender's name shown inside the app matches the directory entry.",
+    'Read the loan terms and interest rate before accepting. Be careful if the app asks for contacts, SMS or photos.',
+  ],
+  hi: [
+    'जाँचें कि ऐप के अंदर दिखने वाला लेंडर का नाम डायरेक्टरी की एंट्री से मेल खाता है।',
+    'लोन स्वीकार करने से पहले शर्तें और ब्याज दर पढ़ें। अगर ऐप कॉन्टैक्ट, SMS या फोटो मांगे तो सावधान रहें।',
+  ],
+};
+
+NEXT_STEPS.UNVERIFIED = {
+  en: [
+    'Do not share contacts, SMS or photos until you can confirm the lender.',
+    "Check the spelling of the app name and the lender's name inside the app, then compare with the RBI directory.",
+    'If the app pressures or threatens you, report it at cybercrime.gov.in or call the cyber crime helpline 1930.',
+  ],
+  hi: [
+    'लेंडर की पुष्टि होने तक कॉन्टैक्ट, SMS या फोटो साझा न करें।',
+    'ऐप के नाम और ऐप के अंदर दिखने वाले लेंडर के नाम की स्पेलिंग जाँचें, फिर RBI डायरेक्टरी से मिलाएं।',
+    'अगर ऐप दबाव डाले या धमकाए, तो cybercrime.gov.in पर शिकायत करें या साइबर क्राइम हेल्पलाइन 1930 पर कॉल करें।',
+  ],
+};
+
 function makeFlag(code, vars = {}) {
   const f = FLAGS[code];
   return { code, severity: f.severity, en: f.en(vars), hi: f.hi(vars) };
 }
 
-module.exports = { PERMISSIONS, VERDICTS, FLAGS, NEXT_STEPS, makeFlag };
+module.exports = { PERMISSIONS, VERDICTS, STATUS_LABELS, FLAGS, NEXT_STEPS, makeFlag };

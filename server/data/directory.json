@@ -1,5 +1,6938 @@
 [
-  { "appName": "SureLoan Demo", "lender": "Demo Finance Ltd" },
-  { "appName": "EasyPay Credit Demo", "lender": "Sample Bank Ltd" },
-  { "appName": "LoanMitra Demo", "lender": "Sample Bank Ltd" }
+  {
+    "appName": "GeM Sahay",
+    "lender": "121 FINANCE PRIVATE LIMITED (OLD NAME YERROW FINANCE AND INVESTMENTS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "360 ONE Wealth – Lending",
+    "lender": "360 ONE PRIME LIMITED (FORMERLY  IIFL WEALTH PRIME LIMITED AND IIFL WEALTH FINANCE LTD)"
+  },
+  {
+    "appName": "4Fin",
+    "lender": "4FIN FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Rupee112: Personal Loan App",
+    "lender": "AADHAR INDIA FINVEST LIMITED"
+  },
+  {
+    "appName": "MyMoneyBazaar",
+    "lender": "AASRA FINCORP PRIVATE LIMITED (NAME CHANGED ON MAY 14, 2019)"
+  },
+  {
+    "appName": "KreditMart",
+    "lender": "ABHAYKUMAR LEA-FIN & INVESTMENTS (PRIVATE) LIMITED"
+  },
+  {
+    "appName": "Kredit Mart Personal Loan App",
+    "lender": "ABHAYKUMAR LEA-FIN & INVESTMENTS (PRIVATE) LIMITED"
+  },
+  {
+    "appName": "Loanontip",
+    "lender": "ACG LEASING LTD."
+  },
+  {
+    "appName": "ACHIIEVERS QUICK GOLD LOAN",
+    "lender": "ACHIIEVERS FINANCE INDIA PRIVATE LIMITED"
+  },
+  {
+    "appName": "AFIL LLC",
+    "lender": "ACHIIEVERS FINANCE INDIA PRIVATE LIMITED"
+  },
+  {
+    "appName": "JHATPAT LOANS",
+    "lender": "ACHIIEVERS FINANCE INDIA PRIVATE LIMITED"
+  },
+  {
+    "appName": "Borrowera",
+    "lender": "ACOLYTE FINSERV LIMITED (EARLIER KNOWN AS GAGAN METALS LIMITED)"
+  },
+  {
+    "appName": "Credxpres",
+    "lender": "ACOLYTE FINSERV LIMITED (EARLIER KNOWN AS GAGAN METALS LIMITED)"
+  },
+  {
+    "appName": "Instant Paise",
+    "lender": "ACOLYTE FINSERV LIMITED (EARLIER KNOWN AS GAGAN METALS LIMITED)"
+  },
+  {
+    "appName": "Loanfinserve",
+    "lender": "ACOLYTE FINSERV LIMITED (EARLIER KNOWN AS GAGAN METALS LIMITED)"
+  },
+  {
+    "appName": "Loan Mitraa",
+    "lender": "ACOLYTE FINSERV LIMITED (EARLIER KNOWN AS GAGAN METALS LIMITED)"
+  },
+  {
+    "appName": "Moneywalle",
+    "lender": "ACOLYTE FINSERV LIMITED (EARLIER KNOWN AS GAGAN METALS LIMITED)"
+  },
+  {
+    "appName": "Perfect Paisa",
+    "lender": "ACOLYTE FINSERV LIMITED (EARLIER KNOWN AS GAGAN METALS LIMITED)"
+  },
+  {
+    "appName": "Blink Credit",
+    "lender": "ADITSH FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "Digital Eco system",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Insta PL",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Aditya Birla Capital Digital?",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Angel One's Super App",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "BharatPe for Business",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Cred",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Flexiloan",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Google Pay",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Indifi",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Kissht",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Kissht IOS",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Kreditbee",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "LendingKart",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Phone pe",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Prefr",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Propelld",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "Ring",
+    "lender": "ADITYA BIRLA CAPITAL LIMITED (MERGED WITH ADITYA BIRLA FINANCE LIMITED)"
+  },
+  {
+    "appName": "AEON FAST (This is used only for generating pre-approval credit limit as of now)",
+    "lender": "AEON CREDIT SERVICE INDIA PRIVATE LIMITED"
+  },
+  {
+    "appName": "InstaMoney",
+    "lender": "AEROFLEX FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Right Rupee",
+    "lender": "AGAMAN FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "EASYFINCARE",
+    "lender": "AGARWAL ASSIGNMENTS PVT. LTD."
+  },
+  {
+    "appName": "EASYRUPEE LOAN",
+    "lender": "AGARWAL ASSIGNMENTS PVT. LTD."
+  },
+  {
+    "appName": "EMI Wale",
+    "lender": "AGARWAL ASSIGNMENTS PVT. LTD."
+  },
+  {
+    "appName": "EVERYDAY EMI",
+    "lender": "AGARWAL ASSIGNMENTS PVT. LTD."
+  },
+  {
+    "appName": "LOAN WITHIN",
+    "lender": "AGARWAL ASSIGNMENTS PVT. LTD."
+  },
+  {
+    "appName": "ZERO LOAN INTREST",
+    "lender": "AGARWAL ASSIGNMENTS PVT. LTD."
+  },
+  {
+    "appName": "CASH KREDIT",
+    "lender": "A.G.F. FINLEASE (INDIA) LIMITED"
+  },
+  {
+    "appName": "KREDBHARAT",
+    "lender": "A.G.F. FINLEASE (INDIA) LIMITED"
+  },
+  {
+    "appName": "RULE MUDRA",
+    "lender": "A.G.F. FINLEASE (INDIA) LIMITED"
+  },
+  {
+    "appName": "AGI MONEEY",
+    "lender": "AGIWAL FINANCE PRIVATE LIMITED (EARLIER KNOWN AS SURMIT INVESTMENTS PVT LTD)."
+  },
+  {
+    "appName": "Swipe Loan",
+    "lender": "AGRIM FINCAP PVT.LTD."
+  },
+  {
+    "appName": "5minuteloan",
+    "lender": "AGRIM FINCAP PVT.LTD."
+  },
+  {
+    "appName": "Paisaanytime",
+    "lender": "AGRIM FINCAP PVT.LTD."
+  },
+  {
+    "appName": "Rupyalelo",
+    "lender": "AGRIM FINCAP PVT.LTD."
+  },
+  {
+    "appName": "Shreeloan",
+    "lender": "AGRIM FINCAP PVT.LTD."
+  },
+  {
+    "appName": "Speedoloan",
+    "lender": "AGRIM FINCAP PVT.LTD."
+  },
+  {
+    "appName": "True Fund",
+    "lender": "AGRIM FINCAP PVT.LTD."
+  },
+  {
+    "appName": "Airtel App",
+    "lender": "AIRTEL MONEY LIMITED"
+  },
+  {
+    "appName": "GoodScore",
+    "lender": "AKARA CAPITAL ADVISORS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Indialends",
+    "lender": "AKARA CAPITAL ADVISORS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Mint Money",
+    "lender": "AKARA CAPITAL ADVISORS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Stashfin",
+    "lender": "AKARA CAPITAL ADVISORS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Turtlemint Loans",
+    "lender": "AKARA CAPITAL ADVISORS PRIVATE LIMITED"
+  },
+  {
+    "appName": "PocketRupee",
+    "lender": "ALLEN'S HOUSING  & FINANCE LTD"
+  },
+  {
+    "appName": "Rupiva Credit",
+    "lender": "ALLEN'S HOUSING  & FINANCE LTD"
+  },
+  {
+    "appName": "AssistFin Technologies Private Limited",
+    "lender": "ALTURA FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Nextfin: Instant Loan",
+    "lender": "AMAR AMBA FINANCE HIRE PURCHASE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Get it Now",
+    "lender": "AMARAVATHI FINANCIAL SOLUTIONS PRIVATE LIMITED"
+  },
+  {
+    "appName": "WeRize Customer App",
+    "lender": "AMBIT FINVEST PVT. LTD. (FORMERLY - AMBIT RETAIL FINANCE PVT. LTD.)"
+  },
+  {
+    "appName": "Finsall",
+    "lender": "AMICA FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Jupiter",
+    "lender": "AMICA FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Khatabook",
+    "lender": "AMICA FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "F1 Speed Loan",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED (EARLIER KNOWN AS MAULESH INVESTMENTS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Fast Paise",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED (EARLIER KNOWN AS MAULESH INVESTMENTS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Fundsb4salary",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED (EARLIER KNOWN AS MAULESH INVESTMENTS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Fundsbull",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED (EARLIER KNOWN AS MAULESH INVESTMENTS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "QuickOneLoan",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED (EARLIER KNOWN AS MAULESH INVESTMENTS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Salary Adda",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED (EARLIER KNOWN AS MAULESH INVESTMENTS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Salary Setu",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED (EARLIER KNOWN AS MAULESH INVESTMENTS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Snap Paisa",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED (EARLIER KNOWN AS MAULESH INVESTMENTS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Credbuddy",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED( FORMERLY KNOWN AS MAULESH INVESTMENT PRIVATE LTD)"
+  },
+  {
+    "appName": "F 1 Speed Loan",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED( FORMERLY KNOWN AS MAULESH INVESTMENT PRIVATE LTD)"
+  },
+  {
+    "appName": "Fast Paisa",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED( FORMERLY KNOWN AS MAULESH INVESTMENT PRIVATE LTD)"
+  },
+  {
+    "appName": "Salary Adda",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED( FORMERLY KNOWN AS MAULESH INVESTMENT PRIVATE LTD)"
+  },
+  {
+    "appName": "Salary Setu",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED( FORMERLY KNOWN AS MAULESH INVESTMENT PRIVATE LTD)"
+  },
+  {
+    "appName": "Snap Paisa",
+    "lender": "AMPIRE FINANCE PRIVATE LIMITED( FORMERLY KNOWN AS MAULESH INVESTMENT PRIVATE LTD)"
+  },
+  {
+    "appName": "Anand Rathi Global Finance Limited",
+    "lender": "ANAND RATHI GLOBAL FINANCE  LTD. (FORMERLY - RATHI GLOBAL FINANCE  LTD.)"
+  },
+  {
+    "appName": "Angel One",
+    "lender": "ANGEL FINCAP PRIVATE LIMITED"
+  },
+  {
+    "appName": "Askrupee",
+    "lender": "ANSU TRADE & FISCAL (P) LTD"
+  },
+  {
+    "appName": "AbhiRupee",
+    "lender": "ANUPAM FINSERV LIMITED (FORMERLY VANTAGE CORPORATE SERVICES LTD)"
+  },
+  {
+    "appName": "Omozing Personal Loans",
+    "lender": "APARAMPAAR FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Airpay Capital",
+    "lender": "APOLLO FINVEST (INDIA) LTD."
+  },
+  {
+    "appName": "Apollo Cash",
+    "lender": "APOLLO FINVEST (INDIA) LTD."
+  },
+  {
+    "appName": "FatakPay",
+    "lender": "APOLLO FINVEST (INDIA) LTD."
+  },
+  {
+    "appName": "GrowFi loan aggregator app",
+    "lender": "APOLLO FINVEST (INDIA) LTD."
+  },
+  {
+    "appName": "Loanmax",
+    "lender": "APOLLO FINVEST (INDIA) LTD."
+  },
+  {
+    "appName": "NIRA",
+    "lender": "APOLLO FINVEST (INDIA) LTD."
+  },
+  {
+    "appName": "WeRize",
+    "lender": "APOLLO FINVEST (INDIA) LTD."
+  },
+  {
+    "appName": "FinGrow",
+    "lender": "ARCHBRIDGE CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Credfin: Instant Personal Loans",
+    "lender": "ARHAM FINANCE & INVESTMENT SERVICES LTD."
+  },
+  {
+    "appName": "Revfin",
+    "lender": "ARISTO SECURITIES PVT, LTD."
+  },
+  {
+    "appName": "RevnU",
+    "lender": "ARISTO SECURITIES PVT, LTD."
+  },
+  {
+    "appName": "TRADOFINA",
+    "lender": "ARNOLD HOLDINGS LTD"
+  },
+  {
+    "appName": "ePayLater",
+    "lender": "ARTHASHASTRA EPAYLATER FINANCIAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "GetCred",
+    "lender": "ARYAMAN FINANCE (INDIA) LIMITED"
+  },
+  {
+    "appName": "CoBorrow",
+    "lender": "ASH GROVE CAPITAL PRIVATE LIMITED (FORMERLY KNOWN A UNOGROWTH CREDIT INDIA PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Asirvad Online Gold Loan (OGL)",
+    "lender": "ASIRVAD MICRO FINANCE LIMITED"
+  },
+  {
+    "appName": "KREDITO24",
+    "lender": "ASOMI FINANCE PRIVATE LTD."
+  },
+  {
+    "appName": "ATD MONEY",
+    "lender": "ATD FINANCIAL SERVICES PVT LTD"
+  },
+  {
+    "appName": "MY LOAN",
+    "lender": "ATD FINANCIAL SERVICES PVT LTD"
+  },
+  {
+    "appName": "Creditt+",
+    "lender": "AUREUS FINVEST PRIVATE LIMITED  (EARLIER KNOWN AS SHIVDURGA TRADING (P) LTD)"
+  },
+  {
+    "appName": "myklinq",
+    "lender": "AUREUS FINVEST PRIVATE LIMITED  (EARLIER KNOWN AS SHIVDURGA TRADING (P) LTD)"
+  },
+  {
+    "appName": "AU 0101 Business - Internet Banking",
+    "lender": "AU SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "AU 0101 Business - Mobile Banking",
+    "lender": "AU SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "AU 0101 Mobile Banking",
+    "lender": "AU SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "AU 0101 Net Banking",
+    "lender": "AU SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "AURO Chatbot",
+    "lender": "AU SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "AU Website",
+    "lender": "AU SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "Salesforce",
+    "lender": "AU SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "WhatsApp Banking",
+    "lender": "AU SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "Propelld",
+    "lender": "AUXILO FINSERVE PRIVATE LIMITED (W.E.F. SEPTEMBER 11, 2017)"
+  },
+  {
+    "appName": "Kamakshi Money",
+    "lender": "AVA FINANCE PRIVATE LIMITED."
+  },
+  {
+    "appName": "Avanse",
+    "lender": "AVANSE FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Credit Fair",
+    "lender": "AVANSE FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Edufin",
+    "lender": "AVANSE FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Fly Hi",
+    "lender": "AVANSE FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Grayquest",
+    "lender": "AVANSE FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Gyandhan",
+    "lender": "AVANSE FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Jodo?",
+    "lender": "AVANSE FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Leo 1",
+    "lender": "AVANSE FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Propelld",
+    "lender": "AVANSE FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Scholfe",
+    "lender": "AVANSE FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "TCPL",
+    "lender": "AVANSE FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Aspire Fintech Private Limited (Web based paltform)",
+    "lender": "AVANTI FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Avanti",
+    "lender": "AVANTI FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Betterplace Money",
+    "lender": "AVANTI FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Entitled Solutions Private Limited (Web based paltform)",
+    "lender": "AVANTI FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Karmalife",
+    "lender": "AVANTI FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "EWA",
+    "lender": "AVANTI FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "NIRA Instant Personal Loan App",
+    "lender": "AVANTI FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "PayMe: Personal Loan App",
+    "lender": "AVANTI FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Avanti",
+    "lender": "AVANTI MICROFINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "BrightLoans",
+    "lender": "AVINASH CAPITAL  MARKETS  PVT.  LTD."
+  },
+  {
+    "appName": "Fixrupee",
+    "lender": "AVINASH CAPITAL  MARKETS  PVT.  LTD."
+  },
+  {
+    "appName": "Kreditbuddha",
+    "lender": "AVINASH CAPITAL  MARKETS  PVT.  LTD."
+  },
+  {
+    "appName": "lendingplate",
+    "lender": "AVINASH CAPITAL  MARKETS  PVT.  LTD."
+  },
+  {
+    "appName": "ATM Cred",
+    "lender": "AVON MONEY SOLUTION INDIA LIMITED"
+  },
+  {
+    "appName": "Finnable: Personal Loan App",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Axis Bank Website",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Amazon",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "App Store: Axis Mobile: Pay, Invest & UPI",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Axis Bank Internet Banking",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Axis Bank Mobile Banking",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Axis Bank Neo for Corporate",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Axis Mobile: Pay, Invest & UPI",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Bitrocket by CheQ",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Freecharge Business App",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Google Pay",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "INDmoney",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Neo for Merchants",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Siddhi",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "super.money",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Tata Neu",
+    "lender": "AXIS BANK LIMITED"
+  },
+  {
+    "appName": "Grayquest Education Finance Pvt. Ltd.",
+    "lender": "AXIS FINANCE LTD."
+  },
+  {
+    "appName": "Ayaan Finserve India Pvt. Ltd",
+    "lender": "AYAAN FINSERVE INDIA PRIVATE LIMITED (FORMERLY CHARAT RAM SHRIRAM PVT. LTD.)"
+  },
+  {
+    "appName": "Retail Pe",
+    "lender": "AYUSH FISCAL (P) LTD"
+  },
+  {
+    "appName": "Paisa247",
+    "lender": "BABA LEASE AND INVESTMENT PRIVATE LIMITED"
+  },
+  {
+    "appName": "Rupeeq.com",
+    "lender": "BABA LEASE AND INVESTMENT PRIVATE LIMITED"
+  },
+  {
+    "appName": "Taplend",
+    "lender": "BABA LEASE AND INVESTMENT PRIVATE LIMITED"
+  },
+  {
+    "appName": "SalaryMantra",
+    "lender": "BAGMANE TRADERS (P) LTD"
+  },
+  {
+    "appName": "Salary TopUp",
+    "lender": "BAID STOCK BROKING SERVICES PVT. LTD."
+  },
+  {
+    "appName": "50fin App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "50fin: Loan Against Securities App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "50fin Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Airtel Thanks App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Airtel Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Bajaj Finance App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Bajaj Markets App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Bajaj Markets Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "BFL Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Finsire Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Google Pay India/ GPay Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Google Pay: Save, Pay, Manage App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Google Pay: Secure UPI payment App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Lark Finserv App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Lark Finserv Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Liquify App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Liquify India App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Navi Finserv Ltd. Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Neoble Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Njloans Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Quicklend Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "SLiQ App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Smallcase: Stock Investments App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Smallcase: Stocks, MFs, FDs App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Smallcase Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Valuenable Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Yenmo: Mutual Fund Loans App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Yenmo- Mutual Funds Loan App",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Yenmo Website",
+    "lender": "BAJAJ FINANCE LTD."
+  },
+  {
+    "appName": "Digital Lending Application 1",
+    "lender": "BANK OF BARODA"
+  },
+  {
+    "appName": "Digital Lending Application 2",
+    "lender": "BANK OF BARODA"
+  },
+  {
+    "appName": "Digital Lending Application 3",
+    "lender": "BANK OF BARODA"
+  },
+  {
+    "appName": "Jansamarth Portal",
+    "lender": "BANK OF BARODA"
+  },
+  {
+    "appName": "PSBloansin59minutes",
+    "lender": "BANK OF BARODA"
+  },
+  {
+    "appName": "E-Platform",
+    "lender": "BANK OF INDIA"
+  },
+  {
+    "appName": "Car Loan",
+    "lender": "BANK OF MAHARASHTRA"
+  },
+  {
+    "appName": "e-GST",
+    "lender": "BANK OF MAHARASHTRA"
+  },
+  {
+    "appName": "Gold Loan",
+    "lender": "BANK OF MAHARASHTRA"
+  },
+  {
+    "appName": "KCC Jan Samart",
+    "lender": "BANK OF MAHARASHTRA"
+  },
+  {
+    "appName": "KCC Tatkal",
+    "lender": "BANK OF MAHARASHTRA"
+  },
+  {
+    "appName": "Mahabank Rooftop Solar Panel Loan",
+    "lender": "BANK OF MAHARASHTRA"
+  },
+  {
+    "appName": "Mudra",
+    "lender": "BANK OF MAHARASHTRA"
+  },
+  {
+    "appName": "PM AWAS Yojana Home Loan For EWS/LIG/MIG",
+    "lender": "BANK OF MAHARASHTRA"
+  },
+  {
+    "appName": "?PMSVANidhi?",
+    "lender": "BANK OF MAHARASHTRA"
+  },
+  {
+    "appName": "PM Vishwakarma",
+    "lender": "BANK OF MAHARASHTRA"
+  },
+  {
+    "appName": "PQPL",
+    "lender": "BANK OF MAHARASHTRA"
+  },
+  {
+    "appName": "Self Helf Group",
+    "lender": "BANK OF MAHARASHTRA"
+  },
+  {
+    "appName": "ZenLyfe  Loan against Deposit( Mobile Banking App )",
+    "lender": "BANK OF MAHARASHTRA"
+  },
+  {
+    "appName": "My Money Bazaar",
+    "lender": "BANSAL IN HOLD LTD."
+  },
+  {
+    "appName": "Paisa24 Finance",
+    "lender": "BAROTA FINANCE LIMITED"
+  },
+  {
+    "appName": "Cashboxx",
+    "lender": "BARWALA LEASING & FINANCE PVT.LTD"
+  },
+  {
+    "appName": "RapidRupee",
+    "lender": "BEE PEE JAY FINANCE LTD"
+  },
+  {
+    "appName": "CASHe",
+    "lender": "BHANIX FINANCE & INVESTMENT LTD"
+  },
+  {
+    "appName": "KarmaLife",
+    "lender": "BHAWANA CAPITAL PVT LTD (FORMERLY BHAWANA SECURITIES & FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "LoanFront",
+    "lender": "BHAWANA CAPITAL PVT LTD (FORMERLY BHAWANA SECURITIES & FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Ippopay for Stores",
+    "lender": "BILLIONLOANS FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Next Capital",
+    "lender": "BILLUS INVESTMENTS PVT. LTD."
+  },
+  {
+    "appName": "KapitaLoan",
+    "lender": "BLUE CHIP FINANCE PVT. LTD."
+  },
+  {
+    "appName": "Zapcash - Quick Loans",
+    "lender": "BMW FIN-INVEST PRIVATE LIMITED"
+  },
+  {
+    "appName": "Myinstafunds",
+    "lender": "B.P. SECURITIES (INDIA) PVT. LTD."
+  },
+  {
+    "appName": "Branch International Financial Services Private Limited",
+    "lender": "BRANCH INTERNATIONAL FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Petticash",
+    "lender": "BT FINANCE PRIVATE LIMITED (EARLIER KNOWN AS VANDEEP SUPPLIERS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "CIRCLEPE",
+    "lender": "BUSSAN AUTO FINANCE INDIA PRIVATE LTD."
+  },
+  {
+    "appName": "Digital Lending Platform",
+    "lender": "CANARA BANK"
+  },
+  {
+    "appName": "Tata Neu",
+    "lender": "CAPFLOAT FINANCIAL SERVICES PRIVATE LIMITED."
+  },
+  {
+    "appName": "NYE",
+    "lender": "CAPITAL INDIA FINANCE LIMITED"
+  },
+  {
+    "appName": "Paisanow",
+    "lender": "CAPITAL TRADE LINKS LIMITED"
+  },
+  {
+    "appName": "Capital Gold Loan",
+    "lender": "CAPITAL TRUST LIMITED"
+  },
+  {
+    "appName": "BharatPe for Business",
+    "lender": "CAPRI GLOBAL CAPITAL LIMITED (FORMERLY MONEY MATTERS FINANCIAL SERVICES LTD.)"
+  },
+  {
+    "appName": "Capri Loans",
+    "lender": "CAPRI GLOBAL CAPITAL LIMITED (FORMERLY MONEY MATTERS FINANCIAL SERVICES LTD.)"
+  },
+  {
+    "appName": "CMC BANK HAVERI",
+    "lender": "CARDAMOM MERCHANTS' CO-OP.BANK LTD."
+  },
+  {
+    "appName": "Carz4Sale?",
+    "lender": "CARS24 FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "MotorHunk?",
+    "lender": "CARS24 FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "PhonePe",
+    "lender": "CARS24 FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Vehicle Info",
+    "lender": "CARS24 FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Indifi Technologies Pvt Ltd",
+    "lender": "CASPIAN IMPACT INVESTMENTS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Digital Lending Platform",
+    "lender": "CENTRAL BANK OF INDIA"
+  },
+  {
+    "appName": "CreditSea",
+    "lender": "CHHOTARIA SECURITIES  PVT.  LTD."
+  },
+  {
+    "appName": "GoCredit",
+    "lender": "CHHOTARIA SECURITIES  PVT.  LTD."
+  },
+  {
+    "appName": "GrowFi Loan Aggregator App",
+    "lender": "CHHOTARIA SECURITIES  PVT.  LTD."
+  },
+  {
+    "appName": "Rupee24",
+    "lender": "CHHOTARIA SECURITIES  PVT.  LTD."
+  },
+  {
+    "appName": "Rupeeq.com",
+    "lender": "CHHOTARIA SECURITIES  PVT.  LTD."
+  },
+  {
+    "appName": "AryseFin",
+    "lender": "CHINMAY FINLEASE LTD"
+  },
+  {
+    "appName": "Chinmay Finlease Limited",
+    "lender": "CHINMAY FINLEASE LTD"
+  },
+  {
+    "appName": "CreditHaat",
+    "lender": "CHINMAY FINLEASE LTD"
+  },
+  {
+    "appName": "Lenditt",
+    "lender": "CHINMAY FINLEASE LTD"
+  },
+  {
+    "appName": "Samridhya",
+    "lender": "CHINMAY FINLEASE LTD"
+  },
+  {
+    "appName": "Instant mudra",
+    "lender": "CHINTAMANI FINLEASE LTD."
+  },
+  {
+    "appName": "NYE",
+    "lender": "CHOICE FINSERV PRIVATE LIMITED"
+  },
+  {
+    "appName": "Chola One",
+    "lender": "CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED"
+  },
+  {
+    "appName": "Fibe",
+    "lender": "CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED"
+  },
+  {
+    "appName": "Flipkart",
+    "lender": "CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED"
+  },
+  {
+    "appName": "Freo",
+    "lender": "CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED"
+  },
+  {
+    "appName": "Kreditbee",
+    "lender": "CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED"
+  },
+  {
+    "appName": "Lendingkart",
+    "lender": "CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED"
+  },
+  {
+    "appName": "MoneyTap",
+    "lender": "CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED"
+  },
+  {
+    "appName": "Navi Finserv Limited",
+    "lender": "CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED"
+  },
+  {
+    "appName": "Stashfin",
+    "lender": "CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED"
+  },
+  {
+    "appName": "asapfinance.in",
+    "lender": "CIECO SECURITIES PVT LTD"
+  },
+  {
+    "appName": "PHOCKET",
+    "lender": "CITRA FINANCIALS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Credit line on UPI",
+    "lender": "CITY UNION BANK LIMITED"
+  },
+  {
+    "appName": "Loan against Mutual Funds",
+    "lender": "CITY UNION BANK LIMITED"
+  },
+  {
+    "appName": "Rapid.ai (Credit card)",
+    "lender": "CITY UNION BANK LIMITED"
+  },
+  {
+    "appName": "Vert-One App",
+    "lender": "CLIME FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "CLIX CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "NYE",
+    "lender": "CLIX CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Abhicash Infotech Private Limited",
+    "lender": "C.N.M.P. INVESTMENTS PVT.LTD."
+  },
+  {
+    "appName": "LOANDIDI",
+    "lender": "COLLOCATE MERCHANTS (P) LTD"
+  },
+  {
+    "appName": "Xpressloan",
+    "lender": "COMERO LEASING & FINANCIALS PVT. LTD."
+  },
+  {
+    "appName": "FINANCE BABU",
+    "lender": "CP CAPITAL LIMITED"
+  },
+  {
+    "appName": "Credila's Website",
+    "lender": "CREDILA FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS HDFC CREDILA FINANCIAL SERVICES LIMITED)"
+  },
+  {
+    "appName": "Credila's LOS",
+    "lender": "CREDILA FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS HDFC CREDILA FINANCIAL SERVICES LIMITED)"
+  },
+  {
+    "appName": "spoctree website",
+    "lender": "CREDILA FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS HDFC CREDILA FINANCIAL SERVICES LIMITED)"
+  },
+  {
+    "appName": "Grameen MAHI",
+    "lender": "CREDITACCESS GRAMEEN LIMITED"
+  },
+  {
+    "appName": "LAS Application",
+    "lender": "CSB BANK LIMITED"
+  },
+  {
+    "appName": "Davinta",
+    "lender": "DAVINTA FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "CRED: UPI, Credit Cards, Bills",
+    "lender": "DBS BANK INDIA LIMITED"
+  },
+  {
+    "appName": "Home Credit: Personal Loan App",
+    "lender": "DBS BANK INDIA LIMITED"
+  },
+  {
+    "appName": "RULE MUDRA",
+    "lender": "DECIMUS FINANCIAL LTD. (FORMERLY  K.C.FINCAP LIMITED)"
+  },
+  {
+    "appName": "Blinkr",
+    "lender": "DEV-AASHISH CAPITAL (P) LTD"
+  },
+  {
+    "appName": "Rupeeontime – Instant Loan",
+    "lender": "DEV-AASHISH CAPITAL (P) LTD"
+  },
+  {
+    "appName": "Loan112 Instant Personal Loan",
+    "lender": "DEVMUNI LEASING & FINANCE LTD."
+  },
+  {
+    "appName": "Dhani",
+    "lender": "DHANI LOANS AND SERVICES LIMITED"
+  },
+  {
+    "appName": "NeoMoney",
+    "lender": "DHRUVA CAPITAL SERVICES LTD."
+  },
+  {
+    "appName": "Salary Flow",
+    "lender": "DHVIJA FINANCE LIMITED  (EARLIER KNOWN AS F MEC INTERNATIONAL FINANCIAL SERVICES LTD.)"
+  },
+  {
+    "appName": "Ruppeinhand",
+    "lender": "DIGNER FINLEASE & INVESTMENT PRIVATE LIMITED"
+  },
+  {
+    "appName": "50Fin",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Abhiloans",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Airtel Thanks",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "BHIM",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Billcut.com",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "CRED",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "DigitMoney",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "DMI Finance app",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "faircentpro.com",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Finance Buddha",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Finnable",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Flipkart",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "GoodScore",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Google pay",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Google Pay for Business",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "OLA",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Parkplus ( via Upswing)",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Saarathi",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Samsung Finance+",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Super.money",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Super.Money (Flipkart)",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "Wishfin",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "ZestMoney",
+    "lender": "DMI FINANCE PVT LTD."
+  },
+  {
+    "appName": "DpalLoan",
+    "lender": "D.PAL LEASING & FINANCE CO. LTD."
+  },
+  {
+    "appName": "GetPaise",
+    "lender": "D.PAL LEASING & FINANCE CO. LTD."
+  },
+  {
+    "appName": "Loanbiz",
+    "lender": "D.PAL LEASING & FINANCE CO. LTD."
+  },
+  {
+    "appName": "Flot",
+    "lender": "D S G INVESTMENTS PRIVATE LIMITED"
+  },
+  {
+    "appName": "CreditJar",
+    "lender": "D. S. INTEGRATED FINSEC PVT. LTD."
+  },
+  {
+    "appName": "BlinkMoney",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Cred",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Creditcase",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "ET Money: Mutual Funds, Stocks",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Groww App",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Groww Credit: Instant Loan App",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "INDmoney: Stocks, Mutual funds",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "LARK Finserv",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paytm: Secure UPI Payments",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "PhonePe: UPI, Payments, Recharge",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Quicklend",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Smallcase",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Volt Money: Mutual Fund Loan",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Yenmo Mutual Funds Loan App",
+    "lender": "DSP FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paisa108",
+    "lender": "DYTRON FINVEST PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paisa108",
+    "lender": "DYTRON FINVEST PVT. LTD. C"
+  },
+  {
+    "appName": "Aditya Birla Capital Digital",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Airtel Thanks App",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Angel One",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Bajaj Markets",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Bitrocket",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Buddyloans",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Cars24",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Credithaat",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Creditmantri",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Fibe",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Fi Money",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Finance Buddha",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Finshell Pay",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Flipkart",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "GoodScore",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Groww credit",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Indialends",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "India Post Payments Bank",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Indmoney",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Jio Finance",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Juspay",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Kashti",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Kpaisa",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Loans24",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Loantap",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Mint Money",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Moneycontrol",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Nobroker Instacash",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "One Andro",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Paisabazar",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Parkplus",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "RU connect",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Shopse",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Spoctree",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Supermoney",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Tata Neu",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Turtlemint Loans",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Varthana",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Wishfin",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Zavo",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "Zet Partner",
+    "lender": "EARLYSALARY SERVICES PRIVATE LIMITED (OLD NAME ASHISH SECURITIES PVT. LTD.)"
+  },
+  {
+    "appName": "AHAsolar Technologies Limited",
+    "lender": "ECOFY FINANCE PRIVATE LIMITED (FORMERLY KNOWN AS ACCRETIVE CLEANTECH FINANCE PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Autovert Technologies Private Limited",
+    "lender": "ECOFY FINANCE PRIVATE LIMITED (FORMERLY KNOWN AS ACCRETIVE CLEANTECH FINANCE PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Husk Power Systems Private Limited",
+    "lender": "ECOFY FINANCE PRIVATE LIMITED (FORMERLY KNOWN AS ACCRETIVE CLEANTECH FINANCE PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Lok Suvidha Finance Limited",
+    "lender": "ECOFY FINANCE PRIVATE LIMITED (FORMERLY KNOWN AS ACCRETIVE CLEANTECH FINANCE PRIVATE LIMITED)"
+  },
+  {
+    "appName": "SolarSquare Energy Private Limited",
+    "lender": "ECOFY FINANCE PRIVATE LIMITED (FORMERLY KNOWN AS ACCRETIVE CLEANTECH FINANCE PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Vidyut Green Labs Pvt Ltd",
+    "lender": "ECOFY FINANCE PRIVATE LIMITED (FORMERLY KNOWN AS ACCRETIVE CLEANTECH FINANCE PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Bluebear Technology Private Limited (Propelld)",
+    "lender": "EDGRO FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Kodo",
+    "lender": "EIGHT FINANCE PVT. LTD."
+  },
+  {
+    "appName": "Money Multiplier (Empowered by Seven Fincorp)",
+    "lender": "ENN ENN CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "bajajfinservmarkets",
+    "lender": "EPIMONEY PRIVATE LIMITED"
+  },
+  {
+    "appName": "Bajaj Finserv Markets Loan App",
+    "lender": "EPIMONEY PRIVATE LIMITED"
+  },
+  {
+    "appName": "Buddy Loan",
+    "lender": "EPIMONEY PRIVATE LIMITED"
+  },
+  {
+    "appName": "Buddy Loan: Personal Loan App",
+    "lender": "EPIMONEY PRIVATE LIMITED"
+  },
+  {
+    "appName": "FlexiLoans",
+    "lender": "EPIMONEY PRIVATE LIMITED"
+  },
+  {
+    "appName": "FlexiLoans: Business Loans",
+    "lender": "EPIMONEY PRIVATE LIMITED"
+  },
+  {
+    "appName": "Freedm",
+    "lender": "EPIMONEY PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "EPIMONEY PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paisabazaar-Loans,Credit Score",
+    "lender": "EPIMONEY PRIVATE LIMITED"
+  },
+  {
+    "appName": "Tally",
+    "lender": "EPIMONEY PRIVATE LIMITED"
+  },
+  {
+    "appName": "My Salary Loan",
+    "lender": "EPOCH MERCANTILES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Velocity.in",
+    "lender": "EQUENTIA FINANCIAL SERVICE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Equitas 2.0",
+    "lender": "EQUITAS SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "Equitas Netbanking",
+    "lender": "EQUITAS SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "Credcashy",
+    "lender": "EVERLIGHT HOLDING PVT LTD"
+  },
+  {
+    "appName": "Mobile Banking",
+    "lender": "EXCELLENT CO-OP.BANK LTD., MUMBAI"
+  },
+  {
+    "appName": "CredMe",
+    "lender": "EXUDE VINCOM PRIVATE LIMITED"
+  },
+  {
+    "appName": "Kreditmantra",
+    "lender": "EXUDE VINCOM PRIVATE LIMITED"
+  },
+  {
+    "appName": "Aadi Finance",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Airpay Capital",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "AryseFin",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Bachatt",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "BharatNXT",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Cashkuber",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Choice Connect",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Cover Mantra",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "CP Advisor",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "CreditFit",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "CreditHaat",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "CreditMantri",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Credo Cash",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "DigitMoney",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "FatakPay",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "FixoFin",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "FlipItMoney",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "GoCredit",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "GoodScore",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Gromo",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "KeshvaCredit",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Krux Finance",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "LoanSparrow",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Netambit",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Nivi Loans",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Ratecut",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "RupeeQ",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "SalarySe",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Swipe Loan",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Urban Money",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Vitto",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "WeCredit",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Yubi Markets",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Zavo",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "ZET",
+    "lender": "FDPL FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Bajaj Markets",
+    "lender": "FEDERAL BANK LTD"
+  },
+  {
+    "appName": "FiMoney",
+    "lender": "FEDERAL BANK LTD"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "FEDERAL BANK LTD"
+  },
+  {
+    "appName": "PaisaBazaar Application",
+    "lender": "FEDERAL BANK LTD"
+  },
+  {
+    "appName": "Digital personal loan",
+    "lender": "FEDERAL BANK LTD"
+  },
+  {
+    "appName": "not applicable",
+    "lender": "FEROZEPUR CENTRAL CO-OPERATIVE BANK LTD."
+  },
+  {
+    "appName": "Anytime Rupee",
+    "lender": "FINAGLE FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "MoneyDot",
+    "lender": "FINAGLE FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "TezCredit",
+    "lender": "FINAGLE FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "CASHO",
+    "lender": "FINALEAP FINSERV PVT LTD"
+  },
+  {
+    "appName": "Rupeeredee",
+    "lender": "FINCFRIENDS PRIVATE LIMITED (REISSUED ON DECEMBER 24, 2018)"
+  },
+  {
+    "appName": "Vivamoney",
+    "lender": "FINCFRIENDS PRIVATE LIMITED (REISSUED ON DECEMBER 24, 2018)"
+  },
+  {
+    "appName": "CarePay",
+    "lender": "FINDOC FINVEST (P) LTD(FORMALLY  AUJLA FINVEST PVT LTD AND NAME CHANGED ON 8.02.2016)"
+  },
+  {
+    "appName": "Claimfriendy",
+    "lender": "FINDOC FINVEST (P) LTD(FORMALLY  AUJLA FINVEST PVT LTD AND NAME CHANGED ON 8.02.2016)"
+  },
+  {
+    "appName": "SaveIN",
+    "lender": "FINDOC FINVEST (P) LTD(FORMALLY  AUJLA FINVEST PVT LTD AND NAME CHANGED ON 8.02.2016)"
+  },
+  {
+    "appName": "Instant Fundz",
+    "lender": "FINE MOTORS FINVEST PRINATE LIMITED"
+  },
+  {
+    "appName": "Huey Tech Private Limited",
+    "lender": "FINKURVE FINANCIAL SERVICES LIMITED (OLD NAME- SANJAY LEASING LIMITED)"
+  },
+  {
+    "appName": "KKSV BUSINESS SERVICES PVT LTD",
+    "lender": "FINKURVE FINANCIAL SERVICES LIMITED (OLD NAME- SANJAY LEASING LIMITED)"
+  },
+  {
+    "appName": "Flipkart Online Shopping App",
+    "lender": "FINNABLE CREDIT PRIVATE LIMITED"
+  },
+  {
+    "appName": "CirclePe",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Clayyo",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Fincrest Capital",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Helium",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Loandigit",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "MartOnline",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "MOTION CORP",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "NA",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "OkCredit",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "QUICKMONEY",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Rapid Money",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Saswat Money",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Seven Fincorp",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "The EMI Club",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Yamoney",
+    "lender": "FINTREE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "jUMPP",
+    "lender": "FINVASIA FINANCIAL SERVICES PVT LTD"
+  },
+  {
+    "appName": "Myntra",
+    "lender": "FLIPKART FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Alrightyy",
+    "lender": "F MEC INTERNATIONAL FINANCIAL SERVICES LTD."
+  },
+  {
+    "appName": "ClickmyLoan",
+    "lender": "F MEC INTERNATIONAL FINANCIAL SERVICES LTD."
+  },
+  {
+    "appName": "Finayo",
+    "lender": "F MEC INTERNATIONAL FINANCIAL SERVICES LTD."
+  },
+  {
+    "appName": "Swipe Loan",
+    "lender": "F MEC INTERNATIONAL FINANCIAL SERVICES LTD."
+  },
+  {
+    "appName": "Duniya Finance",
+    "lender": "FOCUS INDUSTRIAL RESOURCES LTD."
+  },
+  {
+    "appName": "fundbhai",
+    "lender": "FOCUS INDUSTRIAL RESOURCES LTD."
+  },
+  {
+    "appName": "Loan Zap",
+    "lender": "FOCUS INDUSTRIAL RESOURCES LTD."
+  },
+  {
+    "appName": "Paisa On Salary",
+    "lender": "FOCUS INDUSTRIAL RESOURCES LTD."
+  },
+  {
+    "appName": "Tejas Loan",
+    "lender": "FOCUS INDUSTRIAL RESOURCES LTD."
+  },
+  {
+    "appName": "Udhaar portal",
+    "lender": "FOCUS INDUSTRIAL RESOURCES LTD."
+  },
+  {
+    "appName": "www.i2ifunding.com",
+    "lender": "FYNX CAPITAL LIMITED (EARLIER KNOWN AS RAJATH FINANCE LIMITED)"
+  },
+  {
+    "appName": "https://karmalife.ai/",
+    "lender": "FYNX CAPITAL LIMITED (EARLIER KNOWN AS RAJATH FINANCE LIMITED)"
+  },
+  {
+    "appName": "https://moneyase.in/",
+    "lender": "FYNX CAPITAL LIMITED (EARLIER KNOWN AS RAJATH FINANCE LIMITED)"
+  },
+  {
+    "appName": "www.billmart.com",
+    "lender": "FYNX CAPITAL LIMITED (EARLIER KNOWN AS RAJATH FINANCE LIMITED)"
+  },
+  {
+    "appName": "Dhanrishi",
+    "lender": "GAGANDEEP SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "LoanVestra",
+    "lender": "GANESH LEASFIN PVT. LTD."
+  },
+  {
+    "appName": "ValuEnable",
+    "lender": "GEOJIT CREDITS (P) LTD (FORMERLY  A S R FINANCING & LEASING (P)LTD)"
+  },
+  {
+    "appName": "Gem Sahay",
+    "lender": "GETGROWTH CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "30daysLoan",
+    "lender": "GIRDHAR FINLEASE PVT LTD."
+  },
+  {
+    "appName": "FundsMama",
+    "lender": "GIRDHAR FINLEASE PVT LTD."
+  },
+  {
+    "appName": "fundsmama.in",
+    "lender": "GIRDHAR FINLEASE PVT LTD."
+  },
+  {
+    "appName": "Bajaj Finserv Markets LoanApp",
+    "lender": "GODREJ FINANCE LIMITED (OLD NAME ENSEMBLE HOLDINGS & FINANCE LIMITED)"
+  },
+  {
+    "appName": "Catfin",
+    "lender": "GODREJ FINANCE LIMITED (OLD NAME ENSEMBLE HOLDINGS & FINANCE LIMITED)"
+  },
+  {
+    "appName": "Efundzz",
+    "lender": "GODREJ FINANCE LIMITED (OLD NAME ENSEMBLE HOLDINGS & FINANCE LIMITED)"
+  },
+  {
+    "appName": "Godrej Personal Loan - Priority Money",
+    "lender": "GODREJ FINANCE LIMITED (OLD NAME ENSEMBLE HOLDINGS & FINANCE LIMITED)"
+  },
+  {
+    "appName": "Kosh24",
+    "lender": "GODREJ FINANCE LIMITED (OLD NAME ENSEMBLE HOLDINGS & FINANCE LIMITED)"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "GODREJ FINANCE LIMITED (OLD NAME ENSEMBLE HOLDINGS & FINANCE LIMITED)"
+  },
+  {
+    "appName": "Wecredit",
+    "lender": "GODREJ FINANCE LIMITED (OLD NAME ENSEMBLE HOLDINGS & FINANCE LIMITED)"
+  },
+  {
+    "appName": "Ashapurti Loans",
+    "lender": "GOLDEN LEGAND LEASING & FINANCE LTD."
+  },
+  {
+    "appName": "Capital Now",
+    "lender": "GOLDLINE FINANCE PVT LTD"
+  },
+  {
+    "appName": "Salaried Loan",
+    "lender": "GOPI SECURITIES PVT LTD."
+  },
+  {
+    "appName": "Finnable",
+    "lender": "GOSREE FINANCE LIMITED"
+  },
+  {
+    "appName": "Finflux by M2P",
+    "lender": "GREAVES FINANCE LIMITED"
+  },
+  {
+    "appName": "Meesho",
+    "lender": "GRESHMA FINVEST PRIVATE LIMITED"
+  },
+  {
+    "appName": "Turantloan",
+    "lender": "GRJ TRADES & FINANCE LTD."
+  },
+  {
+    "appName": "Ninja",
+    "lender": "GROMOR FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Pice",
+    "lender": "GROMOR FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Shiprocket",
+    "lender": "GROMOR FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Cashvia",
+    "lender": "GROW MONEY CAPITAL PVT LTD (FORMERLY ECLEAR LEASING & FINANCE PVT LTD)"
+  },
+  {
+    "appName": "FinEzzy",
+    "lender": "GROW MONEY CAPITAL PVT LTD (FORMERLY ECLEAR LEASING & FINANCE PVT LTD)"
+  },
+  {
+    "appName": "Lendingplate",
+    "lender": "GROW MONEY CAPITAL PVT LTD (FORMERLY ECLEAR LEASING & FINANCE PVT LTD)"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "GROW MONEY CAPITAL PVT LTD (FORMERLY ECLEAR LEASING & FINANCE PVT LTD)"
+  },
+  {
+    "appName": "OTO Capital",
+    "lender": "GROW MONEY CAPITAL PVT LTD (FORMERLY ECLEAR LEASING & FINANCE PVT LTD)"
+  },
+  {
+    "appName": "True Balance",
+    "lender": "GROW MONEY CAPITAL PVT LTD (FORMERLY ECLEAR LEASING & FINANCE PVT LTD)"
+  },
+  {
+    "appName": "Grownet Finance",
+    "lender": "GROWNET FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Groww App",
+    "lender": "GROWW CREDITSERV TECHNOLOGY PRIVATE LIMITED"
+  },
+  {
+    "appName": "Groww Credit",
+    "lender": "GROWW CREDITSERV TECHNOLOGY PRIVATE LIMITED"
+  },
+  {
+    "appName": "Groww Credit: Instant Loan App",
+    "lender": "GROWW CREDITSERV TECHNOLOGY PRIVATE LIMITED"
+  },
+  {
+    "appName": "CreditSea",
+    "lender": "GSB FINANCE LTD."
+  },
+  {
+    "appName": "Kredito24",
+    "lender": "GSD TRADING AND FINANCIAL SERVICES PVT. LTD"
+  },
+  {
+    "appName": "GS FINANCE : PERSONAL LOAN",
+    "lender": "G.S. LEASING & FINANCE PVT. LTD."
+  },
+  {
+    "appName": "Gyandhan Financial Service Private Limited",
+    "lender": "GYANDHAN FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Axio",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Branch- Personal Cash Loan App",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "CASHe",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "CRED",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "FatakPay",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Fibe",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Finnable Personal Loan App",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Finsall Resources Pvt Ltd.",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Flash app",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "FlexiLoans: Business Loans",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Inprime",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Jodo",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Khatabook App",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "KOSH",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Kreditbee",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Mobikwik",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Okcredit",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Olyv (SmartCoin)",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "PaywithRING (by Kissht)",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Slice",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "True Balance",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Upwards by Lendingkart.",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "WeRize Customer App",
+    "lender": "HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED"
+  },
+  {
+    "appName": "NANOKRED",
+    "lender": "HARSH TRACOM (P) LTD"
+  },
+  {
+    "appName": "Expessoloan",
+    "lender": "HARVINDER FINANCE COMPANY PRIVATE LIMITED"
+  },
+  {
+    "appName": "Fibe",
+    "lender": "HDB FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "ADOBE",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "DAP",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "DASH",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "FINAGG",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "FLUTTER",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "HDFC Bank Mobile Banking App",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "LEAD INSTA",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "LENTRA",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "LOAN ASSIST",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "NET BANKING",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "Novopay",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "One Andro app (DLA of LSP)",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "Paisabazaar App (DLA of LSP)",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "PayZapp",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "Salary Se App (DLA of LSP)",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "Xpress Car Loan (DIAL)",
+    "lender": "HDFC BANK LTD."
+  },
+  {
+    "appName": "FinAGG SME",
+    "lender": "HELPAGE FINLEASE LIMITED"
+  },
+  {
+    "appName": "Flipkart App",
+    "lender": "HERO FINCORP LIMITED"
+  },
+  {
+    "appName": "Hero Digital Lending & UPI App",
+    "lender": "HERO FINCORP LIMITED"
+  },
+  {
+    "appName": "Hero FinCorp Customer App",
+    "lender": "HERO FINCORP LIMITED"
+  },
+  {
+    "appName": "Hero FinCorp Digital UBL",
+    "lender": "HERO FINCORP LIMITED"
+  },
+  {
+    "appName": "Hero FinCorp Personal Loan App",
+    "lender": "HERO FINCORP LIMITED"
+  },
+  {
+    "appName": "MobiKwik : Loans, UPI & Wallet",
+    "lender": "HERO FINCORP LIMITED"
+  },
+  {
+    "appName": "PaisaBazar",
+    "lender": "HERO FINCORP LIMITED"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "HERO FINCORP LIMITED"
+  },
+  {
+    "appName": "BimaPay",
+    "lender": "HINDON MERCANTILE LIMITED"
+  },
+  {
+    "appName": "Finsall",
+    "lender": "HINDON MERCANTILE LIMITED"
+  },
+  {
+    "appName": "Kosh",
+    "lender": "HINDON MERCANTILE LIMITED"
+  },
+  {
+    "appName": "LOAN TAP",
+    "lender": "HINDON MERCANTILE LIMITED"
+  },
+  {
+    "appName": "UdaanCapital",
+    "lender": "HIVELOOP CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Home Credit Personal Loan App",
+    "lender": "HOME CREDIT INDIA FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "InstaCred by Flexmoney",
+    "lender": "HOME CREDIT INDIA FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "UrbanMoney",
+    "lender": "HYTONE MERCHANTS (P) LTD"
+  },
+  {
+    "appName": "IBL Finance Limited",
+    "lender": "IBL FINANCE LIMITED"
+  },
+  {
+    "appName": "IBL:Instant Personal Loan",
+    "lender": "IBL FINANCE LIMITED"
+  },
+  {
+    "appName": "IBL Money:Instant Loan App",
+    "lender": "IBL FINANCE LIMITED"
+  },
+  {
+    "appName": "Corporate Internet Banking",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "Digital Term Loan",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "Express Home Loan",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "Finfinity",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "iMobile (Android)",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "iMobile (IOS)",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "Insta BIL",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "InstaBIZ ( Android)",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "InstaBIZ (IOS)",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "InstaOD",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "Internet Banking (Retail and NRI)",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "OD on Asset",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "Online Asset Portal (OAP)",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "Unified Customer Journey",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "Zoop Money",
+    "lender": "ICICI BANK LIMITED"
+  },
+  {
+    "appName": "Bank's website",
+    "lender": "IDBI BANK LIMITED"
+  },
+  {
+    "appName": "Angel One",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "Cred",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "ET Money",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "Flipkart",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "Google Pay",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "Groww Credit",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "Groww: Stocks & Mutual Fund",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "IDFC FIRST BANK",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "INDmoney",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "InstaCred by Flexmoney",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "Navi Finserv Limited",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "NinjaCart",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "Ola Money",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "PhonePe",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "SaveIN",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "ShopSe",
+    "lender": "IDFC FIRST BANK LIMITED"
+  },
+  {
+    "appName": "Paisa Pop",
+    "lender": "IDF FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "IFL Gold Loan",
+    "lender": "IFL FINANCE LIMITED (FORMERLY KNOWN AS IFL HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Bridge2Capital",
+    "lender": "IIFL FINANCE LIMITED"
+  },
+  {
+    "appName": "IIFL Loans App",
+    "lender": "IIFL FINANCE LIMITED"
+  },
+  {
+    "appName": "Loantap",
+    "lender": "I-LOAN CREDIT PRIVATE LIMITED"
+  },
+  {
+    "appName": "Loantap - Personal Loan App",
+    "lender": "I-LOAN CREDIT PRIVATE LIMITED"
+  },
+  {
+    "appName": "iMSHAKTI (P2PL)",
+    "lender": "IMFAST FINFOTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "Bajaj Markets",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "BankSathi",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Bikewale",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "BillCut",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Buddy Loans",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Choice Connect",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Cready",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "CredBuddha",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Credilio Financial Technologies",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "CreditHaat",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "CreditLinks",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Finance Buddha",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "FinCrif",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Finlab.one",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Flipkart",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "GoodScore: Credit Score App (Rupicard)",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "GroMo",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "InCred Finance",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Infinz",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Jio Finance",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Match My Money",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Moneycontrol-ShareMarketNews",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "MoneyTap  and Freo",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "MyMoney Mantra",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "OLA Money",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Olyv",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Onescore",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Oolka",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "PaisaOne",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "PayInstaCard Private Limited",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Payrup",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Quid",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Ruloans",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Spoctree",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "True Balance",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "True Credit",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "Upswing",
+    "lender": "INCRED FINANCIAL SERVICES LIMITED (FORMERLY KKR INDIA FINANCIAL SERVICES LTD)"
+  },
+  {
+    "appName": "INDcredit Loan on Mutual Funds",
+    "lender": "INDCREDIT FINCAP PRIVATE LIMITED"
+  },
+  {
+    "appName": "INDmoney: Stocks, Mutual funds",
+    "lender": "INDCREDIT FINCAP PRIVATE LIMITED"
+  },
+  {
+    "appName": "ECONNECT / INDEL MONEY",
+    "lender": "INDEL MONEY LIMITED"
+  },
+  {
+    "appName": "Dhancash",
+    "lender": "IND GLOBAL SECURITIES LTD."
+  },
+  {
+    "appName": "Digital Lending Platform",
+    "lender": "INDIAN BANK"
+  },
+  {
+    "appName": "JanSamarth",
+    "lender": "INDIAN BANK"
+  },
+  {
+    "appName": "Maruti Suzuki Smart Finance",
+    "lender": "INDIAN BANK"
+  },
+  {
+    "appName": "One Card",
+    "lender": "INDIAN BANK"
+  },
+  {
+    "appName": "PM Vidya Laxmi",
+    "lender": "INDIAN BANK"
+  },
+  {
+    "appName": "UdyamiMitra",
+    "lender": "INDIAN BANK"
+  },
+  {
+    "appName": "Indifi Technologies Private Limited",
+    "lender": "INDIFI CAPITAL PRIVATE LIMITED (FORMERLY RIVIERA INVESTORS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Indifi Unsecured Business loan",
+    "lender": "INDIFI CAPITAL PRIVATE LIMITED (FORMERLY RIVIERA INVESTORS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "INDIFI CAPITAL PRIVATE LIMITED (FORMERLY RIVIERA INVESTORS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Mahila Money",
+    "lender": "INDIUMPLUS FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Business Loans (Small Ticket Business Loans)",
+    "lender": "INDUSIND BANK LTD"
+  },
+  {
+    "appName": "EasyCredit Personal Loans (DIY Platform)",
+    "lender": "INDUSIND BANK LTD"
+  },
+  {
+    "appName": "IndusInd Bank Mobile App- Indie",
+    "lender": "INDUSIND BANK LTD"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "INDUSIND BANK LTD"
+  },
+  {
+    "appName": "Creditas Solutions Private Limited",
+    "lender": "INDUSIND BANK LTD"
+  },
+  {
+    "appName": "50 Fin",
+    "lender": "INFINA FINANCE PVT. LTD."
+  },
+  {
+    "appName": "BharatPe for Business",
+    "lender": "INNOFIN SOLUTIONS PRIVATE LIMITED (NBFC - P2P)"
+  },
+  {
+    "appName": "CashE",
+    "lender": "INNOFIN SOLUTIONS PRIVATE LIMITED (NBFC - P2P)"
+  },
+  {
+    "appName": "Fi Money",
+    "lender": "INNOFIN SOLUTIONS PRIVATE LIMITED (NBFC - P2P)"
+  },
+  {
+    "appName": "FINBUD FINANCIAL SERVICES LIMITED",
+    "lender": "INNOFIN SOLUTIONS PRIVATE LIMITED (NBFC - P2P)"
+  },
+  {
+    "appName": "Indialends",
+    "lender": "INNOFIN SOLUTIONS PRIVATE LIMITED (NBFC - P2P)"
+  },
+  {
+    "appName": "InstaMoney",
+    "lender": "INNOFIN SOLUTIONS PRIVATE LIMITED (NBFC - P2P)"
+  },
+  {
+    "appName": "InstaVyapaar",
+    "lender": "INNOFIN SOLUTIONS PRIVATE LIMITED (NBFC - P2P)"
+  },
+  {
+    "appName": "Kredit Rupee",
+    "lender": "INNOFIN SOLUTIONS PRIVATE LIMITED (NBFC - P2P)"
+  },
+  {
+    "appName": "PayTM",
+    "lender": "INNOFIN SOLUTIONS PRIVATE LIMITED (NBFC - P2P)"
+  },
+  {
+    "appName": "Phonepe",
+    "lender": "INNOFIN SOLUTIONS PRIVATE LIMITED (NBFC - P2P)"
+  },
+  {
+    "appName": "Quid",
+    "lender": "INNOFIN SOLUTIONS PRIVATE LIMITED (NBFC - P2P)"
+  },
+  {
+    "appName": "Vodafone Idea",
+    "lender": "INNOFIN SOLUTIONS PRIVATE LIMITED (NBFC - P2P)"
+  },
+  {
+    "appName": "ZET TECHNOLABS PRIVATE LIMITED",
+    "lender": "INNOFIN SOLUTIONS PRIVATE LIMITED (NBFC - P2P)"
+  },
+  {
+    "appName": "Pocket Mitra",
+    "lender": "JAI FINANCE (INDIA) LTD."
+  },
+  {
+    "appName": "Truepay",
+    "lender": "JAIN FINSCAP PRIVATE LIMITED"
+  },
+  {
+    "appName": "Digital Loans",
+    "lender": "JAMMU & KASHMIR BANK LTD"
+  },
+  {
+    "appName": "STP",
+    "lender": "JAMMU & KASHMIR BANK LTD"
+  },
+  {
+    "appName": "Loan in Seconds",
+    "lender": "JINDAL FINCAP LTD."
+  },
+  {
+    "appName": "Bajaj Finserv Direct Limited",
+    "lender": "JIO CREDIT LIMITED (FORMERLY KNOWN AS JIO FINANCE LIMITED)"
+  },
+  {
+    "appName": "SYNERGENIUS GROWTH PRIVATE LIMITED",
+    "lender": "JIO CREDIT LIMITED (FORMERLY KNOWN AS JIO FINANCE LIMITED)"
+  },
+  {
+    "appName": "Jio Finance Platform and Service Limited",
+    "lender": "JIO CREDIT LIMITED (FORMERLY KNOWN AS JIO FINANCE LIMITED)"
+  },
+  {
+    "appName": "Paisabazaar Marketing and Consulting Private Limited",
+    "lender": "JIO CREDIT LIMITED (FORMERLY KNOWN AS JIO FINANCE LIMITED)"
+  },
+  {
+    "appName": "Ausha Digital Pvt Ltd",
+    "lender": "JIO CREDIT LIMITED (FORMERLY KNOWN AS JIO FINANCE LIMITED)"
+  },
+  {
+    "appName": "JioFinance: For your life!",
+    "lender": "JIO FINANCE LIMITED"
+  },
+  {
+    "appName": "Credit Fair",
+    "lender": "JM FINANCIAL PRODUCTS LTD. (FORMERLY - JM FINANCIAL PRODUCTS PVT LTD)"
+  },
+  {
+    "appName": "Leo1",
+    "lender": "JM FINANCIAL PRODUCTS LTD. (FORMERLY - JM FINANCIAL PRODUCTS PVT LTD)"
+  },
+  {
+    "appName": "Propelld",
+    "lender": "JM FINANCIAL PRODUCTS LTD. (FORMERLY - JM FINANCIAL PRODUCTS PVT LTD)"
+  },
+  {
+    "appName": "MONEYBRO",
+    "lender": "JMJ FINTECH LIMITED"
+  },
+  {
+    "appName": "N.A.",
+    "lender": "J. P. MORGAN SECURITIES INDIA PVT. LTD."
+  },
+  {
+    "appName": "EARLY WAGES",
+    "lender": "JUNOON CAPITAL SERVICES (P) LTD."
+  },
+  {
+    "appName": "INSTA PAISE",
+    "lender": "JUNOON CAPITAL SERVICES (P) LTD."
+  },
+  {
+    "appName": "PAISA UDHAR",
+    "lender": "JUNOON CAPITAL SERVICES (P) LTD."
+  },
+  {
+    "appName": "REFYNE",
+    "lender": "JUNOON CAPITAL SERVICES (P) LTD."
+  },
+  {
+    "appName": "Ippopay",
+    "lender": "KALEIDOFIN CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Payd24",
+    "lender": "KAMAL RENU CREDIT & INVEST PVT.LTD."
+  },
+  {
+    "appName": "Fund by Khera",
+    "lender": "KANTA CREDITS & HOLDINGS PVT.LTD,"
+  },
+  {
+    "appName": "FUNDLY",
+    "lender": "KARAMJYOTI SALES (P) LTD"
+  },
+  {
+    "appName": "DGV Money",
+    "lender": "KARNATAKA BANK LTD"
+  },
+  {
+    "appName": "NAVI TREZO",
+    "lender": "KARNATAKA BANK LTD"
+  },
+  {
+    "appName": "Xpress Cash Loan",
+    "lender": "KARNATAKA BANK LTD"
+  },
+  {
+    "appName": "Salaryontime",
+    "lender": "KARN SECURITIES PVT.LTD."
+  },
+  {
+    "appName": "1",
+    "lender": "KARUR VYSYA BANK LTD"
+  },
+  {
+    "appName": "2",
+    "lender": "KARUR VYSYA BANK LTD"
+  },
+  {
+    "appName": "3",
+    "lender": "KARUR VYSYA BANK LTD"
+  },
+  {
+    "appName": "4",
+    "lender": "KARUR VYSYA BANK LTD"
+  },
+  {
+    "appName": "5",
+    "lender": "KARUR VYSYA BANK LTD"
+  },
+  {
+    "appName": "Salaryontime",
+    "lender": "KASAR CREDIT & CAPITAL PVT.LTD."
+  },
+  {
+    "appName": "Finsall",
+    "lender": "KAUNSHYA INVESTMENTS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Well Money",
+    "lender": "KEMEX ENGINEERING (P) LTD"
+  },
+  {
+    "appName": "Digicredit",
+    "lender": "KHOSYA FINLEASE (P) LTD."
+  },
+  {
+    "appName": "GLAAS",
+    "lender": "KINARA CAPITAL PRIVATE LIMITED [FORMERLY KNOWN AS VISAGE HOLDINGS AND FINANCE PRIVATE LIMITED]"
+  },
+  {
+    "appName": "Khatabook",
+    "lender": "KINARA CAPITAL PRIVATE LIMITED [FORMERLY KNOWN AS VISAGE HOLDINGS AND FINANCE PRIVATE LIMITED]"
+  },
+  {
+    "appName": "GLAAS",
+    "lender": "KINARA CAPITAL PRIVATE LIMITED (FORMERLY  VISAGE HOLDINGS AND FINANCE PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Khatabook",
+    "lender": "KINARA CAPITAL PRIVATE LIMITED (FORMERLY  VISAGE HOLDINGS AND FINANCE PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Credit Saison India",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Airtel Thanks App",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Angel One",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Bajaj Markets",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Bharatpe for Business",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "CRED",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Digital lending pages of PhonePe Lending on PhonePe consumer app",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "EFundzz",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Fibe",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "FlexiLoans",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Freo",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "FTCash",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Groww",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Groww Credit",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "INDmoney",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "JAR",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Jupiter",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "KreditBee",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Lendingkart: Business Loan App",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Mint Money",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Mobikwik",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "MoneyAse",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Moneycontrol",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Money Tap",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "MoneyView",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Navi",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Niro",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Nobroker",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Ola Money",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "One Score",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Park+",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paysense",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paytm App",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paytm for Business",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Propelld",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Saarathi",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Supermoney",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Uni Cards:Next-gen cards & Paychek",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "ZestMoney",
+    "lender": "KISETSU SAISON FINANCE (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "b4salary",
+    "lender": "KISGA LEASING & FINANCE PVT. LTD."
+  },
+  {
+    "appName": "ScoreLoan",
+    "lender": "KISGA LEASING & FINANCE PVT. LTD."
+  },
+  {
+    "appName": "MoneyFatafat",
+    "lender": "KISGA LEASING & FINANCE PVT. LTD."
+  },
+  {
+    "appName": "Rupeeplant",
+    "lender": "KISSANDHAN AGRI FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "The Cashero",
+    "lender": "KISSANDHAN AGRI FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Fixofin",
+    "lender": "KNAB FINANCE ADVISORS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Freo",
+    "lender": "KOMAC INVESTMENTS & FINANCE PVT. LTD."
+  },
+  {
+    "appName": "IFHL",
+    "lender": "KOMAC INVESTMENTS & FINANCE PVT. LTD."
+  },
+  {
+    "appName": "MoneyTap",
+    "lender": "KOMAC INVESTMENTS & FINANCE PVT. LTD."
+  },
+  {
+    "appName": "NIRA",
+    "lender": "KOMAC INVESTMENTS & FINANCE PVT. LTD."
+  },
+  {
+    "appName": "Android - Kotak Bank 811 Mobile App",
+    "lender": "KOTAK MAHINDRA BANK LTD."
+  },
+  {
+    "appName": "Android - Kotak Bank (New)",
+    "lender": "KOTAK MAHINDRA BANK LTD."
+  },
+  {
+    "appName": "Android -Kotak Bank (Old)",
+    "lender": "KOTAK MAHINDRA BANK LTD."
+  },
+  {
+    "appName": "IOS - Kotak Bank: 811 Mobile App",
+    "lender": "KOTAK MAHINDRA BANK LTD."
+  },
+  {
+    "appName": "IOS - Kotak Bank (New)",
+    "lender": "KOTAK MAHINDRA BANK LTD."
+  },
+  {
+    "appName": "IOS - Kotak Bank (Old)",
+    "lender": "KOTAK MAHINDRA BANK LTD."
+  },
+  {
+    "appName": "Kotak Net Banking",
+    "lender": "KOTAK MAHINDRA BANK LTD."
+  },
+  {
+    "appName": "Kotak PLCC Pre-login Page",
+    "lender": "KOTAK MAHINDRA BANK LTD."
+  },
+  {
+    "appName": "Kotak PL Pre-Login Webpage",
+    "lender": "KOTAK MAHINDRA BANK LTD."
+  },
+  {
+    "appName": "KMPL DIY Loans for pre-approved customers",
+    "lender": "KOTAK MAHINDRA PRIME LTD."
+  },
+  {
+    "appName": "ABCD Aditya Birla Capital App",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Airtel Thanks App",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Angel One",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Bajaj Finserv Market",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Bajaj Finserv Markets Loan App",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Cready",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "CRED",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "CreditFit",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "CreditHaat",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "CreditLinks",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Creditmantri",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Digital Lending Pages of PhonePe Lending on PhonePe Business: Merchant App",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "DigitMoney",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Fibe",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Finance Buddha",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Freo",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Gromo",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Indialends",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Jio Finance Platform and Service Limited",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Kreditbee",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Kreditzy",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Loantap",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Meesho Payments Private Limited",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Mobikwik",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Moneycontrol",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "PayTM",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Pice",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "super.money",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "super.money (Lending pages of Flipkart online shopping App)",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Tata Neu",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Website of Exponent One (www.exponent-one.com)",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "WeCredit",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Wishfin",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "ZET",
+    "lender": "KRAZYBEE SERVICES LIMITED (EARLIER KNOWN AS KRAZYBEE SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "ABCD Aditya Birla Capital App",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Airtel Thanks App",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Angel One",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Bajaj Finserv Market",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Bajaj Finserv Markets Loan App",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "CreditFit",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "CreditMantri",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Fibe",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Indialends",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Kreditbee",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Kreditzy",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Mobikwik",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Moneycontrol",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "PayTM",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Tata Neu",
+    "lender": "KRAZYBEE SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "StuCred",
+    "lender": "KREON FINNANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Kubiz: Loan App, Instant Cash",
+    "lender": "KUBIZ CAPITAL PRIVATE LIMITED(PREVIOUSLY QUEST FINLEASE PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Oro Money",
+    "lender": "KUMBHAT FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Bharat Khata",
+    "lender": "KUSHAL FINNOVATION CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "DEZIRELOAN",
+    "lender": "LABHKARI FINCAP PVT.LTD."
+  },
+  {
+    "appName": "GetitNow",
+    "lender": "LAKME INVESTMENT & FINANCE LTD"
+  },
+  {
+    "appName": "Naukri Loans",
+    "lender": "LAXMI INFIN (P) LTD."
+  },
+  {
+    "appName": "Bajaj Finserv",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "Bajaj Markets",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "Buddyloan",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "CreditLinks",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "Faircent",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "Finlab",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "FLEXILOANS",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "ftcash",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "Lendingkart Android Mobile App",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "Lendingkart Finance Limited",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "Minutesbazaar",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "Open.money",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "paisabazaar.com",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "Pb-CreditScore, CreditCard, Loans",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "Upwards",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "Walkfin",
+    "lender": "LENDINGKART FINANCE LIMITED (FORMERLY AADRI INFIN LIMITED)"
+  },
+  {
+    "appName": "Aspire Fintech Private Limited",
+    "lender": "LIGHT MICRO FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "GLAAS",
+    "lender": "LIGHT MICRO FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Ippostore",
+    "lender": "LIGHT MICRO FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Kosh Loan",
+    "lender": "LIGHT MICRO FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "LightMoneyIN",
+    "lender": "LIGHT MICRO FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Ono Ark India Pvt. Ltd.",
+    "lender": "LIGHT MICRO FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Lionlender-Loan App",
+    "lender": "LIONLENDER FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Jahtpat Cash",
+    "lender": "LOAN2GROW FINCAP PRIVATE LIMITED"
+  },
+  {
+    "appName": "L2G One",
+    "lender": "LOAN2GROW FINCAP PRIVATE LIMITED"
+  },
+  {
+    "appName": "Learnitya",
+    "lender": "LOAN2GROW FINCAP PRIVATE LIMITED"
+  },
+  {
+    "appName": "Rupee Yatra",
+    "lender": "LOAN2GROW FINCAP PRIVATE LIMITED"
+  },
+  {
+    "appName": "Loantap",
+    "lender": "LOANTAP CREDIT PRODUCTS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Loantap - Personal Loan App",
+    "lender": "LOANTAP CREDIT PRODUCTS PRIVATE LIMITED"
+  },
+  {
+    "appName": "LokSuvidha",
+    "lender": "LOK SUVIDHA FINANCE LTD"
+  },
+  {
+    "appName": "Prest Loans",
+    "lender": "LORD KRISHNA FINANCIAL SERVICES LTD,"
+  },
+  {
+    "appName": "Equall",
+    "lender": "LTCV CREDIT PRIVATE LIMITED"
+  },
+  {
+    "appName": "Finance Buddha",
+    "lender": "LTCV CREDIT PRIVATE LIMITED"
+  },
+  {
+    "appName": "Airtel App",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Amazon",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Bajajfinservmarkets",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "BHIM",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Billcut",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Cred",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "CreditFit",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Financebuddha",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Google Pay",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "IndiaLends",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "IndiaLends - Instant Loan App",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "INDmoney",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "L&T Finance - Personal Loans",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "L&T Finance PLANET  (Servicing app and redirection to Personal Loan web journey)",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "MobiKwik",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Moneycontrol - Markets & News",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Moneycontrolpay",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Moneycontrol-Share Market News",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Paisa Bazaar",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Paisabazaar.com",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Phonepe",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Super Money",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Upswing",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "Urban Money Partner",
+    "lender": "L&T FINANCE LIMITED (FORMERLY L&T FINANCE HOLDINGS LIMITED)"
+  },
+  {
+    "appName": "MudraFast Cash-Personal Loan",
+    "lender": "LUCKY HOLDINGS  PVT.  LTD."
+  },
+  {
+    "appName": "ShubhLoan-Personal Loan App",
+    "lender": "LUCKY HOLDINGS  PVT.  LTD."
+  },
+  {
+    "appName": "VegaCash: Personal Loan",
+    "lender": "LUCKY HOLDINGS  PVT.  LTD."
+  },
+  {
+    "appName": "ezee",
+    "lender": "LULU FINANCIAL SERVICES (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Lenditt",
+    "lender": "MADHUR INSTALMENTS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Credit Mines",
+    "lender": "MAHAN INDUSTRIES LIMITED"
+  },
+  {
+    "appName": "Sabka Loan",
+    "lender": "MAHASHAKTI FINANCIERS LTD"
+  },
+  {
+    "appName": "MAHAUTKARSH SECURITIES & FINANCE PVT. LTD",
+    "lender": "MAHAUTKARSH SECURITIES & FINANCE PVT. LTD"
+  },
+  {
+    "appName": "Credit4Sure Pro",
+    "lender": "MAHAVIRA FINLEASE LIMITED"
+  },
+  {
+    "appName": "PlanMate Loan EMI Calculator",
+    "lender": "MAHAVIRA FINLEASE LIMITED"
+  },
+  {
+    "appName": "Customer Portal",
+    "lender": "MAHINDRA & MAHINDRA FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Mahindra Finance",
+    "lender": "MAHINDRA & MAHINDRA FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Mahindra Finance: Loans & FD",
+    "lender": "MAHINDRA & MAHINDRA FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Personal Loan",
+    "lender": "MAHINDRA & MAHINDRA FINANCIAL SERVICES LTD"
+  },
+  {
+    "appName": "Manappuram Gold Loan OGL Lite",
+    "lender": "MANAPPURAM FINANCE LIMITED"
+  },
+  {
+    "appName": "Manappuram OGL",
+    "lender": "MANAPPURAM FINANCE LIMITED"
+  },
+  {
+    "appName": "Manappuram OGL Lite",
+    "lender": "MANAPPURAM FINANCE LIMITED"
+  },
+  {
+    "appName": "Manappuram OGL Main",
+    "lender": "MANAPPURAM FINANCE LIMITED"
+  },
+  {
+    "appName": "Manappuram Personal Loan",
+    "lender": "MANAPPURAM FINANCE LIMITED"
+  },
+  {
+    "appName": "MCFL Loans",
+    "lender": "MANGAL CREDIT AND FINCORP LIMITED"
+  },
+  {
+    "appName": "Manipal Fincap - Loan App",
+    "lender": "MANIPAL FINCAP PRIVATE LIMITED (EARLIER KNOWN AS SIMPLEPAY FINANCE PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Quikkred",
+    "lender": "MAPLE MERCANTILE PVT LTD"
+  },
+  {
+    "appName": "?Eduvanz – Quick Education Loan",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Loantap - Personal Loan App & Ltcash",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Intellend",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Kreditbee",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Kissht",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Kissht IOS",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Ring",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Unnatti",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Lendingkart: Business Loan",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Svcl Sarthi",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Werize Customer App",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Prefr",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Grox technologies pvt ltd (Formerly MyShubhlife)",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "PhonePe Business : Merchant App",
+    "lender": "MAS FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "SalaryNow",
+    "lender": "MAXEMO CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Direct Credit Loan app",
+    "lender": "MEET FINANCE PVT. LTD."
+  },
+  {
+    "appName": "Cash247",
+    "lender": "MEGHDOOT MERCANTILE  PVT.  LTD."
+  },
+  {
+    "appName": "CreditSea",
+    "lender": "MEGHDOOT MERCANTILE  PVT.  LTD."
+  },
+  {
+    "appName": "GoCredit",
+    "lender": "MEGHDOOT MERCANTILE  PVT.  LTD."
+  },
+  {
+    "appName": "GrowFi loan aggregator app",
+    "lender": "MEGHDOOT MERCANTILE  PVT.  LTD."
+  },
+  {
+    "appName": "Nest",
+    "lender": "MEGHDOOT MERCANTILE  PVT.  LTD."
+  },
+  {
+    "appName": "Paisa247",
+    "lender": "MEGHDOOT MERCANTILE  PVT.  LTD."
+  },
+  {
+    "appName": "Rupeeq.com",
+    "lender": "MEGHDOOT MERCANTILE  PVT.  LTD."
+  },
+  {
+    "appName": "Samridhya",
+    "lender": "MEGHDOOT MERCANTILE  PVT.  LTD."
+  },
+  {
+    "appName": "Swipe Loan",
+    "lender": "MEGHDOOT MERCANTILE  PVT.  LTD."
+  },
+  {
+    "appName": "Urban Money",
+    "lender": "MEGHDOOT MERCANTILE  PVT.  LTD."
+  },
+  {
+    "appName": "ZET",
+    "lender": "MEGHDOOT MERCANTILE  PVT.  LTD."
+  },
+  {
+    "appName": "MidFin Customer Service App",
+    "lender": "MIDLAND MICROFIN LIMITED (FORMERLY  SAJAN HIRE PURCHASE LIMITED)"
+  },
+  {
+    "appName": "Fibe",
+    "lender": "MIRAE ASSET FINANCIAL SERVICES (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Grayquest Education Finance Pvt Ltd",
+    "lender": "MIRAE ASSET FINANCIAL SERVICES (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Kissht",
+    "lender": "MIRAE ASSET FINANCIAL SERVICES (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Kreditbee",
+    "lender": "MIRAE ASSET FINANCIAL SERVICES (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Mirae Asset Fin: Loans",
+    "lender": "MIRAE ASSET FINANCIAL SERVICES (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Pay with Ring",
+    "lender": "MIRAE ASSET FINANCIAL SERVICES (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Vitto",
+    "lender": "MITRATA INCLUSIVE FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "Monedo Financial Services Private Limited",
+    "lender": "MONEDO FINANCIAL SERVICES PRIVATE LIMITED (FORMERLY KREDITECH FINANCIAL SERVICES P LTD)"
+  },
+  {
+    "appName": "bachatt",
+    "lender": "MONEYBOXX FINANCE LIMITED"
+  },
+  {
+    "appName": "Crednidhi",
+    "lender": "MONEY FLOW PORTFOLIO(P) LTD."
+  },
+  {
+    "appName": "Udhaar Box",
+    "lender": "MONEYPLUS FINANCIAL SERVICES LIMITED (EARLIER KNOWN AS MONEYPLUS FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "SMC Gold Loan",
+    "lender": "MONEYWISE FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Money Monk App",
+    "lender": "MONK CAPITAL PVT. LTD. (FORMERLY GLAZE BARTER PVT. LTD.)"
+  },
+  {
+    "appName": "MoneyAse",
+    "lender": "MOONGIPA CAPITAL FINANCE LTD."
+  },
+  {
+    "appName": "Cash To You",
+    "lender": "MOUNT SHIKHAR FINANCIAL SERVICES LIMITED"
+  },
+  {
+    "appName": "mPokket: Instant Loan App",
+    "lender": "MPOKKET  FINANCIAL  SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "mPokket: Instant Personal Loan",
+    "lender": "MPOKKET  FINANCIAL  SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Bimapay",
+    "lender": "MUFIN GREEN FINANCE LIMITED(FORMERLY  APM FINVEST LIMITED)"
+  },
+  {
+    "appName": "Instape",
+    "lender": "MUFIN GREEN FINANCE LIMITED(FORMERLY  APM FINVEST LIMITED)"
+  },
+  {
+    "appName": "CREDITBAY",
+    "lender": "MUKESH BABU FINANCIAL SERVICES LTD,"
+  },
+  {
+    "appName": "LEAF COIN",
+    "lender": "MUKUT FINVEST AND PROPOERTIES PVT.LTD."
+  },
+  {
+    "appName": "MUTHOOT FINCORP ONE",
+    "lender": "MUTHOOT CAPITAL SERVICES LTD."
+  },
+  {
+    "appName": "airpay capital",
+    "lender": "MUTHOOT FINCORP LIMITED (FORMERLY  MUTHOOT DEBT MANAGEMENT SERVICES LTD)"
+  },
+  {
+    "appName": "BankBazaar",
+    "lender": "MUTHOOT FINCORP LIMITED (FORMERLY  MUTHOOT DEBT MANAGEMENT SERVICES LTD)"
+  },
+  {
+    "appName": "BharatPe for Business",
+    "lender": "MUTHOOT FINCORP LIMITED (FORMERLY  MUTHOOT DEBT MANAGEMENT SERVICES LTD)"
+  },
+  {
+    "appName": "Digital lending pages of PhonePe Lending on PhonePe Business: Merchant App",
+    "lender": "MUTHOOT FINCORP LIMITED (FORMERLY  MUTHOOT DEBT MANAGEMENT SERVICES LTD)"
+  },
+  {
+    "appName": "ePayLater",
+    "lender": "MUTHOOT FINCORP LIMITED (FORMERLY  MUTHOOT DEBT MANAGEMENT SERVICES LTD)"
+  },
+  {
+    "appName": "Kredmint",
+    "lender": "MUTHOOT FINCORP LIMITED (FORMERLY  MUTHOOT DEBT MANAGEMENT SERVICES LTD)"
+  },
+  {
+    "appName": "Muthoot FinCorp One",
+    "lender": "MUTHOOT FINCORP LIMITED (FORMERLY  MUTHOOT DEBT MANAGEMENT SERVICES LTD)"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "MUTHOOT FINCORP LIMITED (FORMERLY  MUTHOOT DEBT MANAGEMENT SERVICES LTD)"
+  },
+  {
+    "appName": "Spice Money -Banking Agent App",
+    "lender": "MUTHOOT FINCORP LIMITED (FORMERLY  MUTHOOT DEBT MANAGEMENT SERVICES LTD)"
+  },
+  {
+    "appName": "WOGOM B2B Marketplace",
+    "lender": "MUTHOOT FINCORP LIMITED (FORMERLY  MUTHOOT DEBT MANAGEMENT SERVICES LTD)"
+  },
+  {
+    "appName": "Kisan nXt  App",
+    "lender": "NABKISAN FINANCE LIMITED"
+  },
+  {
+    "appName": "CashPey – India’s Own Loan App",
+    "lender": "NAMAN COMMODITIES (P) LTD"
+  },
+  {
+    "appName": "DayToDayLoan",
+    "lender": "NAMAN COMMODITIES (P) LTD"
+  },
+  {
+    "appName": "Lendingrupee",
+    "lender": "NAMAN COMMODITIES (P) LTD"
+  },
+  {
+    "appName": "Cred my loan",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "Dhansaar",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "Dhanvarsha",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "FingoLoan",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "Flashsalary",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "Fundsalary",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "Fundsbull",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "Groceryloan",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "Loan is On",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "Patakaloan",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "QUA Loan",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "QuickDhan",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "Rupee Raftar",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "Salary Vibe",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "Tej Rupiyaa",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "Zaylo Loan",
+    "lender": "NAMAN FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "CashNandi - Instant Loan App",
+    "lender": "NAPEAN FINVEST PVT. LTD."
+  },
+  {
+    "appName": "GoldBridge Loan-Line of Credit",
+    "lender": "NAPEAN FINVEST PVT. LTD."
+  },
+  {
+    "appName": "KuberCash: Personal Loan App",
+    "lender": "NAPEAN FINVEST PVT. LTD."
+  },
+  {
+    "appName": "NexLoan-Credit Loop",
+    "lender": "NAPEAN FINVEST PVT. LTD."
+  },
+  {
+    "appName": "PaisaCash-Personal Credit",
+    "lender": "NAPEAN FINVEST PVT. LTD."
+  },
+  {
+    "appName": "LOANZO",
+    "lender": "NARAINSONS INVESTMENTS FINANCE & CONSULTANCY PVT. LTD."
+  },
+  {
+    "appName": "Kosh Loan App",
+    "lender": "NARENDRA FINANCE CO PVT LTD"
+  },
+  {
+    "appName": "Navi Finserv Limited",
+    "lender": "NAVI FINSERV LIMITED"
+  },
+  {
+    "appName": "Lendplus",
+    "lender": "NAVIN BROTHERS (P) LTD"
+  },
+  {
+    "appName": "The EMI Club",
+    "lender": "NAVKAR NIVESH PRIVATE LIMITED"
+  },
+  {
+    "appName": "The EMI Club - Dealer App",
+    "lender": "NAVKAR NIVESH PRIVATE LIMITED"
+  },
+  {
+    "appName": "Fundongo",
+    "lender": "NEENA IMPEX PVT.LTD."
+  },
+  {
+    "appName": "Instarupees",
+    "lender": "NEENA IMPEX PVT.LTD."
+  },
+  {
+    "appName": "Loaninpocket",
+    "lender": "NEENA IMPEX PVT.LTD."
+  },
+  {
+    "appName": "Loanprime",
+    "lender": "NEENA IMPEX PVT.LTD."
+  },
+  {
+    "appName": "Rupeecare",
+    "lender": "NEENA IMPEX PVT.LTD."
+  },
+  {
+    "appName": "Loanflix",
+    "lender": "NEENA IMPEX PVT.LTD."
+  },
+  {
+    "appName": "NeoCash Insta",
+    "lender": "NEOGROWTH CREDIT PRIVATE LIMITED"
+  },
+  {
+    "appName": "NeoGrowth App",
+    "lender": "NEOGROWTH CREDIT PRIVATE LIMITED"
+  },
+  {
+    "appName": "CRED",
+    "lender": "NEWTAP FINANCE PRIVATE LIMITED (FORMERLY PARFAIT FINANCE & INVESTMENTS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "GoCredit",
+    "lender": "NICE FINANCE AND LEASING PRIVATE LIMITED"
+  },
+  {
+    "appName": "GrowFi loan aggregator app",
+    "lender": "NICE FINANCE AND LEASING PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paizo",
+    "lender": "NICE FINANCE AND LEASING PRIVATE LIMITED"
+  },
+  {
+    "appName": "StrikeLoan",
+    "lender": "NICE FINANCE AND LEASING PRIVATE LIMITED"
+  },
+  {
+    "appName": "Swipe Loan",
+    "lender": "NICE FINANCE AND LEASING PRIVATE LIMITED"
+  },
+  {
+    "appName": "Zenzy",
+    "lender": "NICE FINANCE AND LEASING PRIVATE LIMITED"
+  },
+  {
+    "appName": "Sunny Rupee - Personal Loan",
+    "lender": "NISHTHA LEASING PVT LTD."
+  },
+  {
+    "appName": "Cashpe",
+    "lender": "NISKHA FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Customer Self Service Portal",
+    "lender": "NISSAN RENAULT FINANCIAL SERVICES INDIA PRIVATE LIMITED"
+  },
+  {
+    "appName": "Group Employee Personal Loans",
+    "lender": "NISSAN RENAULT FINANCIAL SERVICES INDIA PRIVATE LIMITED"
+  },
+  {
+    "appName": "Smart Finance Platform",
+    "lender": "NISSAN RENAULT FINANCIAL SERVICES INDIA PRIVATE LIMITED"
+  },
+  {
+    "appName": "CAPITAL CONNECT",
+    "lender": "NIYOGIN FINTECH LIMITED"
+  },
+  {
+    "appName": "Finsall",
+    "lender": "NIYOGIN FINTECH LIMITED"
+  },
+  {
+    "appName": "GLAAS",
+    "lender": "NIYOGIN FINTECH LIMITED"
+  },
+  {
+    "appName": "Karmalife",
+    "lender": "NIYOGIN FINTECH LIMITED"
+  },
+  {
+    "appName": "Khatabook",
+    "lender": "NIYOGIN FINTECH LIMITED"
+  },
+  {
+    "appName": "MEESHO",
+    "lender": "NIYOGIN FINTECH LIMITED"
+  },
+  {
+    "appName": "NINJA",
+    "lender": "NIYOGIN FINTECH LIMITED"
+  },
+  {
+    "appName": "NIRA FINANCE",
+    "lender": "NIYOGIN FINTECH LIMITED"
+  },
+  {
+    "appName": "NYE",
+    "lender": "NIYOGIN FINTECH LIMITED"
+  },
+  {
+    "appName": "Payme",
+    "lender": "NIYOGIN FINTECH LIMITED"
+  },
+  {
+    "appName": "NJ Capital Private Limited",
+    "lender": "NJ CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "NJ Financial Services Private Limited",
+    "lender": "NJ CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Kredito24",
+    "lender": "NORTH EAST HIRE PURCHASE COMPANY(INDIA)PVT LTD."
+  },
+  {
+    "appName": "Branch-Instant Personal Loan",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "CASHe",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "CASHe: Online Instant Loan App",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "CASHe:Quick Personal Loan App",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Fatakpay Digital Private Limited",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Fibe Quick, Easy Personal Loan",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Finnable: Personal Loan App",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Indifi Technologies Pvt Ltd",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Indifi Unsecured Business loan",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Kissht",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Kissht IOS",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "KreditBee",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "KreditBee - Instant Personal Loan Online",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "KreditBee - Instant Personal Loan Online App",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "KreditBee: Personal Loan App",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Lendingkart",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Lendingkart: Business Loan App",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Mobikwik",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "MobiKwik: BHIM UPI Wallet",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Moneyview: Loans, Credit Cards",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Moneyview: UPI, Personal Loans",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Moneyview: UPI, Personal Loans, Credit",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Navi Finserv limited",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "NIRA Instant Personal Loan App",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "NORTHERN ARC CAPITAL LIMITED",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Olyv: Loans & Credit Score",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Olyv (SmartCoin) Personal Loan",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "OTO: Buy Bikes at lowest price",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "OTO Capital",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Paytm for Business",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Ring",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Slice",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Slice: bank at RBI repo rate",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Stashfin",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Stashfin: Loans, Bonds More",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Stashfin Personal Loan Bonds",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "TrueBalance-Personal Loan, UPI",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Unicard",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Uni Cards",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "Uni : GoldX NX Credit Card",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "WeRize Customer App",
+    "lender": "NORTHERN ARC CAPITAL LIMITED"
+  },
+  {
+    "appName": "mobiCred",
+    "lender": "ORICRED FINSERV PRIVATE LIMITED"
+  },
+  {
+    "appName": "Instaclaus",
+    "lender": "ORIENTAL FINSTOCK SERVICES  PVT.LTD"
+  },
+  {
+    "appName": "KARROFIN",
+    "lender": "ORRISH FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "MYINSTACASH",
+    "lender": "ORRISH FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "ORRISH LOANS",
+    "lender": "ORRISH FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "CashPo",
+    "lender": "ORRISH FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Aryse Fin",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Bahi Khata Loans",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Buddy Loans",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "CarePal",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Carepay",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Cash By Cred",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "ClaimFriendy",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Cready",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Credifit",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Easypay",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Finnova",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Instacred",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Jio Finance",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Juspay-Hypercredit",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Medscred",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Money Control",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Muthoot FinCorp ONE",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Nobroker",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Ola Money",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Prefr",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Shopse",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Tata Neu",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Zype",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "BharatPe for Business",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Fibe",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Kreditbee",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "True Balance",
+    "lender": "OXYZO FINANCIAL SERVICES LIMITED (FORMERLY KNOWN AS OXYZO FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "BharatPe for Business",
+    "lender": "OXYZO FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Fibe",
+    "lender": "OXYZO FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Kreditbee",
+    "lender": "OXYZO FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "OXYZO FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Stashfin",
+    "lender": "OXYZO FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "True Balance",
+    "lender": "OXYZO FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "BRIDGE",
+    "lender": "PADMALAYA FINSERVE PRIVATE LIMITED"
+  },
+  {
+    "appName": "FatakPay Digital Private Limited",
+    "lender": "PAHAL FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Glaas",
+    "lender": "PAHAL FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Pahal Pe",
+    "lender": "PAHAL FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Genz Paisa",
+    "lender": "PANAFIC INDUSTRIALS LTD"
+  },
+  {
+    "appName": "NANOKRED",
+    "lender": "P.A. SECURITIES PVT. LTD."
+  },
+  {
+    "appName": "Ayushmaan",
+    "lender": "PAWANSUT HOLDINGS LIMITED"
+  },
+  {
+    "appName": "Dhan Pocket",
+    "lender": "PAWANSUT HOLDINGS LIMITED"
+  },
+  {
+    "appName": "Fincube",
+    "lender": "PAWANSUT HOLDINGS LIMITED"
+  },
+  {
+    "appName": "Minutes Loan",
+    "lender": "PAWANSUT HOLDINGS LIMITED"
+  },
+  {
+    "appName": "Rocketspeedloan",
+    "lender": "PAWANSUT HOLDINGS LIMITED"
+  },
+  {
+    "appName": "Salary4Sure",
+    "lender": "PAWANSUT HOLDINGS LIMITED"
+  },
+  {
+    "appName": "Topspeedloan",
+    "lender": "PAWANSUT HOLDINGS LIMITED"
+  },
+  {
+    "appName": "Zaroorat Loans",
+    "lender": "PAWANSUT HOLDINGS LIMITED"
+  },
+  {
+    "appName": "PayMe",
+    "lender": "PAYME INDIA FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Bajaj Markets",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "BharatPe for Business",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "Digital Lending Application pages powered by Service Provider on Flipkart Online Shopping App",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "Flexicash",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "FT Cash",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "Kiwi",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "Kreditbee",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "LazyPay",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "Meesho",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "Mobikwik",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "MONEY VIEW LOANS PERSONAL LOAN APP INSTANT LOAN",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "Nira",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "Olyv (Smartcoin)",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "PaySense",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "Phone Pe",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "Revenue Based Financing For Digital First Brands - Shiprocket Capital",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "Swiggy Financial Services",
+    "lender": "PAYU FINANCE INDIA PRIVATE LIMITED (FORMERLY KNOWN AS SIDVIK LEASING PVT. LTD.)"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "PIRAMAL ENTERPRISES LIMITED"
+  },
+  {
+    "appName": "BharatPe for Business",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Digital lending pages of PhonePe Lending on PhonePe consumer app",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Fibe",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Finnable: Personal Loan App",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Kissht",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Kissht IOS",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Kreditbee",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "MobiKwik",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Moneyview Limited (Formerly Known as Whizdm Innovations Private Limited)",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Navi Finserv Limited",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Onsecore",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Paisabazaar Marketing and Consulting Private Limited",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Piramal Finance- Loans and More",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "RING",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Ruloans",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "SAVEIN",
+    "lender": "PIRAMAL FINANCE LIMITED (FORMERLY KNOWN AS PIRAMAL CAPITAL & HOUSING FINANCE LIMITED)"
+  },
+  {
+    "appName": "Plebgraph",
+    "lender": "PLEBGRAPH FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "PFIL FINANCE",
+    "lender": "POOJA FINSTOCK INTERNATIONAL LIMTIED"
+  },
+  {
+    "appName": "Sky Credit",
+    "lender": "POOJA FINSTOCK INTERNATIONAL LIMTIED"
+  },
+  {
+    "appName": "Carepay",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Cash By Cred",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "ABCD",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Buddyloan",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "livemint money",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "UNICard",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Angel One",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Bitrocket",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "CarePal",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Conexo",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "CRED",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Credbuddha",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Finfinity",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Groww Credit App",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Mobikwik",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "OLA Money",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "ParkPlus",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Paytm (Business Loan)",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Pice Business PaymentsApp",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Poonawalla Fincorp",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Prefr",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "SuperMoney",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "TOI Money",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Upswing",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Xtelify Limited",
+    "lender": "POONAWALLA FINCORP LTD"
+  },
+  {
+    "appName": "Actoloan",
+    "lender": "PRAKASH CHEMTEX (INDIA) LIMITED"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "PROFECTUS CAPITAL PVT. LTD."
+  },
+  {
+    "appName": "Paytm for Business",
+    "lender": "PROFECTUS CAPITAL PVT. LTD."
+  },
+  {
+    "appName": "Getpaisa",
+    "lender": "PROPKAR SECURITIES (P) LTD."
+  },
+  {
+    "appName": "DIGITAL LOANS",
+    "lender": "PUNJAB AND SIND BANK"
+  },
+  {
+    "appName": "DIGITAL MUDRA",
+    "lender": "PUNJAB AND SIND BANK"
+  },
+  {
+    "appName": "Digi Kisan Vaahan",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digi Housing loan",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digital Car Loan",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digital Education Loan",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digital Education Loan PNB Pratibha",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "E- OD/DL against FD/RD(IBS)",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "E- OD/DL against FD/RD(PNB One App)",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Insta Loan against Securities(Mutual Fund)",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "NTB-Personal Loan",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "PNB Digi Suryaghar",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Pre Approved Pension Loan",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Pre Approved Personal Loan",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Pre-Approved Two Wheeler Loan(ETB) \"Digi Saarthi\"",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Apply for Credit Card",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Apply for Credit Card PNB SARAL",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Pre-Qualified Credit Card (PQCC)",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digi Agri Prime Plus",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "DIGI DAIRY KCC",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digi ECLGS",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digi Gold Loan",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digi HL Top up",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digi Home CRG",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digi KCC",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digi MSME Loan",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digi MSME Prime",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digi PNB Shram Saarthi",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digi Shreshtha",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digital KCC on Jansamarth",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Digital SHG",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Easy Renewal",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "e PM SVANidhi",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Gem Sahay",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "GST Sahay",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Krishi Tatkal",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "PM Vishwakarma",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "PNB Digital KCCReview",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Renewal",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "DP Enhancement",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "PNB Griha Vatika",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "Straight through Processing (STP) Credit Card",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "TRACTOR EXPRESS",
+    "lender": "PUNJAB NATIONAL BANK"
+  },
+  {
+    "appName": "FINAGG SME",
+    "lender": "QUICK CASHFLOW CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Cashbridge",
+    "lender": "RACHIT CAPITAL SERVICES PVT.LTD"
+  },
+  {
+    "appName": "SURYALOAN",
+    "lender": "RAGHAVI FINANCE LIMITED"
+  },
+  {
+    "appName": "www.billmart.com",
+    "lender": "RAJATH FINANCE LTD ( TO CAT B IN JUNE 2023)"
+  },
+  {
+    "appName": "www.i2ifunding.com",
+    "lender": "RAJATH FINANCE LTD ( TO CAT B IN JUNE 2023)"
+  },
+  {
+    "appName": "Fastsalary",
+    "lender": "RAMCHANDRA  LEASING  &FINANCE  LTD"
+  },
+  {
+    "appName": "Finsall Resources Private Limited",
+    "lender": "RATNAAFIN CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Mybank – Android version",
+    "lender": "RBL BANK LTD"
+  },
+  {
+    "appName": "Mybank – I-phone App store",
+    "lender": "RBL BANK LTD"
+  },
+  {
+    "appName": "RBL Bank MyCard",
+    "lender": "RBL BANK LTD"
+  },
+  {
+    "appName": "RIB (Retail Internent BankingI",
+    "lender": "RBL BANK LTD"
+  },
+  {
+    "appName": "PaisaDaily",
+    "lender": "READY LEASING PRIVATE LIMITED"
+  },
+  {
+    "appName": "Suvron",
+    "lender": "READY LEASING PRIVATE LIMITED"
+  },
+  {
+    "appName": "Refyne Tech Private Limited",
+    "lender": "REFYNE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Micromoney",
+    "lender": "REGAL ENTERTAINMENT AND CONSULTANTS LIMITED (FORMERLY REGAL FINANCE & CONSULTANTS LTD)"
+  },
+  {
+    "appName": "CASH MY SALARY",
+    "lender": "REGENCY FINCORP LIMITED"
+  },
+  {
+    "appName": "JET FUND",
+    "lender": "REGENCY FINCORP LIMITED"
+  },
+  {
+    "appName": "BharatPe",
+    "lender": "RESILIENT FINANCE PRIVATE LIMITED  (EARLIER KNOWN AS TRILLIONLOANS FINTECH PRIVATE LIMITED)"
+  },
+  {
+    "appName": "BharatPe for Business",
+    "lender": "RESILIENT FINANCE PRIVATE LIMITED  (EARLIER KNOWN AS TRILLIONLOANS FINTECH PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Freo",
+    "lender": "RESILIENT FINANCE PRIVATE LIMITED  (EARLIER KNOWN AS TRILLIONLOANS FINTECH PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Fundly",
+    "lender": "RESILIENT FINANCE PRIVATE LIMITED  (EARLIER KNOWN AS TRILLIONLOANS FINTECH PRIVATE LIMITED)"
+  },
+  {
+    "appName": "KarmaLife",
+    "lender": "RESILIENT FINANCE PRIVATE LIMITED  (EARLIER KNOWN AS TRILLIONLOANS FINTECH PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Mobikwik",
+    "lender": "RESILIENT FINANCE PRIVATE LIMITED  (EARLIER KNOWN AS TRILLIONLOANS FINTECH PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "RESILIENT FINANCE PRIVATE LIMITED  (EARLIER KNOWN AS TRILLIONLOANS FINTECH PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Ninja Global Import Export",
+    "lender": "RESILIENT FINANCE PRIVATE LIMITED  (EARLIER KNOWN AS TRILLIONLOANS FINTECH PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Ninjamandi",
+    "lender": "RESILIENT FINANCE PRIVATE LIMITED  (EARLIER KNOWN AS TRILLIONLOANS FINTECH PRIVATE LIMITED)"
+  },
+  {
+    "appName": "NIRA Instant Personal Loan App",
+    "lender": "RESILIENT FINANCE PRIVATE LIMITED  (EARLIER KNOWN AS TRILLIONLOANS FINTECH PRIVATE LIMITED)"
+  },
+  {
+    "appName": "NYE",
+    "lender": "RESILIENT FINANCE PRIVATE LIMITED  (EARLIER KNOWN AS TRILLIONLOANS FINTECH PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Savein Money",
+    "lender": "RESILIENT FINANCE PRIVATE LIMITED  (EARLIER KNOWN AS TRILLIONLOANS FINTECH PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Aryse Fin",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Bahi Khata Loans",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Buddy Loans",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "CarePal",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Carepay",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Cash By Cred",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "ClaimFriendy",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Cready",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Credifit",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Easypay",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Finnova",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Instacred",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Jio Finance",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Juspay-Hypercredit",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Medscred",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Money Control",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Muthoot FinCorp ONE",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Nobroker",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Ola Money",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Prefr",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Shopse",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Tata Neu",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Zype",
+    "lender": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Rinn",
+    "lender": "RICHARD TIECON PVT. LTD."
+  },
+  {
+    "appName": "SALARY CHAMPION",
+    "lender": "RICHMAN FINCAP LIMITED"
+  },
+  {
+    "appName": "Bachhat",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "BajajMarkets",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "Cashe",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "Cred Buddha",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "Credit Mantri",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "Finlab",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "Freo",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "GoCredit",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "Goodscore",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "Gromo",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "Growfi",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "Mobikwik",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "MoneyControl",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "Rupeeq",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "Samridhya",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "Supermoney",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "SwipeLoan",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "ZET",
+    "lender": "R.K. BANSAL FINANCE LTD."
+  },
+  {
+    "appName": "EasyDhan",
+    "lender": "RKD FINANCIAL SERVICES LTD."
+  },
+  {
+    "appName": "WePaisa",
+    "lender": "ROCKLAND FINSTOCK LIMITED"
+  },
+  {
+    "appName": "CredSolve",
+    "lender": "RULOANS FINANCIAL SERVICES PVT LTD"
+  },
+  {
+    "appName": "Payme",
+    "lender": "RULOANS FINANCIAL SERVICES PVT LTD"
+  },
+  {
+    "appName": "Quick Money",
+    "lender": "RULOANS FINANCIAL SERVICES PVT LTD"
+  },
+  {
+    "appName": "Rapid Money",
+    "lender": "RULOANS FINANCIAL SERVICES PVT LTD"
+  },
+  {
+    "appName": "Online Gold Loan : Rupeek",
+    "lender": "RUPEEK CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "SaveIN",
+    "lender": "RUPITOL FINANCE PVT. LTD."
+  },
+  {
+    "appName": "Loan Nivo",
+    "lender": "SABRIMALA FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "Ezfinanz",
+    "lender": "SAI ROSHNI CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "CreditMitra",
+    "lender": "SAJAN INTERNATIONAL P LTD."
+  },
+  {
+    "appName": "Finvolt",
+    "lender": "SALORA CAPITAL LTD."
+  },
+  {
+    "appName": "Fundlelo",
+    "lender": "SALORA CAPITAL LTD."
+  },
+  {
+    "appName": "Fynto",
+    "lender": "SALORA CAPITAL LTD."
+  },
+  {
+    "appName": "Jora Capital",
+    "lender": "SALORA CAPITAL LTD."
+  },
+  {
+    "appName": "Kredtap",
+    "lender": "SALORA CAPITAL LTD."
+  },
+  {
+    "appName": "Peday Money",
+    "lender": "SALORA CAPITAL LTD."
+  },
+  {
+    "appName": "Suprb",
+    "lender": "SALORA CAPITAL LTD."
+  },
+  {
+    "appName": "The Digital Loan",
+    "lender": "SALORA CAPITAL LTD."
+  },
+  {
+    "appName": "Sammaan Capital: Home Loans",
+    "lender": "SAMMAAN CAPITAL LIMITED"
+  },
+  {
+    "appName": "Sammaan Capital: Partners",
+    "lender": "SAMMAAN CAPITAL LIMITED"
+  },
+  {
+    "appName": "Bharat Business Loans",
+    "lender": "SAMPATHI CREDITS PRIVATE LIMITED"
+  },
+  {
+    "appName": "FriendLoan - 1hr Business Loan",
+    "lender": "SAMPATHI CREDITS PRIVATE LIMITED"
+  },
+  {
+    "appName": "FriendLoan: Business Loan App",
+    "lender": "SAMPATHI CREDITS PRIVATE LIMITED"
+  },
+  {
+    "appName": "FriendLoan Partner",
+    "lender": "SAMPATHI CREDITS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Sampathi Loans",
+    "lender": "SAMPATHI CREDITS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Creditt+",
+    "lender": "SAMPATI SECURITIES LIMITED"
+  },
+  {
+    "appName": "FUND ON GO",
+    "lender": "SAMRAAT FINLEASE (P) LTD."
+  },
+  {
+    "appName": "SALARY SEWA",
+    "lender": "SAMRAAT FINLEASE (P) LTD."
+  },
+  {
+    "appName": "eazypaisa.com",
+    "lender": "SARAF CREDIT & PORTFOLIO PVT. LTD."
+  },
+  {
+    "appName": "Sarvagram",
+    "lender": "SARVAGRAM FINCARE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Two Minutes Loan",
+    "lender": "SARVOTTAM FINCAP LTD."
+  },
+  {
+    "appName": "Toofan Loan",
+    "lender": "SATISFACTION COMMERCIAL PVT LTD"
+  },
+  {
+    "appName": "QUICKFILO LLP",
+    "lender": "SATSAI FINLEASE PVT. LTD."
+  },
+  {
+    "appName": "Instaclaus",
+    "lender": "SATYA CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "DRONA",
+    "lender": "SATYA MICROCAPITAL LIMITED"
+  },
+  {
+    "appName": "Rocket Cash",
+    "lender": "SAVANTIKA VANIJYA PVT. LTD."
+  },
+  {
+    "appName": "Paisaboxx?",
+    "lender": "SAWALSHA LEASING & FINANCE PVT. LTD."
+  },
+  {
+    "appName": "PayRupik",
+    "lender": "SAYYAM INVESTMENTS PVT. LTD."
+  },
+  {
+    "appName": "AvoraLoan",
+    "lender": "S.B.N. LEASING AND FINANCE LTD."
+  },
+  {
+    "appName": "Cashone",
+    "lender": "S.B.N. LEASING AND FINANCE LTD."
+  },
+  {
+    "appName": "LoanArambh",
+    "lender": "S.B.N. LEASING AND FINANCE LTD."
+  },
+  {
+    "appName": "LoanBloomGo",
+    "lender": "S.B.N. LEASING AND FINANCE LTD."
+  },
+  {
+    "appName": "LoanJai",
+    "lender": "S.B.N. LEASING AND FINANCE LTD."
+  },
+  {
+    "appName": "LoanVanta",
+    "lender": "S.B.N. LEASING AND FINANCE LTD."
+  },
+  {
+    "appName": "LoanVantaBoost",
+    "lender": "S.B.N. LEASING AND FINANCE LTD."
+  },
+  {
+    "appName": "NaviraLoan",
+    "lender": "S.B.N. LEASING AND FINANCE LTD."
+  },
+  {
+    "appName": "Credit Assist",
+    "lender": "SCALEUP FINANCIAL SERVICES PRIVATE LIMITED (EARLIER KNOWN AS PAYME INDIA FINANCIAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Bharat Khata",
+    "lender": "SCIL CAPITAL INDIA PRIVATE LIMITED"
+  },
+  {
+    "appName": "Jai Kisan Farmer",
+    "lender": "SCIL CAPITAL INDIA PRIVATE LIMITED"
+  },
+  {
+    "appName": "Securis Finance Private Limited",
+    "lender": "SECURIS FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "PaisaNext",
+    "lender": "SEVEN ELEVEN LEASING & FINANCE LTD."
+  },
+  {
+    "appName": "BharatPe for Business",
+    "lender": "SG FINSERVE LIMITED (PREVIOUSLY MOONGIPA SECURITIES LIMITED)"
+  },
+  {
+    "appName": "PennyDrop",
+    "lender": "SHANKAR FININVEST (P) LTD."
+  },
+  {
+    "appName": "mshiFFt",
+    "lender": "SHIVALIK SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "Klinq",
+    "lender": "SHIVDURGA TRADING (P) LTD"
+  },
+  {
+    "appName": "SalaryBolt",
+    "lender": "SHIVJI FINANCE AND INVESTMENTS (P) LTD."
+  },
+  {
+    "appName": "SHREE GAJANAN UCBL BYADGI",
+    "lender": "SHREE GAJANAN URBAN CO-OP.BANK LTD."
+  },
+  {
+    "appName": "DhanLAP",
+    "lender": "SHRIRAM CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "CreditFIT App",
+    "lender": "SHRIRAM FINANCE LIMITED (FORMERLY SHRIRAM TRANSPORT FINANCE COMPANY LIMITED)"
+  },
+  {
+    "appName": "Creditmantri Website",
+    "lender": "SHRIRAM FINANCE LIMITED (FORMERLY SHRIRAM TRANSPORT FINANCE COMPANY LIMITED)"
+  },
+  {
+    "appName": "Digital Lending pages of Phonepe Lending on PhonePe Business: Merchant App",
+    "lender": "SHRIRAM FINANCE LIMITED (FORMERLY SHRIRAM TRANSPORT FINANCE COMPANY LIMITED)"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "SHRIRAM FINANCE LIMITED (FORMERLY SHRIRAM TRANSPORT FINANCE COMPANY LIMITED)"
+  },
+  {
+    "appName": "PhonePe - Lending Website",
+    "lender": "SHRIRAM FINANCE LIMITED (FORMERLY SHRIRAM TRANSPORT FINANCE COMPANY LIMITED)"
+  },
+  {
+    "appName": "Shriram Finance Limited Website",
+    "lender": "SHRIRAM FINANCE LIMITED (FORMERLY SHRIRAM TRANSPORT FINANCE COMPANY LIMITED)"
+  },
+  {
+    "appName": "Shriram One App",
+    "lender": "SHRIRAM FINANCE LIMITED (FORMERLY SHRIRAM TRANSPORT FINANCE COMPANY LIMITED)"
+  },
+  {
+    "appName": "Kissht",
+    "lender": "SI CREVA CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Kissht IOS",
+    "lender": "SI CREVA CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Ring",
+    "lender": "SI CREVA CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "ABCD",
+    "lender": "SI CREVA CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Bajaj Markets",
+    "lender": "SI CREVA CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Indialends",
+    "lender": "SI CREVA CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Mint Money",
+    "lender": "SI CREVA CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paisa Bazaar",
+    "lender": "SI CREVA CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Paytm Merchant app",
+    "lender": "SI CREVA CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Prefr",
+    "lender": "SI CREVA CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "SuperMoney",
+    "lender": "SI CREVA CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Tata Neu",
+    "lender": "SI CREVA CAPITAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "PaapaPay",
+    "lender": "SIDDHI TRADERS (P) LTD"
+  },
+  {
+    "appName": "LendingBaba",
+    "lender": "SINGHAL VYAPAR (P) LTD"
+  },
+  {
+    "appName": "PaisaNext",
+    "lender": "SINO CREDITS AND LEASING LTD."
+  },
+  {
+    "appName": "Chabot  Solution",
+    "lender": "S K FINANCE LTD. (OLD NAME ESS KAY FINCORP  LTD)"
+  },
+  {
+    "appName": "DigiIndialoan",
+    "lender": "SKYRISE CREDIT & MARKETING LIMITED"
+  },
+  {
+    "appName": "Quickcashindia",
+    "lender": "SKYRISE CREDIT & MARKETING LIMITED"
+  },
+  {
+    "appName": "RupeyLoans",
+    "lender": "SKYRISE CREDIT & MARKETING LIMITED"
+  },
+  {
+    "appName": "slice",
+    "lender": "SLICE SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "slice business",
+    "lender": "SLICE SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "Angel One's Super App",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "BharatPe for Business",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Digital lending pages of PhonePe Lending on PhonePe Business: Merchant App",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Freo",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Google Pay: Save, Pay, Manage",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Google Pay: Secure UPI payment",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "INDmoney: Stocks, Mutual Funds",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Instant Approval Personal Loan",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Khatabook credit account book",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Khatabook Vyapar App",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Kissht",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Kissht IOS",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Lendingkart Android Mobile App",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Mint:Market & News",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Mobikwik: BHIM UPI & Wallet",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "MONEY VIEW : LOANS PERSONAL LOAN APP, INSTANT LOAN",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "OneScore",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Paisabazaar Marketing and Consulting Pvt Ltd",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "PAYTM FOR BUSINESS",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "PAYTM: SECURE UPI PAYMENTS",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Prefr",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Ring",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "SMFG India Credit Company limited",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "SMFG India Credit mConnect",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "SMFG India Credit mConnect 2.0",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "super.money",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Turtlemint",
+    "lender": "SMFG INDIA CREDIT COMPANY LIMITED"
+  },
+  {
+    "appName": "Meesho",
+    "lender": "SNAPMINT FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "Snapmint",
+    "lender": "SNAPMINT FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "BharatLoan: Personal Loan App",
+    "lender": "SOLOMON CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "AlphaRupee",
+    "lender": "SONU MARKETING (P) LTD"
+  },
+  {
+    "appName": "CLICKRA",
+    "lender": "SONU MARKETING (P) LTD"
+  },
+  {
+    "appName": "Creditlab",
+    "lender": "SONU MARKETING (P) LTD"
+  },
+  {
+    "appName": "Trustpaisa",
+    "lender": "SONU MARKETING (P) LTD"
+  },
+  {
+    "appName": "Trustpaisa: Personal loan app",
+    "lender": "SONU MARKETING (P) LTD"
+  },
+  {
+    "appName": "Amazon App",
+    "lender": "SOUTH INDIAN BANK LTD"
+  },
+  {
+    "appName": "AXIO",
+    "lender": "SOUTH INDIAN BANK LTD"
+  },
+  {
+    "appName": "BharatPe Money",
+    "lender": "SOUTH INDIAN BANK LTD"
+  },
+  {
+    "appName": "DhanLap",
+    "lender": "SOUTH INDIAN BANK LTD"
+  },
+  {
+    "appName": "Finsall",
+    "lender": "SOUTH INDIAN BANK LTD"
+  },
+  {
+    "appName": "INDmoney",
+    "lender": "SOUTH INDIAN BANK LTD"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "SOUTH INDIAN BANK LTD"
+  },
+  {
+    "appName": "Onescore",
+    "lender": "SOUTH INDIAN BANK LTD"
+  },
+  {
+    "appName": "Quick PL",
+    "lender": "SOUTH INDIAN BANK LTD"
+  },
+  {
+    "appName": "SIB Mirror +",
+    "lender": "SOUTH INDIAN BANK LTD"
+  },
+  {
+    "appName": "Smallcase",
+    "lender": "SOUTH INDIAN BANK LTD"
+  },
+  {
+    "appName": "SPEEL FINANCE COMPANY PRIVATE LIMITED",
+    "lender": "SPEEL FINANCE CO P LTD."
+  },
+  {
+    "appName": "Sr.No",
+    "lender": "SPICEBULLS INVESTMENTS LIMITED"
+  },
+  {
+    "appName": "Salary112",
+    "lender": "S R CAPITAL  SERVICES  PVT.  LTD."
+  },
+  {
+    "appName": "SRI VASAVAMBA CO OPERATIVE BANK LTD",
+    "lender": "SRI VASAVAMBA CO-OP.BANK LTD."
+  },
+  {
+    "appName": "CINB",
+    "lender": "STATE BANK OF INDIA"
+  },
+  {
+    "appName": "RINB",
+    "lender": "STATE BANK OF INDIA"
+  },
+  {
+    "appName": "YONO",
+    "lender": "STATE BANK OF INDIA"
+  },
+  {
+    "appName": "Yono  Business",
+    "lender": "STATE BANK OF INDIA"
+  },
+  {
+    "appName": "Finsall",
+    "lender": "STOCK GUARDIANS (INDIA) PRIVATE LIMITED"
+  },
+  {
+    "appName": "Shublakshmi",
+    "lender": "SUBHLAKSHMI FINANCE PRIVATE LIMITED (OLD NAME - PEPSU CAPITAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Subhlakshmi",
+    "lender": "SUBHLAKSHMI FINANCE PRIVATE LIMITED (OLD NAME - PEPSU CAPITAL SERVICES PRIVATE LIMITED)"
+  },
+  {
+    "appName": "EmergencyPaisa",
+    "lender": "SUBURBAN FINANCE & INVESTMENT PVT.LTD."
+  },
+  {
+    "appName": "Nill",
+    "lender": "SUNDARLAL SAWJI URBAN CO-OPERATIVE BANK LTD., JINTUR"
+  },
+  {
+    "appName": "Oro Money",
+    "lender": "SUNITA FINLEASE LTD."
+  },
+  {
+    "appName": "Refyne",
+    "lender": "SUNITA FINLEASE LTD."
+  },
+  {
+    "appName": "ClickPe",
+    "lender": "SURAT PEOPLE'S CO-OP.BANK LTD."
+  },
+  {
+    "appName": "Paytm-MSME",
+    "lender": "SURYODAY SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "SU Fintrust",
+    "lender": "S.U.SECURITIES PVT. LTD."
+  },
+  {
+    "appName": "SU wallet",
+    "lender": "S.U.SECURITIES PVT. LTD."
+  },
+  {
+    "appName": "Svamaan App",
+    "lender": "SVAMAAN FINANCIAL SERVICES PRIVATE LIMITED"
+  },
+  {
+    "appName": "salary24x7",
+    "lender": "SWADHA FINLEASE PRIVATE LIMITED *"
+  },
+  {
+    "appName": "ATM CRED",
+    "lender": "SWASTIK FINANCE LIMITED (FORMERLY KNOWN AS AVON MONEY SOLUTION INDIA LIMITED)"
+  },
+  {
+    "appName": "Tala: Fast & Secure Loan App",
+    "lender": "TALAZEN FINANCE INDIA PRIVATE LIMITED"
+  },
+  {
+    "appName": "Chinmay Finlease Limited",
+    "lender": "TAPSTART CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Chinmay - Personal Loan App",
+    "lender": "TAPSTART CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Freo",
+    "lender": "TAPSTART CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Innotech Creditsea Platforms Private Limited",
+    "lender": "TAPSTART CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "MoneyTap",
+    "lender": "TAPSTART CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Digital Quick Cash",
+    "lender": "TATA CAPITAL HOUSING FINANCE LTD."
+  },
+  {
+    "appName": "HL Online",
+    "lender": "TATA CAPITAL HOUSING FINANCE LTD."
+  },
+  {
+    "appName": "TATA Capital Loan App & Wealth",
+    "lender": "TATA CAPITAL HOUSING FINANCE LTD."
+  },
+  {
+    "appName": "Famescore Pvt Ltd [Other - Disbursal Drawdown]",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "Fibe",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "Finfinity",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "Finnable",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "Indmoney [Other - Disbursal Drawdown]",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "KreditBee",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "Lendingkart",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "Navi Finserv Limited",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "OLA",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "P4B",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "TATA Capital Loan App & Wealth",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "TataNeu",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "Volt [Other - Disbursal Drawdown]",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "Wishfin",
+    "lender": "TATA CAPITAL LIMITED"
+  },
+  {
+    "appName": "Oro money",
+    "lender": "TENMARK CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "Trustpaisa",
+    "lender": "THANVIR BROS (P) LTD"
+  },
+  {
+    "appName": "Digital Personal Loans Application (PIL-STP)",
+    "lender": "THE HONGKONG AND SHANGHAI BANKING CORPORATION LIMITED"
+  },
+  {
+    "appName": "MOBIPRO",
+    "lender": "THE KODINAR NAGRIK SAHAKARI BANK LTD."
+  },
+  {
+    "appName": "0",
+    "lender": "THE MIZORAM CO-OPERATIVE APEX BANK LTD."
+  },
+  {
+    "appName": "NONE",
+    "lender": "TITEC FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Toyota Finance",
+    "lender": "TOYOTA FINANCIAL SERVICES INDIA LIMITED"
+  },
+  {
+    "appName": "Oroboro Loans",
+    "lender": "TRANSWARRANTY FINANCE LIMITED"
+  },
+  {
+    "appName": "Freo",
+    "lender": "TRILLIONLOANS FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "Fundly",
+    "lender": "TRILLIONLOANS FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "Mobikwik",
+    "lender": "TRILLIONLOANS FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "TRILLIONLOANS FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "NIRA Instant Personal Loan App",
+    "lender": "TRILLIONLOANS FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "NYE",
+    "lender": "TRILLIONLOANS FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "BharatPe",
+    "lender": "TRILLIONLOANS FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "BharatPe for Business",
+    "lender": "TRILLIONLOANS FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "KarmaLife",
+    "lender": "TRILLIONLOANS FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "Ninja Global Import Export",
+    "lender": "TRILLIONLOANS FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "Ninjamandi",
+    "lender": "TRILLIONLOANS FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "Savein Money",
+    "lender": "TRILLIONLOANS FINTECH PRIVATE LIMITED"
+  },
+  {
+    "appName": "True Balance",
+    "lender": "TRUE CREDITS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Truepay",
+    "lender": "TRUEPAY FINANCE PRIVATE LIMITED (FORMERLY KNOWN AS JAIN FINSCAP PRIVATE LIMITED)"
+  },
+  {
+    "appName": "TSB FINANCE PVT LTD",
+    "lender": "TSB FINANCE PVT. LTD"
+  },
+  {
+    "appName": "Finnable",
+    "lender": "TVS CREDIT SERVICES LIMITED"
+  },
+  {
+    "appName": "Flipkart Internet Private Limited",
+    "lender": "TVS CREDIT SERVICES LIMITED"
+  },
+  {
+    "appName": "Lending process is enabled for a website journey tech platform referred as InstaCred",
+    "lender": "TVS CREDIT SERVICES LIMITED"
+  },
+  {
+    "appName": "Lending process is enabled for a website journey tech platform referred as Juspay Hypercredit",
+    "lender": "TVS CREDIT SERVICES LIMITED"
+  },
+  {
+    "appName": "NAVI Finserv",
+    "lender": "TVS CREDIT SERVICES LIMITED"
+  },
+  {
+    "appName": "The POS machines at the counters serves as the customer interface in the lending process.",
+    "lender": "TVS CREDIT SERVICES LIMITED"
+  },
+  {
+    "appName": "TOI Money",
+    "lender": "TVS CREDIT SERVICES LIMITED"
+  },
+  {
+    "appName": "TVS Credit Saathi (Web-based Journey also enabled)",
+    "lender": "TVS CREDIT SERVICES LIMITED"
+  },
+  {
+    "appName": "TVS Credit Services Limited",
+    "lender": "TVS CREDIT SERVICES LIMITED"
+  },
+  {
+    "appName": "Finnable",
+    "lender": "TVS CREDIT SERVICES LTD"
+  },
+  {
+    "appName": "Flexmoney",
+    "lender": "TVS CREDIT SERVICES LTD"
+  },
+  {
+    "appName": "Flipkart Internet Private Limited",
+    "lender": "TVS CREDIT SERVICES LTD"
+  },
+  {
+    "appName": "TVS Credit Saathi",
+    "lender": "TVS CREDIT SERVICES LTD"
+  },
+  {
+    "appName": "TVS Credit Services Limited",
+    "lender": "TVS CREDIT SERVICES LTD"
+  },
+  {
+    "appName": "LOANHUB",
+    "lender": "TYCOON CREDIT &PORTFOLIO LTD."
+  },
+  {
+    "appName": "MY FLOT",
+    "lender": "TYCOON CREDIT &PORTFOLIO LTD."
+  },
+  {
+    "appName": "TAP4CREDIT",
+    "lender": "TYCOON CREDIT &PORTFOLIO LTD."
+  },
+  {
+    "appName": "True Rupee",
+    "lender": "TYCOON CREDIT &PORTFOLIO LTD."
+  },
+  {
+    "appName": "ZAPPLOANS",
+    "lender": "TYCOON CREDIT &PORTFOLIO LTD."
+  },
+  {
+    "appName": "Petro1 - Powered by Tyger Capital",
+    "lender": "TYGER CAPITAL PRIVATE LIMIED (FORMERLY KNOWN AS ADANI CAPITAL PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Digital CC Renewal",
+    "lender": "UCO BANK"
+  },
+  {
+    "appName": "Digital Education Loan",
+    "lender": "UCO BANK"
+  },
+  {
+    "appName": "Digital MSME Loan upto 25 Lakh (Shishu, Kishore, Tarun, MSME Smart)",
+    "lender": "UCO BANK"
+  },
+  {
+    "appName": "GST Smart Finance",
+    "lender": "UCO BANK"
+  },
+  {
+    "appName": "KCC Renewal Upto 2 lakh",
+    "lender": "UCO BANK"
+  },
+  {
+    "appName": "KCC with RBIH integration",
+    "lender": "UCO BANK"
+  },
+  {
+    "appName": "Loan against FDR",
+    "lender": "UCO BANK"
+  },
+  {
+    "appName": "Overdraft against FD/RD",
+    "lender": "UCO BANK"
+  },
+  {
+    "appName": "Pre Qualified Personal Loan (PQPL)",
+    "lender": "UCO BANK"
+  },
+  {
+    "appName": "Pre Qualified Vehicle Loan (PQVL)",
+    "lender": "UCO BANK"
+  },
+  {
+    "appName": "STP Pension",
+    "lender": "UCO BANK"
+  },
+  {
+    "appName": "4FIN",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Arthum",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "BharatPe for Business",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Digital lending pages of PhonePe Lending on PhonePe Business: Merchant App",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Finagg SME",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Flexipayment",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "GetVantage",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Lendingkart",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Meesho: Online Shopping App",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "MobiKwik for Business",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "MyShubhLife",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "PayNearby - Aadhaar ATM, DMT",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Recur",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Rupifi",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Shiprocket",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Spice Money Adhikari AEPS App",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Supermoney",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Velicham",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)"
+  },
+  {
+    "appName": "Spice Money – Banking Agent App",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)*"
+  },
+  {
+    "appName": "Velocity",
+    "lender": "UGRO CAPITAL  LIMITED (PREVIOUSLY CHOKHANI SECURITIES LIMITED)*"
+  },
+  {
+    "appName": "OTO",
+    "lender": "UJJIVAN SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "Hello Ujjivan",
+    "lender": "UJJIVAN SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "Loan10minute",
+    "lender": "UNICAP INVESTMENTS PRIVATE LIMITED"
+  },
+  {
+    "appName": "lendingplate",
+    "lender": "UNIFINZ CAPITAL INDIA LTD (FORMERLY SHREE WORSTEX LTD.)"
+  },
+  {
+    "appName": "Digital PMSVANidhi",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Digital PM Vishwakarma",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Digital SHG STP",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Gold Loan",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "KCC Fresh Sanction",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Kisan Tatkal",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Mudra(Kishore & Tarun)",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Nari Shakti",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Personal Loan",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Pre-Qualified Business Loan",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Shishu Mudra STP",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Staff Loan STP",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Union Digital Ease",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Union Education Loan",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Union MSME Superfast STP",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Union Rooftop Solar STP",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Vehicle Loan",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Working Capital Limit Enhancement",
+    "lender": "UNION BANK OF INDIA"
+  },
+  {
+    "appName": "Unity Small Finance Bank",
+    "lender": "UNITY SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "LendingKart^",
+    "lender": "UNITY SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "OkCredit^",
+    "lender": "UNITY SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "Pay Me India*",
+    "lender": "UNITY SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "Unity Small Finance Bank APP",
+    "lender": "UNITY SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "Olyv",
+    "lender": "UPMOVE CAPITAL PRIVATE LIMITED"
+  },
+  {
+    "appName": "MudraSewa",
+    "lender": "URGENT FINVEST LTD."
+  },
+  {
+    "appName": "QuickPaisa Fintech Private Limited",
+    "lender": "USB FINANCIAL CORPORATION LTD"
+  },
+  {
+    "appName": "FatakPay",
+    "lender": "USHA FINANCIAL SERVICES PVT.LTD."
+  },
+  {
+    "appName": "Kreditcall",
+    "lender": "USHA FINANCIAL SERVICES PVT.LTD."
+  },
+  {
+    "appName": "LoanFront",
+    "lender": "USHA FINANCIAL SERVICES PVT.LTD."
+  },
+  {
+    "appName": "WeRize Customer App",
+    "lender": "UTKARSH SMALL FINANCE BANK LIMITED"
+  },
+  {
+    "appName": "FUNDOBABA",
+    "lender": "U.Y. FINCORP LIMITED"
+  },
+  {
+    "appName": "LoanFront",
+    "lender": "VAIBHAV VYAPAAR PVT LTD"
+  },
+  {
+    "appName": "FlexiBee",
+    "lender": "VAISHALI SECURITIES LIMITED"
+  },
+  {
+    "appName": "LoveFund",
+    "lender": "VAISHALI SECURITIES LIMITED"
+  },
+  {
+    "appName": "ZingLoan",
+    "lender": "VAISHALI SECURITIES LIMITED"
+  },
+  {
+    "appName": "Sparsh",
+    "lender": "VARTHANA FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Vector Blink",
+    "lender": "VECTOR FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Vmoney",
+    "lender": "VENUS BARTER PVT LTD"
+  },
+  {
+    "appName": "ZET",
+    "lender": "VISTAS FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "FlexPay",
+    "lender": "VIVIFI INDIA FINANCE (P) LTD"
+  },
+  {
+    "appName": "FlexPay Loan",
+    "lender": "VIVIFI INDIA FINANCE (P) LTD"
+  },
+  {
+    "appName": "FlexSalary",
+    "lender": "VIVIFI INDIA FINANCE (P) LTD"
+  },
+  {
+    "appName": "Udyam Flex Loan",
+    "lender": "VIVIFI INDIA FINANCE (P) LTD"
+  },
+  {
+    "appName": "Axio",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Branch- Personal Cash Loan App",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "CASHe",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "CRED",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "FatakPay",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Fibe",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Finnable Personal Loan App",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Finsall Resources Pvt Ltd.",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Flash app",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "FlexiLoans: Business Loans",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Inprime",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Jodo",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Khatabook App",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "KOSH",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Kreditbee",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Mobikwik",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Okcredit",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Olyv (SmartCoin)",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Paytm",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "PaywithRING (by Kissht)",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "RESPO FINANCIAL CAPITAL PRIVATE LIMITED",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Slice",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "True Balance",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Upwards by Lendingkart.",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "WeRize Customer App",
+    "lender": "VIVRITI CAPITAL LIMITED  (EARLIER KNOWN AS HARI AND COMPANY INVESTMENTS MADRAS PRIVATE LIMITED)"
+  },
+  {
+    "appName": "Rupeeontime – Instant Loan",
+    "lender": "VRINDA FINLEASE LIMITED"
+  },
+  {
+    "appName": "NA",
+    "lender": "VYANKATESHWARA SAH BANK LTD"
+  },
+  {
+    "appName": "Zapcash",
+    "lender": "WEEKLINE INVESTMENT & TRADING CO. LTD."
+  },
+  {
+    "appName": "Welkin Commercials",
+    "lender": "WELKIN COMMERCIALS PVT. LTD."
+  },
+  {
+    "appName": "SaveIN",
+    "lender": "WELKIN COMMERCIALS PVT. LTD."
+  },
+  {
+    "appName": "Khatabook",
+    "lender": "WESTERN CAPITAL ADVISORS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Bachatt",
+    "lender": "WESTERN CAPITAL ADVISORS PRIVATE LIMITED"
+  },
+  {
+    "appName": "FDPL",
+    "lender": "WESTERN CAPITAL ADVISORS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Grayquest",
+    "lender": "WESTERN CAPITAL ADVISORS PRIVATE LIMITED"
+  },
+  {
+    "appName": "OTO",
+    "lender": "WESTERN CAPITAL ADVISORS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Stashfin",
+    "lender": "WESTERN CAPITAL ADVISORS PRIVATE LIMITED"
+  },
+  {
+    "appName": "We Rize",
+    "lender": "WESTERN CAPITAL ADVISORS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Cred",
+    "lender": "WHIZDM FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Jify",
+    "lender": "WHIZDM FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "Moneyview",
+    "lender": "WHIZDM FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "creditwalle",
+    "lender": "WOODLAND SECURITIES LIMITED"
+  },
+  {
+    "appName": "Werize Customer App",
+    "lender": "WORTGAGE FINANCE PRIVATE LIMITED"
+  },
+  {
+    "appName": "ECS Credit",
+    "lender": "YAKSH INFINLEASE PVT.LTD"
+  },
+  {
+    "appName": "Maharani Financial Services",
+    "lender": "YASHIK FINLEASE PVT.LTD"
+  },
+  {
+    "appName": "Nexiloans",
+    "lender": "YASHIK FINLEASE PVT.LTD"
+  },
+  {
+    "appName": "BharatPe UPI",
+    "lender": "YES BANK LTD."
+  },
+  {
+    "appName": "CRED",
+    "lender": "YES BANK LTD."
+  },
+  {
+    "appName": "Creditas Business Solutions",
+    "lender": "YES BANK LTD."
+  },
+  {
+    "appName": "DIGI OD (Digital Overdraft)",
+    "lender": "YES BANK LTD."
+  },
+  {
+    "appName": "IRIS",
+    "lender": "YES BANK LTD."
+  },
+  {
+    "appName": "KIWI",
+    "lender": "YES BANK LTD."
+  },
+  {
+    "appName": "Paisabazaar",
+    "lender": "YES BANK LTD."
+  },
+  {
+    "appName": "YES Online",
+    "lender": "YES BANK LTD."
+  },
+  {
+    "appName": "YES Race",
+    "lender": "YES BANK LTD."
+  },
+  {
+    "appName": "RapidRupee",
+    "lender": "YUVARAJ FINANCE (PVT) LTD."
+  },
+  {
+    "appName": "Yuva Personal Loan App",
+    "lender": "YUVARAJ FINANCE (PVT) LTD."
+  },
+  {
+    "appName": "Ananda Dairy Limited",
+    "lender": "ZEAL HOLDINGS PRIVATE LIMITED"
+  },
+  {
+    "appName": "careinsurance",
+    "lender": "ZEAL HOLDINGS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Kredmint Technologies Private Limited",
+    "lender": "ZEAL HOLDINGS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Meesho Payments Private Limited (MPPL)",
+    "lender": "ZEAL HOLDINGS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Zomato Hyperpure",
+    "lender": "ZEAL HOLDINGS PRIVATE LIMITED"
+  },
+  {
+    "appName": "Salary now",
+    "lender": "ZED LEAFIN PVT. LTD."
+  },
+  {
+    "appName": "Salary now - Instant Loans",
+    "lender": "ZED LEAFIN PVT. LTD."
+  },
+  {
+    "appName": "SN Insta Personal Advance Loan",
+    "lender": "ZED LEAFIN PVT. LTD."
+  },
+  {
+    "appName": "The Zenith Loan",
+    "lender": "ZENITH MACHINERY (P) LTD"
+  },
+  {
+    "appName": "zerodhacapital.com",
+    "lender": "ZERODHA CAPITAL PRIVATE LIMITED"
+  }
 ]

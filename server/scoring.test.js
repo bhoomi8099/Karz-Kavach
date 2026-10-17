@@ -1,9 +1,10 @@
 // Run with:  npm test   (inside the server folder)
+// These tests always use the DEMO directory, so they keep passing after you import real data.
 const test = require('node:test');
 const assert = require('node:assert');
-const { scoreApp, findApp, similarity } = require('./scoring');
+const { scoreApp, findApp, similarity, searchDirectory } = require('./scoring');
 const apps = require('./data/apps.json');
-const directory = require('./data/directory.json');
+const directory = require('./data/directory.demo.json');
 
 const byName = (n) => scoreApp(apps.find((a) => a.name === n), directory);
 
@@ -51,4 +52,26 @@ test('search tolerates small typos and partial names', () => {
   assert.strictEqual(findApp('Quick Rupe Demo', apps).name, 'QuickRupee Demo');
   assert.strictEqual(findApp('completely unknown app xyz', apps), null);
   assert.ok(similarity('abc', 'abc') === 1);
+});
+
+test('searchDirectory: exact, partial and short-word behaviour', () => {
+  const dir = [
+    { appName: 'Moneyview Loan App', lender: 'Fake Lender A' },
+    { appName: 'Quick Loan', lender: 'Fake Lender B' },
+  ];
+  assert.strictEqual(searchDirectory('moneyview loan app', dir)[0].score, 1);
+  assert.ok(searchDirectory('Moneyview', dir)[0].score >= 0.8); // partial name
+  assert.ok(searchDirectory('loan', dir).every((r) => r.score < 0.8)); // short word must not match
+});
+
+test('searchDirectory: brand before a colon finds the full entry name', () => {
+  const dir = [
+    { appName: 'Test App 112: Personal Loan App', lender: 'Fake Lender C' },
+    { appName: 'Quick Cash Plus', lender: 'Fake Lender D' },
+    { appName: 'Quick Loan Finder', lender: 'Fake Lender E' },
+  ];
+  assert.ok(searchDirectory('Test App 112', dir)[0].score >= 0.8);
+  assert.ok(searchDirectory('testapp', dir)[0].score >= 0.8); // 6+ letters, start of the name
+  assert.ok(searchDirectory('quick', dir).every((r) => r.score < 0.8)); // too short and generic
+  assert.ok(searchDirectory('loan', dir).every((r) => r.score < 0.8));
 });

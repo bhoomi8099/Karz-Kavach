@@ -1,11 +1,13 @@
 const express = require('express');
 const cors = require('cors');
-const { listApps, checkApp } = require('./handlers');
+const { listApps, checkApp, getStats } = require('./handlers');
 
 // Data lives in simple JSON files for now (see the data folder).
 // Replace with MongoDB later if you want; only this file and handlers.js would change.
 const apps = require('./data/apps.json');
-const directory = require('./data/directory.json');
+const directory = require('./data/directory.json'); // demo list, or the real one after an import
+const demoDirectory = require('./data/directory.demo.json'); // always the fictional demo list
+const directorySource = require('./data/directory-source.json');
 
 const app = express();
 app.use(cors());
@@ -16,14 +18,19 @@ app.get('/api/health', (req, res) => {
   res.json({ ok: true });
 });
 
-// List of apps (used for search suggestions)
+// Which directory is loaded (demo or imported) and how many apps it has
+app.get('/api/stats', (req, res) => {
+  res.json(getStats(directory, directorySource));
+});
+
+// List of demo apps (used for search suggestions)
 app.get('/api/apps', (req, res) => {
   res.json(listApps(apps));
 });
 
 // Check one app:  /api/check?name=QuickRupee
 app.get('/api/check', (req, res) => {
-  const { status, body } = checkApp(req.query.name, apps, directory);
+  const { status, body } = checkApp(req.query.name, apps, directory, demoDirectory);
   res.status(status).json(body);
 });
 

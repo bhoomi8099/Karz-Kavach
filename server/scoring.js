@@ -52,6 +52,39 @@ function findDirectoryMatch(appName, directory, minSimilarity = 0.8) {
   return bestScore >= minSimilarity ? best : null;
 }
 
+// Search the whole directory for a name. Returns [{ entry, score }] best first (score 0 to 1).
+// Used for apps we have no permission data for.
+function searchDirectory(query, directory, minScore = 0.6) {
+  const q = normalize(query);
+  if (!q) return [];
+  const scored = [];
+  for (const entry of directory) {
+    const n = normalize(entry.appName);
+    if (!n) continue;
+    let score = similarity(query, entry.appName);
+    if (n === q) {
+      score = 1;
+    } else {
+      // "moneyview" should match "Moneyview Loan App", but short words like "loan" must not.
+      const shorter = Math.min(n.length, q.length);
+      const longer = Math.max(n.length, q.length);
+      if (shorter >= 5 && shorter / longer >= 0.4 && (n.includes(q) || q.includes(n))) {
+        score = Math.max(score, 0.85);
+      }
+      // Real entries often look like "Rupee112: Personal Loan App". Typing just the brand
+      // ("Rupee112") should find it. The brand is the text before a ":" or " - ".
+      const brand = normalize(String(entry.appName).split(/:| - | – /)[0]);
+      if (brand === q && q.length >= 3) {
+        score = Math.max(score, 0.95);
+      } else if (q.length >= 6 && n.startsWith(q)) {
+        score = Math.max(score, 0.82);
+      }
+    }
+    if (score >= minScore) scored.push({ entry, score });
+  }
+  return scored.sort((a, b) => b.score - a.score);
+}
+
 // Find the app the user typed in our app list.
 function findApp(query, apps) {
   const q = normalize(query);
@@ -145,4 +178,13 @@ function scoreApp(app, directory) {
   };
 }
 
-module.exports = { scoreApp, findApp, findDirectoryMatch, similarity, normalize, MAX, THRESHOLDS };
+module.exports = {
+  scoreApp,
+  findApp,
+  findDirectoryMatch,
+  searchDirectory,
+  similarity,
+  normalize,
+  MAX,
+  THRESHOLDS,
+};
