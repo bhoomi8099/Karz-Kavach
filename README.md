@@ -1,139 +1,190 @@
-# Karz Kavach: Anti-Predatory Loan App Detector
+# Karz Kavach (कर्ज़ कवच)
 
-Team Moon3 | Hack@BVP 8.0 | FinTech PS2
+> **Anti-Predatory Loan App & Digital Lending Fraud Risk Detector**  
+> *Built for Hack@BVP 8.0 — FinTech PS2 | Team Moon3*
 
-Type a loan app name, get a **Safe / Needs a closer look / Risky** verdict with reasons in English and Hindi.
-
-All apps in the project are **fictional demo apps**. The screen says so on purpose. Do not present them as real apps.
+Karz Kavach is an explainable consumer-protection platform designed to safeguard borrowers against illegal digital lending apps, extortionate loan sharks, and aggressive data harvesting. By evaluating app permissions, regulatory registrations, and transparency disclosures, Karz Kavach delivers instant, easy-to-understand safety verdicts (**Safe**, **Needs Review**, or **Risky**) in both **English and Hindi** with audio accessibility.
 
 ---
 
-## 1. Run it (first time)
+## 🚨 Problem Statement
 
-You need Node.js (version 18 or newer). Check with `node -v` in a terminal.
+The rise of digital lending in India has brought a parallel surge of **predatory and unauthorized lending apps**. Rogue operators exploit urgent financial distress through deceptive tactics:
 
-1. Unzip the folder and open it in VS Code (File > Open Folder).
-2. Open a terminal (Terminal > New Terminal). Start the **server**:
+- **Data Weaponization:** Demanding access to contacts, call logs, SMS, and photo galleries to blackmail borrowers and intimidate family and friends.
+- **Regulatory Impersonation (Claim vs. Reality):** Fraudulently claiming partnerships with legitimate Non-Banking Financial Companies (NBFCs) or banks registered with the Reserve Bank of India (RBI).
+- **Hidden Terms & Lack of Redressal:** Operating without valid privacy policies, physical addresses, or appointed grievance redressal officers.
+- **Accessibility Barrier:** Legal circulars and complex regulatory directories are difficult for everyday citizens and first-time smartphone borrowers to navigate.
+
+---
+
+## 🛡️ Core Solution & Key Highlights
+
+Karz Kavach bridges this information gap by providing a proactive verification tool before a borrower installs or shares personal data with a lending app:
+
+1. **Multi-Vector Risk Scoring Engine (0–100 Scale)**  
+   A deterministic, explainable rule engine that breaks down risk across three core pillars: Permission Risk, Registration Risk, and Transparency Risk.
+2. **Android Permission Auditing**  
+   Audits declared Android permissions against RBI digital lending guidelines, flagging dangerous permissions like `READ_CONTACTS`, `READ_SMS` (OTP interception), and storage access.
+3. **Claim vs. Reality Regulatory Cross-Referencing**  
+   Fuzzy-matches app claims against a directory of recognized Regulated Entities (REs) to catch fake affiliations, ghost lenders, and brand spoofing.
+4. **Bilingual & Audio Accessibility**  
+   Full interface localization in **English** and **Hindi (हिंदी)**, equipped with browser text-to-speech (*"Listen / सुनें"*) for rural and non-English-speaking users.
+5. **Actionable Remediation Guidance**  
+   Provides tailored safety recommendations, immediate defense steps (e.g., revoking permissions, securing UPI/bank accounts), and direct links to official reporting channels (**Cyber Crime Helpline 1930**, **Chakshu**, and **RBI Sachet**).
+
+---
+
+## 🧮 Risk Scoring Methodology
+
+Karz Kavach avoids opaque "black-box" predictions. Every point in the total risk score is tied to an explicit, auditable security rule:
+
+$$\text{Total Risk Score} = \text{Permission Risk (Max 40)} + \text{Registration Risk (Max 40)} + \text{Transparency Risk (Max 20)}$$
+
+### 1. Permission Risk (Max 40 Points)
+Measures the intrusion level and potential for harassment:
+- **`READ_CONTACTS` (+15 pts):** High extortion hazard (used to shame borrowers via their contact list).
+- **`READ_SMS` (+15 pts):** Financial hazard (can intercept confidential banking and authentication OTPs).
+- **`READ_CALL_LOG` / `READ_EXTERNAL_STORAGE` (+10 pts each):** Severe privacy breach (access to communication history and private photos).
+- **`ACCESS_FINE_LOCATION` / `RECORD_AUDIO` (+6 pts each):** Unnecessary surveillance vectors.
+- **`CAMERA` (+4 pts):** Monitored KYC vector.
+- **`READ_PHONE_STATE` (+3 pts):** Device telemetry tracking.
+
+### 2. Registration & Regulatory Risk (Max 40 Points)
+Checks legitimacy against regulatory frameworks:
+- **Unverified / Not in RBI Directory (+30 pts):** App lacks record of RBI registration or licensed NBFC backing.
+- **Claim-vs-Reality Mismatch (+25 pts):** App claims affiliation with one lender while the directory attributes it to another or none.
+
+### 3. Transparency & Governance Risk (Max 20 Points)
+Audits accountability:
+- **No Working Privacy Policy (+10 pts):** Failure to disclose data storage, retention, and third-party sharing practices.
+- **No Appointed Grievance Officer (+10 pts):** Non-compliance with mandated dispute resolution mechanisms.
+
+### Verdict Thresholds
+
+| Score Range | Verdict | Status Meaning |
+| :---: | :---: | :--- |
+| **0 – 29** | 🟢 **Safe** (*सुरक्षित*) | Verified lender backing, minimal compliant permissions, transparent policies. |
+| **30 – 59** | 🟡 **Needs Review** (*ध्यान से जांचें*) | Unverified status or elevated non-critical permissions; proceed with caution. |
+| **60 – 100** | 🔴 **Risky** (*जोखिम भरा*) | Excessive intrusive permissions, predatory flags, or fraudulent claims. |
+
+---
+
+## 🏛️ System Architecture
 
 ```
+karz-kavach/
+├── client/                     # Frontend Application (React + Vite)
+│   ├── src/
+│   │   ├── App.jsx             # UI with bilingual toggle, search, score gauge, and advice
+│   │   ├── App.css             # Design-system CSS (Material-3 tokens, responsive layout)
+│   │   └── main.jsx            # Application entrypoint
+│   └── index.html              # Shell HTML with Noto Sans & Google Symbols
+│
+├── server/                     # Backend API & Engine (Node.js + Express)
+│   ├── index.js                # Express server setup and route configuration
+│   ├── handlers.js             # Route controllers (decoupled for testability)
+│   ├── scoring.js              # Core heuristic engine & Levenshtein fuzzy matching
+│   ├── messages.js             # Bilingual dictionaries, permission weights & flags
+│   ├── test.js                 # Unit tests for scoring logic & edge cases
+│   └── data/
+│       ├── apps.json           # Catalog of analyzed applications & permission manifests
+│       └── directory.json      # Regulatory directory of licensed Regulated Entities
+│
+└── design/                     # UX/UI mockups and reference specifications
+```
+
+---
+
+## 🔌 API Endpoints
+
+### 1. `GET /api/check?name=:appName`
+Performs risk analysis and returns the safety verdict, score breakdown, triggered flags, and remediation steps.
+
+**Sample Response (`200 OK`):**
+```json
+{
+  "name": "QuickRupee Demo",
+  "score": 75,
+  "verdict": "RISKY",
+  "breakdown": {
+    "permission": 40,
+    "registration": 25,
+    "transparency": 10
+  },
+  "flags": [
+    {
+      "severity": "bad",
+      "text": "App claims ABC Finance, but directory says Quick NBFC.",
+      "text_hi": "ऐप दावा करता है ABC Finance, लेकिन डायरेक्टरी कहती है Quick NBFC।"
+    }
+  ],
+  "permissions": [ ... ],
+  "nextSteps": [ ... ]
+}
+```
+
+### 2. `GET /api/apps`
+Returns the list of indexed applications to power the client-side search suggestions and autocompletion.
+
+### 3. `GET /api/health`
+Health check endpoint returning `{ "ok": true }`.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v18.0.0 or later)
+- npm (bundled with Node.js)
+
+### Installation & Local Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/karz-kavach.git
+   cd karz-kavach
+   ```
+
+2. **Start the Backend Server:**
+   ```bash
+   cd server
+   npm install
+   npm start
+   ```
+   *The server runs at `http://localhost:5000`.*
+
+3. **Start the Frontend Client:**
+   Open a new terminal window:
+   ```bash
+   cd client
+   npm install
+   npm run dev
+   ```
+   *The application will be available at `http://localhost:5173`.*
+
+---
+
+## 🧪 Testing
+
+The scoring engine includes automated unit tests covering score caps, fuzzy string matching, claim-vs-reality detection, and bilingual flag generation:
+
+```bash
 cd server
-npm install
-npm start
+npm test
 ```
-
-You should see: `Karz Kavach server running on http://localhost:5000`
-
-3. Open a **second** terminal (click the + or split icon). Start the **website**:
-
-```
-cd client
-npm install
-npm run dev
-```
-
-4. Open the link it prints (usually http://localhost:5173).
-5. Type `QuickRupee Demo` and press **Check app**. Try the other five apps too (the box suggests them).
-
-Both terminals must stay open while you demo.
-
-If the page says it could not reach the server, the first terminal is not running.
-
-To run the checks on the scoring engine: `cd server` then `npm test`. All tests should pass.
 
 ---
 
-## 2. How the project is organised
+## 🔮 Roadmap & Future Enhancements
 
-```
-server/
-  index.js            starts the Express server and defines the 3 routes
-  handlers.js         the logic behind each route
-  scoring.js          THE CORE: the scoring rules and name matching
-  messages.js         all English and Hindi sentences, and permission weights
-  data/apps.json      the demo apps (name, permissions, privacy policy, etc.)
-  data/directory.json demo copy of the "RBI directory" (app name and lender)
-client/
-  src/App.jsx         the screens (search, verdict card, language toggle)
-  src/App.css         colours and layout
-```
-
-How a check works:
-1. The website sends the app name to `/api/check?name=...`.
-2. `scoring.js` finds the app, looks it up in the directory, and adds up risk points.
-3. The server sends back the verdict, score, reasons and advice. The website shows it.
-
-Score = permissions (max 40) + registration (max 40) + transparency (max 20).
-0 to 29 = Safe, 30 to 59 = Needs a closer look, 60 and above = Risky.
+- **Direct APK & Manifest Analysis:** Allow users to upload an `.apk` file or provide a Google Play Store link for automatic permission extraction.
+- **Live RBI Registry Synchronization:** Automate continuous scraping/sync with RBI's public Digital Lending Apps (DLA) repository and the Sachet portal.
+- **Community Threat Intelligence:** Allow victims to flag abusive recovery calls and unmask predatory apps in real time.
+- **Persistent Data Store:** Migrate storage from static JSON catalogs to MongoDB with indexing and audit logs.
 
 ---
 
-## 3. Things you can change (good for learning)
+## ⚖️ Disclaimer
 
-**Add a new demo app:** open `server/data/apps.json`, copy one block, change the name, permissions and yes/no fields (`true` or `false`), and give it a new `id`. Save, restart the server, search for it.
-
-To make it count as "listed", also add a line in `server/data/directory.json` with the same app name and a lender.
-
-**Change how risky a permission is:** edit the `weight` numbers in `server/messages.js`.
-
-**Change verdict cut-offs:** edit `THRESHOLDS` at the top of `server/scoring.js`.
-
-**Change wording or Hindi text:** edit `messages.js` (reasons) and the `UI` block at the top of `client/src/App.jsx` (screen text).
-
-If you change scores, run `npm test` in `server`. Some tests check exact numbers and will tell you what changed.
-
----
-
-## 4. What is NOT built yet (be honest about this in the pitch)
-
-- No real RBI directory data. `directory.json` is a small demo list. Real data would come from RBI's public Digital Lending Apps directory on rbi.org.in, and you must check how you are allowed to collect it.
-- No APK upload and no Play Store lookup. Permissions come from the demo data.
-- No MongoDB yet. Data is read from the JSON files. The abstract says MongoDB, so be ready to say it is the planned database and that the data layer is isolated, so the switch is small.
-- Claim-vs-reality check exists but works on the demo data only.
-- The "Listen" button uses the browser's built-in voice. Hindi voice quality depends on the device.
-
----
-
-## 5. GitHub, step by step
-
-**One person (you) does this once:**
-
-1. On github.com click **New repository**. Name it `karz-kavach`. Leave "Add a README" **unchecked**. Click Create.
-2. In the project folder, in a terminal:
-
-```
-git init
-git add .
-git commit -m "Initial Karz Kavach starter"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/karz-kavach.git
-git push -u origin main
-```
-
-(Replace the link with the one GitHub shows you.)
-
-3. On GitHub: Settings > Collaborators > add your two teammates.
-
-**Every time you finish a bit of work:**
-
-```
-git add .
-git commit -m "short note of what you did"
-git push
-```
-
-**Teammates, first time:** `git clone https://github.com/YOUR-USERNAME/karz-kavach.git`
-
-**Before you start work each time:** `git pull` (this brings in other people's changes).
-
-Simple rules to avoid trouble: pull before you start, push often, and try not to edit the same file at the same time. The `.gitignore` already keeps `node_modules` out of GitHub.
-
----
-
-## 6. Demo script (about 1 minute)
-
-1. Search `QuickRupee Demo`: Risky. Show the three score bars and the red flags.
-2. Scroll to "What this app can do to you" (contacts, SMS, OTPs).
-3. Switch to हिंदी and press Listen.
-4. Search `EasyPay Credit Demo`: the app claims one lender, the directory says another (claim vs reality).
-5. Search `InstaCash Demo`: unlisted but minimal permissions, so only "needs a closer look", not "fraud". This shows you thought about false positives.
-6. Search `SureLoan Demo`: Safe.
+*The sample apps included in this repository are **fictional demonstration datasets** designed to illustrate the scoring engine's capabilities during hackathon evaluation. Karz Kavach is intended as an informational consumer-protection tool and does not constitute formal legal or financial advice.*
