@@ -1,190 +1,144 @@
 # Karz Kavach
 
-> **Anti-Predatory Loan App & Digital Lending Fraud Risk Detector**  
+> **Anti-Predatory Loan App Detector**  
+> *"Know before you borrow"*  
 
-
-Karz Kavach is an explainable consumer-protection platform designed to safeguard borrowers against illegal digital lending apps, extortionate loan sharks, and aggressive data harvesting. By evaluating app permissions, regulatory registrations, and transparency disclosures, Karz Kavach delivers instant, easy-to-understand safety verdicts (**Safe**, **Needs Review**, or **Risky**) in both **English and Hindi** with audio accessibility.
-
----
-
-## 🚨 Problem Statement
-
-The rise of digital lending in India has brought a parallel surge of **predatory and unauthorized lending apps**. Rogue operators exploit urgent financial distress through deceptive tactics:
-
-- **Data Weaponization:** Demanding access to contacts, call logs, SMS, and photo galleries to blackmail borrowers and intimidate family and friends.
-- **Regulatory Impersonation (Claim vs. Reality):** Fraudulently claiming partnerships with legitimate Non-Banking Financial Companies (NBFCs) or banks registered with the Reserve Bank of India (RBI).
-- **Hidden Terms & Lack of Redressal:** Operating without valid privacy policies, physical addresses, or appointed grievance redressal officers.
-- **Accessibility Barrier:** Legal circulars and complex regulatory directories are difficult for everyday citizens and first-time smartphone borrowers to navigate.
+Karz Kavach is a friendly, easy-to-use tool that checks whether a loan app is safe or risky **before** you install it or borrow money. It looks at the permissions the app asks for, checks if the lender is legally registered with the RBI, and explains the risks in simple **English and Hindi** with audio readout.
 
 ---
 
-## 🛡️ Core Solution & Key Highlights
+## 📌 The Problem
 
-Karz Kavach bridges this information gap by providing a proactive verification tool before a borrower installs or shares personal data with a lending app:
-
-1. **Multi-Vector Risk Scoring Engine (0–100 Scale)**  
-   A deterministic, explainable rule engine that breaks down risk across three core pillars: Permission Risk, Registration Risk, and Transparency Risk.
-2. **Android Permission Auditing**  
-   Audits declared Android permissions against RBI digital lending guidelines, flagging dangerous permissions like `READ_CONTACTS`, `READ_SMS` (OTP interception), and storage access.
-3. **Claim vs. Reality Regulatory Cross-Referencing**  
-   Fuzzy-matches app claims against a directory of recognized Regulated Entities (REs) to catch fake affiliations, ghost lenders, and brand spoofing.
-4. **Bilingual & Audio Accessibility**  
-   Full interface localization in **English** and **Hindi (हिंदी)**, equipped with browser text-to-speech (*"Listen / सुनें"*) for rural and non-English-speaking users.
-5. **Actionable Remediation Guidance**  
-   Provides tailored safety recommendations, immediate defense steps (e.g., revoking permissions, securing UPI/bank accounts), and direct links to official reporting channels (**Cyber Crime Helpline 1930**, **Chakshu**, and **RBI Sachet**).
+Many instant loan apps trick people who urgently need money:
+- They promise fast loans with "no paperwork".
+- Once installed, they ask for sensitive permissions like **Contacts, Photos, and SMS**.
+- They use this private data to blackmail and harass borrowers and their families.
+- Many claim they are partnered with RBI-registered banks or NBFCs when they are not.
+- Even though the Reserve Bank of India (RBI) has an official public directory of approved lending apps, most borrowers do not know how to find or check it.
 
 ---
 
-## 🧮 Risk Scoring Methodology
+## 💡 Our Solution
 
-Karz Kavach avoids opaque "black-box" predictions. Every point in the total risk score is tied to an explicit, auditable security rule:
+**Karz Kavach** gives borrowers a clear verdict in seconds:
+- **🟢 Safe** (*सुरक्षित*): The app is registered, asks only for basic needed permissions, and has clear policies.
+- **🟡 Requires Review** (*ध्यान से जांचें*): The app is unverified or asks for extra permissions; proceed with caution.
+- **🔴 Risky** (*जोखिम भरा*): The app asks for dangerous permissions (like reading your contacts or OTPs) or lies about its registration.
 
-$$\text{Total Risk Score} = \text{Permission Risk (Max 40)} + \text{Registration Risk (Max 40)} + \text{Transparency Risk (Max 20)}$$
-
-### 1. Permission Risk (Max 40 Points)
-Measures the intrusion level and potential for harassment:
-- **`READ_CONTACTS` (+15 pts):** High extortion hazard (used to shame borrowers via their contact list).
-- **`READ_SMS` (+15 pts):** Financial hazard (can intercept confidential banking and authentication OTPs).
-- **`READ_CALL_LOG` / `READ_EXTERNAL_STORAGE` (+10 pts each):** Severe privacy breach (access to communication history and private photos).
-- **`ACCESS_FINE_LOCATION` / `RECORD_AUDIO` (+6 pts each):** Unnecessary surveillance vectors.
-- **`CAMERA` (+4 pts):** Monitored KYC vector.
-- **`READ_PHONE_STATE` (+3 pts):** Device telemetry tracking.
-
-### 2. Registration & Regulatory Risk (Max 40 Points)
-Checks legitimacy against regulatory frameworks:
-- **Unverified / Not in RBI Directory (+30 pts):** App lacks record of RBI registration or licensed NBFC backing.
-- **Claim-vs-Reality Mismatch (+25 pts):** App claims affiliation with one lender while the directory attributes it to another or none.
-
-### 3. Transparency & Governance Risk (Max 20 Points)
-Audits accountability:
-- **No Working Privacy Policy (+10 pts):** Failure to disclose data storage, retention, and third-party sharing practices.
-- **No Appointed Grievance Officer (+10 pts):** Non-compliance with mandated dispute resolution mechanisms.
-
-### Verdict Thresholds
-
-| Score Range | Verdict | Status Meaning |
-| :---: | :---: | :--- |
-| **0 – 29** | 🟢 **Safe** (*सुरक्षित*) | Verified lender backing, minimal compliant permissions, transparent policies. |
-| **30 – 59** | 🟡 **Needs Review** (*ध्यान से जांचें*) | Unverified status or elevated non-critical permissions; proceed with caution. |
-| **60 – 100** | 🔴 **Risky** (*जोखिम भरा*) | Excessive intrusive permissions, predatory flags, or fraudulent claims. |
+Every result comes with clear, plain-language explanations in **both English and Hindi**, plus a **"Listen / सुनें"** button so anyone can hear the verdict out loud.
 
 ---
 
-## 🏛️ System Architecture
+## 🔄 Core Flow: How It Works
 
-```
+Our system follows a simple 5-step process:
+
+$$\text{Scan} \longrightarrow \text{Verify} \longrightarrow \text{Assess Risk} \longrightarrow \text{Explain} \longrightarrow \text{Warn}$$
+
+1. **Scan:** Reads the permissions the app requests (such as contacts, SMS, storage, or camera).
+2. **Verify:** Checks if the app and its developer are listed in the official RBI lending directory.
+3. **Assess Risk:** Calculates a transparent risk score (0 to 100) based on three factors:
+   - **Permissions (Max 40 points):** Dangerous access like contacts or SMS.
+   - **Registration (Max 40 points):** Whether the app is registered and tells the truth about its lender.
+   - **Transparency (Max 20 points):** Whether the app has a privacy policy and a grievance officer.
+4. **Explain:** Shows clear reasons for every flag raised (no mysterious "black box" decisions). Unlisted apps are marked as *unverified* (not automatically fraudulent) to prevent false alarms.
+5. **Warn & Guide:** Gives safe next steps, such as reporting fake apps to the Cyber Crime Helpline (**1930**), **Chakshu**, or **RBI Sachet**.
+
+---
+
+## ✨ Key Innovations
+
+- **All-in-One Check:** Combines Android permission auditing with official regulatory verification in a single search.
+- **Claim vs. Reality Check:** Catches apps that pretend to be linked with trusted NBFCs by cross-checking names.
+- **Explainable Scoring:** Every warning flag clearly explains *what* was found and *why* it matters.
+- **Bilingual & Audio Friendly:** Full support for Hindi and English, designed for first-time digital borrowers.
+
+---
+
+## 🎯 United Nations Sustainable Development Goals (SDGs)
+
+This project directly contributes to:
+- **SDG 10: Reduced Inequalities** — Protects vulnerable and low-income borrowers from financial exploitation.
+- **SDG 16: Peace, Justice, and Strong Institutions** — Combats illegal lending rackets and encourages lawful financial practices.
+- **SDG 9: Industry, Innovation, and Infrastructure** — Promotes safe, ethical digital financial services.
+
+---
+
+## 💻 Tech Stack
+
+- **Frontend:** React, HTML5, CSS3 (Material-3 inspired design, mobile-first responsive layout, Web Speech API for voice).
+- **Backend:** Node.js, Express.js.
+- **Scoring Engine:** Deterministic rule-based engine with fuzzy name matching (Levenshtein distance).
+- **Database / Data Storage:** Modular JSON data layer (designed to easily plug into MongoDB).
+
+---
+
+## 📁 Project Structure
+
+```text
 karz-kavach/
-├── client/                     # Frontend Application (React + Vite)
+├── client/                 # Frontend (React + Vite)
 │   ├── src/
-│   │   ├── App.jsx             # UI with bilingual toggle, search, score gauge, and advice
-│   │   ├── App.css             # Design-system CSS (Material-3 tokens, responsive layout)
-│   │   └── main.jsx            # Application entrypoint
-│   └── index.html              # Shell HTML with Noto Sans & Google Symbols
+│   │   ├── App.jsx         # Search box, verdict cards, language toggle & audio
+│   │   ├── App.css         # Clean, responsive styling & design tokens
+│   │   └── main.jsx        # App entry point
+│   └── index.html          # HTML shell with Google Fonts
 │
-├── server/                     # Backend API & Engine (Node.js + Express)
-│   ├── index.js                # Express server setup and route configuration
-│   ├── handlers.js             # Route controllers (decoupled for testability)
-│   ├── scoring.js              # Core heuristic engine & Levenshtein fuzzy matching
-│   ├── messages.js             # Bilingual dictionaries, permission weights & flags
-│   ├── test.js                 # Unit tests for scoring logic & edge cases
+├── server/                 # Backend API (Node.js + Express)
+│   ├── index.js            # Express server & API routes
+│   ├── handlers.js         # Request handlers
+│   ├── scoring.js          # Scoring engine & fuzzy matching logic
+│   ├── messages.js         # Explanations in English & Hindi, permission weights
+│   ├── test.js             # Automated unit tests
 │   └── data/
-│       ├── apps.json           # Catalog of analyzed applications & permission manifests
-│       └── directory.json      # Regulatory directory of licensed Regulated Entities
+│       ├── apps.json       # Demo loan apps data
+│       └── directory.json  # Reference directory of registered lenders
 │
-└── design/                     # UX/UI mockups and reference specifications
+└── design/                 # UI/UX reference screens and mockups
 ```
 
 ---
 
-## 🔌 API Endpoints
-
-### 1. `GET /api/check?name=:appName`
-Performs risk analysis and returns the safety verdict, score breakdown, triggered flags, and remediation steps.
-
-**Sample Response (`200 OK`):**
-```json
-{
-  "name": "QuickRupee Demo",
-  "score": 75,
-  "verdict": "RISKY",
-  "breakdown": {
-    "permission": 40,
-    "registration": 25,
-    "transparency": 10
-  },
-  "flags": [
-    {
-      "severity": "bad",
-      "text": "App claims ABC Finance, but directory says Quick NBFC.",
-      "text_hi": "ऐप दावा करता है ABC Finance, लेकिन डायरेक्टरी कहती है Quick NBFC।"
-    }
-  ],
-  "permissions": [ ... ],
-  "nextSteps": [ ... ]
-}
-```
-
-### 2. `GET /api/apps`
-Returns the list of indexed applications to power the client-side search suggestions and autocompletion.
-
-### 3. `GET /api/health`
-Health check endpoint returning `{ "ok": true }`.
-
----
-
-## 🚀 Getting Started
+## ⚡ Quickstart: Running the Project
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v18.0.0 or later)
-- npm (bundled with Node.js)
+Make sure you have [Node.js](https://nodejs.org/) (v18 or newer) installed.
 
-### Installation & Local Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/karz-kavach.git
-   cd karz-kavach
-   ```
-
-2. **Start the Backend Server:**
-   ```bash
-   cd server
-   npm install
-   npm start
-   ```
-   *The server runs at `http://localhost:5000`.*
-
-3. **Start the Frontend Client:**
-   Open a new terminal window:
-   ```bash
-   cd client
-   npm install
-   npm run dev
-   ```
-   *The application will be available at `http://localhost:5173`.*
-
----
-
-## 🧪 Testing
-
-The scoring engine includes automated unit tests covering score caps, fuzzy string matching, claim-vs-reality detection, and bilingual flag generation:
-
+### 1. Start the Server
+Open a terminal in the project folder:
 ```bash
 cd server
-npm test
+npm install
+npm start
+```
+*The server will start on `http://localhost:5000`.*
+
+### 2. Start the Website
+Open a **second** terminal window:
+```bash
+cd client
+npm install
+npm run dev
+```
+*Open `http://localhost:5173` in your browser.*
+
+### 3. Run Automated Tests
+To test the scoring engine and matching rules:
+```bash
+cd server
+node --test
 ```
 
 ---
 
-## 🔮 Roadmap & Future Enhancements
+## 🔮 Future Scope & Next Steps
 
-- **Direct APK & Manifest Analysis:** Allow users to upload an `.apk` file or provide a Google Play Store link for automatic permission extraction.
-- **Live RBI Registry Synchronization:** Automate continuous scraping/sync with RBI's public Digital Lending Apps (DLA) repository and the Sachet portal.
-- **Community Threat Intelligence:** Allow victims to flag abusive recovery calls and unmask predatory apps in real time.
-- **Persistent Data Store:** Migrate storage from static JSON catalogs to MongoDB with indexing and audit logs.
+- **Direct APK & Store Link Analysis:** Let users paste a Google Play Store link or upload an `.apk` file for instant scanning.
+- **WhatsApp Bot:** Make the service available over WhatsApp so users can send an app name or screenshot to get an instant verdict.
+- **Browser Extension:** Alert users when they visit unofficial APK download websites.
+- **Live RBI Sync:** Automatically sync with live RBI directories and consumer complaints portals.
 
 ---
 
-## ⚖️ Disclaimer
-
-*The sample apps included in this repository are **fictional demonstration datasets** designed to illustrate the scoring engine's capabilities during hackathon evaluation. Karz Kavach is intended as an informational consumer-protection tool and does not constitute formal legal or financial advice.*
+## ⚖️ Note
+*The sample apps included in this project are fictional demo datasets created for hackathon demonstration and testing purposes.*
