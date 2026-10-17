@@ -1,0 +1,5 @@
+[
+  { "appName": "SureLoan Demo", "lender": "Demo Finance Ltd" },
+  { "appName": "EasyPay Credit Demo", "lender": "Sample Bank Ltd" },
+  { "appName": "LoanMitra Demo", "lender": "Sample Bank Ltd" }
+]

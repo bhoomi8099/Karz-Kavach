@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "SureLoan Demo",
+    "developer": "Demo Finance Ltd",
+    "claimedLender": "Demo Finance Ltd",
+    "permissions": ["CAMERA", "ACCESS_FINE_LOCATION", "READ_PHONE_STATE"],
+    "privacyPolicy": true,
+    "grievanceContact": true,
+    "feeDetails": true,
+    "demo": true
+  },
+  {
+    "id": 2,
+    "name": "QuickRupee Demo",
+    "developer": "QR Apps (unverified)",
+    "claimedLender": "Demo Finance Ltd",
+    "permissions": ["READ_CONTACTS", "READ_SMS", "READ_CALL_LOG", "READ_EXTERNAL_STORAGE"],
+    "privacyPolicy": false,
+    "grievanceContact": false,
+    "feeDetails": false,
+    "demo": true
+  },
+  {
+    "id": 3,
+    "name": "EasyPay Credit Demo",
+    "developer": "EasyPay Tech",
+    "claimedLender": "Demo Finance Ltd",
+    "permissions": ["READ_CONTACTS", "ACCESS_FINE_LOCATION", "CAMERA"],
+    "privacyPolicy": true,
+    "grievanceContact": true,
+    "feeDetails": false,
+    "demo": true
+  },
+  {
+    "id": 4,
+    "name": "InstaCash Demo",
+    "developer": "InstaCash Labs",
+    "claimedLender": null,
+    "permissions": ["CAMERA"],
+    "privacyPolicy": true,
+    "grievanceContact": true,
+    "feeDetails": true,
+    "demo": true
+  },
+  {
+    "id": 5,
+    "name": "LoanMitra Demo",
+    "developer": "Sample Bank Ltd",
+    "claimedLender": "Sample Bank Ltd",
+    "permissions": ["READ_CONTACTS", "READ_SMS"],
+    "privacyPolicy": true,
+    "grievanceContact": false,
+    "feeDetails": true,
+    "demo": true
+  },
+  {
+    "id": 6,
+    "name": "CashNow Demo",
+    "developer": "CN Mobile",
+    "claimedLender": "Sample Bank Ltd",
+    "permissions": ["READ_CONTACTS", "READ_SMS", "READ_MEDIA_IMAGES", "RECORD_AUDIO"],
+    "privacyPolicy": false,
+    "grievanceContact": true,
+    "feeDetails": true,
+    "demo": true
+  }
+]

@@ -1,0 +1,276 @@
+<!DOCTYPE html><html class="h-full" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#c4c1fb", "surface-tint": "#5b598c", "on-primary-container": "#8683ba", "on-secondary": "#ffffff", "on-tertiary-fixed": "#002109", "error": "#ba1a1a", "on-background": "#1e1b19", "error-container": "#ffdad6", "on-secondary-fixed": "#100069", "surface-container": "#f4ece8", "primary": "#070235", "on-error": "#ffffff", "surface-container-high": "#eee7e3", "tertiary-fixed-dim": "#62df7d", "background": "#fff8f5", "tertiary-container": "#00280c", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#372abf", "primary-fixed": "#e3dfff", "secondary-fixed": "#e3dfff", "inverse-surface": "#33302d", "surface-container-low": "#faf2ee", "outline-variant": "#c8c5d0", "tertiary-fixed": "#7ffc97", "secondary": "#4e45d5", "surface-variant": "#e9e1dd", "on-primary-fixed-variant": "#444173", "surface-container-highest": "#e9e1dd", "surface-container-lowest": "#ffffff", "outline": "#787680", "secondary-container": "#6860ef", "on-primary-fixed": "#181445", "primary-container": "#1e1b4b", "tertiary": "#000e02", "primary-fixed-dim": "#c4c1fb", "on-secondary-container": "#fffbff", "surface": "#fff8f5", "surface-bright": "#fff8f5", "surface-dim": "#e0d8d5", "on-tertiary-container": "#079e46", "on-error-container": "#93000a", "on-surface": "#1e1b19", "secondary-fixed-dim": "#c3c0ff", "on-tertiary": "#ffffff", "inverse-on-surface": "#f7efeb", "on-tertiary-fixed-variant": "#005320", "on-surface-variant": "#47464f" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "margin": "1rem", "space-xs": "0.25rem", "gutter": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem", "space-xl": "2rem", "margin-mobile": "1rem" }, fontFamily: { "label-sm": ["Noto Sans"], "label-lg": ["Noto Sans"], "label-md": ["Noto Sans"], "headline-lg": ["Noto Sans"], "headline-xl-mobile": ["Noto Sans"], "headline-xl": ["Noto Sans"], "title-md": ["Noto Sans"], "body-md": ["Noto Sans"], "headline-md": ["Noto Sans"], "body-lg": ["Noto Sans"] }, fontSize: { "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "headline-lg": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-md": ["18px", { "lineHeight": "26px", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-full flex flex-col"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-20 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-primary hover:bg-surface-container rounded-full transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Karz Kavach Shield Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X52QK-uCrK_3TwgY7hzOSUT9ToBOHYjgk-aGFq6FaG9sPS9G-XPYJX_DtPjAS-b3XiU9VJnxwEm9b-ToAxK-QsPVMX00E7oplPDkkCe-Wab-3u7GS-FaectpR_QylcpQ4I7CnvhtfCGrkK7WOwQ94Ad8IzZg9aFpU1wUrMH5HYsXyXiETq3eySktjXmYAKjQLadvskJ5t4pbu0Lt8nl1bDTq0j6V_RkG-GPCTckU5ApArgvIWb2djfkZU"><h1 class="font-title-md text-title-md text-primary font-bold tracking-tight truncate max-w-[170px]">App Verdict Detail</h1></div><div class="flex items-center gap-space-xs"><div class="inline-flex items-center bg-surface-container-high p-space-xs rounded-full"><button class="px-space-xs py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm min-h-[26px] min-w-[28px] flex items-center justify-center transition-colors" type="button">EN</button><button class="px-space-xs py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm min-h-[26px] min-w-[28px] flex items-center justify-center hover:text-on-surface transition-colors" type="button">हिंदी</button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile py-space-md gap-space-md"><div class="w-full bg-[#FEF3C7] text-[#B45309] rounded-lg px-space-sm py-1 flex items-center justify-center gap-space-xs font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-[16px]">info</span><span class="">Demo Data • Fictional profile for awareness testing (डेमो डेटा)</span></div>
+<!-- Top App Info Verification Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex gap-space-sm items-center min-w-0">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 shadow-sm overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Fintech mobile app brand icon with minimalist amber and navy blue geometric patterns, clean UI asset presentation against a soft cream backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-f1TnRpdw7pl7Ri9jIQCKISstgU7Md_OxNtRQdK7Cd_ehjetAXqWBN2bW9vtUYyXwdT3-k_X8RKDgvHaZAYKauV_WrhYDdLlLFJQfDk_es1DEdp-Dz0_LitiCCG8yfktIAG6STaq6rkFwJvH9ON4Svr0OQ0tGM3dCcvZJWJMiuCR68YK2QjcYFHgIWUjr13kgSJUXkin7NN_01SgqhTowRBAYPXm5HH4Re7yDRY2tijM1Yy2mWGia">
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-primary font-bold truncate">EasyPay Credit Demo (Needs a closer look)</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant truncate">EasyPay Digital Services LLP (Demo)</span>
+</div>
+</div>
+<!-- Audio/Listen CTA -->
+<button aria-label="Listen to verification result" class="shrink-0 flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-secondary-fixed text-primary font-label-md text-label-md transition-all active:scale-95 shadow-sm" id="voice-summary-btn" type="button">
+<span class="material-symbols-outlined text-[18px]" id="speaker-icon">volume_up</span>
+<span id="speaker-text" class="">स्पीकर से सुनें</span>
+</button>
+</div>
+<!-- Metadata Tags -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">history</span>
+        v1.8.0
+      </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">download</span>
+        100K+ Downloads
+      </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+        Partial KYC Tracked
+      </span>
+</div>
+</div>
+<!-- Amber Caution Verdict Banner -->
+<div class="w-full bg-[#FFFBEB] rounded-xl p-space-md shadow-sm flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-[#FEF3C7] text-[#D97706] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-headline-md text-[#D97706] font-bold">NEEDS A CLOSER LOOK</span>
+<span class="font-title-md text-title-md text-[#B45309] font-semibold">सावधानी बरतें • मध्यम जोखिम</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        This app demonstrates irregular documentation and excessive permission patterns. Exercise strict caution before sharing financial data.
+      </p>
+</div>
+</div>
+<!-- Risk Score & Breakdown Bento Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-primary font-bold">Risk Assessment Gauge</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Computed against RBI digital guidelines</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-[#FFFBEB] text-[#D97706] font-label-sm text-label-sm font-bold">MODERATE</span>
+</div>
+<!-- Gauge Ring & Metric Presentation -->
+<div class="flex items-center gap-space-md py-space-xs">
+<!-- Circular SVG Progress Meter -->
+<div class="relative w-28 h-28 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+<!-- Background track -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#f4ece8" stroke-width="10"></circle>
+<!-- Animated Caution Fill: 52% of 251.2 = 130.6 -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#D97706" stroke-dasharray="251.2" stroke-dashoffset="120.5" stroke-linecap="round" stroke-width="10"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-primary font-extrabold leading-none">52</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">/ 100</span>
+</div>
+</div>
+<!-- Verbal Context Column -->
+<div class="flex flex-col justify-center min-w-0">
+<span class="font-title-md text-title-md text-primary font-bold">Moderate Caution</span>
+<span class="font-body-md text-body-md text-on-surface-variant">मध्यम जोखिम स्कोर</span>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1 leading-snug">
+          Elevated vulnerability detected in data harvesting &amp; NBFC affiliation lifecycle.
+        </p>
+</div>
+</div>
+<!-- Breakdown Progress Bars -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Progress Bar 1: Permissions -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-on-surface font-label-md text-label-md">
+<span class="font-semibold text-primary">Permissions Risk</span>
+<span class="text-[#D97706] font-bold">24 / 40 (60%)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-[#D97706] rounded-full" style="width: 60%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Excessive background location &amp; media library access</span>
+</div>
+<!-- Progress Bar 2: RBI Registration -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-on-surface font-label-md text-label-md">
+<span class="font-semibold text-primary">RBI Affiliation Health</span>
+<span class="text-[#D97706] font-bold">10 / 40 (25%)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-[#D97706] rounded-full" style="width: 25%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Partner NBFC listed, but license validation is pending renewal</span>
+</div>
+<!-- Progress Bar 3: Transparency & Fees -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-on-surface font-label-md text-label-md">
+<span class="font-semibold text-primary">Transparency &amp; Hidden Charges</span>
+<span class="text-[#D97706] font-bold">18 / 20 (90%)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-[#D97706] rounded-full" style="width: 90%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Steep APR (~38%) with ambiguous pre-closure penalty schedules</span>
+</div>
+</div>
+</div>
+<!-- Section: What we found (जांच में क्या मिला) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">fact_check</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">What we found</h2>
+<span class="font-label-md text-label-md text-on-surface-variant">(जांच में क्या मिला)</span>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Findings Item 1 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-full bg-[#FFFBEB] text-[#D97706] flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Outdated NBFC Partnership Record</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Claims formal lending arrangement with 'Demo Finance Partners Ltd.', but the statutory validation agreement is dated 2021 and is currently awaiting renewal on public repositories.</p>
+</div>
+</div>
+<!-- Findings Item 2 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-full bg-[#FFFBEB] text-[#D97706] flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">location_searching</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Non-Essential Live Tracking</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Mandates background location coordinates and camera activation during general catalog browsing before any loan offer is generated.
+          </p>
+</div>
+</div>
+<!-- Findings Item 3 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Slow Redressal Mechanism</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Grievance nodal officer identity details are submitted, but audit samples show complaint acknowledgment averages more than 5 working days.
+          </p>
+</div>
+</div>
+<!-- Findings Item 4 -->
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-full bg-[#FFFBEB] text-[#D97706] flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">percent</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-primary font-semibold">Excessive Upfront Surcharges</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Nominal annual interest meets standard caps, but an elevated 8% processing deduction significantly reduces actual disbursal amount.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: What this app can do to you -->
+<div class="w-full bg-[#FFFBEB] rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#D97706] text-[22px]">policy</span>
+<h2 class="font-headline-md text-headline-md text-[#D97706] font-bold">What this app can do to you</h2>
+</div>
+<span class="font-label-md text-label-md text-[#B45309] font-medium">यह ऐप आपके साथ क्या कर सकता है:</span>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<!-- Risk item 1 -->
+<div class="flex items-start gap-space-sm p-space-xs">
+<span class="material-symbols-outlined text-[#D97706] text-[20px] shrink-0 mt-0.5">my_location</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Tracks continuous GPS location</span>
+<span class="font-label-md text-label-md text-on-surface-variant">हर समय आपकी सटीक लोकेशन ट्रैक कर सकता है, भले ही ऐप बंद हो।</span>
+</div>
+</div>
+<!-- Risk item 2 -->
+<div class="flex items-start gap-space-sm p-space-xs">
+<span class="material-symbols-outlined text-[#D97706] text-[20px] shrink-0 mt-0.5">credit_score</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Aggressive Credit Bureau Reporting</span>
+<span class="font-label-md text-label-md text-on-surface-variant">मामूली देरी पर भी CIBIL स्कोर को तेजी से नुकसान पहुंचा सकता है।</span>
+</div>
+</div>
+<!-- Risk item 3 -->
+<div class="flex items-start gap-space-sm p-space-xs">
+<span class="material-symbols-outlined text-[#D97706] text-[20px] shrink-0 mt-0.5">contacts</span>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Phone State &amp; Contacts Access</span>
+<span class="font-label-md text-label-md text-on-surface-variant">KYC प्रक्रिया के दौरान डिवाइस स्थिति और संपर्कों की अनुमति मांगता है।</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro Visual Banner: RBI Warning Illustration Placeholder -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md shadow-sm flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-lg bg-surface-container-high overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Official financial safety seal with an amber caution shield on a warm neutral textured paper background, clean fintech editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzPhTmp-y5H2UkvKpCkGFbuPwnEhJojhtlT4PXBL0t6wxW5lVg0TjM-Bnc5lH-HNNm9Spd3widu_W7OWNhWlQG8Ql42n9AThhJZ9pZ5dZp1xFzLtkxU29RoTLwqBP2AcRrZvtjGSoOIDJWpRRR0o8ihf-UoyE4Pk3-WurBtmRrI8Rf0D1pi54SQ_tAAsNRuWGr8jYk6pjLxq3BGWI31cGSmog5FmuP0bGm2f917uArfYgjB84h2VYg">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-primary font-bold">RBI Directive Reminder</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Never grant mobile contact list or photo gallery permissions to any lending platform.
+      </p>
+</div>
+</div>
+<!-- Section: What to do next (अब क्या करें) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-primary font-bold">What to do next</h2>
+<span class="font-label-md text-label-md text-on-surface-variant">अब क्या करें — सुरक्षित कदम उठाएं</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Primary NBFC Verification Action Button -->
+<button class="w-full min-h-[52px] bg-primary text-on-primary rounded-xl px-space-md py-space-sm flex items-center justify-center gap-space-sm font-title-md text-title-md font-bold shadow-md active:scale-[0.98] transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span class="">Verify NBFC on RBI Sachet Portal</span>
+</button>
+<!-- Direct Cybercrime / Financial Helpline CTA -->
+<a class="w-full min-h-[50px] bg-[#FFFBEB] text-[#B45309] rounded-xl px-space-md py-space-sm flex items-center justify-center gap-space-sm font-title-md text-title-md font-bold shadow-sm active:scale-[0.98] transition-transform" href="tel:1930">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span class="">Inquire Helpline 1930 (हेल्पलाइन)</span>
+</a>
+<!-- Secondary Safety Checklist PDF -->
+<button class="w-full min-h-[48px] bg-surface-container-high text-primary rounded-xl px-space-md py-space-sm flex items-center justify-center gap-space-sm font-label-lg text-label-lg font-semibold active:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">download_for_offline</span>
+<span class="">Download Safety Checklist PDF</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Client-side Audio Playback Simulation -->
+<script>
+  (function() {
+    const voiceBtn = document.getElementById('voice-summary-btn');
+    const speakerIcon = document.getElementById('speaker-icon');
+    const speakerText = document.getElementById('speaker-text');
+    let isPlaying = false;
+
+    if (voiceBtn) {
+      voiceBtn.addEventListener('click', function() {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+          speakerIcon.textContent = 'pause_circle';
+          speakerText.textContent = 'रोकें (Pause)';
+          voiceBtn.classList.add('bg-primary', 'text-on-primary');
+          voiceBtn.classList.remove('bg-secondary-fixed', 'text-primary');
+        } else {
+          speakerIcon.textContent = 'volume_up';
+          speakerText.textContent = 'स्पीकर से सुनें';
+          voiceBtn.classList.remove('bg-primary', 'text-on-primary');
+          voiceBtn.classList.add('bg-secondary-fixed', 'text-primary');
+        }
+      });
+    }
+  })();
+</script></main>
+
+</body></html>
