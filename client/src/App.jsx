@@ -9,7 +9,7 @@ const UI = {
     tagline: 'Check the app before it checks you.',
     taglineHi: 'ऐप डाउनलोड करने से पहले जांचें',
     demoBanner: 'Demo Data • Every app here is a fictional example for this prototype.',
-    placeholder: 'Type a loan app name, e.g. QuickRupee Demo',
+    placeholder: 'Type an app name, e.g. Rupee112, 4Fin, SureLoan Demo',
     check: 'Check app • ऐप की जांच करें',
     checking: 'Checking…',
     score: 'Risk score',
@@ -25,20 +25,28 @@ const UI = {
     noPerms: 'No sensitive permissions requested.',
     nextSteps: 'What to do next',
     nextStepsHi: 'अब क्या करें',
-    listen: 'सुनें (Listen)',
-    notFound: 'We could not find this app in our demo data. Try one of these:',
+    listen: 'Listen / सुनें',
+    notFound: 'We could not find this app. Try one of these:',
     serverError: 'Could not reach the server. Is it running on port 5000?',
     claims: 'Claims to work with',
     developer: 'Developer',
     footer: 'Karz Kavach | Team Moon3 | Hack@BVP 8.0',
     quickSuggest: 'Quick Suggestions / लोकप्रिय खोजें',
     searchLabel: 'Search Loan App Name',
+    matchedEntry: 'Matched directory entry',
+    matchedEntryHi: 'डायरेक्टरी में नाम',
+    listedUnder: 'Listed under',
+    listedUnderHi: 'लेंडर का नाम',
+    didYouMean: 'Did you mean:',
+    didYouMeanHi: 'क्या आपका मतलब यह था:',
+    dirNote: 'Permissions were not checked for this app (directory lookup only).',
+    dirNoteHi: 'इस ऐप की परमिशन की जाँच नहीं की गई है (केवल डायरेक्टरी लुकअप)।',
     verdictLabel: {
       safe: 'LOOKS SAFE',
       review: 'NEEDS A CLOSER LOOK',
       risky: 'RISKY — DO NOT INSTALL',
-      listed: 'LISTED',
-      unverified: 'UNVERIFIED',
+      listed: 'LISTED IN DIRECTORY',
+      unverified: 'NOT FOUND IN DIRECTORY',
     },
     riskLabel: {
       safe: 'Very Low Risk',
@@ -53,7 +61,7 @@ const UI = {
     tagline: 'ऐप आपको जाँचे, उससे पहले आप ऐप को जाँचें।',
     taglineHi: 'Check the app before it checks you',
     demoBanner: 'डेमो डेटा • यहाँ के सभी ऐप इस प्रोटोटाइप के लिए काल्पनिक उदाहरण हैं।',
-    placeholder: 'लोन ऐप का नाम लिखें, जैसे QuickRupee Demo',
+    placeholder: 'ऐप का नाम लिखें, जैसे Rupee112, 4Fin, QuickRupee Demo',
     check: 'ऐप जाँचें • Check App',
     checking: 'जाँच हो रही है…',
     score: 'जोखिम स्कोर',
@@ -69,20 +77,28 @@ const UI = {
     noPerms: 'कोई संवेदनशील परमिशन नहीं मांगी गई।',
     nextSteps: 'आगे क्या करें',
     nextStepsHi: 'What to do next',
-    listen: 'सुनें',
-    notFound: 'यह ऐप हमारे डेमो डेटा में नहीं मिला। इनमें से कोई आज़माएं:',
+    listen: 'सुनें (Listen)',
+    notFound: 'यह ऐप नहीं मिला। इनमें से कोई आज़माएं:',
     serverError: 'सर्वर से संपर्क नहीं हो सका। क्या वह पोर्ट 5000 पर चल रहा है?',
     claims: 'दावा करता है कि इसके साथ काम करता है',
     developer: 'डेवलपर',
     footer: 'कर्ज़ कवच | Team Moon3 | Hack@BVP 8.0',
     quickSuggest: 'लोकप्रिय खोजें / Quick Suggestions',
     searchLabel: 'लोन ऐप का नाम खोजें',
+    matchedEntry: 'डायरेक्टरी में नाम',
+    matchedEntryHi: 'Matched directory entry',
+    listedUnder: 'लेंडर का नाम',
+    listedUnderHi: 'Listed under',
+    didYouMean: 'क्या आपका मतलब यह था:',
+    didYouMeanHi: 'Did you mean:',
+    dirNote: 'इस ऐप की परमिशन की जाँच नहीं की गई है (केवल डायरेक्टरी लुकअप)।',
+    dirNoteHi: 'Permissions were not checked for this app (directory lookup only).',
     verdictLabel: {
       safe: 'सुरक्षित ऐप',
       review: 'सावधानी बरतें',
       risky: 'खतरनाक — इंस्टॉल न करें',
-      listed: 'सूचीबद्ध',
-      unverified: 'असत्यापित',
+      listed: 'डायरेक्टरी में सूचीबद्ध',
+      unverified: 'डायरेक्टरी में नहीं मिला',
     },
     riskLabel: {
       safe: 'अत्यधिक सुरक्षित',
@@ -94,7 +110,7 @@ const UI = {
 };
 
 const FLAG_ICONS = { good: '✔', warn: '!', bad: '✖' };
-const VERDICT_ICONS = { safe: '🛡️', review: '⚠️', risky: '⛔', listed: '📋', unverified: '❓' };
+const VERDICT_ICONS = { safe: '🛡️', review: '⚠️', risky: '⛔', listed: '📋', unverified: 'ℹ️' };
 
 // Maps verdict string → severity key for styling
 function verdictClass(verdict) {
@@ -116,7 +132,7 @@ function speak(text, lang) {
 }
 
 // ── SVG Gauge Ring ─────────────────────────────────────────────────────────────
-function GaugeRing({ score, max = 100, vClass }) {
+function GaugeRing({ score, max = 100 }) {
   const R = 50;
   const circ = 2 * Math.PI * R;
   const pct = Math.min(score / max, 1);
@@ -160,17 +176,17 @@ function ScoreBar({ label, value, max }) {
   );
 }
 
-// ── Full result (SAFE / REVIEW / RISKY) ────────────────────────────────────────
+// ── Full result (SAFE / REVIEW / RISKY) for Demo Apps ──────────────────────────
 function FullResult({ r, lang, t }) {
   const vClass = verdictClass(r.verdict);
 
   // Verdict hero label from our own UI dict
-  const heroLabel = t.verdictLabel[vClass] || r.verdictLabel[lang];
-  const riskText  = t.riskLabel[vClass]    || '';
+  const heroLabel = t.verdictLabel[vClass] || (r.verdictLabel && r.verdictLabel[lang]) || r.verdict;
+  const riskText  = t.riskLabel[vClass] || '';
 
   const speechText = [
-    r.verdictLabel[lang],
-    ...r.flags.filter(f => f.severity !== 'good').map(f => f[lang]),
+    r.verdictLabel?.[lang] || heroLabel,
+    ...(r.flags || []).filter(f => f.severity !== 'good').map(f => f[lang]),
   ].join('. ');
 
   return (
@@ -178,9 +194,9 @@ function FullResult({ r, lang, t }) {
       {/* App identity */}
       <div className="app-summary-card">
         <div className="app-info">
-          <div className="app-name">{r.app.name}</div>
-          <div className="app-meta">{t.developer}: {r.app.developer}</div>
-          {r.app.claimedLender && (
+          <div className="app-name">{r.app?.name || r.name}</div>
+          {r.app?.developer && <div className="app-meta">{t.developer}: {r.app.developer}</div>}
+          {r.app?.claimedLender && (
             <div className="app-meta">{t.claims}: {r.app.claimedLender}</div>
           )}
         </div>
@@ -199,148 +215,92 @@ function FullResult({ r, lang, t }) {
       </div>
 
       {/* Gauge + breakdown */}
-      <div className={`gauge-card ${vClass}`}>
-        <div className="gauge-header">
-          <div className="gauge-header-group">
-            <span className="gauge-header-label">{t.scoreLabel}</span>
-            <span className="gauge-header-title">{r.score.total} / 100 {t.score}</span>
+      {r.score && (
+        <div className={`gauge-card ${vClass}`}>
+          <div className="gauge-header">
+            <div className="gauge-header-group">
+              <span className="gauge-header-label">{t.scoreLabel}</span>
+              <span className="gauge-header-title">{r.score.total} / 100 {t.score}</span>
+            </div>
+            <span className="severity-pill">{riskText}</span>
           </div>
-          <span className="severity-pill">{riskText}</span>
-        </div>
 
-        <div className="gauge-body">
-          <GaugeRing score={r.score.total} max={100} vClass={vClass} />
-          <div className="gauge-text">
-            <div className="gauge-text-title">{heroLabel}</div>
-            <div className="gauge-text-sub">{riskText}</div>
-            <button className="listen-btn" onClick={() => speak(speechText, lang)}>
-              🔊 {t.listen}
-            </button>
+          <div className="gauge-body">
+            <GaugeRing score={r.score.total} max={100} />
+            <div className="gauge-text">
+              <div className="gauge-text-title">{heroLabel}</div>
+              <div className="gauge-text-sub">{riskText}</div>
+              <button className="listen-btn" onClick={() => speak(speechText, lang)} type="button">
+                🔊 {t.listen}
+              </button>
+            </div>
           </div>
-        </div>
 
-        {/* Score bars */}
-        <div className="bars-section">
-          <ScoreBar label={t.permission}     value={r.score.permission}     max={r.score.max.permission} />
-          <ScoreBar label={t.registration}   value={r.score.registration}   max={r.score.max.registration} />
-          <ScoreBar label={t.transparency}   value={r.score.transparency}   max={r.score.max.transparency} />
-        </div>
-      </div>
-
-      {/* What we found */}
-      <div className="section-card">
-        <div className="section-title">
-          🔍 {t.findings}
-          <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
-            ({t.findingsHi})
-          </span>
-        </div>
-        <ul className="flags">
-          {r.flags.map(f => (
-            <li key={f.code} className={`flag-item ${f.severity}`}>
-              <span className="flag-icon-wrap">{FLAG_ICONS[f.severity]}</span>
-              <span className="flag-text">{f[lang]}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Permissions */}
-      <div className="section-card">
-        <div className="section-title">
-          🔒 {t.canDo}
-          <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
-            ({t.canDoHi})
-          </span>
-        </div>
-        {r.permissions.length === 0 ? (
-          <p style={{ color: 'var(--on-surface-variant)', fontSize: 14 }}>{t.noPerms}</p>
-        ) : (
-          <ul className="perms">
-            {r.permissions.map(p => (
-              <li key={p.permission} className="perm-item">
-                <span className="perm-code">{p.permission}</span>
-                <span>{p[lang]}</span>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-
-      {/* Next steps */}
-      <div className="section-card">
-        <div className="section-title">
-          ⚡ {t.nextSteps}
-          <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
-            ({t.nextStepsHi})
-          </span>
-        </div>
-        <ol className="steps">
-          {r.nextSteps[lang].map((s, i) => (
-            <li key={s} className="step-item">
-              <span className="step-num">{i + 1}</span>
-              <span>{s}</span>
-            </li>
-          ))}
-        </ol>
-      </div>
-    </div>
-  );
-}
-
-// ── Directory-only result (LISTED / UNVERIFIED) ────────────────────────────────
-function DirResult({ r, lang, t }) {
-  const vClass = verdictClass(r.verdict);
-  const heroLabel = t.verdictLabel[vClass] || r.verdictLabel[lang];
-
-  return (
-    <div className="dir-result-card">
-      {/* Header */}
-      <div className="app-summary-card" style={{ marginBottom: 0, boxShadow: 'none', padding: 0 }}>
-        <div className="app-info">
-          <div className="app-name">{r.query}</div>
-        </div>
-        <span className={`verdict-badge ${vClass}`}>
-          {VERDICT_ICONS[vClass]} {heroLabel}
-        </span>
-      </div>
-
-      {/* Verdict banner */}
-      <div className={`verdict-hero ${vClass}`}>
-        <div className="vh-icon-wrap">{VERDICT_ICONS[vClass]}</div>
-        <div className="vh-content">
-          <div className="vh-title">{heroLabel}</div>
-          {r.verdictLabel && (
-            <div className="vh-subtitle">{r.verdictLabel[lang]}</div>
-          )}
-        </div>
-      </div>
-
-      {/* Matches */}
-      {r.matches && r.matches.length > 0 && (
-        <div className="section-card">
-          <div className="section-title">📋 {t.findings}</div>
-          <div className="dir-matches">
-            {r.matches.map((m, i) => (
-              <div key={i} className="dir-match-item">
-                <span style={{ fontSize: 16 }}>🏦</span>
-                <div>
-                  <div style={{ fontWeight: 700, color: 'var(--primary)' }}>{m.name || m}</div>
-                  {m.reg && <div style={{ fontSize: 12, color: 'var(--on-surface-variant)' }}>{m.reg}</div>}
-                </div>
-              </div>
-            ))}
+          {/* Score bars */}
+          <div className="bars-section">
+            <ScoreBar label={t.permission}     value={r.score.permission}     max={r.score.max?.permission || 40} />
+            <ScoreBar label={t.registration}   value={r.score.registration}   max={r.score.max?.registration || 40} />
+            <ScoreBar label={t.transparency}   value={r.score.transparency}   max={r.score.max?.transparency || 20} />
           </div>
         </div>
       )}
 
-      {/* Next steps */}
-      {r.nextSteps && r.nextSteps[lang] && (
+      {/* What we found */}
+      {r.flags && r.flags.length > 0 && (
         <div className="section-card">
-          <div className="section-title">⚡ {t.nextSteps}</div>
+          <div className="section-title">
+            🔍 {t.findings}
+            <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
+              ({t.findingsHi})
+            </span>
+          </div>
+          <ul className="flags">
+            {r.flags.map((f, i) => (
+              <li key={f.code || i} className={`flag-item ${f.severity}`}>
+                <span className="flag-icon-wrap">{FLAG_ICONS[f.severity] || '•'}</span>
+                <span className="flag-text">{f[lang]}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Permissions */}
+      {r.permissions && (
+        <div className="section-card">
+          <div className="section-title">
+            🔒 {t.canDo}
+            <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
+              ({t.canDoHi})
+            </span>
+          </div>
+          {r.permissions.length === 0 ? (
+            <p style={{ color: 'var(--on-surface-variant)', fontSize: 14 }}>{t.noPerms}</p>
+          ) : (
+            <ul className="perms">
+              {r.permissions.map(p => (
+                <li key={p.permission} className="perm-item">
+                  <span className="perm-code">{p.permission}</span>
+                  <span>{p[lang]}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
+
+      {/* Next steps */}
+      {r.nextSteps?.[lang] && (
+        <div className="section-card">
+          <div className="section-title">
+            ⚡ {t.nextSteps}
+            <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
+              ({t.nextStepsHi})
+            </span>
+          </div>
           <ol className="steps">
             {r.nextSteps[lang].map((s, i) => (
-              <li key={s} className="step-item">
+              <li key={i} className="step-item">
                 <span className="step-num">{i + 1}</span>
                 <span>{s}</span>
               </li>
@@ -352,11 +312,153 @@ function DirResult({ r, lang, t }) {
   );
 }
 
+// ── Directory-only result (LISTED / UNVERIFIED) ────────────────────────────────
+function DirResult({ r, lang, t, onSearch }) {
+  const isListed = r.verdict === 'LISTED';
+  const vClass = isListed ? 'listed' : 'unverified';
+  const verdictText = r.verdictLabel?.[lang] || (isListed ? t.verdictLabel.listed : t.verdictLabel.unverified);
+  const noteText = lang === 'hi' ? t.dirNoteHi : t.dirNote;
+
+  const speechText = [
+    verdictText,
+    ...(r.matches || []).map(m => `${m.appName}. ${m.lender}`),
+    ...(r.flags || []).map(f => f[lang]),
+    ...(r.nextSteps?.[lang] || []),
+  ].filter(Boolean).join('. ');
+
+  return (
+    <div className={`dir-result-card ${vClass}`}>
+      {/* App identity header */}
+      <div className="app-summary-card">
+        <div className="app-info">
+          <div className="app-name">{r.query}</div>
+          <div className="dir-lookup-tag">📋 {lang === 'hi' ? 'डायरेक्टरी लुकअप' : 'Directory Lookup'}</div>
+        </div>
+        <span className={`verdict-badge ${vClass}`}>
+          {isListed ? '📋' : 'ℹ️'} {verdictText}
+        </span>
+      </div>
+
+      {/* Verdict hero banner */}
+      <div className={`verdict-hero ${vClass}`}>
+        <div className="vh-icon-wrap">{isListed ? '📋' : 'ℹ️'}</div>
+        <div className="vh-content" style={{ flex: 1 }}>
+          <div className="vh-title">{verdictText}</div>
+          <div className="vh-subtitle" style={{ fontSize: 13, marginTop: 4, fontWeight: 500 }}>
+            {noteText}
+          </div>
+        </div>
+        <button
+          className="listen-btn dir-listen-btn"
+          onClick={() => speak(speechText, lang)}
+          title={t.listen}
+          type="button"
+        >
+          🔊 {t.listen}
+        </button>
+      </div>
+
+      {/* Matches (when app is listed) */}
+      {r.matches && r.matches.length > 0 && (
+        <div className="section-card">
+          <div className="section-title">
+            📋 {lang === 'hi' ? 'डायरेक्टरी मिलान' : 'Matched RBI Directory Records'}
+          </div>
+          <div className="dir-matches">
+            {r.matches.map((m, i) => (
+              <div key={i} className="dir-match-item">
+                <div className="dir-match-field">
+                  <span className="dir-match-label">{lang === 'hi' ? t.matchedEntryHi : t.matchedEntry}:</span>
+                  <span className="dir-match-val">{m.appName}</span>
+                </div>
+                <div className="dir-match-field">
+                  <span className="dir-match-label">{lang === 'hi' ? t.listedUnderHi : t.listedUnder}:</span>
+                  <span className="dir-match-lender">{m.lender}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Flags */}
+      {r.flags && r.flags.length > 0 && (
+        <div className="section-card">
+          <div className="section-title">
+            🔍 {t.findings}
+            <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
+              ({t.findingsHi})
+            </span>
+          </div>
+          <ul className="flags">
+            {r.flags.map((f, i) => (
+              <li key={f.code || i} className={`flag-item ${f.severity || 'warn'}`}>
+                <span className="flag-icon-wrap">
+                  {f.severity === 'good' ? '✔' : '!'}
+                </span>
+                <span className="flag-text">{f[lang]}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* "Did you mean" suggestion chips */}
+      {r.similar && r.similar.length > 0 && (
+        <div className="section-card">
+          <div className="section-title" style={{ fontSize: 16 }}>
+            💡 {lang === 'hi' ? t.didYouMeanHi : t.didYouMean}
+          </div>
+          <div className="chips">
+            {r.similar.map((simName) => (
+              <button
+                key={simName}
+                type="button"
+                className="chip dir-chip"
+                onClick={() => onSearch(simName)}
+              >
+                {simName}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Next steps */}
+      {r.nextSteps && r.nextSteps[lang] && (
+        <div className="section-card">
+          <div className="section-title">
+            ⚡ {t.nextSteps}
+            <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
+              ({t.nextStepsHi})
+            </span>
+          </div>
+          <ol className="steps">
+            {r.nextSteps[lang].map((s, i) => (
+              <li key={i} className="step-item">
+                <span className="step-num">{i + 1}</span>
+                <span>{s}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
+
+      {/* Informational small note */}
+      <div className="dir-note-box">
+        <span style={{ fontSize: 16 }}>ℹ️</span>
+        <span>{noteText}</span>
+      </div>
+    </div>
+  );
+}
+
 // ── Main App ──────────────────────────────────────────────────────────────────
 export default function App() {
   const [lang, setLang]         = useState('en');
   const [name, setName]         = useState('');
   const [apps, setApps]         = useState([]);
+  const [stats, setStats]       = useState(null);
   const [result, setResult]     = useState(null);
   const [notFound, setNotFound] = useState(null);
   const [error, setError]       = useState('');
@@ -369,19 +471,30 @@ export default function App() {
       .then(res => res.json())
       .then(setApps)
       .catch(() => {});
+
+    fetch('/api/stats')
+      .then(res => res.json())
+      .then(setStats)
+      .catch(() => {});
   }, []);
 
   async function runCheck(appName) {
+    const query = String(appName || '').trim();
+    if (!query) return;
     setLoading(true);
     setError('');
     setResult(null);
     setNotFound(null);
     try {
-      const res  = await fetch(`/api/check?name=${encodeURIComponent(appName)}`);
+      const res  = await fetch(`/api/check?name=${encodeURIComponent(query)}`);
       const data = await res.json();
-      if (res.status === 200)      setResult(data);
-      else if (res.status === 404) setNotFound(data.suggestions || []);
-      else                          setError(data.error || '');
+      if (res.status === 200) {
+        setResult(data);
+      } else if (res.status === 404) {
+        setNotFound(data.suggestions || []);
+      } else {
+        setError(data.error || t.serverError);
+      }
     } catch {
       setError(t.serverError);
     }
@@ -394,7 +507,8 @@ export default function App() {
   }
 
   // Decide which result component to show
-  const isDirectory = result && !result.score;
+  // Shape A has result.score; Shape B has result.mode === 'directory_only'
+  const isDirectory = result && (result.mode === 'directory_only' || !result.score);
 
   return (
     <div className="page">
@@ -412,10 +526,12 @@ export default function App() {
             <button
               className={lang === 'en' ? 'on' : ''}
               onClick={() => setLang('en')}
+              type="button"
             >EN</button>
             <button
               className={lang === 'hi' ? 'on' : ''}
               onClick={() => setLang('hi')}
+              type="button"
             >हिंदी</button>
           </div>
         </div>
@@ -425,15 +541,22 @@ export default function App() {
       <main className="main-content">
         <div className="inner">
 
-          {/* Demo banner */}
+          {/* Yellow Banner */}
           {showBanner && (
             <aside className="demo-banner">
               <span className="demo-banner-icon">⚠️</span>
-              <span className="demo-banner-text">{t.demoBanner}</span>
+              <span className="demo-banner-text">
+                {stats && stats.directorySource === 'rbi'
+                  ? (lang === 'hi'
+                      ? `डायरेक्टरी डेटा: RBI की DLA डायरेक्टरी से ${stats.importedAt || ''} को ${stats.directoryCount} ऐप आयात किए गए। पूर्ण परमिशन स्कोरिंग केवल काल्पनिक डेमो ऐप के लिए काम करती है।`
+                      : `Directory data: ${stats.directoryCount} apps imported from RBI's DLA directory on ${stats.importedAt || ''}. Full permission scoring works only for the fictional demo apps.`)
+                  : t.demoBanner}
+              </span>
               <button
                 onClick={() => setShowBanner(false)}
                 style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#854d0e', fontSize: 14, padding: 0 }}
                 aria-label="Dismiss"
+                type="button"
               >✕</button>
             </aside>
           )}
@@ -493,6 +616,7 @@ export default function App() {
                   {apps.slice(0, 5).map(a => (
                     <button
                       key={a.id}
+                      type="button"
                       className="suggestion-chip"
                       onClick={() => { setName(a.name); runCheck(a.name); }}
                     >
@@ -504,7 +628,7 @@ export default function App() {
             )}
           </section>
 
-          {/* Error */}
+          {/* Error card */}
           {error && (
             <div className="card error-card">{error}</div>
           )}
@@ -517,6 +641,7 @@ export default function App() {
                 {notFound.map(n => (
                   <button
                     key={n}
+                    type="button"
                     className="chip"
                     onClick={() => { setName(n); runCheck(n); }}
                   >
@@ -530,7 +655,7 @@ export default function App() {
           {/* Result */}
           {result && (
             isDirectory
-              ? <DirResult r={result} lang={lang} t={t} />
+              ? <DirResult r={result} lang={lang} t={t} onSearch={(simName) => { setName(simName); runCheck(simName); }} />
               : <FullResult r={result} lang={lang} t={t} />
           )}
         </div>
