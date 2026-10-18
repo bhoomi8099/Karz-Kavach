@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 
+const TRY_APPS = ['PhonePe', 'Paytm', 'Navi', 'Blink Credit'];
+
 // ── All screen text in English and Hindi ──────────────────────────────────────
 const UI = {
   en: {
@@ -8,8 +10,10 @@ const UI = {
     titleHi: 'कर्ज़ कवच',
     tagline: 'Check the app before it checks you.',
     taglineHi: 'ऐप डाउनलोड करने से पहले जांचें',
-    demoBanner: 'Demo Data • Every app here is a fictional example for this prototype.',
-    placeholder: 'Type an app name, e.g. Rupee112, 4Fin, SureLoan Demo',
+    demoBanner: "Directory data: 1734 apps imported from RBI's DLA directory. For real apps we show evidence (RBI listing, permissions, complaint contact), not safe/risky labels.",
+    bannerText: "Directory data: 1734 apps imported from RBI's DLA directory. For real apps we show evidence (RBI listing, permissions, complaint contact), not safe/risky labels.",
+    placeholder: 'Type an app name, e.g. PhonePe, Paytm, Navi, Blink Credit',
+    tryLabel: 'Try:',
     check: 'Check app • ऐप की जांच करें',
     checking: 'Checking…',
     score: 'Risk score',
@@ -101,8 +105,10 @@ const UI = {
     titleHi: 'Karz Kavach',
     tagline: 'ऐप आपको जाँचे, उससे पहले आप ऐप को जाँचें।',
     taglineHi: 'Check the app before it checks you',
-    demoBanner: 'डेमो डेटा • यहाँ के सभी ऐप इस प्रोटोटाइप के लिए काल्पनिक उदाहरण हैं।',
-    placeholder: 'ऐप का नाम लिखें, जैसे Rupee112, 4Fin, QuickRupee Demo',
+    demoBanner: 'डायरेक्टरी डेटा: RBI की DLA डायरेक्टरी से 1734 ऐप आयात किए गए। वास्तविक ऐप के लिए हम साक्ष्य (RBI सूची, परमिशन, शिकायत संपर्क) दिखाते हैं, सुरक्षित/जोखिम भरे लेबल नहीं।',
+    bannerText: 'डायरेक्टरी डेटा: RBI की DLA डायरेक्टरी से 1734 ऐप आयात किए गए। वास्तविक ऐप के लिए हम साक्ष्य (RBI सूची, परमिशन, शिकायत संपर्क) दिखाते हैं, सुरक्षित/जोखिम भरे लेबल नहीं।',
+    placeholder: 'ऐप का नाम लिखें, जैसे PhonePe, Paytm, Navi, Blink Credit',
+    tryLabel: 'आज़माएं:',
     check: 'ऐप जाँचें • Check App',
     checking: 'जाँच हो रही है…',
     score: 'जोखिम स्कोर',
@@ -853,11 +859,7 @@ export default function App() {
             <aside className="demo-banner">
               <span className="demo-banner-icon">⚠️</span>
               <span className="demo-banner-text">
-                {stats && stats.directorySource === 'rbi'
-                  ? (lang === 'hi'
-                      ? `डायरेक्टरी डेटा: RBI की DLA डायरेक्टरी से ${stats.importedAt || ''} को ${stats.directoryCount} ऐप आयात किए गए। पूर्ण परमिशन स्कोरिंग केवल काल्पनिक डेमो ऐप के लिए काम करती है।`
-                      : `Directory data: ${stats.directoryCount} apps imported from RBI's DLA directory on ${stats.importedAt || ''}. Full permission scoring works only for the fictional demo apps.`)
-                  : t.demoBanner}
+                {t.bannerText}
               </span>
               <button
                 onClick={() => setShowBanner(false)}
@@ -896,15 +898,11 @@ export default function App() {
               <div className="search-input-wrap">
                 <input
                   id="app-search-input"
-                  list="app-list"
                   value={name}
                   onChange={e => setName(e.target.value)}
                   placeholder={t.placeholder}
                   aria-label={t.placeholder}
                 />
-                <datalist id="app-list">
-                  {apps.map(a => <option key={a.id} value={a.name} />)}
-                </datalist>
               </div>
 
               <button
@@ -917,24 +915,22 @@ export default function App() {
               </button>
             </form>
 
-            {/* Quick suggestion chips */}
-            {apps.length > 0 && (
-              <div>
-                <div className="suggestions-label">{t.quickSuggest}</div>
-                <div className="suggestions-row">
-                  {apps.slice(0, 5).map(a => (
-                    <button
-                      key={a.id}
-                      type="button"
-                      className="suggestion-chip"
-                      onClick={() => { setName(a.name); runCheck(a.name); }}
-                    >
-                      {a.name}
-                    </button>
-                  ))}
-                </div>
+            {/* Try chips for real apps */}
+            <div className="try-chips-row">
+              <span className="try-label">{t.tryLabel}</span>
+              <div className="try-chips">
+                {TRY_APPS.map(appName => (
+                  <button
+                    key={appName}
+                    type="button"
+                    className="suggestion-chip"
+                    onClick={() => { setName(appName); runCheck(appName); }}
+                  >
+                    {appName}
+                  </button>
+                ))}
               </div>
-            )}
+            </div>
 
             {/* Prominent explore trusted apps button */}
             <button

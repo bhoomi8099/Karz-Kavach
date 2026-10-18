@@ -1,166 +1,159 @@
-# Karz Kavach (कर्ज़ कवच)
+# Karz Kavach (कर्ज़ कवच) 🛡️
 
-> **Citizen Protection Engine against Predatory Loan Apps**  
-> *"Check the app before it checks you • ऐप डाउनलोड करने से पहले जांचें"*
+> **Check loan apps before they check you.**  
+> *ऐप डाउनलोड करने से पहले जांचें*
 
-Karz Kavach is a bilingual, accessibility-first web application designed to protect citizens from predatory digital lending apps. It bridges the gap between official regulatory data and the app store ecosystem by cross-referencing apps against the **Reserve Bank of India (RBI) Digital Lending Directory**, analyzing **Google Play Store permissions exposure**, and providing direct access to **Grievance Redressal Officers**.
+**Karz Kavach** is an easy-to-use, bilingual website built to protect citizens in India from fake, predatory, and illegal loan apps.
 
----
-
-## 📌 The Problem
-
-Digital lending in India has expanded rapidly, but rogue and predatory loan apps have exploited first-time digital borrowers:
-- **Permission Harvesting:** Apps demand access to sensitive permissions—such as **Contacts, SMS (including bank OTPs), Photos, Storage, and Precise Location**—to blackmail borrowers and harass their families.
-- **False Regulatory Claims:** Unregistered operators claim partnerships with reputable banks or Non-Banking Financial Companies (NBFCs) to project legitimacy.
-- **Information Asymmetry:** While the RBI publishes an official directory of approved Digital Lending Apps (DLAs) and regulated entities, ordinary citizens find it difficult to search through complex spreadsheets, especially in regional languages.
+Instead of guessing whether an app is safe, Karz Kavach checks it directly against official **Reserve Bank of India (RBI)** records and real **Google Play Store permissions**, giving you clear facts and official complaint contacts in seconds.
 
 ---
 
-## 💡 How Karz Kavach Solves It
+## 🛑 Why Was This Built?
 
-Karz Kavach provides instantaneous, transparent assessments using a dual-mode engine:
+In India, many fraudulent and illegal loan apps trick borrowers every day:
+1. **Harassment through phone permissions:** Rogue apps demand access to your Contacts, SMS messages, Photos, and Location, and later use them to blackmail borrowers and their families.
+2. **Fake claims:** Unregulated apps often claim they are partnered with famous banks or NBFCs when they are not.
+3. **Hard-to-read official data:** The RBI publishes lists of genuine Digital Lending Apps (DLAs), but they are buried inside large spreadsheets that are difficult for regular people to search on a mobile phone.
+
+**Karz Kavach solves this by making official verification as easy as searching a name.**
+
+---
+
+## ✨ Key Features (What You Can Do)
+
+### 1. 🔍 Instant Loan App Verification
+- Type the name of any loan app (e.g. **PhonePe, Paytm, Navi, Blink Credit**).
+- **Official RBI Directory Check:** Checks against **1,734+ real apps** officially registered in RBI's Digital Lending directory.
+- **Shows Real Evidence:**
+  - **Registered Lender:** Shows the exact bank or NBFC legally responsible for the app.
+  - **Grievance Redressal Officer:** Shows the official officer's name, email (`mailto:`), and phone number (`tel:`) so you know exactly who to contact for disputes.
+  - **Google Play Permission Exposure:** Reads what sensitive permissions the app actually asks for (Contacts, SMS, Camera, Location, Storage) and gives an easy-to-read Low, Medium, or High exposure bar.
+  - **Next Steps & Helpline Links:** Direct links to report illegal apps to Cyber Crime (**1930**), Chakshu, or RBI Sachet.
+- **Smart Typo Tolerance:** If you misspell an app name, the site suggests close matches ("Did you mean...").
+
+### 2. ⭐ Trusted Apps Directory
+- A dedicated tab showing **590+ RBI-registered apps** that are also well-rated by users on the Google Play Store.
+- **Filter easily:** Browse "All", "Highly rated" (4.2★+), or "Well rated" apps.
+- **Search & Sort:** Search by app name or lender, and sort by trust score, star ratings, or number of user reviews.
+- **One-Click Check:** Click any trusted app card to immediately inspect its permissions and grievance officer.
+- **Safe Install:** Direct links to open the official listing on the Google Play Store.
+
+### 3. 🌐 100% Bilingual (English & Hindi)
+- Switch instantly between **English** and **हिंदी** at any time.
+- All headings, explanations, risk levels, and permissions are translated so everyone can understand.
+
+### 4. 🔊 Voice Readout (Listen / सुनें)
+- Tap the **Listen / सुनें** button to hear the verification findings read out loud.
+- Perfect for users who prefer listening or have difficulty reading text on a small screen.
+
+---
+
+## 🧭 How It Works (Simple Flow)
 
 ```
-                  ┌────────────────────────────────────────┐
-                  │          Search Loan App Name          │
-                  └───────────────────┬────────────────────┘
+                            User types an app name
                                       │
-                   ┌──────────────────┴──────────────────┐
-                   ▼                                     ▼
-        [ Prototype Demo Apps ]              [ Real RBI Directory Apps ]
-     Full 3-Pillar Threat Assessment     Live Directory Match & Play Exposure
-     • Risk Score Gauge (0–100)          • Official Registered Lender Entity
-     • Permissions Audit (Max 40)        • Grievance Redressal Officer Contact
-     • Regulatory Linkage (Max 40)       • Live Play Store Permission Exposure
-     • Transparency & Fees (Max 20)      • Direct mailto: and tel: Click-to-Call
-     • What this app can do to you       • "Did you mean" Fuzzy Suggestions
+                                      ▼
+                        ┌───────────────────────────┐
+                        │   RBI Directory Search    │
+                        │   (1,734+ official apps)  │
+                        └─────────────┬─────────────┘
+                                      │
+              ┌───────────────────────┴───────────────────────┐
+              ▼                                               ▼
+       App Found in RBI                                Not Found in RBI
+              │                                               │
+  • Shows official lender name                    • Cautions the user
+  • Shows Grievance Officer details               • Suggests close names
+  • Fetches live Play Store permissions           • Gives safety checklist
+  • Shows permission exposure bar                 • Links to report fraud
 ```
 
-### 1. Prototype Threat Assessment (Demo Apps)
-For analyzed demo apps, Karz Kavach generates an explainable 0–100 threat assessment across three pillars:
-- **Permissions (Max 40 pts):** Penalizes invasive access (e.g., Contacts: 15, SMS: 15, Storage: 10).
-- **Registration (Max 40 pts):** Validates genuine ties to RBI-regulated lenders. Catches "claim vs. reality" mismatches where an app claims one lender but operates under another.
-- **Transparency & Fees (Max 20 pts):** Checks for upfront APR disclosures, valid privacy policies, and grievance contact mechanisms.
-
-### 2. Live RBI Directory Verification & Google Play Permission Exposure
-When searching real-world lending apps:
-- **RBI Directory Matching:** Searches across 1,700+ official RBI-registered lending apps using Levenshtein distance and token-based fuzzy matching.
-- **Grievance Redressal Officer Integration:** Automatically displays the lender's designated grievance officer with direct, tap-to-call `tel:` and `mailto:` links for prompt dispute resolution.
-- **Live Google Play Store Permissions Exposure:** Reads permissions declared on the app's Google Play listing via package ID extraction and provides an objective exposure assessment (Low: Teal, Medium: Amber, High: Orange).
-- **Responsible & Factual:** Refrains from using speculative or defamatory labels (such as "fraud" or "scam") for real directory entries, focusing objectively on declared permission exposures and official directory listings.
-
-### 3. Accessibility & Inclusion First
-- **100% Bilingual (English & Hindi):** Seamless, one-click toggle between English and Hindi across all screens, scores, tags, and guidance.
-- **Text-to-Speech (Listen / सुनें):** Built-in Web Speech API voice readout (`en-IN` and `hi-IN`) allows non-literate and visually impaired users to hear verdicts out loud.
-- **Responsive Material-3 Aesthetic:** Mobile-optimized UI with fluid design tokens, clean color coding, and high-contrast accessibility.
-
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technology Used
 
-- **Frontend:** React 18, Vite, Vanilla CSS3 (Custom Design Tokens, Material-3 Card Architecture, Web Speech API).
+- **Frontend:** React 18, Vite, clean Vanilla CSS (fast, mobile-friendly, no heavy UI libraries).
 - **Backend:** Node.js, Express.js.
-- **Scoring & Matching Engine:** Deterministic rule-based scoring engine with Levenshtein string distance matching.
-- **Live Permission Fetching:** `google-play-scraper` with in-memory 6-hour caching and timeout handling.
-- **Data Ingestion:** Custom CSV/TSV streaming parser with auto-header detection, BOM stripping, merged row fill-down, and query parameter extraction.
+- **Live Permission Fetching:** `google-play-scraper` with in-memory caching.
+- **Data Ingestion:** Custom CSV parser for RBI spreadsheets that cleans merged cells, removes duplicates, and extracts Play Store IDs.
+- **Accessibility:** Web Speech API for Hindi & English audio readouts.
 
 ---
 
-## 📁 Project Architecture
+## 📁 Project Folders
 
 ```text
 karz-kavach/
-├── client/                          # React + Vite Frontend
+├── client/                     # Frontend (React + Vite)
 │   ├── src/
-│   │   ├── App.jsx                  # Main interface: search, verdict cards, audio, localization
-│   │   ├── App.css                  # Design system: tokens, gauges, exposure bars, grievance cards
-│   │   ├── main.jsx                 # React root bootstrap
-│   │   └── index.css                # Global resets
-│   ├── index.html                   # HTML shell with Google Fonts (Noto Sans)
-│   └── vite.config.js               # Vite bundler configuration
+│   │   ├── App.jsx             # Main UI: Search, Trusted Apps tab, Audio, Language toggle
+│   │   ├── App.css             # Styling & responsive design system
+│   │   └── main.jsx            # React root
+│   └── index.html              # HTML template
 │
-├── server/                          # Express.js Backend
-│   ├── index.js                     # API routes & server initialization
-│   ├── handlers.js                  # Request handlers for /api/apps, /api/check, /api/stats
-│   ├── scoring.js                   # 3-pillar scoring engine & fuzzy directory search
-│   ├── messages.js                  # Bilingual message catalogs, permission weights, guidance
-│   ├── playPermissions.js           # Live Google Play Store permission analyzer & enricher
-│   ├── directoryImport.js           # Robust CSV/TSV table parser for RBI directories
-│   ├── rbi-directory.csv            # Official RBI digital lending dataset
-│   ├── scripts/
-│   │   └── import-directory.js      # CLI directory ingestion script
+├── server/                     # Backend API (Node + Express)
+│   ├── index.js                # API server entry point (port 5000)
+│   ├── handlers.js             # API route handlers (/api/check, /api/trusted, /api/stats)
+│   ├── scoring.js              # RBI directory search & demo scoring logic
+│   ├── playPermissions.js      # Google Play permissions reader
+│   ├── trusted.js              # Trusted apps builder & filter logic
+│   ├── directoryImport.js      # CSV parser for RBI lending directories
+│   ├── rbi-directory.csv       # Raw official RBI dataset
 │   ├── data/
-│   │   ├── apps.json                # Curated prototype demo apps
-│   │   ├── directory.json           # Imported RBI lending directory (1,700+ entries)
-│   │   ├── directory.demo.json      # Fallback reference directory
-│   │   └── directory-source.json    # Ingestion metadata (record count, timestamp)
-│   └── *.test.js                    # Comprehensive unit tests (scoring, imports, permissions)
-│
-└── design/                          # UX reference screens and design specifications
+│   │   ├── directory.json      # 1,734+ imported RBI apps
+│   │   ├── trusted-apps.json   # 590+ RBI apps vetted with Play Store ratings
+│   │   └── directory-source.json # Import stats and timestamp
+│   └── *.test.js               # 38 automated test cases
+└── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 How to Run Karz Kavach Locally
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (version 18 or higher)
-- npm (version 8 or higher)
+Make sure you have [Node.js](https://nodejs.org/) installed (v18 or higher).
 
-### 1. Setup the Server
+### Step 1: Start the Backend Server
+Open a terminal:
 ```bash
 cd server
 npm install
 npm start
 ```
-*The backend server runs on `http://localhost:5000`.*
+*The backend will run on `http://localhost:5000`.*
 
-### 2. Setup the Client
-In a separate terminal window:
+### Step 2: Start the Frontend Client
+Open a second terminal:
 ```bash
 cd client
 npm install
 npm run dev
 ```
-*Open `http://localhost:5173` in your browser.*
+*Open `http://localhost:5173` in your web browser.*
 
 ---
 
-## 📊 Ingesting Updated RBI Directories
+## 🧪 Testing the Project
 
-You can import any updated RBI Digital Lending spreadsheet (CSV or TSV):
-```bash
-cd server
-node scripts/import-directory.js rbi-directory.csv
-```
-The importer automatically:
-- Identifies the app name and lender columns.
-- Re-uses merged lender cells across multiple apps.
-- Extracts Play Store package IDs even when extra query parameters (`hl=`, `gl=`) exist.
-- Extracts Grievance Redressal Officer names, emails, and phone/mobile numbers.
-- Updates `server/data/directory.json` and records stats in `server/data/directory-source.json`.
+### Try These Searches in the App:
+- **PhonePe / Paytm / Navi / Blink Credit:** Click the quick **"Try:"** chips to see official RBI records, live permissions, and grievance contacts.
+- **Typo Search (e.g. `PhonPe`):** See how fuzzy search suggests the correct app name.
+- **Unknown App (e.g. `SuperFastMoneyLoan`):** See the warning explaining that the app is unlisted, along with safe next steps.
+- **Trusted Apps Tab:** Click "Trusted Apps" to explore verified apps, filter by rating tier, or search by lender.
 
----
-
-## 🧪 Running Automated Tests
-
-Karz Kavach includes an extensive unit test suite covering the scoring engine, fuzzy matching, CSV ingestion edge cases, live Play Store enrichment, and text-to-speech sanitization:
-
+### Run Automated Tests:
+In the `server` folder, run:
 ```bash
 cd server
 npm test
 ```
-*(Runs 33 automated tests via Node's native test runner).*
+*Runs all **38 automated tests** covering directory parsing, Play Store permission scoring, search algorithms, and grievance officer data extraction.*
 
 ---
 
-## 🎯 Sustainable Development Goals (SDGs)
-
-- **SDG 10: Reduced Inequalities:** Protects unbanked and economically vulnerable citizens from debt traps and predatory practices.
-- **SDG 16: Peace, Justice, and Strong Institutions:** Promotes legal, regulated financial institutions and provides actionable dispute escalation channels (Cyber Crime **1930**, **Chakshu**, **RBI Sachet**).
-- **SDG 9: Industry, Innovation, and Infrastructure:** Supports the safe, ethical adoption of digital public infrastructure and financial technology.
-
----
-
-## ⚖️ Disclaimer
-*The prototype loan apps (`QuickRupee Demo`, `SureLoan Demo`, `Kavach Loan Demo`) are fictional examples created for testing and demonstration. Real directory lookups reflect records publicly published by regulated entities in the RBI Digital Lending Directory.*
+## ⚖️ Note & Disclaimer
+- Directory records and grievance contacts are directly sourced from data published by regulated financial institutions in the **RBI Digital Lending Apps (DLA) Directory**.
+- Karz Kavach provides objective factual evidence (registration status, declared permissions, official contacts) to help citizens make informed decisions. It is not an endorsement or credit advice. Always read loan terms carefully before signing.
