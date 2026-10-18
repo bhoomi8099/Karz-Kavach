@@ -783,6 +783,10 @@ body {
   gap: var(--space-md);
 }
 
+.dir-result-card .verdict-hero {
+  align-items: center;
+}
+
 .dir-lookup-tag {
   font-size: 12px;
   font-weight: 600;

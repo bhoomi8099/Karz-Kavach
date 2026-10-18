@@ -53,7 +53,7 @@ function parseTable(text) {
   return rows.filter((r) => r.some((x) => x.trim() !== ''));
 }
 
-const PLAY_LINK_RE = /play\.google\.com\/store\/apps\/details\?id=([A-Za-z][A-Za-z0-9_]*(?:\.[A-Za-z0-9_]+)+)/;
+const PLAY_LINK_RE = /play\.google\.com\/store\/apps\/details\?(?:[^\s"'&]*&)*?id=([A-Za-z][A-Za-z0-9_]*(?:\.[A-Za-z0-9_]+)+)/;
 
 // options: { appCol, lenderCol } (1-based column numbers) if the headers cannot be guessed.
 function parseDirectory(text, options = {}) {

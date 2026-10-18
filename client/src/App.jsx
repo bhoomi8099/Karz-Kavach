@@ -39,8 +39,8 @@ const UI = {
     listedUnderHi: 'लेंडर का नाम',
     didYouMean: 'Did you mean:',
     didYouMeanHi: 'क्या आपका मतलब यह था:',
-    dirNote: 'Permissions were not checked for this app (directory lookup only).',
-    dirNoteHi: 'इस ऐप की परमिशन की जाँच नहीं की गई है (केवल डायरेक्टरी लुकअप)।',
+    dirNote: 'Permission details are not available for this app (the directory has no Play Store link for it, or the Play Store could not be reached).',
+    dirNoteHi: 'इस ऐप की परमिशन की जानकारी उपलब्ध नहीं है (डायरेक्टरी में इसका Play Store लिंक नहीं है, या Play Store से जानकारी नहीं मिली)।',
     permExposureTitle: 'Permission exposure (from the Google Play listing)',
     permExposureTitleHi: 'परमिशन एक्सपोज़र (Google Play लिस्टिंग से)',
     noPlayPerms: 'No sensitive permissions declared on the Play Store listing.',
@@ -102,8 +102,8 @@ const UI = {
     listedUnderHi: 'Listed under',
     didYouMean: 'क्या आपका मतलब यह था:',
     didYouMeanHi: 'Did you mean:',
-    dirNote: 'इस ऐप की परमिशन की जाँच नहीं की गई है (केवल डायरेक्टरी लुकअप)।',
-    dirNoteHi: 'Permissions were not checked for this app (directory lookup only).',
+    dirNote: 'इस ऐप की परमिशन की जानकारी उपलब्ध नहीं है (डायरेक्टरी में इसका Play Store लिंक नहीं है, या Play Store से जानकारी नहीं मिली)।',
+    dirNoteHi: 'Permission details are not available for this app (the directory has no Play Store link for it, or the Play Store could not be reached).',
     permExposureTitle: 'परमिशन एक्सपोज़र (Google Play लिस्टिंग से)',
     permExposureTitleHi: 'Permission exposure (from the Google Play listing)',
     noPlayPerms: 'Play Store लिस्टिंग पर कोई संवेदनशील परमिशन घोषित नहीं है।',
@@ -337,16 +337,26 @@ function FullResult({ r, lang, t }) {
 }
 
 // ── Directory-only result (LISTED / UNVERIFIED) ────────────────────────────────
+function cleanSpeech(text) {
+  if (!text) return '';
+  return text
+    .replace(/We did not check this app's permissions\.?/gi, '')
+    .replace(/Permissions were not checked for this app \(directory lookup only\)\.?/gi, '')
+    .replace(/permissions were not checked\.?/gi, '')
+    .replace(/हमने इस ऐप की परमिशन की जाँच नहीं की।?/g, '')
+    .replace(/इस ऐप की परमिशन की जाँच नहीं की गई है \(केवल डायरेक्टरी लुकअप\)।?/g, '')
+    .trim();
+}
+
 function DirResult({ r, lang, t, onSearch }) {
   const isListed = r.verdict === 'LISTED';
   const vClass = isListed ? 'listed' : 'unverified';
   const verdictText = r.verdictLabel?.[lang] || (isListed ? t.verdictLabel.listed : t.verdictLabel.unverified);
-  const noteText = lang === 'hi' ? t.dirNoteHi : t.dirNote;
 
   const speechText = [
     verdictText,
     ...(r.matches || []).map(m => `${m.appName}. ${m.lender}`),
-    ...(r.flags || []).map(f => f[lang]),
+    ...(r.flags || []).map(f => cleanSpeech(f[lang])),
     ...(r.permissionReport?.available
       ? [
           r.permissionReport.levelLabel?.[lang] || r.permissionReport.levelLabel?.en,
@@ -355,7 +365,7 @@ function DirResult({ r, lang, t, onSearch }) {
         ]
       : []),
     ...(r.nextSteps?.[lang] || []),
-  ].filter(Boolean).join('. ');
+  ].map(cleanSpeech).filter(Boolean).join('. ');
 
   return (
     <div className={`dir-result-card ${vClass}`}>
@@ -375,9 +385,6 @@ function DirResult({ r, lang, t, onSearch }) {
         <div className="vh-icon-wrap">{isListed ? '📋' : 'ℹ️'}</div>
         <div className="vh-content" style={{ flex: 1 }}>
           <div className="vh-title">{verdictText}</div>
-          <div className="vh-subtitle" style={{ fontSize: 13, marginTop: 4, fontWeight: 500 }}>
-            {noteText}
-          </div>
         </div>
         <button
           className="listen-btn dir-listen-btn"
@@ -556,11 +563,13 @@ function DirResult({ r, lang, t, onSearch }) {
         </div>
       )}
 
-      {/* Informational small note */}
-      <div className="dir-note-box">
-        <span style={{ fontSize: 16 }}>ℹ️</span>
-        <span>{noteText}</span>
-      </div>
+      {/* Informational small note (shown ONLY when permission report is missing or not available) */}
+      {(!r.permissionReport || !r.permissionReport.available) && (
+        <div className="dir-note-box">
+          <span style={{ fontSize: 16 }}>ℹ️</span>
+          <span>{t.dirNote}</span>
+        </div>
+      )}
     </div>
   );
 }

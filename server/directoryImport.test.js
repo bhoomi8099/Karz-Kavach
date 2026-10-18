@@ -105,3 +105,14 @@ test('keeps grievance officer details (name, email, phone, mobile) when the colu
   });
   assert.strictEqual(r.entries[1].grievance, undefined);
 });
+
+test('finds the Play Store package id when "id=" is not the first query parameter', () => {
+  const mk = (link) =>
+    parseDirectory(
+      ['Sr. No,Entity Name,Name of the DLA,Link to DLA', `1,TEST LENDER LIMITED,Fake App,${link}`].join('\n')
+    ).entries[0].packageId;
+  assert.strictEqual(mk('https://play.google.com/store/apps/details?id=com.fake.one'), 'com.fake.one');
+  assert.strictEqual(mk('https://play.google.com/store/apps/details?hl=en_IN&id=com.fake.two&gl=IN'), 'com.fake.two');
+  assert.strictEqual(mk('https://play.google.com/store/apps/details?id=com.fake.three&pcampaignid=web_share'), 'com.fake.three');
+  assert.strictEqual(mk('https://apps.apple.com/in/app/fake/id123456'), undefined);
+});
