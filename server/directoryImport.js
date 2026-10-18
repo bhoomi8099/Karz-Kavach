@@ -53,6 +53,8 @@ function parseTable(text) {
   return rows.filter((r) => r.some((x) => x.trim() !== ''));
 }
 
+const PLAY_LINK_RE = /play\.google\.com\/store\/apps\/details\?id=([A-Za-z][A-Za-z0-9_]*(?:\.[A-Za-z0-9_]+)+)/;
+
 // options: { appCol, lenderCol } (1-based column numbers) if the headers cannot be guessed.
 function parseDirectory(text, options = {}) {
   const rows = parseTable(text);
@@ -96,6 +98,7 @@ function parseDirectory(text, options = {}) {
 
   const entries = [];
   const seen = new Set();
+  const byKey = new Map();
   let skipped = 0;
   let filledDown = 0;
   let lastLender = '';
@@ -117,11 +120,24 @@ function parseDirectory(text, options = {}) {
       skipped++;
       continue;
     }
+    // The Play Store link (if this row has one) gives the app's package id, used later
+    // to read the permissions the Play Store lists for it.
+    const link = row.join(' ').match(PLAY_LINK_RE);
+    const packageId = link ? link[1] : undefined;
+
     for (const appName of names) {
       const key = normalize(appName) + '|' + normalize(lender);
-      if (seen.has(key)) continue;
+      if (seen.has(key)) {
+        // The same app is listed once per store (Android, iOS, website). Keep the package id.
+        const existing = byKey.get(key);
+        if (packageId && !existing.packageId) existing.packageId = packageId;
+        continue;
+      }
       seen.add(key);
-      entries.push({ appName, lender });
+      const entry = { appName, lender };
+      if (packageId && names.length === 1) entry.packageId = packageId;
+      byKey.set(key, entry);
+      entries.push(entry);
     }
   }
 

@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { listApps, checkApp, getStats } = require('./handlers');
+const { enrichWithPermissions } = require('./playPermissions');
 
 // Data lives in simple JSON files for now (see the data folder).
 // Replace with MongoDB later if you want; only this file and handlers.js would change.
@@ -29,8 +30,9 @@ app.get('/api/apps', (req, res) => {
 });
 
 // Check one app:  /api/check?name=QuickRupee
-app.get('/api/check', (req, res) => {
+app.get('/api/check', async (req, res) => {
   const { status, body } = checkApp(req.query.name, apps, directory, demoDirectory);
+  if (status === 200) await enrichWithPermissions(body); // adds Play Store permissions for listed apps
   res.status(status).json(body);
 });
 

@@ -632,6 +632,37 @@ body {
 .gauge-card.review .bar-fill { background: var(--review); }
 .gauge-card.risky  .bar-fill { background: var(--error); }
 
+/* Permission exposure bar colours (low = teal, medium = amber, high = orange) */
+.bar-row.bar-low {
+  border-left: 3px solid #0d9488;
+}
+.bar-row.bar-low .bar-score {
+  color: #0f766e;
+}
+.bar-row.bar-low .bar-fill {
+  background: #0d9488;
+}
+
+.bar-row.bar-medium {
+  border-left: 3px solid #d97706;
+}
+.bar-row.bar-medium .bar-score {
+  color: #b45309;
+}
+.bar-row.bar-medium .bar-fill {
+  background: #d97706;
+}
+
+.bar-row.bar-high {
+  border-left: 3px solid #ea580c;
+}
+.bar-row.bar-high .bar-score {
+  color: #c2410c;
+}
+.bar-row.bar-high .bar-fill {
+  background: #ea580c;
+}
+
 /* Section cards */
 .section-card {
   background: var(--surface-lowest);
@@ -710,6 +741,13 @@ body {
   color: var(--primary);
   font-weight: 700;
   margin-right: 4px;
+}
+
+.perm-report-note {
+  font-size: 12px;
+  color: var(--on-surface-variant);
+  line-height: 1.5;
+  margin-top: 4px;
 }
 
 /* Steps */

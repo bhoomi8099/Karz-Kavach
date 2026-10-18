@@ -41,6 +41,9 @@ const UI = {
     didYouMeanHi: 'क्या आपका मतलब यह था:',
     dirNote: 'Permissions were not checked for this app (directory lookup only).',
     dirNoteHi: 'इस ऐप की परमिशन की जाँच नहीं की गई है (केवल डायरेक्टरी लुकअप)।',
+    permExposureTitle: 'Permission exposure (from the Google Play listing)',
+    permExposureTitleHi: 'परमिशन एक्सपोज़र (Google Play लिस्टिंग से)',
+    noPlayPerms: 'No sensitive permissions declared on the Play Store listing.',
     verdictLabel: {
       safe: 'LOOKS SAFE',
       review: 'NEEDS A CLOSER LOOK',
@@ -93,6 +96,9 @@ const UI = {
     didYouMeanHi: 'Did you mean:',
     dirNote: 'इस ऐप की परमिशन की जाँच नहीं की गई है (केवल डायरेक्टरी लुकअप)।',
     dirNoteHi: 'Permissions were not checked for this app (directory lookup only).',
+    permExposureTitle: 'परमिशन एक्सपोज़र (Google Play लिस्टिंग से)',
+    permExposureTitleHi: 'Permission exposure (from the Google Play listing)',
+    noPlayPerms: 'Play Store लिस्टिंग पर कोई संवेदनशील परमिशन घोषित नहीं है।',
     verdictLabel: {
       safe: 'सुरक्षित ऐप',
       review: 'सावधानी बरतें',
@@ -161,13 +167,15 @@ function GaugeRing({ score, max = 100 }) {
 }
 
 // ── Score bar ──────────────────────────────────────────────────────────────────
-function ScoreBar({ label, value, max }) {
-  const pct = Math.round((value / max) * 100);
+function ScoreBar({ label, value, max, level }) {
+  const maxVal = max || 40;
+  const pct = Math.min(100, Math.round(((value || 0) / maxVal) * 100));
+  const lvlClass = level ? `bar-${String(level).toLowerCase()}` : '';
   return (
-    <div className="bar-row">
+    <div className={`bar-row ${lvlClass}`.trim()}>
       <div className="bar-header">
         <span className="bar-label">{label}</span>
-        <span className="bar-score">{value} / {max}</span>
+        <span className="bar-score">{value} / {maxVal}</span>
       </div>
       <div className="bar-track">
         <div className="bar-fill" style={{ width: `${pct}%` }} />
@@ -323,6 +331,13 @@ function DirResult({ r, lang, t, onSearch }) {
     verdictText,
     ...(r.matches || []).map(m => `${m.appName}. ${m.lender}`),
     ...(r.flags || []).map(f => f[lang]),
+    ...(r.permissionReport?.available
+      ? [
+          r.permissionReport.levelLabel?.[lang] || r.permissionReport.levelLabel?.en,
+          ...(r.permissionReport.permissions || []).map(p => p[lang] || p.en),
+          r.permissionReport.note?.[lang] || r.permissionReport.note?.en,
+        ]
+      : []),
     ...(r.nextSteps?.[lang] || []),
   ].filter(Boolean).join('. ');
 
@@ -400,6 +415,44 @@ function DirResult({ r, lang, t, onSearch }) {
               </li>
             ))}
           </ul>
+        </div>
+      )}
+
+      {/* Permission exposure (from the Google Play listing) */}
+      {r.permissionReport && r.permissionReport.available && (
+        <div className="section-card">
+          <div className="section-title">
+            🔒 {t.permExposureTitle}
+            <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
+              ({t.permExposureTitleHi})
+            </span>
+          </div>
+
+          <ScoreBar
+            label={r.permissionReport.levelLabel?.[lang] || r.permissionReport.levelLabel?.en || r.permissionReport.level}
+            value={r.permissionReport.score ?? 0}
+            max={r.permissionReport.max || 40}
+            level={r.permissionReport.level}
+          />
+
+          {(!r.permissionReport.permissions || r.permissionReport.permissions.length === 0) ? (
+            <p style={{ color: 'var(--on-surface-variant)', fontSize: 14 }}>{t.noPlayPerms}</p>
+          ) : (
+            <ul className="perms">
+              {r.permissionReport.permissions.map(p => (
+                <li key={p.permission} className="perm-item">
+                  <span className="perm-code">{p.permission}</span>
+                  <span>{p[lang] || p.en || p.permission}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {r.permissionReport.note && (
+            <p className="perm-report-note">
+              {r.permissionReport.note[lang] || r.permissionReport.note.en || (typeof r.permissionReport.note === 'string' ? r.permissionReport.note : '')}
+            </p>
+          )}
         </div>
       )}
 

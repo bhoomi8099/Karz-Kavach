@@ -26,7 +26,7 @@ function lookupInDirectory(name, directory) {
     ? scored
         .filter((s) => s.score >= LISTED_MIN_SCORE && s.score >= top.score - 1e-9)
         .slice(0, 5)
-        .map((s) => ({ appName: s.entry.appName, lender: s.entry.lender }))
+        .map((s) => ({ appName: s.entry.appName, lender: s.entry.lender, ...(s.entry.packageId && { packageId: s.entry.packageId }) }))
     : [];
   const similar = listed ? [] : [...new Set(scored.slice(0, 3).map((s) => s.entry.appName))];
   const lenders = [...new Set(matches.map((m) => m.lender))].join(', ');
