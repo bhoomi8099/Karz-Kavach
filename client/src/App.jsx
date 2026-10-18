@@ -44,6 +44,14 @@ const UI = {
     permExposureTitle: 'Permission exposure (from the Google Play listing)',
     permExposureTitleHi: 'परमिशन एक्सपोज़र (Google Play लिस्टिंग से)',
     noPlayPerms: 'No sensitive permissions declared on the Play Store listing.',
+    grievanceTitle: 'Who to complain to (Grievance Redressal Officer)',
+    grievanceTitleHi: 'शिकायत किससे करें (शिकायत निवारण अधिकारी)',
+    grievanceOfficer: 'Officer',
+    grievanceEmail: 'Email',
+    grievancePhone: 'Phone',
+    grievanceMobile: 'Mobile',
+    grievanceNote: 'Contact details are published by the lender in the RBI directory.',
+    grievanceNoteHi: 'संपर्क विवरण लेंडर द्वारा RBI डायरेक्टरी में प्रकाशित किए गए हैं।',
     verdictLabel: {
       safe: 'LOOKS SAFE',
       review: 'NEEDS A CLOSER LOOK',
@@ -99,6 +107,14 @@ const UI = {
     permExposureTitle: 'परमिशन एक्सपोज़र (Google Play लिस्टिंग से)',
     permExposureTitleHi: 'Permission exposure (from the Google Play listing)',
     noPlayPerms: 'Play Store लिस्टिंग पर कोई संवेदनशील परमिशन घोषित नहीं है।',
+    grievanceTitle: 'शिकायत किससे करें (शिकायत निवारण अधिकारी)',
+    grievanceTitleHi: 'Who to complain to (Grievance Redressal Officer)',
+    grievanceOfficer: 'अधिकारी',
+    grievanceEmail: 'ईमेल',
+    grievancePhone: 'फ़ोन',
+    grievanceMobile: 'मोबाइल',
+    grievanceNote: 'संपर्क विवरण लेंडर द्वारा RBI डायरेक्टरी में प्रकाशित किए गए हैं।',
+    grievanceNoteHi: 'Contact details are published by the lender in the RBI directory.',
     verdictLabel: {
       safe: 'सुरक्षित ऐप',
       review: 'सावधानी बरतें',
@@ -390,6 +406,49 @@ function DirResult({ r, lang, t, onSearch }) {
                   <span className="dir-match-label">{lang === 'hi' ? t.listedUnderHi : t.listedUnder}:</span>
                   <span className="dir-match-lender">{m.lender}</span>
                 </div>
+                {m.grievance && (m.grievance.name || m.grievance.email || m.grievance.phone || m.grievance.mobile) && (
+                  <div className="dir-grievance-box">
+                    <div className="dir-grievance-title">
+                      🛡️ {t.grievanceTitle}
+                      <span className="dir-grievance-title-sub">({t.grievanceTitleHi})</span>
+                    </div>
+                    <div className="dir-grievance-content">
+                      {m.grievance.name && (
+                        <div className="dir-grievance-row">
+                          <span className="dir-grievance-label">{t.grievanceOfficer}:</span>
+                          <span className="dir-grievance-val">{m.grievance.name}</span>
+                        </div>
+                      )}
+                      {m.grievance.email && (
+                        <div className="dir-grievance-row">
+                          <span className="dir-grievance-label">{t.grievanceEmail}:</span>
+                          <a className="dir-grievance-link" href={`mailto:${m.grievance.email}`}>
+                            {m.grievance.email}
+                          </a>
+                        </div>
+                      )}
+                      {m.grievance.phone && (
+                        <div className="dir-grievance-row">
+                          <span className="dir-grievance-label">{t.grievancePhone}:</span>
+                          <a className="dir-grievance-link" href={`tel:${String(m.grievance.phone).replace(/\s+/g, '')}`}>
+                            {m.grievance.phone}
+                          </a>
+                        </div>
+                      )}
+                      {m.grievance.mobile && (
+                        <div className="dir-grievance-row">
+                          <span className="dir-grievance-label">{t.grievanceMobile}:</span>
+                          <a className="dir-grievance-link" href={`tel:${String(m.grievance.mobile).replace(/\s+/g, '')}`}>
+                            {m.grievance.mobile}
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                    <div className="dir-grievance-note">
+                      ℹ️ {t.grievanceNote}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>

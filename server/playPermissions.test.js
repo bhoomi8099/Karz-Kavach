@@ -55,3 +55,17 @@ test('enrich never breaks the result when the fetch fails or there is no package
   await enrichWithPermissions(unverified, async () => heavy);
   assert.strictEqual(unverified.permissionReport, undefined);
 });
+
+test('after reading permissions, the "not checked" sentence is replaced', async () => {
+  const { makeFlag } = require('./messages');
+  const result = {
+    mode: 'directory_only',
+    verdict: 'LISTED',
+    flags: [makeFlag('DIRECTORY_ONLY_LISTED', { lender: 'Fake Lender' })],
+    matches: [{ appName: 'Fake App', lender: 'Fake Lender', packageId: 'com.fake.app' }],
+  };
+  await enrichWithPermissions(result, async () => heavy);
+  assert.ok(!result.flags[0].en.includes('did not check'));
+  assert.ok(result.flags[0].en.includes('Google Play listing'));
+  assert.ok(!result.flags[0].hi.includes('जाँच नहीं की'));
+});

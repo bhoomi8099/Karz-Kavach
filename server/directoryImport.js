@@ -96,6 +96,14 @@ function parseDirectory(text, options = {}) {
     );
   }
 
+  // Grievance officer details (columns are optional; used to show "who to complain to").
+  const findCol = (test) => lower.findIndex((h) => /grievance/.test(h) && test(h));
+  const gName = findCol((h) => !/mail|tele|phone|mobile/.test(h));
+  const gEmail = findCol((h) => /mail/.test(h));
+  const gPhone = findCol((h) => /tele|phone/.test(h));
+  const gMobile = findCol((h) => /mobile/.test(h));
+  const cell = (row, i) => (i >= 0 ? String(row[i] || '').replace(/\s+/g, ' ').trim() : '');
+
   const entries = [];
   const seen = new Set();
   const byKey = new Map();
@@ -125,17 +133,27 @@ function parseDirectory(text, options = {}) {
     const link = row.join(' ').match(PLAY_LINK_RE);
     const packageId = link ? link[1] : undefined;
 
+    const grievance = {};
+    const gn = cell(row, gName), ge = cell(row, gEmail), gp = cell(row, gPhone), gm = cell(row, gMobile);
+    if (gn) grievance.name = gn;
+    if (ge) grievance.email = ge;
+    if (gp) grievance.phone = gp;
+    if (gm && gm !== gp) grievance.mobile = gm;
+    const hasGrievance = Object.keys(grievance).length > 0;
+
     for (const appName of names) {
       const key = normalize(appName) + '|' + normalize(lender);
       if (seen.has(key)) {
         // The same app is listed once per store (Android, iOS, website). Keep the package id.
         const existing = byKey.get(key);
         if (packageId && !existing.packageId) existing.packageId = packageId;
+        if (hasGrievance && !existing.grievance) existing.grievance = grievance;
         continue;
       }
       seen.add(key);
       const entry = { appName, lender };
       if (packageId && names.length === 1) entry.packageId = packageId;
+      if (hasGrievance) entry.grievance = grievance;
       byKey.set(key, entry);
       entries.push(entry);
     }

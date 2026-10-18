@@ -101,6 +101,18 @@ async function enrichWithPermissions(result, fetcher = fetchPlayPermissions) {
     const items = await fetcher(withId.packageId);
     result.permissionReport = buildPermissionReport(items);
     result.permissionReport.packageId = withId.packageId;
+    // The directory sentence says permissions were not checked. Now they were, so fix it.
+    for (const f of result.flags || []) {
+      if (f.code !== 'DIRECTORY_ONLY_LISTED') continue;
+      f.en = f.en.replace(
+        "We did not check this app's permissions.",
+        "Its permissions are read from its Google Play listing (see below)."
+      );
+      f.hi = f.hi.replace(
+        'हमने इस ऐप की परमिशन की जाँच नहीं की।',
+        'इसकी परमिशन Google Play लिस्टिंग से पढ़ी गई हैं (नीचे देखें)।'
+      );
+    }
   } catch (err) {
     result.permissionReport = { available: false };
   }

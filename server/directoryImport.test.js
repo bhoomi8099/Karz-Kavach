@@ -77,3 +77,31 @@ test('real RBI sheet layout: title rows above the header, blank first column, me
   assert.strictEqual(r.appCol, 6);
   assert.strictEqual(r.lenderCol, 3);
 });
+
+test('keeps the Play Store package id even when the Play row is not the first row of the app', () => {
+  const csv = [
+    'Sr. No,Entity Name,Website of RE,Entity Type,Name of the DLA,Available on,Link to DLA',
+    '1,TEST LENDER ONE LIMITED,https://one.example,NBFC,Fake App A,iOS App Store,https://apps.apple.com/in/app/fake/id1',
+    '2,,https://one.example,NBFC,Fake App A,Google Play Store,https://play.google.com/store/apps/details?id=com.fake.appa&hl=en',
+    '3,TEST LENDER TWO LIMITED,https://two.example,NBFC,Fake App B,Website,https://two.example/app',
+  ].join('\n');
+  const r = parseDirectory(csv);
+  assert.strictEqual(r.entries[0].packageId, 'com.fake.appa');
+  assert.strictEqual(r.entries[1].packageId, undefined);
+});
+
+test('keeps grievance officer details (name, email, phone, mobile) when the columns exist', () => {
+  const csv = [
+    'Sr. No,Entity Name,Name of the DLA,Name of Grievance Redressal Officer,Email id of Grievance Redressal Officer,Telephone number of Grievance Redressal Officer,Mobile number of Grievance Redressal Officer',
+    '1,TEST LENDER ONE LIMITED,Fake App A,Test Person,help@one.example,1100000000,9900000000',
+    '2,TEST LENDER TWO LIMITED,Fake App B,,,,',
+  ].join('\n');
+  const r = parseDirectory(csv);
+  assert.deepStrictEqual(r.entries[0].grievance, {
+    name: 'Test Person',
+    email: 'help@one.example',
+    phone: '1100000000',
+    mobile: '9900000000',
+  });
+  assert.strictEqual(r.entries[1].grievance, undefined);
+});
