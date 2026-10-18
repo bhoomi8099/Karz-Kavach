@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const { listApps, checkApp, getStats } = require('./handlers');
@@ -34,6 +36,29 @@ app.get('/api/check', async (req, res) => {
   const { status, body } = checkApp(req.query.name, apps, directory, demoDirectory);
   if (status === 200) await enrichWithPermissions(body); // adds Play Store permissions for listed apps
   res.status(status).json(body);
+});
+
+// Trusted apps: RBI-listed + well rated on Google Play. Built by scripts/build-trusted.js
+app.get('/api/trusted', (req, res) => {
+  let data;
+  try {
+    data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'trusted.json'), 'utf8'));
+  } catch (err) {
+    return res.json({ available: false, count: 0, items: [] });
+  }
+  const q = String(req.query.q || '').toLowerCase().trim();
+  const tier = String(req.query.tier || '');
+  const limit = Math.min(200, Number(req.query.limit) || 50);
+  let items = data.items;
+  if (tier === 'high' || tier === 'well') items = items.filter((i) => i.tier === tier);
+  if (q) items = items.filter((i) => (i.appName + ' ' + i.lender).toLowerCase().includes(q));
+  res.json({
+    available: true,
+    generatedAt: data.generatedAt,
+    total: data.items.length,
+    count: items.length,
+    items: items.slice(0, limit),
+  });
 });
 
 const PORT = process.env.PORT || 5000;

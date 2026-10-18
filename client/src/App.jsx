@@ -52,6 +52,36 @@ const UI = {
     grievanceMobile: 'Mobile',
     grievanceNote: 'Contact details are published by the lender in the RBI directory.',
     grievanceNoteHi: 'संपर्क विवरण लेंडर द्वारा RBI डायरेक्टरी में प्रकाशित किए गए हैं।',
+    navChecker: 'Check App',
+    navTrusted: 'Trusted Apps',
+    exploreTrusted: 'Explore trusted lending apps',
+    trustedHeading: 'Trusted apps — RBI-listed and well rated by users',
+    trustedSubtext: 'Registered with RBI and rated well on Google Play. This is a trust signal, not a guarantee. Always read the terms.',
+    trustedHeroTag: 'Verified Directory & Store Rating',
+    trustedSearchPlaceholder: 'Search trusted apps or lenders…',
+    filterAll: 'All',
+    filterHigh: 'Highly rated',
+    filterWell: 'Well rated',
+    sortLabel: 'Sort by',
+    sortBest: 'Best trust score',
+    sortRating: 'Highest rating',
+    sortReviews: 'Most reviews',
+    showingApps: (shown, total) => `Showing ${shown} of ${total} apps`,
+    ratingsFetchedOn: (date) => `Ratings fetched on ${date}`,
+    trustedNotBuilt: 'Trusted list not built yet.',
+    notFoundTrusted: 'No matching trusted apps found.',
+    lenderLabel: 'Lender',
+    trustLabel: 'Trust',
+    trustScoreDesc: 'Composite score from rating and review volume',
+    tierHigh: 'Highly rated',
+    tierWell: 'Well rated',
+    rbiSignal: 'RBI directory: listed',
+    rbiListedPill: 'RBI listed',
+    playSignalPrefix: 'Google Play',
+    playSignalFrom: 'from',
+    ratingsSuffix: 'ratings',
+    viewOnPlay: 'View on Google Play',
+    checkAppHint: 'Click to view permissions & grievance officer',
     verdictLabel: {
       safe: 'LOOKS SAFE',
       review: 'NEEDS A CLOSER LOOK',
@@ -115,6 +145,36 @@ const UI = {
     grievanceMobile: 'मोबाइल',
     grievanceNote: 'संपर्क विवरण लेंडर द्वारा RBI डायरेक्टरी में प्रकाशित किए गए हैं।',
     grievanceNoteHi: 'Contact details are published by the lender in the RBI directory.',
+    navChecker: 'ऐप जांचें',
+    navTrusted: 'भरोसेमंद ऐप',
+    exploreTrusted: 'भरोसेमंद लोन ऐप देखें',
+    trustedHeading: 'भरोसेमंद ऐप — RBI में सूचीबद्ध और उपयोगकर्ताओं द्वारा अच्छी रेटिंग',
+    trustedSubtext: 'RBI में पंजीकृत और Google Play पर अच्छी रेटिंग प्राप्त। यह विश्वास का संकेत है, गारंटी नहीं। हमेशा नियम और शर्तें पढ़ें।',
+    trustedHeroTag: 'सत्यापित डायरेक्टरी और स्टोर रेटिंग',
+    trustedSearchPlaceholder: 'भरोसेमंद ऐप या लेंडर खोजें…',
+    filterAll: 'सभी',
+    filterHigh: 'बहुत अच्छी रेटिंग',
+    filterWell: 'अच्छी रेटिंग',
+    sortLabel: 'क्रमबद्ध करें',
+    sortBest: 'सर्वश्रेष्ठ ट्रस्ट स्कोर',
+    sortRating: 'उच्चतम रेटिंग',
+    sortReviews: 'सर्वाधिक समीक्षाएं',
+    showingApps: (shown, total) => `कुल ${total} में से ${shown} ऐप दिखाए जा रहे हैं`,
+    ratingsFetchedOn: (date) => `रेटिंग प्राप्त करने की तिथि: ${date}`,
+    trustedNotBuilt: 'भरोसेमंद सूची अभी तैयार नहीं है।',
+    notFoundTrusted: 'कोई मेल खाने वाला भरोसेमंद ऐप नहीं मिला।',
+    lenderLabel: 'लेंडर',
+    trustLabel: 'ट्रस्ट',
+    trustScoreDesc: 'रेटिंग और समीक्षा संख्या पर आधारित स्कोर',
+    tierHigh: 'बहुत अच्छी रेटिंग',
+    tierWell: 'अच्छी रेटिंग',
+    rbiSignal: 'RBI डायरेक्टरी: सूचीबद्ध',
+    rbiListedPill: 'RBI सूचीबद्ध',
+    playSignalPrefix: 'Google Play',
+    playSignalFrom: 'कुल',
+    ratingsSuffix: 'रेटिंग से',
+    viewOnPlay: 'Google Play पर देखें',
+    checkAppHint: 'परमिशन और शिकायत अधिकारी देखने के लिए क्लिक करें',
     verdictLabel: {
       safe: 'सुरक्षित ऐप',
       review: 'सावधानी बरतें',
@@ -133,6 +193,39 @@ const UI = {
 
 const FLAG_ICONS = { good: '✔', warn: '!', bad: '✖' };
 const VERDICT_ICONS = { safe: '🛡️', review: '⚠️', risky: '⛔', listed: '📋', unverified: 'ℹ️' };
+
+// Format rating counts: 1,20,000 -> 1.2L, 1,500,000 -> 15L, 5000 -> 5K
+function formatRatings(num) {
+  if (!num || num < 0) return '0';
+  const n = Number(num);
+  if (n >= 10000000) {
+    const cr = n / 10000000;
+    return (cr % 1 === 0 ? cr : cr.toFixed(1)) + 'Cr';
+  }
+  if (n >= 100000) {
+    const l = n / 100000;
+    return (l % 1 === 0 ? l : l.toFixed(1)) + 'L';
+  }
+  if (n >= 1000) {
+    const k = n / 1000;
+    return (k % 1 === 0 ? k : k.toFixed(1)) + 'K';
+  }
+  return String(n);
+}
+
+function formatDate(dateStr, lang) {
+  if (!dateStr) return '';
+  try {
+    const d = new Date(dateStr);
+    return d.toLocaleDateString(lang === 'hi' ? 'hi-IN' : 'en-IN', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
+  } catch {
+    return String(dateStr);
+  }
+}
 
 // Maps verdict string → severity key for styling
 function verdictClass(verdict) {
@@ -577,6 +670,7 @@ function DirResult({ r, lang, t, onSearch }) {
 // ── Main App ──────────────────────────────────────────────────────────────────
 export default function App() {
   const [lang, setLang]         = useState('en');
+  const [activeTab, setActiveTab] = useState('checker'); // 'checker' | 'trusted'
   const [name, setName]         = useState('');
   const [apps, setApps]         = useState([]);
   const [stats, setStats]       = useState(null);
@@ -585,6 +679,16 @@ export default function App() {
   const [error, setError]       = useState('');
   const [loading, setLoading]   = useState(false);
   const [showBanner, setShowBanner] = useState(true);
+
+  // Trusted apps state
+  const [trustedData, setTrustedData] = useState(null);
+  const [trustedLoading, setTrustedLoading] = useState(false);
+  const [trustedError, setTrustedError] = useState('');
+  const [trustedSearch, setTrustedSearch] = useState('');
+  const [debouncedSearch, setDebouncedSearch] = useState('');
+  const [selectedTier, setSelectedTier] = useState(''); // '' | 'high' | 'well'
+  const [sortBy, setSortBy] = useState('best'); // 'best' | 'rating' | 'reviews'
+
   const t = UI[lang];
 
   useEffect(() => {
@@ -598,6 +702,44 @@ export default function App() {
       .then(setStats)
       .catch(() => {});
   }, []);
+
+  // Debounce search in trusted apps
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearch(trustedSearch);
+    }, 250);
+    return () => clearTimeout(timer);
+  }, [trustedSearch]);
+
+  // Fetch trusted apps when tab is open or filters change
+  useEffect(() => {
+    if (activeTab !== 'trusted') return;
+    let cancelled = false;
+    setTrustedLoading(true);
+    setTrustedError('');
+
+    const params = new URLSearchParams();
+    if (selectedTier) params.set('tier', selectedTier);
+    if (debouncedSearch.trim()) params.set('q', debouncedSearch.trim());
+    params.set('limit', '100');
+
+    fetch(`/api/trusted?${params.toString()}`)
+      .then(res => res.json())
+      .then(data => {
+        if (!cancelled) {
+          setTrustedData(data);
+          setTrustedLoading(false);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setTrustedError(t.serverError);
+          setTrustedLoading(false);
+        }
+      });
+
+    return () => { cancelled = true; };
+  }, [activeTab, selectedTier, debouncedSearch]);
 
   async function runCheck(appName) {
     const query = String(appName || '').trim();
@@ -627,6 +769,25 @@ export default function App() {
     if (name.trim()) runCheck(name);
   }
 
+  function onSelectTrustedApp(appName) {
+    setActiveTab('checker');
+    setName(appName);
+    runCheck(appName);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Client-side sorting of loaded trusted items
+  const sortedTrustedItems = [...(trustedData?.items || [])].sort((a, b) => {
+    if (sortBy === 'rating') {
+      return (b.rating - a.rating) || (b.ratings - a.ratings);
+    }
+    if (sortBy === 'reviews') {
+      return (b.ratings - a.ratings) || (b.rating - a.rating);
+    }
+    // default: 'best' (trustScore)
+    return (b.trustScore - a.trustScore) || (b.ratings - a.ratings);
+  });
+
   // Decide which result component to show
   // Shape A has result.score; Shape B has result.mode === 'directory_only'
   const isDirectory = result && (result.mode === 'directory_only' || !result.score);
@@ -636,24 +797,49 @@ export default function App() {
       {/* ── Sticky header ── */}
       <header className="site-header">
         <div className="header-inner">
-          <div className="logo-group">
+          <div
+            className="logo-group"
+            onClick={() => setActiveTab('checker')}
+            style={{ cursor: 'pointer' }}
+            title={t.title}
+          >
             <span className="logo-shield">🛡️</span>
             <div className="logo-text">
               <span className="logo-en">{t.title}</span>
               <span className="logo-hi">{t.titleHi}</span>
             </div>
           </div>
-          <div className="lang-toggle">
-            <button
-              className={lang === 'en' ? 'on' : ''}
-              onClick={() => setLang('en')}
-              type="button"
-            >EN</button>
-            <button
-              className={lang === 'hi' ? 'on' : ''}
-              onClick={() => setLang('hi')}
-              type="button"
-            >हिंदी</button>
+
+          <div className="header-right">
+            <nav className="header-nav" aria-label="Main Navigation">
+              <button
+                className={`nav-tab ${activeTab === 'checker' ? 'active' : ''}`}
+                onClick={() => setActiveTab('checker')}
+                type="button"
+              >
+                🔍 {t.navChecker}
+              </button>
+              <button
+                className={`nav-tab ${activeTab === 'trusted' ? 'active' : ''}`}
+                onClick={() => setActiveTab('trusted')}
+                type="button"
+              >
+                ⭐ {t.navTrusted}
+              </button>
+            </nav>
+
+            <div className="lang-toggle">
+              <button
+                className={lang === 'en' ? 'on' : ''}
+                onClick={() => setLang('en')}
+                type="button"
+              >EN</button>
+              <button
+                className={lang === 'hi' ? 'on' : ''}
+                onClick={() => setLang('hi')}
+                type="button"
+              >हिंदी</button>
+            </div>
           </div>
         </div>
       </header>
@@ -682,8 +868,10 @@ export default function App() {
             </aside>
           )}
 
-          {/* Hero — only show when no result */}
-          {!result && !notFound && !error && (
+          {activeTab === 'checker' ? (
+            <>
+              {/* Hero — only show when no result */}
+              {!result && !notFound && !error && (
             <div className="hero">
               <div className="hero-shield">🛡️</div>
               <span className="hero-tag">🔒 {t.heroTag}</span>
@@ -747,6 +935,16 @@ export default function App() {
                 </div>
               </div>
             )}
+
+            {/* Prominent explore trusted apps button */}
+            <button
+              type="button"
+              className="explore-trusted-btn"
+              onClick={() => setActiveTab('trusted')}
+            >
+              <span>🛡️ {t.exploreTrusted}</span>
+              <span style={{ fontSize: 18 }}>→</span>
+            </button>
           </section>
 
           {/* Error card */}
@@ -778,6 +976,197 @@ export default function App() {
             isDirectory
               ? <DirResult r={result} lang={lang} t={t} onSearch={(simName) => { setName(simName); runCheck(simName); }} />
               : <FullResult r={result} lang={lang} t={t} />
+          )}
+          </>
+          ) : (
+            /* ── Trusted Apps Section ── */
+            <div className="trusted-view">
+              <div className="trusted-hero">
+                <span className="trusted-hero-badge">⭐ {t.trustedHeroTag}</span>
+                <h1 className="trusted-title">{t.trustedHeading}</h1>
+                <p className="trusted-subtext">{t.trustedSubtext}</p>
+              </div>
+
+              {/* Controls: Search, Filter Chips, Sort Dropdown */}
+              <section className="search-card trusted-controls-card">
+                <div className="search-input-wrap">
+                  <input
+                    type="search"
+                    value={trustedSearch}
+                    onChange={e => setTrustedSearch(e.target.value)}
+                    placeholder={t.trustedSearchPlaceholder}
+                    aria-label={t.trustedSearchPlaceholder}
+                  />
+                  {trustedSearch && (
+                    <button
+                      type="button"
+                      onClick={() => setTrustedSearch('')}
+                      className="search-clear-btn"
+                      aria-label="Clear search"
+                    >✕</button>
+                  )}
+                </div>
+
+                <div className="trusted-filter-row">
+                  <div className="trusted-chips">
+                    <button
+                      type="button"
+                      className={`chip ${selectedTier === '' ? 'chip-active' : ''}`}
+                      onClick={() => setSelectedTier('')}
+                    >
+                      {t.filterAll}
+                    </button>
+                    <button
+                      type="button"
+                      className={`chip ${selectedTier === 'high' ? 'chip-active' : ''}`}
+                      onClick={() => setSelectedTier('high')}
+                    >
+                      ⭐ {t.filterHigh}
+                    </button>
+                    <button
+                      type="button"
+                      className={`chip ${selectedTier === 'well' ? 'chip-active' : ''}`}
+                      onClick={() => setSelectedTier('well')}
+                    >
+                      ✨ {t.filterWell}
+                    </button>
+                  </div>
+
+                  <div className="trusted-sort-box">
+                    <label htmlFor="trusted-sort-select" className="trusted-sort-label">
+                      {t.sortLabel}:
+                    </label>
+                    <select
+                      id="trusted-sort-select"
+                      className="trusted-sort-select"
+                      value={sortBy}
+                      onChange={e => setSortBy(e.target.value)}
+                    >
+                      <option value="best">{t.sortBest}</option>
+                      <option value="rating">{t.sortRating}</option>
+                      <option value="reviews">{t.sortReviews}</option>
+                    </select>
+                  </div>
+                </div>
+
+                {trustedData && trustedData.available && (
+                  <div className="trusted-meta-bar">
+                    <span>{t.showingApps(sortedTrustedItems.length, trustedData.count || trustedData.total)}</span>
+                    {trustedData.generatedAt && (
+                      <span className="trusted-date-text">
+                        {t.ratingsFetchedOn(formatDate(trustedData.generatedAt, lang))}
+                      </span>
+                    )}
+                  </div>
+                )}
+              </section>
+
+              {/* Loading indicator */}
+              {trustedLoading && (
+                <div className="card" style={{ textAlign: 'center', padding: '32px 16px' }}>
+                  <div style={{ fontSize: 24, marginBottom: 8 }}>⏳</div>
+                  <p style={{ color: 'var(--on-surface-variant)', fontWeight: 600 }}>{t.checking}</p>
+                </div>
+              )}
+
+              {/* Error state */}
+              {trustedError && (
+                <div className="card error-card">{trustedError}</div>
+              )}
+
+              {/* Unavailable state */}
+              {trustedData && !trustedData.available && (
+                <div className="card">
+                  <p className="not-found-text">ℹ️ {t.trustedNotBuilt}</p>
+                </div>
+              )}
+
+              {/* Empty state */}
+              {!trustedLoading && trustedData?.available && sortedTrustedItems.length === 0 && (
+                <div className="card" style={{ textAlign: 'center', padding: '28px 16px' }}>
+                  <p className="not-found-text">🔍 {t.notFoundTrusted}</p>
+                </div>
+              )}
+
+              {/* Trusted Cards Grid */}
+              {!trustedLoading && trustedData?.available && sortedTrustedItems.length > 0 && (
+                <div className="trusted-grid">
+                  {sortedTrustedItems.map(item => (
+                    <div
+                      key={item.packageId || item.appName}
+                      className="trusted-card"
+                      onClick={() => onSelectTrustedApp(item.appName)}
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') onSelectTrustedApp(item.appName); }}
+                    >
+                      {/* Top: Name, Lender & Trust Score */}
+                      <div className="trusted-card-header">
+                        <div className="trusted-app-info">
+                          <h3 className="trusted-app-name">{item.appName}</h3>
+                          <div className="trusted-lender-name">
+                            <span className="trusted-lender-label">{t.lenderLabel}:</span> {item.lender}
+                          </div>
+                        </div>
+                        <div className="trusted-score-badge" title={t.trustScoreDesc}>
+                          <span className="trusted-score-label">{t.trustLabel}</span>
+                          <div className="trusted-score-num-wrap">
+                            <span className="trusted-score-num">{item.trustScore}</span>
+                            <span className="trusted-score-denom">/100</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Badges row: Tier badge + Installs (if present) */}
+                      <div className="trusted-badges-row">
+                        <span className={`trusted-tier-badge ${item.tier === 'high' ? 'tier-high' : 'tier-well'}`}>
+                          {item.tier === 'high' ? '⭐ ' + t.tierHigh : '✨ ' + t.tierWell}
+                        </span>
+                        {item.installs && (
+                          <span className="trusted-installs-badge">
+                            📥 {item.installs}
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Two signals shown SEPARATELY */}
+                      <div className="trusted-signals-box">
+                        <div className="trusted-signal-item rbi-signal">
+                          <span className="signal-icon">📋</span>
+                          <span className="signal-text">{t.rbiSignal}</span>
+                          <span className="rbi-pill">{t.rbiListedPill}</span>
+                        </div>
+                        <div className="trusted-signal-item play-signal">
+                          <span className="signal-icon">⭐</span>
+                          <span className="signal-text">
+                            {t.playSignalPrefix}: <strong>{item.rating} ★</strong> ({formatRatings(item.ratings)} {t.ratingsSuffix})
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Card Bottom: Click to check hint + View on Google Play link */}
+                      <div className="trusted-card-footer">
+                        <span className="trusted-check-cta">
+                          🔍 {t.checkAppHint}
+                        </span>
+                        {item.packageId && (
+                          <a
+                            href={`https://play.google.com/store/apps/details?id=${encodeURIComponent(item.packageId)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="trusted-play-link"
+                            onClick={(e) => e.stopPropagation()}
+                            title="Google Play Store"
+                          >
+                            <span>{t.viewOnPlay}</span> ↗
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           )}
         </div>
       </main>
