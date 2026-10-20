@@ -52,6 +52,18 @@ function findDirectoryMatch(appName, directory, minSimilarity = 0.8) {
   return bestScore >= minSimilarity ? best : null;
 }
 
+// Everyday words that are not a brand. A directory name made of only these is too generic to match loosely.
+const GENERIC_WORDS = new Set([
+  'loan', 'loans', 'personal', 'instant', 'credit', 'card', 'cards', 'cash', 'app', 'apps', 'finance',
+  'financial', 'money', 'lending', 'lend', 'digital', 'business', 'easy', 'quick', 'fast', 'online',
+  'pay', 'bank', 'banking', 'and', 'the', 'for', 'get', 'now', 'EMI', 'emi',
+].map((w) => w.toLowerCase()));
+
+function isGenericName(name) {
+  const words = String(name || '').toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+  return words.length > 0 && words.every((w) => GENERIC_WORDS.has(w));
+}
+
 // Search the whole directory for a name. Returns [{ entry, score }] best first (score 0 to 1).
 // Used for apps we have no permission data for.
 function searchDirectory(query, directory, minScore = 0.6) {
@@ -64,6 +76,9 @@ function searchDirectory(query, directory, minScore = 0.6) {
     let score = similarity(query, entry.appName);
     if (n === q) {
       score = 1;
+    } else if (isGenericName(entry.appName)) {
+      // A name made only of everyday words ("Personal Loan") only matches when it is (almost) exact.
+      // Otherwise "personal loans and credit card" would wrongly match it.
     } else {
       // "moneyview" should match "Moneyview Loan App", but short words like "loan" must not.
       const shorter = Math.min(n.length, q.length);

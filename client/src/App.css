@@ -1452,3 +1452,579 @@ footer {
   .gauge-score { font-size: 32px; }
   .search-card { padding: var(--space-lg); }
 }
+
+/* ── Real-App Assessment Styles (Google Play & RBI Directory) ──────────────── */
+.real-app-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  position: relative;
+}
+
+.real-app-card.real-app-subcard {
+  margin-top: var(--space-md);
+  border-top: 3px solid var(--secondary);
+}
+
+.subcard-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-container);
+  color: var(--secondary);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+
+/* 1. App identity header */
+.assess-app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  padding-bottom: var(--space-xs);
+}
+
+.assess-app-identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.assess-app-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  background: var(--surface-lowest);
+  border: 1px solid var(--outline-variant);
+  flex-shrink: 0;
+}
+
+.assess-app-icon-fallback {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: var(--surface-container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.assess-app-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.assess-app-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.assess-resolved-search-line {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--on-surface-variant);
+  background: var(--surface-low);
+  border-left: 3px solid #0284c7;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 3px 0 2px 0;
+}
+
+.assess-app-dev {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--on-surface-variant);
+}
+
+.assess-app-stats {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--on-surface-variant);
+  margin-top: 2px;
+}
+
+.assess-star-rating {
+  color: #d97706;
+  background: #fef3c7;
+  padding: 1px 7px;
+  border-radius: 6px;
+}
+
+.assess-ratings-count {
+  color: var(--on-surface-variant);
+  font-weight: 500;
+}
+
+.assess-installs {
+  color: var(--on-surface-variant);
+  font-weight: 600;
+}
+
+.assess-play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--surface-low);
+  color: var(--secondary);
+  border: 1px solid var(--outline-variant);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 150ms, color 150ms;
+}
+.assess-play-btn:hover {
+  background: var(--secondary);
+  color: var(--on-secondary);
+}
+
+/* 2. Big banner ("Kachu says: <label>") */
+.assess-banner {
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+}
+
+.assess-banner.banner-proceed {
+  background: #ecfdf5;
+  border: 1.5px solid #a7f3d0;
+  color: #065f46;
+}
+
+.assess-banner.banner-pause {
+  background: #fffbeb;
+  border: 1.5px solid #fde68a;
+  color: #92400e;
+}
+
+.assess-banner.banner-stop {
+  background: #fef2f2;
+  border: 1.5px solid #fecaca;
+  color: #991b1b;
+}
+
+.assess-banner-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.assess-banner-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  background: rgba(255,255,255,.75);
+}
+
+.assess-banner-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.assess-banner-label {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.banner-proceed .assess-banner-label { color: #065f46; }
+.banner-pause   .assess-banner-label { color: #b45309; }
+.banner-stop    .assess-banner-label { color: #b91c1c; }
+
+.assess-banner-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+
+.assess-listen-btn {
+  margin-top: 2px;
+}
+
+.assess-banner-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.85;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(0,0,0,.15);
+}
+
+.assess-meta-divider {
+  opacity: 0.5;
+}
+
+/* 3. Confidence chip */
+.assess-confidence-row {
+  display: flex;
+  align-items: center;
+}
+
+.confidence-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.confidence-chip.confidence-high {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+.confidence-chip.confidence-high .confidence-dot {
+  background: #22c55e;
+}
+
+.confidence-chip.confidence-medium {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+.confidence-chip.confidence-medium .confidence-dot {
+  background: #f59e0b;
+}
+
+.confidence-chip.confidence-low {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+.confidence-chip.confidence-low .confidence-dot {
+  background: #9ca3af;
+}
+
+.confidence-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+/* 4. Score breakdown */
+.assess-score-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.assess-score-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.assess-score-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.assess-score-subtitle {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--on-surface-variant);
+}
+
+.assess-score-total {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* 5. "Why this result" signals list */
+.assess-signals-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.assess-signal-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--surface-low);
+  transition: background 150ms;
+}
+
+.assess-signal-item.status-warn {
+  border-left: 3px solid #f59e0b;
+  background: #fffdf5;
+}
+.assess-signal-item.status-ok {
+  border-left: 3px solid #10b981;
+}
+.assess-signal-item.status-info {
+  border-left: 3px solid #3b82f6;
+}
+.assess-signal-item.status-unknown {
+  border-left: 3px solid #9ca3af;
+}
+
+.assess-signal-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.assess-signal-badge.status-ok {
+  background: #dcfce7;
+  color: #16a34a;
+}
+.assess-signal-badge.status-warn {
+  background: #fef3c7;
+  color: #d97706;
+}
+.assess-signal-badge.status-info {
+  background: #dbeafe;
+  color: #2563eb;
+}
+.assess-signal-badge.status-unknown {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.assess-signal-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.assess-signal-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--on-surface);
+  line-height: 1.45;
+}
+
+.assess-signal-source {
+  align-self: flex-start;
+  font-size: 10px;
+  font-weight: 700;
+  color: #4b5563;
+  background: #e5e7eb;
+  padding: 2px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Calm blue info banner for non-lending apps */
+.assess-non-lending-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-left: 4px solid #0284c7;
+  border-radius: 12px;
+  color: #0369a1;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.assess-non-lending-banner .non-lending-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.assess-non-lending-banner .non-lending-text {
+  margin: 0;
+}
+
+/* 6. Lookalike warning box */
+.lookalike-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #fffbeb;
+  border: 1.5px solid #f59e0b;
+  border-radius: 12px;
+  color: #92400e;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.lookalike-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+/* 7. Bottom note box */
+.assess-bottom-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 12px 14px;
+  background: var(--surface-low);
+  border-radius: 12px;
+  color: var(--on-surface-variant);
+  font-size: 12px;
+  line-height: 1.5;
+  border: 1px solid var(--outline-variant);
+}
+
+.assess-bottom-note .note-icon {
+  font-size: 15px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.assess-bottom-note .note-text {
+  margin: 0;
+}
+
+/* Loading card for live assess lookup */
+.assess-loading-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px;
+  color: var(--on-surface-variant);
+  font-weight: 600;
+  font-size: 13px;
+  background: var(--surface-low);
+  border: 1px dashed var(--outline-variant);
+}
+
+.assess-spinner {
+  font-size: 18px;
+  animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Compact RBI directory record section in RealAppCard */
+.assess-dir-record-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  background: var(--surface-low);
+  border-left: 3px solid #0284c7;
+}
+
+.assess-dir-record-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.assess-dir-field {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.assess-dir-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--on-surface-variant);
+  min-width: 60px;
+}
+
+.assess-dir-lender {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.assess-dir-val {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0369a1;
+}
+
+.assess-dir-record-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.assess-record-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  background: var(--surface-container);
+  border: 1px solid var(--outline-variant);
+  border-radius: 10px;
+}
+
+/* Grey note when Play store reading is unavailable */
+.dir-play-unavailable-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--surface-low);
+  border: 1px solid var(--outline-variant);
+  border-radius: 12px;
+  color: var(--on-surface-variant);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+

@@ -12,7 +12,7 @@ const UI = {
     taglineHi: 'ऐप डाउनलोड करने से पहले जांचें',
     demoBanner: "Directory data: 1734 apps imported from RBI's DLA directory. For real apps we show evidence (RBI listing, permissions, complaint contact), not safe/risky labels.",
     bannerText: "Directory data: 1734 apps imported from RBI's DLA directory. For real apps we show evidence (RBI listing, permissions, complaint contact), not safe/risky labels.",
-    placeholder: 'Type an app name, e.g. PhonePe, Paytm, Navi, Blink Credit',
+    placeholder: 'App name or Google Play link',
     tryLabel: 'Try:',
     check: 'Check app • ऐप की जांच करें',
     checking: 'Checking…',
@@ -36,7 +36,7 @@ const UI = {
     developer: 'Developer',
     footer: 'Karz Kavach | Team Moon3 | Hack@BVP 8.0',
     quickSuggest: 'Quick Suggestions / लोकप्रिय खोजें',
-    searchLabel: 'Search Loan App Name',
+    searchLabel: 'Search Loan App or Paste Play Link',
     matchedEntry: 'Matched directory entry',
     matchedEntryHi: 'डायरेक्टरी में नाम',
     listedUnder: 'Listed under',
@@ -56,6 +56,33 @@ const UI = {
     grievanceMobile: 'Mobile',
     grievanceNote: 'Contact details are published by the lender in the RBI directory.',
     grievanceNoteHi: 'संपर्क विवरण लेंडर द्वारा RBI डायरेक्टरी में प्रकाशित किए गए हैं।',
+    kachuSays: 'Kachu says:',
+    asOfChecked: (date) => `Based on what we checked, as of ${date}`,
+    sourceLabel: (src) => `Data source: ${src === 'live' ? 'Live Google Play' : 'Saved copy'}`,
+    scoreBreakdownTitle: 'Score Breakdown',
+    permissionsScore: 'Permissions',
+    registrationScore: 'RBI registration',
+    transparencyScore: 'Transparency & Fees',
+    totalWarningScore: 'Total warning score',
+    whyThisResult: 'Why this result',
+    whyThisResultSub: 'Evidence from Google Play listing and RBI directory',
+    confidenceTitle: 'Confidence',
+    confidence_high: 'High',
+    confidence_medium: 'Medium',
+    confidence_low: 'Low',
+    confidenceLowSub: 'Some data could not be read',
+    lookalikeWarning: "A similar name is in the RBI directory under a different app. Check the lender's official link.",
+    realAppAssessment: 'Real App Assessment',
+    assessingPlay: 'Reading Google Play listing & RBI directory…',
+    rbiRecordTitle: 'RBI directory record',
+    rbiRecordTitleHi: 'RBI डायरेक्टरी रिकॉर्ड',
+    playUnavailableNote: 'We could not read this app from Google Play right now.',
+    matchedSearchTo: (title, dev) => `We matched your search to ${title} by ${dev} on Google Play. Not the right app? Paste its Google Play link above.`,
+    assessErrors: {
+      NEEDS_LINK: "We could not find that app on Google Play by name. Paste the app's Google Play link (play.google.com/store/apps/details?id=...) or its app ID.",
+      PLAY_UNAVAILABLE: 'We could not read this app from Google Play right now. Check the link, or try again.',
+    },
+    notLendingBanner: "This doesn't look like a lending app, so RBI registration and loan-fee checks may not apply.",
     navChecker: 'Check App',
     navTrusted: 'Trusted Apps',
     exploreTrusted: 'Explore trusted lending apps',
@@ -107,7 +134,7 @@ const UI = {
     taglineHi: 'Check the app before it checks you',
     demoBanner: 'डायरेक्टरी डेटा: RBI की DLA डायरेक्टरी से 1734 ऐप आयात किए गए। वास्तविक ऐप के लिए हम साक्ष्य (RBI सूची, परमिशन, शिकायत संपर्क) दिखाते हैं, सुरक्षित/जोखिम भरे लेबल नहीं।',
     bannerText: 'डायरेक्टरी डेटा: RBI की DLA डायरेक्टरी से 1734 ऐप आयात किए गए। वास्तविक ऐप के लिए हम साक्ष्य (RBI सूची, परमिशन, शिकायत संपर्क) दिखाते हैं, सुरक्षित/जोखिम भरे लेबल नहीं।',
-    placeholder: 'ऐप का नाम लिखें, जैसे PhonePe, Paytm, Navi, Blink Credit',
+    placeholder: 'ऐप का नाम या Google Play लिंक',
     tryLabel: 'आज़माएं:',
     check: 'ऐप जाँचें • Check App',
     checking: 'जाँच हो रही है…',
@@ -131,7 +158,7 @@ const UI = {
     developer: 'डेवलपर',
     footer: 'कर्ज़ कवच | Team Moon3 | Hack@BVP 8.0',
     quickSuggest: 'लोकप्रिय खोजें / Quick Suggestions',
-    searchLabel: 'लोन ऐप का नाम खोजें',
+    searchLabel: 'लोन ऐप खोजें या Google Play लिंक पेस्ट करें',
     matchedEntry: 'डायरेक्टरी में नाम',
     matchedEntryHi: 'Matched directory entry',
     listedUnder: 'लेंडर का नाम',
@@ -151,6 +178,33 @@ const UI = {
     grievanceMobile: 'मोबाइल',
     grievanceNote: 'संपर्क विवरण लेंडर द्वारा RBI डायरेक्टरी में प्रकाशित किए गए हैं।',
     grievanceNoteHi: 'Contact details are published by the lender in the RBI directory.',
+    kachuSays: 'कछु कहता है:',
+    asOfChecked: (date) => `हमारी जाँच के अनुसार, तारीख: ${date}`,
+    sourceLabel: (src) => `डेटा स्रोत: ${src === 'live' ? 'लाइव Google Play' : 'सहेजी गई कॉपी'}`,
+    scoreBreakdownTitle: 'स्कोर विवरण',
+    permissionsScore: 'परमिशन',
+    registrationScore: 'RBI रजिस्ट्रेशन',
+    transparencyScore: 'पारदर्शिता और शुल्क',
+    totalWarningScore: 'कुल चेतावनी अंक',
+    whyThisResult: 'यह परिणाम क्यों आया',
+    whyThisResultSub: 'Google Play लिस्टिंग और RBI डायरेक्टरी के साक्ष्य',
+    confidenceTitle: 'विश्वसनीयता',
+    confidence_high: 'उच्च',
+    confidence_medium: 'मध्यम',
+    confidence_low: 'कम',
+    confidenceLowSub: 'कुछ डेटा नहीं पढ़ा जा सका',
+    lookalikeWarning: 'RBI डायरेक्टरी में एक मिलता-जुलता नाम किसी अन्य ऐप के तहत है। लेंडर का आधिकारिक लिंक जाँचें।',
+    realAppAssessment: 'वास्तविक ऐप मूल्यांकन',
+    assessingPlay: 'Google Play लिस्टिंग और RBI डायरेक्टरी पढ़ी जा रही है…',
+    rbiRecordTitle: 'RBI डायरेक्टरी रिकॉर्ड',
+    rbiRecordTitleHi: 'RBI directory record',
+    playUnavailableNote: 'अभी हम इस ऐप की जानकारी Google Play से नहीं पढ़ सके।',
+    matchedSearchTo: (title, dev) => `हमने आपकी खोज का मिलान Google Play पर ${dev} के ${title} से किया है। क्या यह सही ऐप नहीं है? ऊपर इसका Google Play लिंक पेस्ट करें।`,
+    assessErrors: {
+      NEEDS_LINK: 'हम Google Play पर इस नाम से ऐप नहीं ढूंढ सके। ऐप का Google Play लिंक (play.google.com/store/apps/details?id=...) या ऐप ID पेस्ट करें।',
+      PLAY_UNAVAILABLE: 'अभी हम इस ऐप की जानकारी Google Play से नहीं पढ़ सके। लिंक की जांच करें या पुनः प्रयास करें।',
+    },
+    notLendingBanner: 'यह लोन देने वाला ऐप नहीं लगता, इसलिए RBI पंजीकरण और लोन-फीस की जाँच लागू नहीं हो सकती।',
     navChecker: 'ऐप जांचें',
     navTrusted: 'भरोसेमंद ऐप',
     exploreTrusted: 'भरोसेमंद लोन ऐप देखें',
@@ -435,6 +489,77 @@ function FullResult({ r, lang, t }) {
   );
 }
 
+// ── Grievance Redressal Box (Shared Component) ────────────────────────────────
+function GrievanceBox({ grievance, t, showNote = true }) {
+  if (!grievance || (!grievance.name && !grievance.email && !grievance.phone && !grievance.mobile)) {
+    return null;
+  }
+  return (
+    <div className="dir-grievance-box">
+      <div className="dir-grievance-title">
+        🛡️ {t.grievanceTitle}
+        <span className="dir-grievance-title-sub">({t.grievanceTitleHi})</span>
+      </div>
+      <div className="dir-grievance-content">
+        {grievance.name && (
+          <div className="dir-grievance-row">
+            <span className="dir-grievance-label">{t.grievanceOfficer}:</span>
+            <span className="dir-grievance-val">{grievance.name}</span>
+          </div>
+        )}
+        {grievance.email && (
+          <div className="dir-grievance-row">
+            <span className="dir-grievance-label">{t.grievanceEmail}:</span>
+            {grievance.email.includes('@') ? (
+              grievance.email.includes(' ') ? (
+                <span className="dir-grievance-val">
+                  {grievance.email.split(/\s+/).map((em, eIdx) => {
+                    const clean = em.replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '');
+                    return em.includes('@') ? (
+                      <a key={eIdx} className="dir-grievance-link" href={`mailto:${clean}`}>
+                        {em}{' '}
+                      </a>
+                    ) : (
+                      <span key={eIdx}>{em} </span>
+                    );
+                  })}
+                </span>
+              ) : (
+                <a className="dir-grievance-link" href={`mailto:${grievance.email.trim()}`}>
+                  {grievance.email}
+                </a>
+              )
+            ) : (
+              <span className="dir-grievance-val">{grievance.email}</span>
+            )}
+          </div>
+        )}
+        {grievance.phone && (
+          <div className="dir-grievance-row">
+            <span className="dir-grievance-label">{t.grievancePhone}:</span>
+            <a className="dir-grievance-link" href={`tel:${String(grievance.phone).replace(/\s+/g, '')}`}>
+              {grievance.phone}
+            </a>
+          </div>
+        )}
+        {grievance.mobile && (
+          <div className="dir-grievance-row">
+            <span className="dir-grievance-label">{t.grievanceMobile}:</span>
+            <a className="dir-grievance-link" href={`tel:${String(grievance.mobile).replace(/\s+/g, '')}`}>
+              {grievance.mobile}
+            </a>
+          </div>
+        )}
+      </div>
+      {showNote && (
+        <div className="dir-grievance-note">
+          ℹ️ {t.grievanceNote}
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ── Directory-only result (LISTED / UNVERIFIED) ────────────────────────────────
 function cleanSpeech(text) {
   if (!text) return '';
@@ -447,7 +572,7 @@ function cleanSpeech(text) {
     .trim();
 }
 
-function DirResult({ r, lang, t, onSearch }) {
+function DirResult({ r, playUnavailable = false, lang, t, onSearch }) {
   const isListed = r.verdict === 'LISTED';
   const vClass = isListed ? 'listed' : 'unverified';
   const verdictText = r.verdictLabel?.[lang] || (isListed ? t.verdictLabel.listed : t.verdictLabel.unverified);
@@ -495,6 +620,19 @@ function DirResult({ r, lang, t, onSearch }) {
         </button>
       </div>
 
+      {/* Small grey note when Play store reading failed or app has no Play ID */}
+      {playUnavailable && (
+        <div className="dir-play-unavailable-note">
+          <span style={{ fontSize: 16 }}>ℹ️</span>
+          <span>
+            {typeof playUnavailable === 'object'
+              ? ((lang === 'hi' && t.assessErrors?.[playUnavailable.error]) || playUnavailable.message || t.playUnavailableNote)
+              : (typeof playUnavailable === 'string' ? playUnavailable : t.playUnavailableNote)
+            }
+          </span>
+        </div>
+      )}
+
       {/* Matches (when app is listed) */}
       {r.matches && r.matches.length > 0 && (
         <div className="section-card">
@@ -512,48 +650,8 @@ function DirResult({ r, lang, t, onSearch }) {
                   <span className="dir-match-label">{lang === 'hi' ? t.listedUnderHi : t.listedUnder}:</span>
                   <span className="dir-match-lender">{m.lender}</span>
                 </div>
-                {m.grievance && (m.grievance.name || m.grievance.email || m.grievance.phone || m.grievance.mobile) && (
-                  <div className="dir-grievance-box">
-                    <div className="dir-grievance-title">
-                      🛡️ {t.grievanceTitle}
-                      <span className="dir-grievance-title-sub">({t.grievanceTitleHi})</span>
-                    </div>
-                    <div className="dir-grievance-content">
-                      {m.grievance.name && (
-                        <div className="dir-grievance-row">
-                          <span className="dir-grievance-label">{t.grievanceOfficer}:</span>
-                          <span className="dir-grievance-val">{m.grievance.name}</span>
-                        </div>
-                      )}
-                      {m.grievance.email && (
-                        <div className="dir-grievance-row">
-                          <span className="dir-grievance-label">{t.grievanceEmail}:</span>
-                          <a className="dir-grievance-link" href={`mailto:${m.grievance.email}`}>
-                            {m.grievance.email}
-                          </a>
-                        </div>
-                      )}
-                      {m.grievance.phone && (
-                        <div className="dir-grievance-row">
-                          <span className="dir-grievance-label">{t.grievancePhone}:</span>
-                          <a className="dir-grievance-link" href={`tel:${String(m.grievance.phone).replace(/\s+/g, '')}`}>
-                            {m.grievance.phone}
-                          </a>
-                        </div>
-                      )}
-                      {m.grievance.mobile && (
-                        <div className="dir-grievance-row">
-                          <span className="dir-grievance-label">{t.grievanceMobile}:</span>
-                          <a className="dir-grievance-link" href={`tel:${String(m.grievance.mobile).replace(/\s+/g, '')}`}>
-                            {m.grievance.mobile}
-                          </a>
-                        </div>
-                      )}
-                    </div>
-                    <div className="dir-grievance-note">
-                      ℹ️ {t.grievanceNote}
-                    </div>
-                  </div>
+                {m.grievance && (
+                  <GrievanceBox grievance={m.grievance} t={t} />
                 )}
               </div>
             ))}
@@ -621,23 +719,25 @@ function DirResult({ r, lang, t, onSearch }) {
         </div>
       )}
 
-      {/* "Did you mean" suggestion chips */}
-      {r.similar && r.similar.length > 0 && (
+      {/* "Did you mean" suggestion chips (hiding demo apps) */}
+      {r.similar && r.similar.filter(s => !s.toLowerCase().includes('demo')).length > 0 && (
         <div className="section-card">
           <div className="section-title" style={{ fontSize: 16 }}>
             💡 {lang === 'hi' ? t.didYouMeanHi : t.didYouMean}
           </div>
           <div className="chips">
-            {r.similar.map((simName) => (
-              <button
-                key={simName}
-                type="button"
-                className="chip dir-chip"
-                onClick={() => onSearch(simName)}
-              >
-                {simName}
-              </button>
-            ))}
+            {r.similar
+              .filter(s => !s.toLowerCase().includes('demo'))
+              .map((simName) => (
+                <button
+                  key={simName}
+                  type="button"
+                  className="chip dir-chip"
+                  onClick={() => onSearch(simName)}
+                >
+                  {simName}
+                </button>
+              ))}
           </div>
         </div>
       )}
@@ -673,18 +773,310 @@ function DirResult({ r, lang, t, onSearch }) {
   );
 }
 
+// ── Real-App Assessment Result Card (Google Play & RBI Directory) ────────────
+function RealAppCard({ data, lang, t }) {
+  if (!data) return null;
+  const app = data.app || {};
+  const level = data.level || 'proceed'; // 'proceed' | 'pause' | 'stop'
+  const labelText = data.label?.[lang] || data.label?.en || '';
+  const subtitleText = data.subtitle?.[lang] || data.subtitle?.en || '';
+  const asOfFormatted = formatDate(data.asOf, lang);
+
+  // Speech narration
+  const speechText = [
+    `${t.kachuSays} ${labelText}`,
+    subtitleText,
+    ...(data.signals || []).filter(s => s.status === 'warn').map(s => s[lang] || s.en),
+  ].filter(Boolean).join('. ');
+
+  // Sort signals: warn signals first, then info, unknown, ok
+  const sortedSignals = [...(data.signals || [])].sort((a, b) => {
+    const rank = { warn: 0, info: 1, unknown: 2, ok: 3 };
+    return (rank[a.status] ?? 4) - (rank[b.status] ?? 4);
+  });
+
+  return (
+    <div className={`result-card real-app-card level-${level}`}>
+      {/* 1. App identity header: icon, title, developer, star rating, ratings */}
+      <div className="assess-app-header">
+        <div className="assess-app-identity">
+          {app.icon ? (
+            <img src={app.icon} alt={app.title || 'App icon'} className="assess-app-icon" />
+          ) : (
+            <div className="assess-app-icon-fallback">📱</div>
+          )}
+          <div className="assess-app-info">
+            <h2 className="assess-app-title">{app.title || app.packageId}</h2>
+            {data.resolvedFromSearch && (
+              <div className="assess-resolved-search-line">
+                {t.matchedSearchTo(data.resolvedFromSearch.title, data.resolvedFromSearch.developer)}
+              </div>
+            )}
+            {app.developer && (
+              <div className="assess-app-dev">{t.developer}: {app.developer}</div>
+            )}
+            <div className="assess-app-stats">
+              {app.rating != null && (
+                <span className="assess-star-rating">
+                  ★ {Number(app.rating).toFixed(1)}
+                </span>
+              )}
+              {app.ratings != null && (
+                <span className="assess-ratings-count">
+                  ({formatRatings(app.ratings)} {t.ratingsSuffix})
+                </span>
+              )}
+              {app.installs && (
+                <span className="assess-installs">
+                  • 📥 {app.installs}
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {app.playUrl && (
+          <a
+            href={app.playUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="assess-play-btn"
+            title="Google Play Store"
+          >
+            <span>{t.viewOnPlay}</span> ↗
+          </a>
+        )}
+      </div>
+
+      {/* Calm blue info banner when not a lending app */}
+      {data.lending === false && (
+        <div className="assess-non-lending-banner">
+          <span className="non-lending-icon">ℹ️</span>
+          <span className="non-lending-text">{t.notLendingBanner}</span>
+        </div>
+      )}
+
+      {/* 2. Banner ("Kachu says: <label>") */}
+      <div className={`assess-banner banner-${level}`}>
+        <div className="assess-banner-main">
+          <div className="assess-banner-icon-wrap">
+            {level === 'proceed' ? '🐢' : level === 'pause' ? '⚠️' : '🛑'}
+          </div>
+          <div className="assess-banner-content">
+            <div className="assess-banner-label">
+              {t.kachuSays} {labelText}
+            </div>
+            <div className="assess-banner-subtitle">
+              {subtitleText}
+            </div>
+          </div>
+          <button
+            className="listen-btn assess-listen-btn"
+            onClick={() => speak(speechText, lang)}
+            type="button"
+            title={t.listen}
+          >
+            🔊 {t.listen}
+          </button>
+        </div>
+
+        <div className="assess-banner-meta">
+          <span className="assess-meta-item">
+            📅 {t.asOfChecked(asOfFormatted)}
+          </span>
+          <span className="assess-meta-divider">•</span>
+          <span className="assess-meta-item">
+            💾 {t.sourceLabel(data.source)}
+          </span>
+        </div>
+      </div>
+
+      {/* 3. Score breakdown: Permissions /40, RBI registration /40, Transparency /20, Total /100 */}
+      {data.score && (
+        <div className="section-card assess-score-card">
+          <div className="assess-score-header">
+            <div className="assess-score-title-group">
+              <span className="assess-score-subtitle">{t.scoreBreakdownTitle}</span>
+              <h3 className="assess-score-total">
+                {t.totalWarningScore}: <strong>{data.score.total}</strong> / 100
+              </h3>
+            </div>
+          </div>
+
+          <div className="bars-section">
+            <ScoreBar
+              label={t.permissionsScore}
+              value={data.score.permission ?? 0}
+              max={data.score.max?.permission || 40}
+              level={data.score.permission >= 20 ? 'high' : data.score.permission > 0 ? 'medium' : 'low'}
+            />
+            <ScoreBar
+              label={t.registrationScore}
+              value={data.score.registration ?? 0}
+              max={data.score.max?.registration || 40}
+              level={data.score.registration >= 25 ? 'high' : data.score.registration > 0 ? 'medium' : 'low'}
+            />
+            <ScoreBar
+              label={t.transparencyScore}
+              value={data.score.transparency ?? 0}
+              max={data.score.max?.transparency || 20}
+              level={data.score.transparency >= 10 ? 'high' : data.score.transparency > 0 ? 'medium' : 'low'}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* 4. "Why this result" list: warn signals first */}
+      {sortedSignals.length > 0 && (
+        <div className="section-card">
+          <div className="section-title">
+            🔍 {t.whyThisResult}
+            <span style={{ fontSize: 13, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 6 }}>
+              ({t.whyThisResultSub})
+            </span>
+          </div>
+          <ul className="assess-signals-list">
+            {sortedSignals.map((sig, idx) => {
+              const status = sig.status || 'info';
+              return (
+                <li key={sig.id || idx} className={`assess-signal-item status-${status}`}>
+                  <span className={`assess-signal-badge status-${status}`}>
+                    {status === 'ok' && '✔'}
+                    {status === 'warn' && '⚠️'}
+                    {status === 'info' && 'ℹ️'}
+                    {status === 'unknown' && '❓'}
+                  </span>
+                  <div className="assess-signal-content">
+                    <span className="assess-signal-text">{sig[lang] || sig.en}</span>
+                    {sig.source && (
+                      <span className="assess-signal-source">{sig.source}</span>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+
+      {/* 5. Note */}
+      {data.note && (
+        <div className="assess-bottom-note">
+          <span className="note-icon">ℹ️</span>
+          <p className="note-text">{data.note[lang] || data.note.en}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Compact RBI directory record section (Shown below RealAppCard) ────────────
+function RbiDirectoryRecord({ data, directoryResult, lang, t }) {
+  if (!data) return null;
+  const app = data.app || {};
+  const dir = data.directory || {};
+  const isLookalike = dir.match === 'lookalike';
+
+  // 1. All directory records for this app from assess data
+  let records = Array.isArray(dir.records) ? dir.records : [];
+
+  // 2. If records is empty, fall back to directoryResult matches with grievance info
+  if (records.length === 0 && !isLookalike && directoryResult?.matches?.length) {
+    const fallbackMatches = directoryResult.matches.filter(
+      (m) => m.grievance && (m.grievance.name || m.grievance.email || m.grievance.phone || m.grievance.mobile)
+    );
+    if (fallbackMatches.length > 0) {
+      records = fallbackMatches.map((m) => ({
+        appName: m.appName,
+        lender: m.lender,
+        grievance: m.grievance,
+      }));
+    }
+  }
+
+  // 3. If records is empty, show nothing for this section (unless lookalike warning)
+  if (records.length === 0 && !isLookalike) {
+    return null;
+  }
+
+  return (
+    <div className="card assess-dir-record-card">
+      <div className="section-title">
+        📋 {t.rbiRecordTitle}
+        <span style={{ fontSize: 13, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 6 }}>
+          ({t.rbiRecordTitleHi})
+        </span>
+      </div>
+
+      <div className="assess-dir-record-content">
+        {isLookalike && (
+          <div className="lookalike-box">
+            <span className="lookalike-icon">⚠️</span>
+            <div className="lookalike-text">
+              {t.lookalikeWarning}
+            </div>
+          </div>
+        )}
+
+        {records.length > 0 && (
+          <div className="assess-dir-record-list">
+            {records.map((rec, idx) => (
+              <div key={idx} className="assess-record-block">
+                {rec.lender && (
+                  <div className="assess-dir-field">
+                    <span className="assess-dir-label">{lang === 'hi' ? t.listedUnderHi : t.listedUnder}:</span>
+                    <span className="assess-dir-lender">{rec.lender}</span>
+                  </div>
+                )}
+
+                {rec.appName && rec.appName.toLowerCase() !== (app.title || '').toLowerCase() && (
+                  <div className="assess-dir-field">
+                    <span className="assess-dir-label">{lang === 'hi' ? t.matchedEntryHi : t.matchedEntry}:</span>
+                    <span className="assess-dir-val">{rec.appName}</span>
+                  </div>
+                )}
+
+                {rec.grievance && (
+                  <GrievanceBox grievance={rec.grievance} t={t} showNote={false} />
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {records.some((r) => r.grievance && (r.grievance.name || r.grievance.email || r.grievance.phone || r.grievance.mobile)) && (
+          <div className="dir-grievance-note">
+            ℹ️ {t.grievanceNote}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// Helper to detect Google Play links or package IDs
+function isPlayInput(input) {
+  const s = String(input || '').trim();
+  if (!s) return false;
+  if (/play\.google\.com/i.test(s)) return true;
+  if (/^[A-Za-z][A-Za-z0-9_]*(\.[A-Za-z0-9_]+)+$/.test(s)) return true;
+  return false;
+}
+
 // ── Main App ──────────────────────────────────────────────────────────────────
 export default function App() {
-  const [lang, setLang]         = useState('en');
-  const [activeTab, setActiveTab] = useState('checker'); // 'checker' | 'trusted'
-  const [name, setName]         = useState('');
-  const [apps, setApps]         = useState([]);
-  const [stats, setStats]       = useState(null);
-  const [result, setResult]     = useState(null);
-  const [notFound, setNotFound] = useState(null);
-  const [error, setError]       = useState('');
-  const [loading, setLoading]   = useState(false);
-  const [showBanner, setShowBanner] = useState(true);
+  const [lang, setLang]               = useState('en');
+  const [activeTab, setActiveTab]     = useState('checker'); // 'checker' | 'trusted'
+  const [name, setName]               = useState('');
+  const [apps, setApps]               = useState([]);
+  const [stats, setStats]             = useState(null);
+  const [result, setResult]           = useState(null);
+  const [assessResult, setAssessResult] = useState(null);
+  const [playUnavailable, setPlayUnavailable] = useState(null);
+  const [notFound, setNotFound]       = useState(null);
+  const [error, setError]             = useState('');
+  const [loading, setLoading]         = useState(false);
+  const [showBanner, setShowBanner]   = useState(true);
 
   // Trusted apps state
   const [trustedData, setTrustedData] = useState(null);
@@ -700,7 +1092,10 @@ export default function App() {
   useEffect(() => {
     fetch('/api/apps')
       .then(res => res.json())
-      .then(setApps)
+      .then(list => {
+        // Hide demo apps from suggestions
+        setApps(list.filter(a => !a.demo && !a.name?.toLowerCase().includes('demo')));
+      })
       .catch(() => {});
 
     fetch('/api/stats')
@@ -750,19 +1145,65 @@ export default function App() {
   async function runCheck(appName) {
     const query = String(appName || '').trim();
     if (!query) return;
+
     setLoading(true);
     setError('');
     setResult(null);
+    setAssessResult(null);
+    setPlayUnavailable(null);
     setNotFound(null);
+
+    // 1. If it looks like a Google Play link or package ID, call /api/assess directly
+    if (isPlayInput(query)) {
+      try {
+        const res = await fetch(`/api/assess?input=${encodeURIComponent(query)}`);
+        const data = await res.json();
+        if (res.ok) {
+          setAssessResult(data);
+        } else {
+          setError(data.message || data.error || t.serverError);
+        }
+      } catch {
+        setError(t.serverError);
+      }
+      setLoading(false);
+      return;
+    }
+
+    // 2. Plain name search: call /api/assess and /api/check in parallel
     try {
-      const res  = await fetch(`/api/check?name=${encodeURIComponent(query)}`);
-      const data = await res.json();
-      if (res.status === 200) {
-        setResult(data);
-      } else if (res.status === 404) {
-        setNotFound(data.suggestions || []);
+      const [checkRes, assessRes] = await Promise.all([
+        fetch(`/api/check?name=${encodeURIComponent(query)}`).catch(() => null),
+        fetch(`/api/assess?input=${encodeURIComponent(query)}`).catch(() => null),
+      ]);
+
+      const checkData = checkRes ? await checkRes.json().catch(() => null) : null;
+      const assessData = assessRes ? await assessRes.json().catch(() => null) : null;
+
+      if (assessRes && assessRes.ok && assessData && !assessData.error) {
+        // Assessment succeeded: show assessment card as main result
+        setAssessResult(assessData);
+        if (checkRes && checkRes.status === 200 && checkData) {
+          setResult(checkData);
+        } else {
+          setResult(null);
+        }
+        setPlayUnavailable(null);
       } else {
-        setError(data.error || t.serverError);
+        // Assessment failed (e.g. NEEDS_LINK, PLAY_UNAVAILABLE):
+        // Fall back to existing directory result, and show server's message in small grey info note
+        setAssessResult(null);
+        const serverError = assessData || { message: t.playUnavailableNote };
+        setPlayUnavailable(serverError);
+
+        if (checkRes && checkRes.status === 200 && checkData) {
+          setResult(checkData);
+        } else if (checkRes && checkRes.status === 404 && checkData) {
+          const suggestions = (checkData.suggestions || []).filter(s => !s.toLowerCase().includes('demo'));
+          setNotFound(suggestions);
+        } else {
+          setError(assessData?.message || checkData?.error || t.serverError);
+        }
       }
     } catch {
       setError(t.serverError);
@@ -872,8 +1313,8 @@ export default function App() {
 
           {activeTab === 'checker' ? (
             <>
-              {/* Hero — only show when no result */}
-              {!result && !notFound && !error && (
+              {/* Hero — only show when no result or assessment result */}
+              {!result && !assessResult && !notFound && !error && (
             <div className="hero">
               <div className="hero-shield">🛡️</div>
               <span className="hero-tag">🔒 {t.heroTag}</span>
@@ -967,10 +1408,28 @@ export default function App() {
             </div>
           )}
 
-          {/* Result */}
-          {result && (
+          {/* Loading spinner for assessment while it loads, so old card does not appear first and jump */}
+          {loading && (
+            <div className="card assess-loading-card">
+              <span className="assess-spinner">⏳</span>
+              <span>{t.assessingPlay}</span>
+            </div>
+          )}
+
+          {/* 1. When /api/assess succeeds, show ONLY the assessment card as the main result */}
+          {/* 2. Below it, show one compact section "RBI directory record" with lender and grievance */}
+          {/* 3. Old "Permission exposure" section and old "Listed in directory" banner are hidden */}
+          {!loading && assessResult && (
+            <>
+              <RealAppCard data={assessResult} lang={lang} t={t} />
+              <RbiDirectoryRecord data={assessResult} directoryResult={result} lang={lang} t={t} />
+            </>
+          )}
+
+          {/* 4. If /api/assess fails or the app has no Play ID, show old directory result as before, plus small grey note */}
+          {!loading && !assessResult && result && (
             isDirectory
-              ? <DirResult r={result} lang={lang} t={t} onSearch={(simName) => { setName(simName); runCheck(simName); }} />
+              ? <DirResult r={result} playUnavailable={playUnavailable} lang={lang} t={t} onSearch={(simName) => { setName(simName); runCheck(simName); }} />
               : <FullResult r={result} lang={lang} t={t} />
           )}
           </>

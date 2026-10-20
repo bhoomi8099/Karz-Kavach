@@ -4,6 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const { listApps, checkApp, getStats } = require('./handlers');
 const { enrichWithPermissions } = require('./playPermissions');
+const { assessApp } = require('./assess');
 
 // Data lives in simple JSON files for now (see the data folder).
 // Replace with MongoDB later if you want; only this file and handlers.js would change.
@@ -38,6 +39,13 @@ app.get('/api/check', async (req, res) => {
   res.status(status).json(body);
 });
 
+// Score any app from a Google Play link, an app ID, or an RBI-listed app name:
+//   /api/assess?input=https://play.google.com/store/apps/details?id=com.example.app
+app.get('/api/assess', async (req, res) => {
+  const { status, body } = await assessApp(req.query.input || req.query.name, directory);
+  res.status(status).json(body);
+});
+
 // Trusted apps: RBI-listed + well rated on Google Play. Built by scripts/build-trusted.js
 app.get('/api/trusted', (req, res) => {
   let data;
@@ -64,7 +72,13 @@ app.get('/api/trusted', (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 if (require.main === module) {
-  app.listen(PORT, () => console.log(`Karz Kavach server running on http://localhost:${PORT}`));
+  app.listen(PORT, () => {
+    console.log(`Karz Kavach server running on http://localhost:${PORT}`);
+    if (process.env.KK_OFFLINE === '1') {
+      console.log('*** OFFLINE MODE IS ON: only apps saved in data/play-snapshot.json will work. ***');
+      console.log('*** To go back to live Google Play lookups run: Remove-Item Env:KK_OFFLINE  and restart. ***');
+    }
+  });
 }
 
 module.exports = app;

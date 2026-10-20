@@ -75,3 +75,14 @@ test('searchDirectory: brand before a colon finds the full entry name', () => {
   assert.ok(searchDirectory('quick', dir).every((r) => r.score < 0.8)); // too short and generic
   assert.ok(searchDirectory('loan', dir).every((r) => r.score < 0.8));
 });
+
+test('generic directory names do not match long descriptive queries', () => {
+  const { searchDirectory: sd } = require('./scoring');
+  const dir = [
+    { appName: 'Personal Loan', lender: 'Some NBFC' },
+    { appName: 'Moneyview Loan App', lender: 'Moneyview Ltd' },
+  ];
+  assert.deepStrictEqual(sd('personal loans and credit card', dir), []); // was a wrong match before
+  assert.strictEqual(sd('Personal Loan', dir)[0].entry.appName, 'Personal Loan'); // exact still works
+  assert.strictEqual(sd('moneyview', dir)[0].entry.appName, 'Moneyview Loan App'); // brands still match
+});
