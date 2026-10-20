@@ -784,7 +784,7 @@ function RealAppCard({ data, lang, t }) {
 
   // Speech narration
   const speechText = [
-    `${t.kachuSays} ${labelText}`,
+    labelText,
     subtitleText,
     ...(data.signals || []).filter(s => s.status === 'warn').map(s => s[lang] || s.en),
   ].filter(Boolean).join('. ');
@@ -856,15 +856,15 @@ function RealAppCard({ data, lang, t }) {
         </div>
       )}
 
-      {/* 2. Banner ("Kachu says: <label>") */}
+      {/* 2. Banner: appropriate icon + phrase line */}
       <div className={`assess-banner banner-${level}`}>
         <div className="assess-banner-main">
-          <div className="assess-banner-icon-wrap">
-            {level === 'proceed' ? '🐢' : level === 'pause' ? '⚠️' : '🛑'}
+          <div className="assess-banner-icon-wrap" aria-hidden="true">
+            {level === 'proceed' ? '✅' : level === 'pause' ? '⚠️' : '🛑'}
           </div>
           <div className="assess-banner-content">
             <div className="assess-banner-label">
-              {t.kachuSays} {labelText}
+              {labelText}
             </div>
             <div className="assess-banner-subtitle">
               {subtitleText}
@@ -1250,7 +1250,7 @@ export default function App() {
             style={{ cursor: 'pointer' }}
             title={t.title}
           >
-            <span className="logo-shield">🛡️</span>
+            <img src="/karz-kavach-shield.png" alt="Karz Kavach" className="logo-shield-img" />
             <div className="logo-text">
               <span className="logo-en">{t.title}</span>
               <span className="logo-hi">{t.titleHi}</span>
@@ -1316,7 +1316,9 @@ export default function App() {
               {/* Hero — only show when no result or assessment result */}
               {!result && !assessResult && !notFound && !error && (
             <div className="hero">
-              <div className="hero-shield">🛡️</div>
+              <div className="hero-shield">
+                <img src="/karz-kavach-shield.png" alt="Karz Kavach" className="hero-shield-img" />
+              </div>
               <span className="hero-tag">🔒 {t.heroTag}</span>
               <h1 className="hero-title">
                 {t.title}{' '}
