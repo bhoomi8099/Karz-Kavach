@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import LoanCostCalculator from './LoanCostCalculator';
 
 const TRY_APPS = ['PhonePe', 'Paytm', 'Navi', 'Blink Credit'];
 
@@ -126,6 +127,34 @@ const UI = {
       risky: 'Maximum Danger',
     },
     heroTag: 'Citizen Protection Engine',
+    calcTitle: 'Loan cost calculator',
+    calcSubtitle: 'See what you will really pay back, including fees and GST.',
+    calcRealCostLink: 'Calculate the real cost of this loan',
+    calcLoanAmount: 'Loan amount (₹)',
+    calcInterestRate: 'Interest rate',
+    calcTenure: 'Tenure',
+    calcProcessingFee: 'Processing fee',
+    calcGstOnFee: 'GST on processing fee (%)',
+    calcOtherCharges: 'Other upfront charges (₹)',
+    calcReset: 'Reset',
+    calcRateUnitDay: '% per day',
+    calcRateUnitMonth: '% per month',
+    calcRateUnitYear: '% per year',
+    calcTenureUnitDays: 'days',
+    calcTenureUnitMonths: 'months',
+    calcFeeTypeFlat: '₹',
+    calcFeeTypePercent: '% of loan',
+    calcPromptEmpty: 'Enter the details above to see the cost',
+    calcChargesExceed: 'Charges are higher than the loan amount. Please check the numbers.',
+    calcYouReceive: 'You actually receive',
+    calcYouRepay: 'You repay in total',
+    calcExtraPaid: 'Extra you pay',
+    calcApproxYearlyCost: 'Approx. yearly cost',
+    calcApproxTag: 'approximate',
+    calcLegendReceive: 'You receive',
+    calcLegendUpfront: 'Fee + GST + Charges',
+    calcLegendInterest: 'Interest',
+    calcEstimateNote: "This is an estimate based on the numbers you entered (simple interest, one payment at the end). Check the lender's Key Fact Statement for exact figures.",
   },
   hi: {
     title: 'कर्ज़ कवच',
@@ -248,6 +277,34 @@ const UI = {
       risky: 'अत्यंत खतरनाक',
     },
     heroTag: 'नागरिक सुरक्षा इंजन',
+    calcTitle: 'लोन की असली लागत कैलकुलेटर',
+    calcSubtitle: 'फीस और जीएसटी सहित जानें कि आप वास्तव में कितना वापस चुकाएंगे।',
+    calcRealCostLink: 'इस लोन की असली लागत की गणना करें',
+    calcLoanAmount: 'लोन राशि (₹)',
+    calcInterestRate: 'ब्याज दर',
+    calcTenure: 'लोन की अवधि',
+    calcProcessingFee: 'प्रोसेसिंग फीस',
+    calcGstOnFee: 'प्रोसेसिंग फीस पर GST (%)',
+    calcOtherCharges: 'अन्य अग्रिम शुल्क (₹)',
+    calcReset: 'रीसेट करें',
+    calcRateUnitDay: '% प्रति दिन',
+    calcRateUnitMonth: '% प्रति माह',
+    calcRateUnitYear: '% प्रति वर्ष',
+    calcTenureUnitDays: 'दिन',
+    calcTenureUnitMonths: 'महीने',
+    calcFeeTypeFlat: '₹',
+    calcFeeTypePercent: '% लोन का',
+    calcPromptEmpty: 'लागत देखने के लिए ऊपर दिए गए विवरण भरें',
+    calcChargesExceed: 'शुल्क लोन राशि से अधिक हैं। कृपया दर्ज संख्याएं जांचें।',
+    calcYouReceive: 'आपको वास्तव में मिलेगा',
+    calcYouRepay: 'आप कुल वापस चुकाएंगे',
+    calcExtraPaid: 'अतिरिक्त भुगतान',
+    calcApproxYearlyCost: 'अनुमानित वार्षिक लागत',
+    calcApproxTag: 'अनुमानित',
+    calcLegendReceive: 'आपको प्राप्त राशि',
+    calcLegendUpfront: 'फीस + GST + अन्य शुल्क',
+    calcLegendInterest: 'ब्याज',
+    calcEstimateNote: "यह आपके द्वारा दर्ज की गई संख्याओं (साधारण ब्याज, अंत में एकमुश्त भुगतान) पर आधारित एक अनुमान है। सटीक आंकड़ों के लिए लेंडर का Key Fact Statement देखें।",
   },
 };
 
@@ -769,6 +826,21 @@ function DirResult({ r, playUnavailable = false, lang, t, onSearch }) {
           <span>{t.dirNote}</span>
         </div>
       )}
+
+      {/* Link to Loan Cost Calculator */}
+      <div className="assess-calc-link-card">
+        <a
+          href="#loan-calculator"
+          className="assess-calc-link"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('loan-calculator')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          <span>🧮 {t.calcRealCostLink}</span>
+          <span className="assess-calc-arrow">↓</span>
+        </a>
+      </div>
     </div>
   );
 }
@@ -966,6 +1038,21 @@ function RealAppCard({ data, lang, t }) {
           <p className="note-text">{data.note[lang] || data.note.en}</p>
         </div>
       )}
+
+      {/* Link to Loan Cost Calculator */}
+      <div className="assess-calc-link-card">
+        <a
+          href="#loan-calculator"
+          className="assess-calc-link"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('loan-calculator')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          <span>🧮 {t.calcRealCostLink}</span>
+          <span className="assess-calc-arrow">↓</span>
+        </a>
+      </div>
     </div>
   );
 }
@@ -1434,6 +1521,9 @@ export default function App() {
               ? <DirResult r={result} playUnavailable={playUnavailable} lang={lang} t={t} onSearch={(simName) => { setName(simName); runCheck(simName); }} />
               : <FullResult r={result} lang={lang} t={t} />
           )}
+
+          {/* Loan Cost Calculator Section */}
+          <LoanCostCalculator lang={lang} t={t} />
           </>
           ) : (
             /* ── Trusted Apps Section ── */
