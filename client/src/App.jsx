@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import LoanCostCalculator from './LoanCostCalculator';
+import CompareApps from './CompareApps';
 
 const TRY_APPS = ['PhonePe', 'Paytm', 'Navi', 'Blink Credit'];
 
@@ -35,7 +36,6 @@ const UI = {
     serverError: 'Could not reach the server. Is it running on port 5000?',
     claims: 'Claims to work with',
     developer: 'Developer',
-    footer: 'Karz Kavach | Team Moon3 | Hack@BVP 8.0',
     quickSuggest: 'Quick Suggestions / लोकप्रिय खोजें',
     searchLabel: 'Search Loan App or Paste Play Link',
     matchedEntry: 'Matched directory entry',
@@ -86,7 +86,38 @@ const UI = {
     notLendingBanner: "This doesn't look like a lending app, so RBI registration and loan-fee checks may not apply.",
     navChecker: 'Check App',
     navTrusted: 'Trusted Apps',
+    navCompare: 'Compare',
     navCalc: 'Loan Calculator',
+    compareHeroTag: 'Side-by-side Screening',
+    compareTitle: 'Compare Two Apps',
+    compareSubtitle: 'Compare RBI registration, permissions declared, risk scores and grievance contacts side-by-side.',
+    compareApp1Label: 'App 1',
+    compareApp2Label: 'App 2',
+    comparePlaceholder: 'App name, Play link or app ID',
+    compareBtn: 'Compare',
+    comparing: 'Comparing apps…',
+    compareWithAnother: 'Compare with another app',
+    viewFullResult: 'View full result',
+    fewerRiskPoints: 'fewer risk points',
+    compareNote: 'This compares public information and is a screening, not a verdict. Verify with the RBI list and the lender.',
+    rbiStatusMap: {
+      id: 'Listed by Play ID',
+      name: 'Listed by name only',
+      lookalike: 'Lookalike (different app in RBI directory)',
+      none: 'Not found in RBI directory',
+    },
+    rowAppIdentity: 'App details',
+    rowAssessment: 'Assessment & risk points',
+    rowScoreBreakdown: 'Score breakdown',
+    rowRbiStatus: 'RBI directory status',
+    rowPermissions: 'Permissions declared',
+    rowRatings: 'User rating & reviews',
+    rowSignals: 'Top signals',
+    rowGrievance: 'Grievance contact',
+    noDeclaredPermissions: 'No sensitive permissions declared on Google Play listing.',
+    noGrievanceContact: 'No grievance contact published in RBI directory.',
+    andMoreContacts: (n) => `and ${n} more`,
+    enterBothAppsPrompt: 'Please enter both app names or links to compare.',
     checkAnother: '← Check another app',
     checkingApp: (q) => `Checking ${q}…`,
     exploreTrusted: 'Explore trusted lending apps',
@@ -188,7 +219,6 @@ const UI = {
     serverError: 'सर्वर से संपर्क नहीं हो सका। क्या वह पोर्ट 5000 पर चल रहा है?',
     claims: 'दावा करता है कि इसके साथ काम करता है',
     developer: 'डेवलपर',
-    footer: 'कर्ज़ कवच | Team Moon3 | Hack@BVP 8.0',
     quickSuggest: 'लोकप्रिय खोजें / Quick Suggestions',
     searchLabel: 'लोन ऐप खोजें या Google Play लिंक पेस्ट करें',
     matchedEntry: 'डायरेक्टरी में नाम',
@@ -239,7 +269,38 @@ const UI = {
     notLendingBanner: 'यह लोन देने वाला ऐप नहीं लगता, इसलिए RBI पंजीकरण और लोन-फीस की जाँच लागू नहीं हो सकती।',
     navChecker: 'ऐप जांचें',
     navTrusted: 'भरोसेमंद ऐप',
+    navCompare: 'तुलना करें',
     navCalc: 'लोन कैलकुलेटर',
+    compareHeroTag: 'आमने-सामने तुलना',
+    compareTitle: 'दो ऐप्स की तुलना करें',
+    compareSubtitle: 'RBI पंजीकरण, मांगी गई परमिशन, जोखिम अंक और शिकायत अधिकारियों की आमने-सामने तुलना करें।',
+    compareApp1Label: 'ऐप 1',
+    compareApp2Label: 'ऐप 2',
+    comparePlaceholder: 'ऐप का नाम, Play लिंक या ऐप ID',
+    compareBtn: 'तुलना करें',
+    comparing: 'तुलना हो रही है…',
+    compareWithAnother: 'अन्य ऐप से तुलना करें',
+    viewFullResult: 'पूरा परिणाम देखें',
+    fewerRiskPoints: 'कम जोखिम अंक',
+    compareNote: 'यह सार्वजनिक जानकारी की तुलना करता है और केवल एक प्राथमिक जांच है, कोई अंतिम निर्णय नहीं। RBI सूची और लेंडर से पुष्टि अवश्य करें।',
+    rbiStatusMap: {
+      id: 'Play ID द्वारा सूचीबद्ध',
+      name: 'केवल नाम से सूचीबद्ध',
+      lookalike: 'मिलता-जुलता नाम (RBI डायरेक्टरी में अलग ऐप)',
+      none: 'RBI डायरेक्टरी में नहीं मिला',
+    },
+    rowAppIdentity: 'ऐप विवरण',
+    rowAssessment: 'मूल्यांकन और जोखिम अंक',
+    rowScoreBreakdown: 'स्कोर विवरण',
+    rowRbiStatus: 'RBI डायरेक्टरी स्थिति',
+    rowPermissions: 'घोषित परमिशन',
+    rowRatings: 'रेटिंग और समीक्षाएं',
+    rowSignals: 'प्रमुख संकेत',
+    rowGrievance: 'शिकायत निवारण अधिकारी',
+    noDeclaredPermissions: 'Google Play लिस्टिंग पर कोई संवेदनशील परमिशन घोषित नहीं है।',
+    noGrievanceContact: 'RBI डायरेक्टरी में कोई शिकायत संपर्क प्रकाशित नहीं है।',
+    andMoreContacts: (n) => `तथा ${n} अन्य`,
+    enterBothAppsPrompt: 'तुलना करने के लिए कृपया दोनों ऐप के नाम या लिंक दर्ज करें।',
     checkAnother: '← दूसरा ऐप जांचें',
     checkingApp: (q) => `${q} की जाँच हो रही है…`,
     exploreTrusted: 'भरोसेमंद लोन ऐप देखें',
@@ -417,7 +478,7 @@ function ScoreBar({ label, value, max, level }) {
 }
 
 // ── Full result (SAFE / REVIEW / RISKY) for Demo Apps ──────────────────────────
-function FullResult({ r, lang, t }) {
+function FullResult({ r, lang, t, onOpenCalculator, onOpenCompare }) {
   const vClass = verdictClass(r.verdict);
 
   // Verdict hero label from our own UI dict
@@ -548,6 +609,32 @@ function FullResult({ r, lang, t }) {
           </ol>
         </div>
       )}
+
+      {/* Actions: Compare with another app & Loan Cost Calculator */}
+      <div className="assess-actions-links">
+        <a
+          href="#compare"
+          className="assess-action-link"
+          onClick={(e) => {
+            e.preventDefault();
+            if (onOpenCompare) onOpenCompare(r.app?.name || r.name || '');
+          }}
+        >
+          <span>⚖️ {t.compareWithAnother}</span>
+          <span className="assess-calc-arrow">→</span>
+        </a>
+        <a
+          href="#loan-calculator"
+          className="assess-calc-link"
+          onClick={(e) => {
+            e.preventDefault();
+            if (onOpenCalculator) onOpenCalculator();
+          }}
+        >
+          <span>🧮 {t.calcRealCostLink}</span>
+          <span className="assess-calc-arrow">↓</span>
+        </a>
+      </div>
     </div>
   );
 }
@@ -635,7 +722,7 @@ function cleanSpeech(text) {
     .trim();
 }
 
-function DirResult({ r, playUnavailable = false, lang, t, onSearch, onOpenCalculator }) {
+function DirResult({ r, playUnavailable = false, lang, t, onSearch, onOpenCalculator, onOpenCompare }) {
   const isListed = r.verdict === 'LISTED';
   const vClass = isListed ? 'listed' : 'unverified';
   const verdictText = r.verdictLabel?.[lang] || (isListed ? t.verdictLabel.listed : t.verdictLabel.unverified);
@@ -833,8 +920,19 @@ function DirResult({ r, playUnavailable = false, lang, t, onSearch, onOpenCalcul
         </div>
       )}
 
-      {/* Link to Loan Cost Calculator */}
-      <div className="assess-calc-link-card">
+      {/* Actions: Compare with another app & Loan Cost Calculator */}
+      <div className="assess-actions-links">
+        <a
+          href="#compare"
+          className="assess-action-link"
+          onClick={(e) => {
+            e.preventDefault();
+            if (onOpenCompare) onOpenCompare(r.app?.name || r.name || '');
+          }}
+        >
+          <span>⚖️ {t.compareWithAnother}</span>
+          <span className="assess-calc-arrow">→</span>
+        </a>
         <a
           href="#loan-calculator"
           className="assess-calc-link"
@@ -852,7 +950,7 @@ function DirResult({ r, playUnavailable = false, lang, t, onSearch, onOpenCalcul
 }
 
 // ── Real-App Assessment Result Card (Google Play & RBI Directory) ────────────
-function RealAppCard({ data, lang, t, onOpenCalculator }) {
+function RealAppCard({ data, lang, t, onOpenCalculator, onOpenCompare }) {
   if (!data) return null;
   const app = data.app || {};
   const level = data.level || 'proceed'; // 'proceed' | 'pause' | 'stop'
@@ -1045,8 +1143,19 @@ function RealAppCard({ data, lang, t, onOpenCalculator }) {
         </div>
       )}
 
-      {/* Link to Loan Cost Calculator */}
-      <div className="assess-calc-link-card">
+      {/* Actions: Compare with another app & Loan Cost Calculator */}
+      <div className="assess-actions-links">
+        <a
+          href="#compare"
+          className="assess-action-link"
+          onClick={(e) => {
+            e.preventDefault();
+            if (onOpenCompare) onOpenCompare(app.title || app.packageId || data.directory?.directoryName || '');
+          }}
+        >
+          <span>⚖️ {t.compareWithAnother}</span>
+          <span className="assess-calc-arrow">→</span>
+        </a>
         <a
           href="#loan-calculator"
           className="assess-calc-link"
@@ -1187,6 +1296,20 @@ export default function App() {
   const [selectedTier, setSelectedTier] = useState(''); // '' | 'high' | 'well'
   const [sortBy, setSortBy] = useState('best'); // 'best' | 'rating' | 'reviews'
 
+  // Compare state
+  const [compareApp1, setCompareApp1] = useState(() => {
+    if (typeof window !== 'undefined' && window.history.state?.app1) {
+      return window.history.state.app1;
+    }
+    return '';
+  });
+  const [compareApp2, setCompareApp2] = useState(() => {
+    if (typeof window !== 'undefined' && window.history.state?.app2) {
+      return window.history.state.app2;
+    }
+    return '';
+  });
+
   const t = UI[lang];
 
   useEffect(() => {
@@ -1216,12 +1339,22 @@ export default function App() {
       if (nextView === 'result' && e.state?.query && e.state.query !== currentQuery) {
         runCheck(e.state.query, false);
       }
+      if (nextView === 'compare') {
+        if (e.state?.app1 != null) setCompareApp1(e.state.app1);
+        if (e.state?.app2 != null) setCompareApp2(e.state.app2);
+      }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, [currentQuery]);
+
+  function openCompare(app1 = '', app2 = '') {
+    setCompareApp1(app1);
+    setCompareApp2(app2);
+    navigateTo('compare', { app1, app2 });
+  }
 
   // Debounce search in trusted apps
   useEffect(() => {
@@ -1437,6 +1570,13 @@ export default function App() {
                 ⭐ {t.navTrusted}
               </button>
               <button
+                className={`nav-tab ${view === 'compare' ? 'active' : ''}`}
+                onClick={() => navigateTo('compare')}
+                type="button"
+              >
+                ⚖️ {t.navCompare}
+              </button>
+              <button
                 className={`nav-tab ${view === 'calculator' ? 'active' : ''}`}
                 onClick={() => navigateTo('calculator')}
                 type="button"
@@ -1570,6 +1710,14 @@ export default function App() {
                   {t.checkAnother}
                 </button>
 
+                <button
+                  type="button"
+                  className="result-top-compare-btn"
+                  onClick={() => openCompare(assessResult?.app?.title || assessResult?.app?.packageId || currentQuery)}
+                >
+                  ⚖️ {t.compareWithAnother}
+                </button>
+
                 <form
                   className="result-mini-search"
                   onSubmit={(e) => {
@@ -1633,7 +1781,13 @@ export default function App() {
               {/* 1. When /api/assess succeeds: RealAppCard + RbiDirectoryRecord */}
               {!loading && assessResult && (
                 <>
-                  <RealAppCard data={assessResult} lang={lang} t={t} onOpenCalculator={() => navigateTo('calculator')} />
+                  <RealAppCard
+                    data={assessResult}
+                    lang={lang}
+                    t={t}
+                    onOpenCalculator={() => navigateTo('calculator')}
+                    onOpenCompare={(targetApp) => openCompare(targetApp)}
+                  />
                   <RbiDirectoryRecord data={assessResult} directoryResult={result} lang={lang} t={t} />
                 </>
               )}
@@ -1641,8 +1795,22 @@ export default function App() {
               {/* 2. If /api/assess fails or app has no Play ID: DirResult / FullResult */}
               {!loading && !assessResult && result && (
                 isDirectory
-                  ? <DirResult r={result} playUnavailable={playUnavailable} lang={lang} t={t} onSearch={(simName) => { setName(simName); runCheck(simName, true); }} onOpenCalculator={() => navigateTo('calculator')} />
-                  : <FullResult r={result} lang={lang} t={t} onOpenCalculator={() => navigateTo('calculator')} />
+                  ? <DirResult
+                      r={result}
+                      playUnavailable={playUnavailable}
+                      lang={lang}
+                      t={t}
+                      onSearch={(simName) => { setName(simName); runCheck(simName, true); }}
+                      onOpenCalculator={() => navigateTo('calculator')}
+                      onOpenCompare={(targetApp) => openCompare(targetApp)}
+                    />
+                  : <FullResult
+                      r={result}
+                      lang={lang}
+                      t={t}
+                      onOpenCalculator={() => navigateTo('calculator')}
+                      onOpenCompare={(targetApp) => openCompare(targetApp)}
+                    />
               )}
             </div>
           )}
@@ -1840,7 +2008,22 @@ export default function App() {
             </div>
           )}
 
-          {/* ── VIEW 4: LOAN COST CALCULATOR (On its own page) ── */}
+          {/* ── VIEW 4: COMPARE APPS (On its own page) ── */}
+          {view === 'compare' && (
+            <CompareApps
+              lang={lang}
+              t={t}
+              initialApp1={compareApp1}
+              initialApp2={compareApp2}
+              onViewFullResult={(targetApp) => {
+                setName(targetApp);
+                setMiniQuery(targetApp);
+                runCheck(targetApp, true);
+              }}
+            />
+          )}
+
+          {/* ── VIEW 5: LOAN COST CALCULATOR (On its own page) ── */}
           {view === 'calculator' && (
             <div className="view-container view-calculator" key="calculator">
               <LoanCostCalculator lang={lang} t={t} />
@@ -1849,8 +2032,6 @@ export default function App() {
 
         </div>
       </main>
-
-      <footer>{t.footer}</footer>
     </div>
   );
 }
