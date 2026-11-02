@@ -2,6 +2,36 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import LoanCostCalculator from './LoanCostCalculator';
 import CompareApps from './CompareApps';
+import {
+  Search,
+  Star,
+  Scale,
+  Calculator,
+  Share2,
+  LifeBuoy,
+  IndianRupee,
+  BarChart3,
+  ShieldCheck,
+  ShieldAlert,
+  ShieldX,
+  Shield,
+  Languages,
+  Volume2,
+  ExternalLink,
+  Info,
+  Check,
+  AlertTriangle,
+  HelpCircle,
+  ArrowLeft,
+  ArrowRight,
+  Download,
+  Lock,
+  Zap,
+  Calendar,
+  Database,
+  X,
+  Lightbulb,
+} from 'lucide-react';
 
 const TRY_APPS = ['PhonePe', 'Paytm', 'Navi', 'Blink Credit'];
 
@@ -430,48 +460,207 @@ function speak(text, lang) {
   window.speechSynthesis.speak(u);
 }
 
-// ── SVG Gauge Ring ─────────────────────────────────────────────────────────────
-function GaugeRing({ score, max = 100 }) {
-  const R = 50;
-  const circ = 2 * Math.PI * R;
-  const pct = Math.min(score / max, 1);
-  const offset = circ * (1 - pct);
+// Helper to format uppercase lender names to Title Case
+function toNormalCase(str) {
+  if (!str) return '';
+  const s = String(str).trim();
+  if (s === s.toUpperCase()) {
+    return s
+      .toLowerCase()
+      .split(' ')
+      .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' ')
+      .replace(/\b(rbi|nbfc|dla|pvt|ltd|upi|gst)\b/gi, m => m.toUpperCase())
+      .replace(/\((india)\)/gi, '(India)');
+  }
+  return s;
+}
+
+// ── Result Shield Icon with subtle glow and Lucide shield ────────────────────
+function ResultShieldIcon({ level = 'proceed', className = '' }) {
+  if (level === 'proceed' || level === 'ok' || level === 'safe') {
+    return <ShieldCheck className={`hero-shield-lucide status-${level} ${className}`} size={36} strokeWidth={2.2} />;
+  }
+  if (level === 'pause' || level === 'warn' || level === 'review' || level === 'unverified') {
+    return <ShieldAlert className={`hero-shield-lucide status-${level} ${className}`} size={36} strokeWidth={2.2} />;
+  }
+  if (level === 'stop' || level === 'risky' || level === 'danger') {
+    return <ShieldX className={`hero-shield-lucide status-${level} ${className}`} size={36} strokeWidth={2.2} />;
+  }
+  return <Shield className={`hero-shield-lucide status-${level} ${className}`} size={36} strokeWidth={2.2} />;
+}
+
+// ── Quick-Action Buttons Row (Share, Help and Report, Calculate Real Cost, Compare) ──
+function QuickActionsRow({ lang, t, appName, onOpenCalculator, onOpenCompare }) {
+  const [copied, setCopied] = useState(false);
+
+  function handleShare(e) {
+    e.preventDefault();
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      navigator.share({
+        title: appName ? `${appName} - Karz Kavach` : 'Karz Kavach',
+        text: `${appName || 'App'} safety report on Karz Kavach`,
+        url: window.location.href,
+      }).catch(() => {});
+    } else if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }).catch(() => {});
+    }
+  }
+
+  function handleHelpAndReport(e) {
+    e.preventDefault();
+    const el = document.getElementById('grievance-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
   return (
-    <div className="gauge-ring">
-      <svg viewBox="0 0 120 120">
-        <circle className="gauge-ring-track" cx="60" cy="60" r={R} fill="transparent" strokeWidth="10" />
-        <circle
-          className="gauge-ring-fill"
-          cx="60" cy="60" r={R}
-          fill="transparent"
-          strokeWidth="10"
-          strokeLinecap="round"
-          strokeDasharray={circ}
-          strokeDashoffset={offset}
-        />
-      </svg>
-      <div className="gauge-inner">
-        <span className="gauge-score">{String(score).padStart(2, '0')}</span>
-        <span className="gauge-max">/ {max}</span>
-        <span className="gauge-risk-label" style={{ marginTop: 2 }} />
-      </div>
+    <div className="quick-actions-row">
+      <button
+        type="button"
+        className="quick-action-btn qa-share"
+        onClick={handleShare}
+        title={lang === 'hi' ? 'शेयर करें' : 'Share'}
+      >
+        <Share2 size={18} strokeWidth={2} className="qa-icon" />
+        <span className="qa-label">{copied ? (lang === 'hi' ? 'कॉपी हुआ!' : 'Copied!') : (lang === 'hi' ? 'शेयर' : 'Share')}</span>
+      </button>
+
+      <button
+        type="button"
+        className="quick-action-btn qa-report"
+        onClick={handleHelpAndReport}
+        title={lang === 'hi' ? 'मदद और शिकायत' : 'Help & Report'}
+      >
+        <LifeBuoy size={18} strokeWidth={2} className="qa-icon" />
+        <span className="qa-label">{lang === 'hi' ? 'मदद व शिकायत' : 'Help & Report'}</span>
+      </button>
+
+      <button
+        type="button"
+        className="quick-action-btn qa-calc"
+        onClick={(e) => {
+          e.preventDefault();
+          if (onOpenCalculator) onOpenCalculator();
+        }}
+        title={t.calcRealCostLink}
+      >
+        <Calculator size={18} strokeWidth={2} className="qa-icon" />
+        <span className="qa-label">{lang === 'hi' ? 'असली लागत' : 'Real Cost'}</span>
+      </button>
+
+      <button
+        type="button"
+        className="quick-action-btn qa-compare"
+        onClick={(e) => {
+          e.preventDefault();
+          if (onOpenCompare) onOpenCompare(appName || '');
+        }}
+        title={t.compareWithAnother}
+      >
+        <Scale size={18} strokeWidth={2} className="qa-icon" />
+        <span className="qa-label">{lang === 'hi' ? 'तुलना करें' : 'Compare'}</span>
+      </button>
     </div>
   );
 }
 
-// ── Score bar ──────────────────────────────────────────────────────────────────
+// ── Circular Animated Score Ring ──────────────────────────────────────────────
+function AnimatedScoreRing({ score = 0, max = 100, label = 'Total Threat Assessment' }) {
+  const [displayScore, setDisplayScore] = useState(0);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const target = Math.min(Math.max(Number(score) || 0, 0), max);
+    let startTimestamp = null;
+    const duration = 800;
+
+    function step(timestamp) {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const elapsed = timestamp - startTimestamp;
+      const rawProgress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - rawProgress, 3);
+      setDisplayScore(Math.round(eased * target));
+      setProgress(eased * (target / max));
+
+      if (rawProgress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    const frameId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(frameId);
+  }, [score, max]);
+
+  const R = 38;
+  const strokeWidth = 7;
+  const circ = 2 * Math.PI * R;
+  const offset = circ * (1 - progress);
+
+  return (
+    <div className="hero-score-ring-wrap" title={`${score}/${max} ${label}`}>
+      <div className="hero-score-ring-svg-box">
+        <svg viewBox="0 0 92 92" className="hero-score-ring-svg">
+          <circle
+            cx="46"
+            cy="46"
+            r={R}
+            fill="none"
+            stroke="rgba(255, 255, 255, 0.22)"
+            strokeWidth={strokeWidth}
+          />
+          <circle
+            cx="46"
+            cy="46"
+            r={R}
+            fill="none"
+            stroke="#FFFFFF"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeDasharray={circ}
+            strokeDashoffset={offset}
+            transform="rotate(-90 46 46)"
+            style={{ transition: 'stroke-dashoffset 0.08s linear' }}
+          />
+        </svg>
+        <div className="hero-score-ring-center">
+          <span className="hero-ring-num">{displayScore}</span>
+          <span className="hero-ring-slash">/{max}</span>
+        </div>
+      </div>
+      {label && <div className="hero-score-ring-label">{label}</div>}
+    </div>
+  );
+}
+
+// ── Score bar (thinner 8px with bucket status color) ─────────────────────────
 function ScoreBar({ label, value, max, level }) {
   const maxVal = max || 40;
   const pct = Math.min(100, Math.round(((value || 0) / maxVal) * 100));
-  const lvlClass = level ? `bar-${String(level).toLowerCase()}` : '';
+  let bucket = 'low';
+  if (level) {
+    const l = String(level).toLowerCase();
+    if (l === 'high' || l === 'danger' || l === 'bad' || l === 'stop') bucket = 'high';
+    else if (l === 'medium' || l === 'warn' || l === 'pause') bucket = 'medium';
+    else bucket = 'low';
+  } else {
+    const ratio = (value || 0) / maxVal;
+    if (ratio >= 0.5) bucket = 'high';
+    else if (ratio > 0) bucket = 'medium';
+    else bucket = 'low';
+  }
   return (
-    <div className={`bar-row ${lvlClass}`.trim()}>
+    <div className={`bar-row bar-${bucket}`}>
       <div className="bar-header">
         <span className="bar-label">{label}</span>
-        <span className="bar-score">{value} / {maxVal}</span>
+        <span className="bar-score">{value ?? 0} / {maxVal}</span>
       </div>
       <div className="bar-track">
-        <div className="bar-fill" style={{ width: `${pct}%` }} />
+        <div className={`bar-fill bar-fill-${bucket}`} style={{ width: `${pct}%` }} />
       </div>
     </div>
   );
@@ -480,6 +669,7 @@ function ScoreBar({ label, value, max, level }) {
 // ── Full result (SAFE / REVIEW / RISKY) for Demo Apps ──────────────────────────
 function FullResult({ r, lang, t, onOpenCalculator, onOpenCompare }) {
   const vClass = verdictClass(r.verdict);
+  const [iconError, setIconError] = useState(false);
 
   // Verdict hero label from our own UI dict
   const heroLabel = t.verdictLabel[vClass] || (r.verdictLabel && r.verdictLabel[lang]) || r.verdict;
@@ -490,150 +680,209 @@ function FullResult({ r, lang, t, onOpenCalculator, onOpenCompare }) {
     ...(r.flags || []).filter(f => f.severity !== 'good').map(f => f[lang]),
   ].join('. ');
 
+  const appTitle = r.app?.name || r.name;
+  const lender = toNormalCase(r.app?.claimedLender);
+
   return (
-    <div className="result-card">
-      {/* App identity */}
-      <div className="app-summary-card">
-        <div className="app-info">
-          <div className="app-name">{r.app?.name || r.name}</div>
-          {r.app?.developer && <div className="app-meta">{t.developer}: {r.app.developer}</div>}
-          {r.app?.claimedLender && (
-            <div className="app-meta">{t.claims}: {r.app.claimedLender}</div>
-          )}
-        </div>
-        <span className={`verdict-badge ${vClass}`}>
-          {VERDICT_ICONS[vClass]} {heroLabel}
-        </span>
-      </div>
-
-      {/* Verdict hero banner */}
-      <div className={`verdict-hero ${vClass}`}>
-        <div className="vh-icon-wrap">{VERDICT_ICONS[vClass]}</div>
-        <div className="vh-content">
-          <div className="vh-title">{heroLabel}</div>
-          <div className="vh-subtitle">{riskText}</div>
-        </div>
-      </div>
-
-      {/* Gauge + breakdown */}
-      {r.score && (
-        <div className={`gauge-card ${vClass}`}>
-          <div className="gauge-header">
-            <div className="gauge-header-group">
-              <span className="gauge-header-label">{t.scoreLabel}</span>
-              <span className="gauge-header-title">{r.score.total} / 100 {t.score}</span>
+    <div className={`result-grid-layout full-result-flow level-${vClass}`}>
+      {/* ── Left Column: Hero card, quick actions, score breakdown ── */}
+      <div className="result-col-left">
+        {/* 1. Hero card */}
+        <div className={`result-card result-hero-card hero-gradient status-${vClass}`}>
+          <div className="hero-top-row">
+            <div className="hero-app-identity">
+              <div className="hero-app-icon-box">
+                {!iconError && r.app?.icon ? (
+                  <img
+                    src={r.app.icon}
+                    alt={appTitle || 'App icon'}
+                    className="hero-app-icon"
+                    onError={() => setIconError(true)}
+                  />
+                ) : (
+                  <div className="hero-app-icon-fallback" aria-label="App icon fallback">
+                    <Smartphone size={28} strokeWidth={2} />
+                  </div>
+                )}
+              </div>
+              <div className="hero-app-titles">
+                <h1 className="hero-app-title">{appTitle}</h1>
+                {lender && (
+                  <div className="hero-app-lender">
+                    <span className="hero-lender-label">{lang === 'hi' ? t.claims : t.claims}:</span>{' '}
+                    <span className="hero-lender-val">{lender}</span>
+                  </div>
+                )}
+                {r.app?.developer && (
+                  <div className="hero-app-developer">
+                    <span className="hero-dev-label">{t.developer}:</span> {r.app.developer}
+                  </div>
+                )}
+              </div>
             </div>
-            <span className="severity-pill">{riskText}</span>
+            <div className="hero-kachu-mascot-wrap" title="Kachu (Karz Kavach Mascot)">
+              <img src="/karz-kavach-shield.png" alt="Kachu" className="hero-kachu-mascot" />
+            </div>
           </div>
 
-          <div className="gauge-body">
-            <GaugeRing score={r.score.total} max={100} />
-            <div className="gauge-text">
-              <div className="gauge-text-title">{heroLabel}</div>
-              <div className="gauge-text-sub">{riskText}</div>
-              <button className="listen-btn" onClick={() => speak(speechText, lang)} type="button">
-                🔊 {t.listen}
+          {/* Verdict hero: Shield icon + Result label pill + Risk score ring */}
+          <div className="hero-verdict-section">
+            <div className="hero-verdict-main">
+              <div className={`hero-shield-wrap status-${vClass}`}>
+                <ResultShieldIcon level={vClass === 'safe' ? 'proceed' : vClass === 'review' ? 'pause' : 'stop'} />
+              </div>
+              <div className="hero-verdict-labels">
+                <div className={`hero-verdict-pill status-${vClass}`}>
+                  <span className="verdict-pill-text">{heroLabel}</span>
+                </div>
+                {riskText && <div className="hero-verdict-sub">{riskText}</div>}
+              </div>
+            </div>
+
+            {r.score && (
+              <AnimatedScoreRing
+                score={r.score.total ?? 0}
+                max={100}
+                label={t.totalWarningScore}
+              />
+            )}
+          </div>
+
+          {/* Meta footer with Listen button */}
+          <div className="hero-translucent-strip">
+            <div className="hero-translucent-left">
+              <span style={{ fontSize: 13, opacity: 0.9 }}>{t.scoreLabel || t.score}</span>
+            </div>
+            <div className="hero-translucent-right">
+              <button
+                className="hero-translucent-listen-btn"
+                onClick={() => speak(speechText, lang)}
+                type="button"
+                title={t.listen}
+              >
+                <Volume2 size={15} strokeWidth={2} />
+                <span>{t.listen}</span>
               </button>
             </div>
           </div>
-
-          {/* Score bars */}
-          <div className="bars-section">
-            <ScoreBar label={t.permission}     value={r.score.permission}     max={r.score.max?.permission || 40} />
-            <ScoreBar label={t.registration}   value={r.score.registration}   max={r.score.max?.registration || 40} />
-            <ScoreBar label={t.transparency}   value={r.score.transparency}   max={r.score.max?.transparency || 20} />
-          </div>
         </div>
-      )}
 
-      {/* What we found */}
-      {r.flags && r.flags.length > 0 && (
-        <div className="section-card">
-          <div className="section-title">
-            🔍 {t.findings}
-            <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
-              ({t.findingsHi})
-            </span>
-          </div>
-          <ul className="flags">
-            {r.flags.map((f, i) => (
-              <li key={f.code || i} className={`flag-item ${f.severity}`}>
-                <span className="flag-icon-wrap">{FLAG_ICONS[f.severity] || '•'}</span>
-                <span className="flag-text">{f[lang]}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+        {/* 4. Quick-action buttons */}
+        <QuickActionsRow
+          lang={lang}
+          t={t}
+          appName={appTitle}
+          onOpenCalculator={onOpenCalculator}
+          onOpenCompare={onOpenCompare}
+        />
 
-      {/* Permissions */}
-      {r.permissions && (
-        <div className="section-card">
-          <div className="section-title">
-            🔒 {t.canDo}
-            <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
-              ({t.canDoHi})
-            </span>
+        {/* 2. Score breakdown */}
+        {r.score && (
+          <div className="result-card score-bars-card">
+            <div className="section-title">
+              <BarChart3 size={20} strokeWidth={2} className="section-title-icon" />
+              <span>{t.scoreBreakdownTitle}</span>
+            </div>
+            <div className="bars-section">
+              <ScoreBar
+                label={t.permissionsScore || t.permission}
+                value={r.score.permission}
+                max={r.score.max?.permission || 40}
+                level={r.score.permission >= 20 ? 'high' : r.score.permission > 0 ? 'medium' : 'low'}
+              />
+              <ScoreBar
+                label={t.registrationScore || t.registration}
+                value={r.score.registration}
+                max={r.score.max?.registration || 40}
+                level={r.score.registration >= 25 ? 'high' : r.score.registration > 0 ? 'medium' : 'low'}
+              />
+              <ScoreBar
+                label={t.transparencyScore || t.transparency}
+                value={r.score.transparency}
+                max={r.score.max?.transparency || 20}
+                level={r.score.transparency >= 10 ? 'high' : r.score.transparency > 0 ? 'medium' : 'low'}
+              />
+            </div>
           </div>
-          {r.permissions.length === 0 ? (
-            <p style={{ color: 'var(--on-surface-variant)', fontSize: 14 }}>{t.noPerms}</p>
-          ) : (
-            <ul className="perms">
-              {r.permissions.map(p => (
-                <li key={p.permission} className="perm-item">
-                  <span className="perm-code">{p.permission}</span>
-                  <span>{p[lang]}</span>
+        )}
+      </div>
+
+      {/* ── Right Column: Timeline, permissions, next steps ── */}
+      <div className="result-col-right">
+        {/* 3. "Why this result" as a vertical timeline */}
+        {r.flags && r.flags.length > 0 && (
+          <div className="result-card timeline-card">
+            <div className="section-title">
+              <Search size={20} strokeWidth={2} className="section-title-icon" />
+              <span>{t.whyThisResult || t.findings}</span>
+              <span className="section-title-sub">({t.findingsHi})</span>
+            </div>
+            <div className="timeline-container">
+              <div className="timeline-line" aria-hidden="true" />
+              <div className="timeline-list">
+                {r.flags.map((f, i) => {
+                  const isGood = f.severity === 'good';
+                  const status = isGood ? 'ok' : f.severity === 'danger' || f.severity === 'warn' ? 'warn' : 'info';
+                  return (
+                    <div key={f.code || i} className={`timeline-entry status-${status}`}>
+                      <div className={`timeline-dot status-${status}`} aria-hidden="true">
+                        {isGood ? <Check size={13} strokeWidth={2.5} /> : <AlertTriangle size={13} strokeWidth={2.5} />}
+                      </div>
+                      <div className="timeline-card-content">
+                        <div className="timeline-card-top">
+                          <span className="timeline-source-chip">RBI DIRECTORY</span>
+                        </div>
+                        <p className="timeline-text">{f[lang]}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Permissions */}
+        {r.permissions && (
+          <div className="result-card">
+            <div className="section-title">
+              <Lock size={20} strokeWidth={2} className="section-title-icon" />
+              <span>{t.canDo}</span>
+              <span className="section-title-sub">({t.canDoHi})</span>
+            </div>
+            {r.permissions.length === 0 ? (
+              <p className="no-perms-text">{t.noPerms}</p>
+            ) : (
+              <ul className="perms">
+                {r.permissions.map(p => (
+                  <li key={p.permission} className="perm-item">
+                    <span className="perm-code">{p.permission}</span>
+                    <span>{p[lang]}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
+
+        {/* Next steps */}
+        {r.nextSteps?.[lang] && (
+          <div className="result-card">
+            <div className="section-title">
+              <Zap size={20} strokeWidth={2} className="section-title-icon" />
+              <span>{t.nextSteps}</span>
+              <span className="section-title-sub">({t.nextStepsHi})</span>
+            </div>
+            <ol className="steps">
+              {r.nextSteps[lang].map((s, i) => (
+                <li key={i} className="step-item">
+                  <span className="step-num">{i + 1}</span>
+                  <span>{s}</span>
                 </li>
               ))}
-            </ul>
-          )}
-        </div>
-      )}
-
-      {/* Next steps */}
-      {r.nextSteps?.[lang] && (
-        <div className="section-card">
-          <div className="section-title">
-            ⚡ {t.nextSteps}
-            <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
-              ({t.nextStepsHi})
-            </span>
+            </ol>
           </div>
-          <ol className="steps">
-            {r.nextSteps[lang].map((s, i) => (
-              <li key={i} className="step-item">
-                <span className="step-num">{i + 1}</span>
-                <span>{s}</span>
-              </li>
-            ))}
-          </ol>
-        </div>
-      )}
-
-      {/* Actions: Compare with another app & Loan Cost Calculator */}
-      <div className="assess-actions-links">
-        <a
-          href="#compare"
-          className="assess-action-link"
-          onClick={(e) => {
-            e.preventDefault();
-            if (onOpenCompare) onOpenCompare(r.app?.name || r.name || '');
-          }}
-        >
-          <span>⚖️ {t.compareWithAnother}</span>
-          <span className="assess-calc-arrow">→</span>
-        </a>
-        <a
-          href="#loan-calculator"
-          className="assess-calc-link"
-          onClick={(e) => {
-            e.preventDefault();
-            if (onOpenCalculator) onOpenCalculator();
-          }}
-        >
-          <span>🧮 {t.calcRealCostLink}</span>
-          <span className="assess-calc-arrow">↓</span>
-        </a>
+        )}
       </div>
     </div>
   );
@@ -647,7 +896,8 @@ function GrievanceBox({ grievance, t, showNote = true }) {
   return (
     <div className="dir-grievance-box">
       <div className="dir-grievance-title">
-        🛡️ {t.grievanceTitle}
+        <ShieldCheck size={18} strokeWidth={2} className="section-title-icon" />
+        <span>{t.grievanceTitle}</span>
         <span className="dir-grievance-title-sub">({t.grievanceTitleHi})</span>
       </div>
       <div className="dir-grievance-content">
@@ -703,7 +953,8 @@ function GrievanceBox({ grievance, t, showNote = true }) {
       </div>
       {showNote && (
         <div className="dir-grievance-note">
-          ℹ️ {t.grievanceNote}
+          <Info size={14} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+          <span>{t.grievanceNote}</span>
         </div>
       )}
     </div>
@@ -726,6 +977,9 @@ function DirResult({ r, playUnavailable = false, lang, t, onSearch, onOpenCalcul
   const isListed = r.verdict === 'LISTED';
   const vClass = isListed ? 'listed' : 'unverified';
   const verdictText = r.verdictLabel?.[lang] || (isListed ? t.verdictLabel.listed : t.verdictLabel.unverified);
+  const appTitle = r.matches?.[0]?.appName || r.query;
+  const rawLender = r.matches?.[0]?.lender;
+  const lender = toNormalCase(rawLender);
 
   const speechText = [
     verdictText,
@@ -742,221 +996,270 @@ function DirResult({ r, playUnavailable = false, lang, t, onSearch, onOpenCalcul
   ].map(cleanSpeech).filter(Boolean).join('. ');
 
   return (
-    <div className={`dir-result-card ${vClass}`}>
-      {/* App identity header */}
-      <div className="app-summary-card">
-        <div className="app-info">
-          <div className="app-name">{r.query}</div>
-          <div className="dir-lookup-tag">📋 {lang === 'hi' ? 'डायरेक्टरी लुकअप' : 'Directory Lookup'}</div>
-        </div>
-        <span className={`verdict-badge ${vClass}`}>
-          {isListed ? '📋' : 'ℹ️'} {verdictText}
-        </span>
-      </div>
-
-      {/* Verdict hero banner */}
-      <div className={`verdict-hero ${vClass}`}>
-        <div className="vh-icon-wrap">{isListed ? '📋' : 'ℹ️'}</div>
-        <div className="vh-content" style={{ flex: 1 }}>
-          <div className="vh-title">{verdictText}</div>
-        </div>
-        <button
-          className="listen-btn dir-listen-btn"
-          onClick={() => speak(speechText, lang)}
-          title={t.listen}
-          type="button"
-        >
-          🔊 {t.listen}
-        </button>
-      </div>
-
-      {/* Small grey note when Play store reading failed or app has no Play ID */}
-      {playUnavailable && (
-        <div className="dir-play-unavailable-note">
-          <span style={{ fontSize: 16 }}>ℹ️</span>
-          <span>
-            {typeof playUnavailable === 'object'
-              ? ((lang === 'hi' && t.assessErrors?.[playUnavailable.error]) || playUnavailable.message || t.playUnavailableNote)
-              : (typeof playUnavailable === 'string' ? playUnavailable : t.playUnavailableNote)
-            }
-          </span>
-        </div>
-      )}
-
-      {/* Matches (when app is listed) */}
-      {r.matches && r.matches.length > 0 && (
-        <div className="section-card">
-          <div className="section-title">
-            📋 {lang === 'hi' ? 'डायरेक्टरी मिलान' : 'Matched RBI Directory Records'}
-          </div>
-          <div className="dir-matches">
-            {r.matches.map((m, i) => (
-              <div key={i} className="dir-match-item">
-                <div className="dir-match-field">
-                  <span className="dir-match-label">{lang === 'hi' ? t.matchedEntryHi : t.matchedEntry}:</span>
-                  <span className="dir-match-val">{m.appName}</span>
+    <div className={`result-grid-layout dir-result-flow level-${vClass}`}>
+      {/* ── Left Column: Hero card, quick actions, permission exposure ── */}
+      <div className="result-col-left">
+        {/* 1. Hero card at top */}
+        <div className={`result-card result-hero-card hero-gradient status-${vClass}`}>
+          <div className="hero-top-row">
+            <div className="hero-app-identity">
+              <div className="hero-app-icon-box">
+                <div className="hero-app-icon-fallback" aria-label="Directory record">
+                  <ShieldCheck size={28} strokeWidth={2} />
                 </div>
-                <div className="dir-match-field">
-                  <span className="dir-match-label">{lang === 'hi' ? t.listedUnderHi : t.listedUnder}:</span>
-                  <span className="dir-match-lender">{m.lender}</span>
-                </div>
-                {m.grievance && (
-                  <GrievanceBox grievance={m.grievance} t={t} />
-                )}
               </div>
-            ))}
+              <div className="hero-app-titles">
+                <h1 className="hero-app-title">{appTitle}</h1>
+                {lender && (
+                  <div className="hero-app-lender">
+                    <span className="hero-lender-label">{lang === 'hi' ? t.listedUnderHi : t.listedUnder}:</span>{' '}
+                    <span className="hero-lender-val">{lender}</span>
+                  </div>
+                )}
+                <div className="hero-dir-lookup-tag">
+                  {lang === 'hi' ? 'डायरेक्टरी लुकअप' : 'Directory Lookup'}
+                </div>
+              </div>
+            </div>
+            <div className="hero-kachu-mascot-wrap" title="Kachu (Karz Kavach Mascot)">
+              <img src="/karz-kavach-shield.png" alt="Kachu" className="hero-kachu-mascot" />
+            </div>
           </div>
+
+          {/* Verdict Section: Shield Icon + Large Result Pill */}
+          <div className="hero-verdict-section">
+            <div className="hero-verdict-main">
+              <div className={`hero-shield-wrap status-${vClass}`}>
+                <ResultShieldIcon level={isListed ? 'info' : 'warn'} />
+              </div>
+              <div className="hero-verdict-labels">
+                <div className={`hero-verdict-pill ${isListed ? 'status-info' : 'status-warn'}`}>
+                  <span className="verdict-pill-text">{verdictText}</span>
+                </div>
+              </div>
+            </div>
+
+            {r.permissionReport?.available && r.permissionReport?.score != null && (
+              <AnimatedScoreRing
+                score={r.permissionReport.score}
+                max={r.permissionReport.max || 40}
+                label={t.permission || 'Permissions'}
+              />
+            )}
+          </div>
+
+          {/* Listen Audio button in translucent strip */}
+          <div className="hero-translucent-strip">
+            <div className="hero-translucent-left">
+              <span style={{ fontSize: 13, opacity: 0.9 }}>
+                {isListed ? (lang === 'hi' ? 'RBI सूची में शामिल' : 'Verified in RBI list') : (lang === 'hi' ? 'सूची में नहीं मिला' : 'Not found in RBI list')}
+              </span>
+            </div>
+            <div className="hero-translucent-right">
+              <button
+                className="hero-translucent-listen-btn"
+                onClick={() => speak(speechText, lang)}
+                title={t.listen}
+                type="button"
+              >
+                <Volume2 size={15} strokeWidth={2} />
+                <span>{t.listen}</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Small note when Play store reading failed or app has no Play ID */}
+          {playUnavailable && (
+            <div className="dir-play-unavailable-note">
+              <Info size={16} strokeWidth={2} style={{ flexShrink: 0, marginTop: 1 }} />
+              <span>
+                {typeof playUnavailable === 'object'
+                  ? ((lang === 'hi' && t.assessErrors?.[playUnavailable.error]) || playUnavailable.message || t.playUnavailableNote)
+                  : (typeof playUnavailable === 'string' ? playUnavailable : t.playUnavailableNote)
+                }
+              </span>
+            </div>
+          )}
         </div>
-      )}
 
-      {/* Flags */}
-      {r.flags && r.flags.length > 0 && (
-        <div className="section-card">
-          <div className="section-title">
-            🔍 {t.findings}
-            <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
-              ({t.findingsHi})
-            </span>
+        {/* 4. Quick actions row */}
+        <QuickActionsRow
+          lang={lang}
+          t={t}
+          appName={appTitle}
+          onOpenCalculator={onOpenCalculator}
+          onOpenCompare={onOpenCompare}
+        />
+
+        {/* 2. Score bars / Permission exposure card */}
+        {r.permissionReport && r.permissionReport.available ? (
+          <div className="result-card score-bars-card">
+            <div className="section-title">
+              <Lock size={20} strokeWidth={2} className="section-title-icon" />
+              <span>{t.permExposureTitle}</span>
+              <span className="section-title-sub">({t.permExposureTitleHi})</span>
+            </div>
+
+            <ScoreBar
+              label={r.permissionReport.levelLabel?.[lang] || r.permissionReport.levelLabel?.en || r.permissionReport.level}
+              value={r.permissionReport.score ?? 0}
+              max={r.permissionReport.max || 40}
+              level={r.permissionReport.level}
+            />
+
+            {(!r.permissionReport.permissions || r.permissionReport.permissions.length === 0) ? (
+              <p className="no-perms-text">{t.noPlayPerms}</p>
+            ) : (
+              <ul className="perms">
+                {r.permissionReport.permissions.map(p => (
+                  <li key={p.permission} className="perm-item">
+                    <span className="perm-code">{p.permission}</span>
+                    <span>{p[lang] || p.en || p.permission}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {r.permissionReport.note && (
+              <p className="perm-report-note">
+                {r.permissionReport.note[lang] || r.permissionReport.note.en || (typeof r.permissionReport.note === 'string' ? r.permissionReport.note : '')}
+              </p>
+            )}
           </div>
-          <ul className="flags">
-            {r.flags.map((f, i) => (
-              <li key={f.code || i} className={`flag-item ${f.severity || 'warn'}`}>
-                <span className="flag-icon-wrap">
-                  {f.severity === 'good' ? '✔' : '!'}
-                </span>
-                <span className="flag-text">{f[lang]}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Permission exposure (from the Google Play listing) */}
-      {r.permissionReport && r.permissionReport.available && (
-        <div className="section-card">
-          <div className="section-title">
-            🔒 {t.permExposureTitle}
-            <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
-              ({t.permExposureTitleHi})
-            </span>
+        ) : (
+          <div className="dir-note-box">
+            <Info size={16} strokeWidth={2} style={{ flexShrink: 0, marginTop: 1 }} />
+            <span>{t.dirNote}</span>
           </div>
+        )}
+      </div>
 
-          <ScoreBar
-            label={r.permissionReport.levelLabel?.[lang] || r.permissionReport.levelLabel?.en || r.permissionReport.level}
-            value={r.permissionReport.score ?? 0}
-            max={r.permissionReport.max || 40}
-            level={r.permissionReport.level}
-          />
+      {/* ── Right Column: Timeline, Grievance contacts, Suggestions ── */}
+      <div className="result-col-right">
+        {/* 3. "Why this result" as a vertical timeline */}
+        {r.flags && r.flags.length > 0 && (
+          <div className="result-card timeline-card">
+            <div className="section-title">
+              <Search size={20} strokeWidth={2} className="section-title-icon" />
+              <span>{t.whyThisResult || t.findings}</span>
+              <span className="section-title-sub">({t.findingsHi})</span>
+            </div>
+            <div className="timeline-container">
+              <div className="timeline-line" aria-hidden="true" />
+              <div className="timeline-list">
+                {r.flags.map((f, i) => {
+                  const isGood = f.severity === 'good';
+                  const status = isGood ? 'ok' : 'warn';
+                  return (
+                    <div key={f.code || i} className={`timeline-entry status-${status}`}>
+                      <div className={`timeline-dot status-${status}`} aria-hidden="true">
+                        {isGood ? <Check size={13} strokeWidth={2.5} /> : <AlertTriangle size={13} strokeWidth={2.5} />}
+                      </div>
+                      <div className="timeline-card-content">
+                        <div className="timeline-card-top">
+                          <span className="timeline-source-chip">RBI DIRECTORY</span>
+                        </div>
+                        <p className="timeline-text">{f[lang]}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        )}
 
-          {(!r.permissionReport.permissions || r.permissionReport.permissions.length === 0) ? (
-            <p style={{ color: 'var(--on-surface-variant)', fontSize: 14 }}>{t.noPlayPerms}</p>
-          ) : (
-            <ul className="perms">
-              {r.permissionReport.permissions.map(p => (
-                <li key={p.permission} className="perm-item">
-                  <span className="perm-code">{p.permission}</span>
-                  <span>{p[lang] || p.en || p.permission}</span>
+        {/* 5. Grievance contacts in their own card */}
+        {r.matches && r.matches.length > 0 && (
+          <div className="result-card assess-dir-record-card" id="grievance-section">
+            <div className="section-title">
+              <ShieldCheck size={20} strokeWidth={2} className="section-title-icon" />
+              <span>{t.grievanceTitle}</span>
+              <span className="section-title-sub">({t.grievanceTitleHi})</span>
+            </div>
+            <div className="assess-dir-record-list">
+              {r.matches.map((m, i) => (
+                <div key={i} className="assess-record-block">
+                  <div className="assess-dir-field">
+                    <span className="assess-dir-label">{lang === 'hi' ? t.matchedEntryHi : t.matchedEntry}:</span>
+                    <span className="assess-dir-val">{m.appName}</span>
+                  </div>
+                  <div className="assess-dir-field">
+                    <span className="assess-dir-label">{lang === 'hi' ? t.listedUnderHi : t.listedUnder}:</span>
+                    <span className="assess-dir-lender">{toNormalCase(m.lender)}</span>
+                  </div>
+                  {m.grievance && (
+                    <GrievanceBox grievance={m.grievance} t={t} showNote={false} />
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="dir-grievance-note">
+              <Info size={14} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+              <span>{t.grievanceNote}</span>
+            </div>
+          </div>
+        )}
+
+        {/* "Did you mean" suggestion chips */}
+        {r.similar && r.similar.filter(s => !s.toLowerCase().includes('demo')).length > 0 && (
+          <div className="result-card">
+            <div className="section-title" style={{ fontSize: 16 }}>
+              <Lightbulb size={18} strokeWidth={2} className="section-title-icon" />
+              <span>{lang === 'hi' ? t.didYouMeanHi : t.didYouMean}</span>
+            </div>
+            <div className="chips">
+              {r.similar
+                .filter(s => !s.toLowerCase().includes('demo'))
+                .map((simName) => (
+                  <button
+                    key={simName}
+                    type="button"
+                    className="chip dir-chip"
+                    onClick={() => onSearch(simName)}
+                  >
+                    {simName}
+                  </button>
+                ))}
+            </div>
+          </div>
+        )}
+
+        {/* Next steps */}
+        {r.nextSteps && r.nextSteps[lang] && (
+          <div className="result-card">
+            <div className="section-title">
+              <Zap size={20} strokeWidth={2} className="section-title-icon" />
+              <span>{t.nextSteps}</span>
+              <span className="section-title-sub">({t.nextStepsHi})</span>
+            </div>
+            <ol className="steps">
+              {r.nextSteps[lang].map((s, i) => (
+                <li key={i} className="step-item">
+                  <span className="step-num">{i + 1}</span>
+                  <span>{s}</span>
                 </li>
               ))}
-            </ul>
-          )}
-
-          {r.permissionReport.note && (
-            <p className="perm-report-note">
-              {r.permissionReport.note[lang] || r.permissionReport.note.en || (typeof r.permissionReport.note === 'string' ? r.permissionReport.note : '')}
-            </p>
-          )}
-        </div>
-      )}
-
-      {/* "Did you mean" suggestion chips (hiding demo apps) */}
-      {r.similar && r.similar.filter(s => !s.toLowerCase().includes('demo')).length > 0 && (
-        <div className="section-card">
-          <div className="section-title" style={{ fontSize: 16 }}>
-            💡 {lang === 'hi' ? t.didYouMeanHi : t.didYouMean}
+            </ol>
           </div>
-          <div className="chips">
-            {r.similar
-              .filter(s => !s.toLowerCase().includes('demo'))
-              .map((simName) => (
-                <button
-                  key={simName}
-                  type="button"
-                  className="chip dir-chip"
-                  onClick={() => onSearch(simName)}
-                >
-                  {simName}
-                </button>
-              ))}
-          </div>
-        </div>
-      )}
-
-      {/* Next steps */}
-      {r.nextSteps && r.nextSteps[lang] && (
-        <div className="section-card">
-          <div className="section-title">
-            ⚡ {t.nextSteps}
-            <span style={{ fontSize: 14, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 4 }}>
-              ({t.nextStepsHi})
-            </span>
-          </div>
-          <ol className="steps">
-            {r.nextSteps[lang].map((s, i) => (
-              <li key={i} className="step-item">
-                <span className="step-num">{i + 1}</span>
-                <span>{s}</span>
-              </li>
-            ))}
-          </ol>
-        </div>
-      )}
-
-      {/* Informational small note (shown ONLY when permission report is missing or not available) */}
-      {(!r.permissionReport || !r.permissionReport.available) && (
-        <div className="dir-note-box">
-          <span style={{ fontSize: 16 }}>ℹ️</span>
-          <span>{t.dirNote}</span>
-        </div>
-      )}
-
-      {/* Actions: Compare with another app & Loan Cost Calculator */}
-      <div className="assess-actions-links">
-        <a
-          href="#compare"
-          className="assess-action-link"
-          onClick={(e) => {
-            e.preventDefault();
-            if (onOpenCompare) onOpenCompare(r.app?.name || r.name || '');
-          }}
-        >
-          <span>⚖️ {t.compareWithAnother}</span>
-          <span className="assess-calc-arrow">→</span>
-        </a>
-        <a
-          href="#loan-calculator"
-          className="assess-calc-link"
-          onClick={(e) => {
-            e.preventDefault();
-            if (onOpenCalculator) onOpenCalculator();
-          }}
-        >
-          <span>🧮 {t.calcRealCostLink}</span>
-          <span className="assess-calc-arrow">↓</span>
-        </a>
+        )}
       </div>
     </div>
   );
 }
 
 // ── Real-App Assessment Result Card (Google Play & RBI Directory) ────────────
-function RealAppCard({ data, lang, t, onOpenCalculator, onOpenCompare }) {
+function RealAppCard({ data, lang, t, onOpenCalculator, onOpenCompare, directoryResult }) {
   if (!data) return null;
   const app = data.app || {};
   const level = data.level || 'proceed'; // 'proceed' | 'pause' | 'stop'
   const labelText = data.label?.[lang] || data.label?.en || '';
   const subtitleText = data.subtitle?.[lang] || data.subtitle?.en || '';
   const asOfFormatted = formatDate(data.asOf, lang);
+  const [iconError, setIconError] = useState(false);
+
+  const rawLender = data.directory?.lender || (data.directory?.records && data.directory.records[0]?.lender);
+  const lender = toNormalCase(rawLender);
 
   // Speech narration
   const speechText = [
@@ -972,207 +1275,264 @@ function RealAppCard({ data, lang, t, onOpenCalculator, onOpenCompare }) {
   });
 
   return (
-    <div className={`result-card real-app-card level-${level}`}>
-      {/* 1. App identity header: icon, title, developer, star rating, ratings */}
-      <div className="assess-app-header">
-        <div className="assess-app-identity">
-          {app.icon ? (
-            <img src={app.icon} alt={app.title || 'App icon'} className="assess-app-icon" />
-          ) : (
-            <div className="assess-app-icon-fallback">📱</div>
-          )}
-          <div className="assess-app-info">
-            <h2 className="assess-app-title">{app.title || app.packageId}</h2>
-            {data.resolvedFromSearch && (
-              <div className="assess-resolved-search-line">
-                {t.matchedSearchTo(data.resolvedFromSearch.title, data.resolvedFromSearch.developer)}
+    <div className={`result-grid-layout real-app-flow level-${level}`}>
+      {/* ── Left Column: Hero card, quick-action buttons, score breakdown ── */}
+      <div className="result-col-left">
+        {/* 1. Hero card at the top */}
+        <div className={`result-card result-hero-card hero-gradient status-${level}`}>
+          <div className="hero-top-row">
+            <div className="hero-app-identity">
+              <div className="hero-app-icon-box">
+                {!iconError && app.icon ? (
+                  <img
+                    src={app.icon}
+                    alt={app.title || 'App icon'}
+                    className="hero-app-icon"
+                    onError={() => setIconError(true)}
+                  />
+                ) : (
+                  <div className="hero-app-icon-fallback" aria-label="App icon fallback">
+                    <Smartphone size={28} strokeWidth={2} />
+                  </div>
+                )}
               </div>
+              <div className="hero-app-titles">
+                <h1 className="hero-app-title">{app.title || app.packageId}</h1>
+                {lender && (
+                  <div className="hero-app-lender">
+                    <span className="hero-lender-label">{lang === 'hi' ? t.listedUnderHi : t.listedUnder}:</span>{' '}
+                    <span className="hero-lender-val">{lender}</span>
+                  </div>
+                )}
+                {app.developer && (
+                  <div className="hero-app-developer">
+                    <span className="hero-dev-label">{t.developer}:</span> {app.developer}
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="hero-kachu-mascot-wrap" title="Kachu (Karz Kavach Mascot)">
+              <img src="/karz-kavach-shield.png" alt="Kachu" className="hero-kachu-mascot" />
+            </div>
+          </div>
+
+          {data.resolvedFromSearch && (
+            <div className="hero-resolved-search-line">
+              {t.matchedSearchTo(data.resolvedFromSearch.title, data.resolvedFromSearch.developer)}
+            </div>
+          )}
+
+          {/* Verdict section: Shield icon + Result label pill + Circular score ring */}
+          <div className="hero-verdict-section">
+            <div className="hero-verdict-main">
+              <div className={`hero-shield-wrap status-${level}`}>
+                <ResultShieldIcon level={level} />
+              </div>
+              <div className="hero-verdict-labels">
+                <div className={`hero-verdict-pill status-${level}`}>
+                  <span className="verdict-pill-text">{labelText}</span>
+                </div>
+                {subtitleText && (
+                  <div className="hero-verdict-sub">{subtitleText}</div>
+                )}
+              </div>
+            </div>
+
+            {data.score && (
+              <AnimatedScoreRing
+                score={data.score.total ?? 0}
+                max={100}
+                label={t.totalWarningScore}
+              />
             )}
-            {app.developer && (
-              <div className="assess-app-dev">{t.developer}: {app.developer}</div>
-            )}
-            <div className="assess-app-stats">
+          </div>
+
+          {/* Bottom translucent strip: rating, installs, view on play, listen */}
+          <div className="hero-translucent-strip">
+            <div className="hero-translucent-left">
               {app.rating != null && (
-                <span className="assess-star-rating">
-                  ★ {Number(app.rating).toFixed(1)}
+                <span className="hero-translucent-star">
+                  <Star size={13} strokeWidth={2} fill="currentColor" /> {Number(app.rating).toFixed(1)}
                 </span>
               )}
               {app.ratings != null && (
-                <span className="assess-ratings-count">
+                <span className="hero-translucent-ratings">
                   ({formatRatings(app.ratings)} {t.ratingsSuffix})
                 </span>
               )}
               {app.installs && (
-                <span className="assess-installs">
-                  • 📥 {app.installs}
+                <span className="hero-translucent-installs">
+                  • <Download size={13} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-1px' }} /> {app.installs}
                 </span>
               )}
+              {app.playUrl && (
+                <a
+                  href={app.playUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-translucent-play-link"
+                  title="Google Play Store"
+                >
+                  <span>{t.viewOnPlay}</span>
+                  <ExternalLink size={12} strokeWidth={2} />
+                </a>
+              )}
+            </div>
+            <div className="hero-translucent-right">
+              <button
+                className="hero-translucent-listen-btn"
+                onClick={() => speak(speechText, lang)}
+                type="button"
+                title={t.listen}
+              >
+                <Volume2 size={15} strokeWidth={2} />
+                <span>{t.listen}</span>
+              </button>
             </div>
           </div>
+
+          {/* Timestamp row */}
+          <div className="hero-timestamp-row">
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+              <Calendar size={12} strokeWidth={2} /> {t.asOfChecked(asOfFormatted)}
+            </span>
+            <span className="hero-dot-sep">•</span>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+              <Database size={12} strokeWidth={2} /> {t.sourceLabel(data.source)}
+            </span>
+          </div>
+
+          {/* Non-lending banner when not a lending app */}
+          {data.lending === false && (
+            <div className="assess-non-lending-banner">
+              <Info size={16} strokeWidth={2} className="non-lending-icon" />
+              <span className="non-lending-text">{t.notLendingBanner}</span>
+            </div>
+          )}
         </div>
 
-        {app.playUrl && (
-          <a
-            href={app.playUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="assess-play-btn"
-            title="Google Play Store"
-          >
-            <span>{t.viewOnPlay}</span> ↗
-          </a>
+        {/* 4. Row of quick-action buttons under the hero card */}
+        <QuickActionsRow
+          lang={lang}
+          t={t}
+          appName={app.title || app.packageId || data.directory?.directoryName}
+          onOpenCalculator={onOpenCalculator}
+          onOpenCompare={onOpenCompare}
+        />
+
+        {/* 2. Directly below: The three score bars inside one card */}
+        {data.score && (
+          <div className="result-card score-bars-card">
+            <div className="section-title">
+              <BarChart3 size={20} strokeWidth={2} className="section-title-icon" />
+              <span>{t.scoreBreakdownTitle}</span>
+            </div>
+
+            <div className="bars-section">
+              <ScoreBar
+                label={t.permissionsScore}
+                value={data.score.permission ?? 0}
+                max={data.score.max?.permission || 40}
+                level={data.score.permission >= 20 ? 'high' : data.score.permission > 0 ? 'medium' : 'low'}
+              />
+              <ScoreBar
+                label={t.registrationScore}
+                value={data.score.registration ?? 0}
+                max={data.score.max?.registration || 40}
+                level={data.score.registration >= 25 ? 'high' : data.score.registration > 0 ? 'medium' : 'low'}
+              />
+              <ScoreBar
+                label={t.transparencyScore}
+                value={data.score.transparency ?? 0}
+                max={data.score.max?.transparency || 20}
+                level={data.score.transparency >= 10 ? 'high' : data.score.transparency > 0 ? 'medium' : 'low'}
+              />
+            </div>
+
+            {/* Declared permissions details if available */}
+            {data.permissionReport?.permissions && (
+              <div className="assess-perms-detail">
+                <div className="perms-detail-header">
+                  <Lock size={16} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 6 }} />
+                  {lang === 'hi' ? t.permExposureTitleHi : t.permExposureTitle}
+                </div>
+                <ul className="perms">
+                  {data.permissionReport.permissions.map((p) => (
+                    <li key={p.permission} className="perm-item">
+                      <span className="perm-code">{p.permission}</span>
+                      <span>{p[lang] || p.en || p.permission}</span>
+                    </li>
+                  ))}
+                </ul>
+                {data.permissionReport.note && (
+                  <p className="perm-report-note">
+                    {data.permissionReport.note[lang] || data.permissionReport.note.en || (typeof data.permissionReport.note === 'string' ? data.permissionReport.note : '')}
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
         )}
       </div>
 
-      {/* Calm blue info banner when not a lending app */}
-      {data.lending === false && (
-        <div className="assess-non-lending-banner">
-          <span className="non-lending-icon">ℹ️</span>
-          <span className="non-lending-text">{t.notLendingBanner}</span>
-        </div>
-      )}
-
-      {/* 2. Banner: appropriate icon + phrase line */}
-      <div className={`assess-banner banner-${level}`}>
-        <div className="assess-banner-main">
-          <div className="assess-banner-icon-wrap" aria-hidden="true">
-            {level === 'proceed' ? '✅' : level === 'pause' ? '⚠️' : '🛑'}
-          </div>
-          <div className="assess-banner-content">
-            <div className="assess-banner-label">
-              {labelText}
+      {/* ── Right Column: "Why this result" timeline and grievance contacts ── */}
+      <div className="result-col-right">
+        {/* 3. "Why this result" as a vertical timeline */}
+        {sortedSignals.length > 0 && (
+          <div className="result-card timeline-card">
+            <div className="section-title">
+              <Search size={20} strokeWidth={2} className="section-title-icon" />
+              <span>{t.whyThisResult}</span>
+              <span className="section-title-sub">({t.whyThisResultSub})</span>
             </div>
-            <div className="assess-banner-subtitle">
-              {subtitleText}
-            </div>
-          </div>
-          <button
-            className="listen-btn assess-listen-btn"
-            onClick={() => speak(speechText, lang)}
-            type="button"
-            title={t.listen}
-          >
-            🔊 {t.listen}
-          </button>
-        </div>
 
-        <div className="assess-banner-meta">
-          <span className="assess-meta-item">
-            📅 {t.asOfChecked(asOfFormatted)}
-          </span>
-          <span className="assess-meta-divider">•</span>
-          <span className="assess-meta-item">
-            💾 {t.sourceLabel(data.source)}
-          </span>
-        </div>
-      </div>
-
-      {/* 3. Score breakdown: Permissions /40, RBI registration /40, Transparency /20, Total /100 */}
-      {data.score && (
-        <div className="section-card assess-score-card">
-          <div className="assess-score-header">
-            <div className="assess-score-title-group">
-              <span className="assess-score-subtitle">{t.scoreBreakdownTitle}</span>
-              <h3 className="assess-score-total">
-                {t.totalWarningScore}: <strong>{data.score.total}</strong> / 100
-              </h3>
+            <div className="timeline-container">
+              <div className="timeline-line" aria-hidden="true" />
+              <div className="timeline-list">
+                {sortedSignals.map((sig, idx) => {
+                  const status = sig.status || 'info';
+                  const sourceText = (sig.source || 'Google Play').toUpperCase();
+                  return (
+                    <div key={sig.id || idx} className={`timeline-entry status-${status}`}>
+                      <div className={`timeline-dot status-${status}`} aria-hidden="true">
+                        {status === 'ok' && <Check size={13} strokeWidth={2.5} />}
+                        {status === 'warn' && <AlertTriangle size={13} strokeWidth={2.5} />}
+                        {status === 'info' && <Info size={13} strokeWidth={2.5} />}
+                        {status === 'unknown' && <HelpCircle size={13} strokeWidth={2.5} />}
+                      </div>
+                      <div className="timeline-card-content">
+                        <div className="timeline-card-top">
+                          <span className="timeline-source-chip">{sourceText}</span>
+                          {sig.points > 0 && (
+                            <span className="timeline-points-tag">+{sig.points} {lang === 'hi' ? 'अंक' : 'pts'}</span>
+                          )}
+                        </div>
+                        <p className="timeline-text">{sig[lang] || sig.en}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
+        )}
 
-          <div className="bars-section">
-            <ScoreBar
-              label={t.permissionsScore}
-              value={data.score.permission ?? 0}
-              max={data.score.max?.permission || 40}
-              level={data.score.permission >= 20 ? 'high' : data.score.permission > 0 ? 'medium' : 'low'}
-            />
-            <ScoreBar
-              label={t.registrationScore}
-              value={data.score.registration ?? 0}
-              max={data.score.max?.registration || 40}
-              level={data.score.registration >= 25 ? 'high' : data.score.registration > 0 ? 'medium' : 'low'}
-            />
-            <ScoreBar
-              label={t.transparencyScore}
-              value={data.score.transparency ?? 0}
-              max={data.score.max?.transparency || 20}
-              level={data.score.transparency >= 10 ? 'high' : data.score.transparency > 0 ? 'medium' : 'low'}
-            />
+        {/* Note */}
+        {data.note && (
+          <div className="result-card assess-note-card">
+            <Info size={16} strokeWidth={2} className="note-icon" />
+            <p className="note-text">{data.note[lang] || data.note.en}</p>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* 4. "Why this result" list: warn signals first */}
-      {sortedSignals.length > 0 && (
-        <div className="section-card">
-          <div className="section-title">
-            🔍 {t.whyThisResult}
-            <span style={{ fontSize: 13, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 6 }}>
-              ({t.whyThisResultSub})
-            </span>
-          </div>
-          <ul className="assess-signals-list">
-            {sortedSignals.map((sig, idx) => {
-              const status = sig.status || 'info';
-              return (
-                <li key={sig.id || idx} className={`assess-signal-item status-${status}`}>
-                  <span className={`assess-signal-badge status-${status}`}>
-                    {status === 'ok' && '✔'}
-                    {status === 'warn' && '⚠️'}
-                    {status === 'info' && 'ℹ️'}
-                    {status === 'unknown' && '❓'}
-                  </span>
-                  <div className="assess-signal-content">
-                    <span className="assess-signal-text">{sig[lang] || sig.en}</span>
-                    {sig.source && (
-                      <span className="assess-signal-source">{sig.source}</span>
-                    )}
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      )}
-
-      {/* 5. Note */}
-      {data.note && (
-        <div className="assess-bottom-note">
-          <span className="note-icon">ℹ️</span>
-          <p className="note-text">{data.note[lang] || data.note.en}</p>
-        </div>
-      )}
-
-      {/* Actions: Compare with another app & Loan Cost Calculator */}
-      <div className="assess-actions-links">
-        <a
-          href="#compare"
-          className="assess-action-link"
-          onClick={(e) => {
-            e.preventDefault();
-            if (onOpenCompare) onOpenCompare(app.title || app.packageId || data.directory?.directoryName || '');
-          }}
-        >
-          <span>⚖️ {t.compareWithAnother}</span>
-          <span className="assess-calc-arrow">→</span>
-        </a>
-        <a
-          href="#loan-calculator"
-          className="assess-calc-link"
-          onClick={(e) => {
-            e.preventDefault();
-            if (onOpenCalculator) onOpenCalculator();
-          }}
-        >
-          <span>🧮 {t.calcRealCostLink}</span>
-          <span className="assess-calc-arrow">↓</span>
-        </a>
+        {/* Grievance contacts */}
+        <RbiDirectoryRecord data={data} directoryResult={directoryResult} lang={lang} t={t} />
       </div>
     </div>
   );
 }
 
-// ── Compact RBI directory record section (Shown below RealAppCard) ────────────
+// ── Compact RBI directory record section (Shown in right column) ─────────────
 function RbiDirectoryRecord({ data, directoryResult, lang, t }) {
   if (!data) return null;
   const app = data.app || {};
@@ -1196,24 +1556,32 @@ function RbiDirectoryRecord({ data, directoryResult, lang, t }) {
     }
   }
 
-  // 3. If records is empty, show nothing for this section (unless lookalike warning)
+  // 3. If records is empty, check if dir itself has grievance
+  if (records.length === 0 && dir.grievance) {
+    records = [{
+      appName: dir.directoryName || app.title,
+      lender: dir.lender,
+      grievance: dir.grievance,
+    }];
+  }
+
+  // If records is empty, show nothing for this section (unless lookalike warning)
   if (records.length === 0 && !isLookalike) {
     return null;
   }
 
   return (
-    <div className="card assess-dir-record-card">
+    <div className="result-card assess-dir-record-card" id="grievance-section">
       <div className="section-title">
-        📋 {t.rbiRecordTitle}
-        <span style={{ fontSize: 13, fontWeight: 400, color: 'var(--on-surface-variant)', marginLeft: 6 }}>
-          ({t.rbiRecordTitleHi})
-        </span>
+        <ShieldCheck size={20} strokeWidth={2} className="section-title-icon" />
+        <span>{t.grievanceTitle}</span>
+        <span className="section-title-sub">({t.grievanceTitleHi})</span>
       </div>
 
       <div className="assess-dir-record-content">
         {isLookalike && (
           <div className="lookalike-box">
-            <span className="lookalike-icon">⚠️</span>
+            <AlertTriangle size={18} strokeWidth={2} className="lookalike-icon" />
             <div className="lookalike-text">
               {t.lookalikeWarning}
             </div>
@@ -1227,7 +1595,7 @@ function RbiDirectoryRecord({ data, directoryResult, lang, t }) {
                 {rec.lender && (
                   <div className="assess-dir-field">
                     <span className="assess-dir-label">{lang === 'hi' ? t.listedUnderHi : t.listedUnder}:</span>
-                    <span className="assess-dir-lender">{rec.lender}</span>
+                    <span className="assess-dir-lender">{toNormalCase(rec.lender)}</span>
                   </div>
                 )}
 
@@ -1248,7 +1616,8 @@ function RbiDirectoryRecord({ data, directoryResult, lang, t }) {
 
         {records.some((r) => r.grievance && (r.grievance.name || r.grievance.email || r.grievance.phone || r.grievance.mobile)) && (
           <div className="dir-grievance-note">
-            ℹ️ {t.grievanceNote}
+            <Info size={14} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+            <span>{t.grievanceNote}</span>
           </div>
         )}
       </div>
@@ -1560,28 +1929,32 @@ export default function App() {
                 }}
                 type="button"
               >
-                🔍 {t.navChecker}
+                <Search size={16} strokeWidth={2} />
+                <span>{t.navChecker}</span>
               </button>
               <button
                 className={`nav-tab ${view === 'trusted' ? 'active' : ''}`}
                 onClick={() => navigateTo('trusted')}
                 type="button"
               >
-                ⭐ {t.navTrusted}
+                <Star size={16} strokeWidth={2} />
+                <span>{t.navTrusted}</span>
               </button>
               <button
                 className={`nav-tab ${view === 'compare' ? 'active' : ''}`}
                 onClick={() => navigateTo('compare')}
                 type="button"
               >
-                ⚖️ {t.navCompare}
+                <Scale size={16} strokeWidth={2} />
+                <span>{t.navCompare}</span>
               </button>
               <button
                 className={`nav-tab ${view === 'calculator' ? 'active' : ''}`}
                 onClick={() => navigateTo('calculator')}
                 type="button"
               >
-                🧮 {t.navCalc}
+                <Calculator size={16} strokeWidth={2} />
+                <span>{t.navCalc}</span>
               </button>
             </nav>
 
@@ -1605,19 +1978,23 @@ export default function App() {
       <main className="main-content">
         <div className="inner">
 
-          {/* Yellow Banner */}
+          {/* Slim low-contrast Info Banner */}
           {showBanner && (
-            <aside className="demo-banner">
-              <span className="demo-banner-icon">⚠️</span>
-              <span className="demo-banner-text">
-                {t.bannerText}
-              </span>
+            <aside className="slim-info-banner">
+              <div className="slim-banner-content">
+                <Info size={16} strokeWidth={2} className="slim-banner-icon" />
+                <span className="slim-banner-text">
+                  {t.bannerText}
+                </span>
+              </div>
               <button
                 onClick={() => setShowBanner(false)}
-                style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#854d0e', fontSize: 14, padding: 0 }}
-                aria-label="Dismiss"
+                className="slim-banner-dismiss"
+                aria-label="Dismiss banner"
                 type="button"
-              >✕</button>
+              >
+                <X size={15} strokeWidth={2} />
+              </button>
             </aside>
           )}
 
@@ -1628,7 +2005,10 @@ export default function App() {
                 <div className="hero-shield">
                   <img src="/karz-kavach-shield.png" alt="Karz Kavach" className="hero-shield-img" />
                 </div>
-                <span className="hero-tag">🔒 {t.heroTag}</span>
+                <span className="hero-tag">
+                  <Lock size={14} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                  {t.heroTag}
+                </span>
                 <h1 className="hero-title">
                   {t.title}{' '}
                   <span className="hero-title-hi">{t.titleHi}</span>
@@ -1642,7 +2022,8 @@ export default function App() {
               {/* Search card */}
               <section className="search-card">
                 <label className="search-label" htmlFor="app-search-input">
-                  🔍 {t.searchLabel}
+                  <Search size={18} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-3px', marginRight: 6 }} />
+                  {t.searchLabel}
                 </label>
 
                 <form onSubmit={onSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -1661,8 +2042,8 @@ export default function App() {
                     className="search-btn"
                     disabled={loading || !name.trim()}
                   >
-                    {loading ? t.checking : t.check}
-                    <span style={{ fontSize: 20 }}>→</span>
+                    <span>{loading ? t.checking : t.check}</span>
+                    <ArrowRight size={18} strokeWidth={2} />
                   </button>
                 </form>
 
@@ -1689,8 +2070,11 @@ export default function App() {
                   className="explore-trusted-btn"
                   onClick={() => navigateTo('trusted')}
                 >
-                  <span>🛡️ {t.exploreTrusted}</span>
-                  <span style={{ fontSize: 18 }}>→</span>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                    <ShieldCheck size={18} strokeWidth={2} />
+                    {t.exploreTrusted}
+                  </span>
+                  <ArrowRight size={18} strokeWidth={2} />
                 </button>
               </section>
             </div>
@@ -1707,6 +2091,7 @@ export default function App() {
                   onClick={returnToHomeAndFocus}
                   title={t.checkAnother}
                 >
+                  <ArrowLeft size={16} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
                   {t.checkAnother}
                 </button>
 
@@ -1715,7 +2100,8 @@ export default function App() {
                   className="result-top-compare-btn"
                   onClick={() => openCompare(assessResult?.app?.title || assessResult?.app?.packageId || currentQuery)}
                 >
-                  ⚖️ {t.compareWithAnother}
+                  <Scale size={16} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                  {t.compareWithAnother}
                 </button>
 
                 <form
@@ -1746,10 +2132,10 @@ export default function App() {
                 </form>
               </div>
 
-              {/* Loading spinner for assessment */}
+              {/* Loading indicator for assessment */}
               {loading && (
                 <div className="card assess-loading-card">
-                  <span className="assess-spinner">⏳</span>
+                  <div className="assess-spinner" />
                   <span>{t.checkingApp ? t.checkingApp(currentQuery) : (lang === 'hi' ? `${currentQuery} की जाँच हो रही है…` : `Checking ${currentQuery}…`)}</span>
                 </div>
               )}
@@ -1778,18 +2164,16 @@ export default function App() {
                 </div>
               )}
 
-              {/* 1. When /api/assess succeeds: RealAppCard + RbiDirectoryRecord */}
+              {/* 1. When /api/assess succeeds: RealAppCard (handles left and right columns including grievance record) */}
               {!loading && assessResult && (
-                <>
-                  <RealAppCard
-                    data={assessResult}
-                    lang={lang}
-                    t={t}
-                    onOpenCalculator={() => navigateTo('calculator')}
-                    onOpenCompare={(targetApp) => openCompare(targetApp)}
-                  />
-                  <RbiDirectoryRecord data={assessResult} directoryResult={result} lang={lang} t={t} />
-                </>
+                <RealAppCard
+                  data={assessResult}
+                  lang={lang}
+                  t={t}
+                  directoryResult={result}
+                  onOpenCalculator={() => navigateTo('calculator')}
+                  onOpenCompare={(targetApp) => openCompare(targetApp)}
+                />
               )}
 
               {/* 2. If /api/assess fails or app has no Play ID: DirResult / FullResult */}
@@ -1820,7 +2204,10 @@ export default function App() {
             <div className="view-container view-trusted" key="trusted">
               <div className="trusted-view">
                 <div className="trusted-hero">
-                  <span className="trusted-hero-badge">⭐ {t.trustedHeroTag}</span>
+                  <span className="trusted-hero-badge">
+                    <Star size={15} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                    {t.trustedHeroTag}
+                  </span>
                   <h1 className="trusted-title">{t.trustedHeading}</h1>
                   <p className="trusted-subtext">{t.trustedSubtext}</p>
                 </div>
@@ -1841,7 +2228,9 @@ export default function App() {
                         onClick={() => setTrustedSearch('')}
                         className="search-clear-btn"
                         aria-label="Clear search"
-                      >✕</button>
+                      >
+                        <X size={14} strokeWidth={2} />
+                      </button>
                     )}
                   </div>
 
@@ -1859,14 +2248,16 @@ export default function App() {
                         className={`chip ${selectedTier === 'high' ? 'chip-active' : ''}`}
                         onClick={() => setSelectedTier('high')}
                       >
-                        ⭐ {t.filterHigh}
+                        <Star size={13} strokeWidth={2} fill="currentColor" style={{ display: 'inline', verticalAlign: '-1px', marginRight: 4 }} />
+                        {t.filterHigh}
                       </button>
                       <button
                         type="button"
                         className={`chip ${selectedTier === 'well' ? 'chip-active' : ''}`}
                         onClick={() => setSelectedTier('well')}
                       >
-                        ✨ {t.filterWell}
+                        <Star size={13} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-1px', marginRight: 4 }} />
+                        {t.filterWell}
                       </button>
                     </div>
 
@@ -1902,7 +2293,7 @@ export default function App() {
                 {/* Loading indicator */}
                 {trustedLoading && (
                   <div className="card" style={{ textAlign: 'center', padding: '32px 16px' }}>
-                    <div style={{ fontSize: 24, marginBottom: 8 }}>⏳</div>
+                    <div className="assess-spinner" style={{ margin: '0 auto 8px' }} />
                     <p style={{ color: 'var(--on-surface-variant)', fontWeight: 600 }}>{t.checking}</p>
                   </div>
                 )}
@@ -1915,14 +2306,20 @@ export default function App() {
                 {/* Unavailable state */}
                 {trustedData && !trustedData.available && (
                   <div className="card">
-                    <p className="not-found-text">ℹ️ {t.trustedNotBuilt}</p>
+                    <p className="not-found-text">
+                      <Info size={16} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 6 }} />
+                      {t.trustedNotBuilt}
+                    </p>
                   </div>
                 )}
 
                 {/* Empty state */}
                 {!trustedLoading && trustedData?.available && sortedTrustedItems.length === 0 && (
                   <div className="card" style={{ textAlign: 'center', padding: '28px 16px' }}>
-                    <p className="not-found-text">🔍 {t.notFoundTrusted}</p>
+                    <p className="not-found-text">
+                      <Search size={16} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 6 }} />
+                      {t.notFoundTrusted}
+                    </p>
                   </div>
                 )}
 
@@ -1943,7 +2340,7 @@ export default function App() {
                           <div className="trusted-app-info">
                             <h3 className="trusted-app-name">{item.appName}</h3>
                             <div className="trusted-lender-name">
-                              <span className="trusted-lender-label">{t.lenderLabel}:</span> {item.lender}
+                              <span className="trusted-lender-label">{t.lenderLabel}:</span> {toNormalCase(item.lender)}
                             </div>
                           </div>
                           <div className="trusted-score-badge" title={t.trustScoreDesc}>
@@ -1958,11 +2355,22 @@ export default function App() {
                         {/* Badges row: Tier badge + Installs (if present) */}
                         <div className="trusted-badges-row">
                           <span className={`trusted-tier-badge ${item.tier === 'high' ? 'tier-high' : 'tier-well'}`}>
-                            {item.tier === 'high' ? '⭐ ' + t.tierHigh : '✨ ' + t.tierWell}
+                            {item.tier === 'high' ? (
+                              <>
+                                <Star size={12} strokeWidth={2} fill="currentColor" style={{ display: 'inline', verticalAlign: '-1px', marginRight: 4 }} />
+                                {t.tierHigh}
+                              </>
+                            ) : (
+                              <>
+                                <Star size={12} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-1px', marginRight: 4 }} />
+                                {t.tierWell}
+                              </>
+                            )}
                           </span>
                           {item.installs && (
                             <span className="trusted-installs-badge">
-                              📥 {item.installs}
+                              <Download size={12} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-1px', marginRight: 4 }} />
+                              {item.installs}
                             </span>
                           )}
                         </div>
@@ -1970,12 +2378,12 @@ export default function App() {
                         {/* Two signals shown SEPARATELY */}
                         <div className="trusted-signals-box">
                           <div className="trusted-signal-item rbi-signal">
-                            <span className="signal-icon">📋</span>
+                            <ShieldCheck size={14} strokeWidth={2} className="signal-icon" />
                             <span className="signal-text">{t.rbiSignal}</span>
                             <span className="rbi-pill">{t.rbiListedPill}</span>
                           </div>
                           <div className="trusted-signal-item play-signal">
-                            <span className="signal-icon">⭐</span>
+                            <Star size={14} strokeWidth={2} fill="currentColor" className="signal-icon" />
                             <span className="signal-text">
                               {t.playSignalPrefix}: <strong>{item.rating} ★</strong> ({formatRatings(item.ratings)} {t.ratingsSuffix})
                             </span>
@@ -1985,7 +2393,8 @@ export default function App() {
                         {/* Card Bottom: Click to check hint + View on Google Play link */}
                         <div className="trusted-card-footer">
                           <span className="trusted-check-cta">
-                            🔍 {t.checkAppHint}
+                            <Search size={14} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                            {t.checkAppHint}
                           </span>
                           {item.packageId && (
                             <a
@@ -1996,7 +2405,8 @@ export default function App() {
                               onClick={(e) => e.stopPropagation()}
                               title="Google Play Store"
                             >
-                              <span>{t.viewOnPlay}</span> ↗
+                              <span>{t.viewOnPlay}</span>
+                              <ExternalLink size={12} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-1px', marginLeft: 4 }} />
                             </a>
                           )}
                         </div>
@@ -2007,6 +2417,7 @@ export default function App() {
               </div>
             </div>
           )}
+
 
           {/* ── VIEW 4: COMPARE APPS (On its own page) ── */}
           {view === 'compare' && (

@@ -1,4 +1,22 @@
 import { useState, useEffect } from 'react';
+import {
+  Scale,
+  Smartphone,
+  Star,
+  Check,
+  AlertTriangle,
+  Info,
+  HelpCircle,
+  ShieldCheck,
+  ShieldAlert,
+  ShieldX,
+  Download,
+  ArrowRight,
+  Search,
+  Mail,
+  Phone,
+  Building2,
+} from 'lucide-react';
 
 // Format rating counts: 1,20,000 -> 1.2L, 1,500,000 -> 15L, 5000 -> 5K
 function formatRatings(num) {
@@ -23,7 +41,7 @@ function formatRatings(num) {
 function AppIcon({ src, alt }) {
   const [hasError, setHasError] = useState(false);
   if (!src || hasError) {
-    return <div className="compare-app-icon-fallback" aria-hidden="true">📱</div>;
+    return <div className="compare-app-icon-fallback" aria-hidden="true"><Smartphone size={22} strokeWidth={2} /></div>;
   }
   return (
     <img
@@ -205,8 +223,7 @@ export default function CompareApps({
     const match = data?.directory?.match || 'none';
     const text = t.rbiStatusMap[match] || t.rbiStatusMap.none;
     const type = match === 'id' ? 'ok' : match === 'name' ? 'info' : match === 'lookalike' ? 'warn' : 'unknown';
-    const icon = match === 'id' ? '✔' : match === 'name' ? 'ℹ️' : match === 'lookalike' ? '⚠️' : '❓';
-    return { text, type, icon, match };
+    return { text, type, match };
   }
 
   // Render score bar inside compare column
@@ -236,7 +253,10 @@ export default function CompareApps({
     <div className="view-container view-compare" key="compare">
       {/* Hero Header */}
       <div className="hero compare-hero">
-        <span className="hero-tag">⚖️ {t.compareHeroTag}</span>
+        <span className="hero-tag">
+          <Scale size={15} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+          {t.compareHeroTag}
+        </span>
         <h1 className="hero-title">
           {t.compareTitle}
         </h1>
@@ -251,7 +271,8 @@ export default function CompareApps({
           <div className="compare-inputs-grid">
             <div className="compare-input-group">
               <label className="compare-input-label" htmlFor="compare-app1-input">
-                📱 {t.compareApp1Label}
+                <Smartphone size={15} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                {t.compareApp1Label}
               </label>
               <input
                 id="compare-app1-input"
@@ -266,7 +287,8 @@ export default function CompareApps({
 
             <div className="compare-input-group">
               <label className="compare-input-label" htmlFor="compare-app2-input">
-                📱 {t.compareApp2Label}
+                <Smartphone size={15} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                {t.compareApp2Label}
               </label>
               <input
                 id="compare-app2-input"
@@ -290,8 +312,11 @@ export default function CompareApps({
               className="search-btn compare-submit-btn"
               disabled={loading || (!app1Input.trim() && !app2Input.trim())}
             >
-              <span>{loading ? t.comparing : `⚖️ ${t.compareBtn}`}</span>
-              <span style={{ fontSize: 18 }}>→</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                <Scale size={18} strokeWidth={2} />
+                {loading ? t.comparing : t.compareBtn}
+              </span>
+              <ArrowRight size={18} strokeWidth={2} />
             </button>
           </div>
         </form>
@@ -412,7 +437,13 @@ export default function CompareApps({
                     <div className={`compare-verdict-box level-${res1.data.level}`}>
                       <div className="compare-verdict-header">
                         <span className="compare-verdict-icon">
-                          {res1.data.level === 'proceed' ? '✅' : res1.data.level === 'pause' ? '⚠️' : '🛑'}
+                          {res1.data.level === 'proceed' ? (
+                            <ShieldCheck size={20} strokeWidth={2} />
+                          ) : res1.data.level === 'pause' ? (
+                            <ShieldAlert size={20} strokeWidth={2} />
+                          ) : (
+                            <ShieldX size={20} strokeWidth={2} />
+                          )}
                         </span>
                         <div className="compare-verdict-text">
                           <span className="compare-verdict-label">
@@ -443,7 +474,13 @@ export default function CompareApps({
                     <div className={`compare-verdict-box level-${res2.data.level}`}>
                       <div className="compare-verdict-header">
                         <span className="compare-verdict-icon">
-                          {res2.data.level === 'proceed' ? '✅' : res2.data.level === 'pause' ? '⚠️' : '🛑'}
+                          {res2.data.level === 'proceed' ? (
+                            <ShieldCheck size={20} strokeWidth={2} />
+                          ) : res2.data.level === 'pause' ? (
+                            <ShieldAlert size={20} strokeWidth={2} />
+                          ) : (
+                            <ShieldX size={20} strokeWidth={2} />
+                          )}
                         </span>
                         <div className="compare-verdict-text">
                           <span className="compare-verdict-label">
@@ -546,7 +583,12 @@ export default function CompareApps({
                     const rbi = getRbiStatus(res1.data);
                     return (
                       <div className={`compare-status-badge status-${rbi.type}`}>
-                        <span className="status-badge-icon">{rbi.icon}</span>
+                        <span className="status-badge-icon">
+                          {rbi.type === 'ok' && <Check size={14} strokeWidth={2.5} />}
+                          {rbi.type === 'info' && <Info size={14} strokeWidth={2} />}
+                          {rbi.type === 'warn' && <AlertTriangle size={14} strokeWidth={2} />}
+                          {rbi.type === 'unknown' && <HelpCircle size={14} strokeWidth={2} />}
+                        </span>
                         <div className="status-badge-text">
                           <strong className="status-badge-title">{rbi.text}</strong>
                           {res1.data.directory?.lender && (
@@ -568,7 +610,12 @@ export default function CompareApps({
                     const rbi = getRbiStatus(res2.data);
                     return (
                       <div className={`compare-status-badge status-${rbi.type}`}>
-                        <span className="status-badge-icon">{rbi.icon}</span>
+                        <span className="status-badge-icon">
+                          {rbi.type === 'ok' && <Check size={14} strokeWidth={2.5} />}
+                          {rbi.type === 'info' && <Info size={14} strokeWidth={2} />}
+                          {rbi.type === 'warn' && <AlertTriangle size={14} strokeWidth={2} />}
+                          {rbi.type === 'unknown' && <HelpCircle size={14} strokeWidth={2} />}
+                        </span>
                         <div className="status-badge-text">
                           <strong className="status-badge-title">{rbi.text}</strong>
                           {res2.data.directory?.lender && (
@@ -652,7 +699,9 @@ export default function CompareApps({
                     <div className="compare-ratings-box">
                       {res1.data.app?.rating != null ? (
                         <div className="compare-rating-val">
-                          <span className="compare-star">★</span>
+                          <span className="compare-star">
+                            <Star size={13} strokeWidth={2} fill="currentColor" />
+                          </span>
                           <span className="compare-rating-num">{Number(res1.data.app.rating).toFixed(1)}</span>
                           {res1.data.app.ratings != null && (
                             <span className="compare-rating-count">
@@ -665,7 +714,8 @@ export default function CompareApps({
                       )}
                       {res1.data.app?.installs && (
                         <div className="compare-installs-line">
-                          📥 {res1.data.app.installs} {lang === 'hi' ? 'डाउनलोड' : 'installs'}
+                          <Download size={13} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-1px', marginRight: 4 }} />
+                          {res1.data.app.installs} {lang === 'hi' ? 'डाउनलोड' : 'installs'}
                         </div>
                       )}
                     </div>
@@ -680,7 +730,9 @@ export default function CompareApps({
                     <div className="compare-ratings-box">
                       {res2.data.app?.rating != null ? (
                         <div className="compare-rating-val">
-                          <span className="compare-star">★</span>
+                          <span className="compare-star">
+                            <Star size={13} strokeWidth={2} fill="currentColor" />
+                          </span>
                           <span className="compare-rating-num">{Number(res2.data.app.rating).toFixed(1)}</span>
                           {res2.data.app.ratings != null && (
                             <span className="compare-rating-count">
@@ -693,7 +745,8 @@ export default function CompareApps({
                       )}
                       {res2.data.app?.installs && (
                         <div className="compare-installs-line">
-                          📥 {res2.data.app.installs} {lang === 'hi' ? 'डाउनलोड' : 'installs'}
+                          <Download size={13} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-1px', marginRight: 4 }} />
+                          {res2.data.app.installs} {lang === 'hi' ? 'डाउनलोड' : 'installs'}
                         </div>
                       )}
                     </div>
@@ -720,7 +773,47 @@ export default function CompareApps({
                         {signals.map((sig, idx) => (
                           <li key={sig.id || idx} className={`compare-signal-item status-${sig.status || 'info'}`}>
                             <span className="signal-badge-icon">
-                              {sig.status === 'ok' ? '✔' : sig.status === 'warn' ? '⚠️' : sig.status === 'unknown' ? '❓' : 'ℹ️'}
+                              {sig.status === 'ok' ? (
+                                <Check size={13} strokeWidth={2.5} />
+                              ) : sig.status === 'warn' ? (
+                                <AlertTriangle size={13} strokeWidth={2} />
+                              ) : sig.status === 'unknown' ? (
+                                <HelpCircle size={13} strokeWidth={2} />
+                              ) : (
+                                <Info size={13} strokeWidth={2} />
+                              )}
+                            </span>
+                            <span className="signal-body-text">
+                              {sig[lang] || sig.en}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    );
+                  })() : (
+                    <div className="compare-cell-unavailable">—</div>
+                  )}
+                </div>
+
+                {/* Col 2 */}
+                <div className="compare-cell-card">
+                  {res2.success ? (() => {
+                    const signals = getTopSignals(res2.data);
+                    if (signals.length === 0) return <span className="compare-muted-text">—</span>;
+                    return (
+                      <ul className="compare-signals-list">
+                        {signals.map((sig, idx) => (
+                          <li key={sig.id || idx} className={`compare-signal-item status-${sig.status || 'info'}`}>
+                            <span className="signal-badge-icon">
+                              {sig.status === 'ok' ? (
+                                <Check size={13} strokeWidth={2.5} />
+                              ) : sig.status === 'warn' ? (
+                                <AlertTriangle size={13} strokeWidth={2} />
+                              ) : sig.status === 'unknown' ? (
+                                <HelpCircle size={13} strokeWidth={2} />
+                              ) : (
+                                <Info size={13} strokeWidth={2} />
+                              )}
                             </span>
                             <span className="signal-body-text">
                               {sig[lang] || sig.en}
@@ -776,21 +869,25 @@ export default function CompareApps({
                     return (
                       <div className="compare-grievance-box">
                         <div className="compare-grievance-name">
-                          👤 <strong>{g.primary.name || t.grievanceOfficer}</strong>
+                          <ShieldCheck size={14} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                          <strong>{g.primary.name || t.grievanceOfficer}</strong>
                         </div>
                         {g.primary.email && (
                           <div className="compare-grievance-item">
-                            ✉️ <a href={`mailto:${g.primary.email}`}>{g.primary.email}</a>
+                            <Mail size={13} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                            <a href={`mailto:${g.primary.email}`}>{g.primary.email}</a>
                           </div>
                         )}
                         {(g.primary.phone || g.primary.mobile) && (
                           <div className="compare-grievance-item">
-                            📞 <span>{g.primary.phone || g.primary.mobile}</span>
+                            <Phone size={13} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                            <span>{g.primary.phone || g.primary.mobile}</span>
                           </div>
                         )}
                         {g.lender && (
                           <div className="compare-grievance-lender">
-                            🏢 {g.lender}
+                            <Building2 size={13} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                            {g.lender}
                           </div>
                         )}
                         {g.moreCount > 0 && (
@@ -815,21 +912,25 @@ export default function CompareApps({
                     return (
                       <div className="compare-grievance-box">
                         <div className="compare-grievance-name">
-                          👤 <strong>{g.primary.name || t.grievanceOfficer}</strong>
+                          <ShieldCheck size={14} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                          <strong>{g.primary.name || t.grievanceOfficer}</strong>
                         </div>
                         {g.primary.email && (
                           <div className="compare-grievance-item">
-                            ✉️ <a href={`mailto:${g.primary.email}`}>{g.primary.email}</a>
+                            <Mail size={13} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                            <a href={`mailto:${g.primary.email}`}>{g.primary.email}</a>
                           </div>
                         )}
                         {(g.primary.phone || g.primary.mobile) && (
                           <div className="compare-grievance-item">
-                            📞 <span>{g.primary.phone || g.primary.mobile}</span>
+                            <Phone size={13} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                            <span>{g.primary.phone || g.primary.mobile}</span>
                           </div>
                         )}
                         {g.lender && (
                           <div className="compare-grievance-lender">
-                            🏢 {g.lender}
+                            <Building2 size={13} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+                            {g.lender}
                           </div>
                         )}
                         {g.moreCount > 0 && (
@@ -860,8 +961,11 @@ export default function CompareApps({
                         if (onViewFullResult) onViewFullResult(target);
                       }}
                     >
-                      <span>🔍 {t.viewFullResult}</span>
-                      <span style={{ fontSize: 16 }}>→</span>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                        <Search size={15} strokeWidth={2} />
+                        {t.viewFullResult}
+                      </span>
+                      <ArrowRight size={16} strokeWidth={2} />
                     </button>
                   ) : (
                     <div />
@@ -879,8 +983,11 @@ export default function CompareApps({
                         if (onViewFullResult) onViewFullResult(target);
                       }}
                     >
-                      <span>🔍 {t.viewFullResult}</span>
-                      <span style={{ fontSize: 16 }}>→</span>
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                        <Search size={15} strokeWidth={2} />
+                        {t.viewFullResult}
+                      </span>
+                      <ArrowRight size={16} strokeWidth={2} />
                     </button>
                   ) : (
                     <div />
@@ -893,7 +1000,7 @@ export default function CompareApps({
 
           {/* Under comparison note: exact wording in English & Hindi */}
           <div className="compare-disclaimer-card">
-            <span className="disclaimer-icon">ℹ️</span>
+            <Info size={16} strokeWidth={2} className="disclaimer-icon" />
             <p className="disclaimer-text">{t.compareNote}</p>
           </div>
 

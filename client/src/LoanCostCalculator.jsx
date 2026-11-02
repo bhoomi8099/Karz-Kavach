@@ -1,5 +1,15 @@
 import { useState, useMemo } from 'react';
 import { calculateLoanCost, formatINR, formatPercent } from './utils/loanCost';
+import {
+  Calculator,
+  RotateCcw,
+  IndianRupee,
+  CreditCard,
+  TrendingUp,
+  BarChart3,
+  Info,
+  AlertTriangle,
+} from 'lucide-react';
 
 export default function LoanCostCalculator({ lang, t }) {
   const [amount, setAmount] = useState('');
@@ -52,7 +62,10 @@ export default function LoanCostCalculator({ lang, t }) {
       {/* Header */}
       <div className="calc-header">
         <div className="calc-header-title-group">
-          <span className="calc-badge">🧮 {lang === 'hi' ? 'लागत कैलकुलेटर' : 'Cost Engine'}</span>
+          <span className="calc-badge">
+            <Calculator size={15} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+            {lang === 'hi' ? 'लागत कैलकुलेटर' : 'Cost Engine'}
+          </span>
           <h2 id="loan-calc-title" className="calc-title">{t.calcTitle}</h2>
           <p className="calc-subtitle">{t.calcSubtitle}</p>
         </div>
@@ -62,7 +75,8 @@ export default function LoanCostCalculator({ lang, t }) {
           className="calc-reset-btn"
           title={t.calcReset}
         >
-          🔄 {t.calcReset}
+          <RotateCcw size={15} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-2px', marginRight: 4 }} />
+          {t.calcReset}
         </button>
       </div>
 
@@ -215,14 +229,14 @@ export default function LoanCostCalculator({ lang, t }) {
       <div className="calc-results-wrap">
         {result.status === 'empty' && (
           <div className="calc-empty-card">
-            <span className="calc-empty-icon">ℹ️</span>
+            <Info size={18} strokeWidth={2} className="calc-empty-icon" />
             <span className="calc-empty-text">{t.calcPromptEmpty}</span>
           </div>
         )}
 
         {result.status === 'charges_exceed' && (
           <div className="calc-error-card">
-            <span className="calc-error-icon">⚠️</span>
+            <AlertTriangle size={18} strokeWidth={2} className="calc-error-icon" />
             <div className="calc-error-content">
               <span className="calc-error-title">{t.calcChargesExceed}</span>
               <span className="calc-error-sub">
@@ -241,7 +255,7 @@ export default function LoanCostCalculator({ lang, t }) {
               {/* You actually receive */}
               <div className="calc-metric-card metric-received">
                 <div className="calc-metric-head">
-                  <span className="calc-metric-icon">💵</span>
+                  <IndianRupee size={18} strokeWidth={2} className="calc-metric-icon" />
                   <span className="calc-metric-label">{t.calcYouReceive}</span>
                 </div>
                 <div className="calc-metric-val">{formatINR(result.received)}</div>
@@ -253,7 +267,7 @@ export default function LoanCostCalculator({ lang, t }) {
               {/* You repay in total */}
               <div className="calc-metric-card metric-repay">
                 <div className="calc-metric-head">
-                  <span className="calc-metric-icon">💳</span>
+                  <CreditCard size={18} strokeWidth={2} className="calc-metric-icon" />
                   <span className="calc-metric-label">{t.calcYouRepay}</span>
                 </div>
                 <div className="calc-metric-val">{formatINR(result.totalRepay)}</div>
@@ -265,7 +279,7 @@ export default function LoanCostCalculator({ lang, t }) {
               {/* Extra you pay */}
               <div className="calc-metric-card metric-extra">
                 <div className="calc-metric-head">
-                  <span className="calc-metric-icon">💸</span>
+                  <IndianRupee size={18} strokeWidth={2} className="calc-metric-icon" />
                   <span className="calc-metric-label">{t.calcExtraPaid}</span>
                 </div>
                 <div className="calc-metric-val">{formatINR(result.extraPaid)}</div>
@@ -277,7 +291,7 @@ export default function LoanCostCalculator({ lang, t }) {
               {/* Approx yearly cost */}
               <div className="calc-metric-card metric-yearly">
                 <div className="calc-metric-head">
-                  <span className="calc-metric-icon">📈</span>
+                  <TrendingUp size={18} strokeWidth={2} className="calc-metric-icon" />
                   <span className="calc-metric-label">{t.calcApproxYearlyCost}</span>
                   <span className="calc-approx-pill">{t.calcApproxTag}</span>
                 </div>
@@ -292,7 +306,8 @@ export default function LoanCostCalculator({ lang, t }) {
             <div className="calc-breakdown-box">
               <div className="calc-breakdown-header">
                 <span className="calc-breakdown-title">
-                  📊 {lang === 'hi' ? 'रुपयों का विभाजन' : 'Where your money goes'}
+                  <BarChart3 size={18} strokeWidth={2} style={{ display: 'inline', verticalAlign: '-3px', marginRight: 6 }} />
+                  {lang === 'hi' ? 'रुपयों का विभाजन' : 'Where your money goes'}
                 </span>
                 <span className="calc-breakdown-total">
                   {lang === 'hi' ? 'कुल देनदारी:' : 'Total obligation:'} {formatINR(result.totalRepay)}
@@ -343,7 +358,7 @@ export default function LoanCostCalculator({ lang, t }) {
 
             {/* Note under results */}
             <div className="calc-note-box">
-              <span className="calc-note-icon">ℹ️</span>
+              <Info size={16} strokeWidth={2} className="calc-note-icon" />
               <p className="calc-note-text">{t.calcEstimateNote}</p>
             </div>
           </div>
